@@ -16,6 +16,7 @@ class AppCoordinator: Coordinator {
     let alertHandlerService: AlertHandlerServiceProtocol
     let userDefaultsService: UserDefaultsServiceProtocol
     
+    var stretchesCoordinator: StretchesCoordinator!
     var workoutCoordinator: WorkoutCoordinator!
     var settingsCoordinator: SettingsCoordinator!
 
@@ -29,6 +30,11 @@ class AppCoordinator: Coordinator {
         self.userDefaultsService = UserDefaultsService()
         
         super.init()
+        
+        self.stretchesCoordinator = StretchesCoordinator(
+            alertHandlerService,
+            userDefaultsService,
+            delegate: self)
         
         self.workoutCoordinator = WorkoutCoordinator(
             alertHandlerService,
@@ -47,16 +53,22 @@ class AppCoordinator: Coordinator {
         
         let tabBarController = UITabBarController()
         
+        stretchesCoordinator.start()
         workoutCoordinator.start()
         settingsCoordinator.start()
         
         tabBarController.viewControllers = [
+            stretchesCoordinator.navigationController,
             workoutCoordinator.navigationController,
             settingsCoordinator.navigationController
         ]
         
         self.navigationController.pushViewController(tabBarController, animated: true)
     }
+}
+
+extension AppCoordinator: StretchesCoordinatorDelegate {
+    
 }
 
 extension AppCoordinator: WorkoutCoordinatorDelegate {
