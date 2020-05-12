@@ -6,6 +6,10 @@ target 'PhimosisStretcher' do
   use_frameworks!
 
   # Pods for PhimosisStretcher
+  pod 'DZNEmptyDataSet'
+  pod 'MaterialComponents/Buttons'
+  pod 'MaterialComponents/Buttons+Theming'
+  pod 'MaterialComponents/TextFields'
 
   target 'PhimosisStretcherTests' do
     inherit! :search_paths

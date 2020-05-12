@@ -636,6 +636,7 @@
 				D45565E7246AAD8000DC1FAE /* Sources */,
 				D45565E8246AAD8000DC1FAE /* Frameworks */,
 				D45565E9246AAD8000DC1FAE /* Resources */,
+				538461AF3875728F71FE4EEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -728,6 +729,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		538461AF3875728F71FE4EEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhimosisStretcher/Pods-PhimosisStretcher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhimosisStretcher/Pods-PhimosisStretcher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhimosisStretcher/Pods-PhimosisStretcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		62D80CBE067835BFF6B46718 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
