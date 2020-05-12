@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,6 +66,32 @@
 		D455669E246B107E00DC1FAE /* StretchesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455669D246B107E00DC1FAE /* StretchesViewControllerTests.swift */; };
 		D45566A0246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455669F246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift */; };
 		D45566A2246B116700DC1FAE /* StretchInfoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566A1246B116700DC1FAE /* StretchInfoPresenterTests.swift */; };
+		D45566A9246B148000DC1FAE /* InformationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566A8246B148000DC1FAE /* InformationScreenViewController.swift */; };
+		D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566AA246B149300DC1FAE /* InformationScreenPresenter.swift */; };
+		D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566AC246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift */; };
+		D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45566AE246B14C800DC1FAE /* InformationScreen.storyboard */; };
+		D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566B3246B157400DC1FAE /* PSPrimaryButton.swift */; };
+		D45566B6246B157D00DC1FAE /* PSSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566B5246B157D00DC1FAE /* PSSecondaryButton.swift */; };
+		D45566B8246B15CD00DC1FAE /* PSDestructiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566B7246B15CD00DC1FAE /* PSDestructiveButton.swift */; };
+		D45566BB246B164400DC1FAE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566BA246B164400DC1FAE /* Fonts.swift */; };
+		D45566BE246B167800DC1FAE /* UIColor-AppColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566BD246B167800DC1FAE /* UIColor-AppColours.swift */; };
+		D45566C1246B173800DC1FAE /* FatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566C0246B173800DC1FAE /* FatalError.swift */; };
+		D45566C8246B17A800DC1FAE /* InformationScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566C7246B17A800DC1FAE /* InformationScreenViewControllerTests.swift */; };
+		D45566CA246B17CA00DC1FAE /* InformationScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566C9246B17CA00DC1FAE /* InformationScreenPresenterTests.swift */; };
+		D45566CC246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566CB246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift */; };
+		D45566CE246B17F000DC1FAE /* MockInformationScreenPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566CD246B17F000DC1FAE /* MockInformationScreenPresenterDelegate.swift */; };
+		D45566D0246B180C00DC1FAE /* MockInformationScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566CF246B180C00DC1FAE /* MockInformationScreenPresenter.swift */; };
+		D45566D3246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566D2246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift */; };
+		D45566D8246B19D300DC1FAE /* ErrorScreensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566D7246B19D300DC1FAE /* ErrorScreensCoordinator.swift */; };
+		D45566DD246B1A0F00DC1FAE /* EnableNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566DC246B1A0F00DC1FAE /* EnableNotificationsViewController.swift */; };
+		D45566DF246B1A1E00DC1FAE /* EnableNotifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45566DE246B1A1E00DC1FAE /* EnableNotifications.storyboard */; };
+		D45566E1246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566E0246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift */; };
+		D45566E3246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566E2246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift */; };
+		D45566EB246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566EA246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift */; };
+		D45566ED246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566EC246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift */; };
+		D45566EF246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566EE246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift */; };
+		D45566F1246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566F0246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift */; };
+		D45566F3246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566F2246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +172,32 @@
 		D455669D246B107E00DC1FAE /* StretchesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesViewControllerTests.swift; sourceTree = "<group>"; };
 		D455669F246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesInfoViewControllerTests.swift; sourceTree = "<group>"; };
 		D45566A1246B116700DC1FAE /* StretchInfoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchInfoPresenterTests.swift; sourceTree = "<group>"; };
+		D45566A8246B148000DC1FAE /* InformationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenViewController.swift; sourceTree = "<group>"; };
+		D45566AA246B149300DC1FAE /* InformationScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenPresenter.swift; sourceTree = "<group>"; };
+		D45566AC246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenPresenterProtocol.swift; sourceTree = "<group>"; };
+		D45566AE246B14C800DC1FAE /* InformationScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InformationScreen.storyboard; sourceTree = "<group>"; };
+		D45566B3246B157400DC1FAE /* PSPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSPrimaryButton.swift; sourceTree = "<group>"; };
+		D45566B5246B157D00DC1FAE /* PSSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSecondaryButton.swift; sourceTree = "<group>"; };
+		D45566B7246B15CD00DC1FAE /* PSDestructiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDestructiveButton.swift; sourceTree = "<group>"; };
+		D45566BA246B164400DC1FAE /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		D45566BD246B167800DC1FAE /* UIColor-AppColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-AppColours.swift"; sourceTree = "<group>"; };
+		D45566C0246B173800DC1FAE /* FatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalError.swift; sourceTree = "<group>"; };
+		D45566C7246B17A800DC1FAE /* InformationScreenViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenViewControllerTests.swift; sourceTree = "<group>"; };
+		D45566C9246B17CA00DC1FAE /* InformationScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreenPresenterTests.swift; sourceTree = "<group>"; };
+		D45566CB246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInformationScreenPresenterView.swift; sourceTree = "<group>"; };
+		D45566CD246B17F000DC1FAE /* MockInformationScreenPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInformationScreenPresenterDelegate.swift; sourceTree = "<group>"; };
+		D45566CF246B180C00DC1FAE /* MockInformationScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInformationScreenPresenter.swift; sourceTree = "<group>"; };
+		D45566D2246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase-ExpectFatalError.swift"; sourceTree = "<group>"; };
+		D45566D7246B19D300DC1FAE /* ErrorScreensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreensCoordinator.swift; sourceTree = "<group>"; };
+		D45566DC246B1A0F00DC1FAE /* EnableNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableNotificationsViewController.swift; sourceTree = "<group>"; };
+		D45566DE246B1A1E00DC1FAE /* EnableNotifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnableNotifications.storyboard; sourceTree = "<group>"; };
+		D45566E0246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableNotificationsPresenter.swift; sourceTree = "<group>"; };
+		D45566E2246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableNotificationsPresenterProtocol.swift; sourceTree = "<group>"; };
+		D45566EA246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableNotificationsViewControllerTests.swift; sourceTree = "<group>"; };
+		D45566EC246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableNotificationsPresenterTests.swift; sourceTree = "<group>"; };
+		D45566EE246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnableNotificationsPresenter.swift; sourceTree = "<group>"; };
+		D45566F0246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnableNotificationsPresenterView.swift; sourceTree = "<group>"; };
+		D45566F2246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnableNotificationsPresenterDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,9 +263,10 @@
 		D45565ED246AAD8000DC1FAE /* PhimosisStretcher */ = {
 			isa = PBXGroup;
 			children = (
-				D4556619246AE55A00DC1FAE /* Services */,
 				D4556610246AE44900DC1FAE /* Base */,
 				D4556611246AE45400DC1FAE /* Tabs */,
+				D45566B0246B154700DC1FAE /* Reusables */,
+				D4556619246AE55A00DC1FAE /* Services */,
 				D45565EE246AAD8000DC1FAE /* AppDelegate.swift */,
 				D45565F0246AAD8000DC1FAE /* SceneDelegate.swift */,
 				D45565F4246AAD8000DC1FAE /* Main.storyboard */,
@@ -227,6 +280,8 @@
 		D4556604246AAD8200DC1FAE /* PhimosisStretcherTests */ = {
 			isa = PBXGroup;
 			children = (
+				D45566D1246B183500DC1FAE /* Extensions */,
+				D45566C2246B178000DC1FAE /* Base */,
 				D455664A246AEA4A00DC1FAE /* Mocks */,
 				D4556634246AE92600DC1FAE /* Tabs */,
 				D4556607246AAD8200DC1FAE /* Info.plist */,
@@ -238,6 +293,8 @@
 		D4556610246AE44900DC1FAE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D45566D4246B19AD00DC1FAE /* ErrorScreens */,
+				D45566A5246B145800DC1FAE /* InformationScreen */,
 				D4556612246AE45B00DC1FAE /* Coordinator */,
 			);
 			path = Base;
@@ -625,6 +682,243 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D45566A5246B145800DC1FAE /* InformationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D45566A7246B147100DC1FAE /* Presenter */,
+				D45566A6246B146B00DC1FAE /* View */,
+			);
+			path = InformationScreen;
+			sourceTree = "<group>";
+		};
+		D45566A6246B146B00DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45566A8246B148000DC1FAE /* InformationScreenViewController.swift */,
+				D45566AE246B14C800DC1FAE /* InformationScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566A7246B147100DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D45566AA246B149300DC1FAE /* InformationScreenPresenter.swift */,
+				D45566AC246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D45566B0246B154700DC1FAE /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				D45566BF246B172600DC1FAE /* FatalError */,
+				D45566BC246B165E00DC1FAE /* Colors */,
+				D45566B9246B163400DC1FAE /* Fonts */,
+				D45566B1246B155900DC1FAE /* Custom Storyboard Objects */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		D45566B1246B155900DC1FAE /* Custom Storyboard Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D45566B2246B156000DC1FAE /* Buttons */,
+			);
+			path = "Custom Storyboard Objects";
+			sourceTree = "<group>";
+		};
+		D45566B2246B156000DC1FAE /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D45566B3246B157400DC1FAE /* PSPrimaryButton.swift */,
+				D45566B5246B157D00DC1FAE /* PSSecondaryButton.swift */,
+				D45566B7246B15CD00DC1FAE /* PSDestructiveButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		D45566B9246B163400DC1FAE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D45566BA246B164400DC1FAE /* Fonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D45566BC246B165E00DC1FAE /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				D45566BD246B167800DC1FAE /* UIColor-AppColours.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		D45566BF246B172600DC1FAE /* FatalError */ = {
+			isa = PBXGroup;
+			children = (
+				D45566C0246B173800DC1FAE /* FatalError.swift */,
+			);
+			path = FatalError;
+			sourceTree = "<group>";
+		};
+		D45566C2246B178000DC1FAE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D45566E4246B1BD500DC1FAE /* ErrorScreens */,
+				D45566C3246B178500DC1FAE /* InformationScreen */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D45566C3246B178500DC1FAE /* InformationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D45566C6246B179600DC1FAE /* Mocks */,
+				D45566C5246B179200DC1FAE /* Presenter */,
+				D45566C4246B178C00DC1FAE /* View */,
+			);
+			path = InformationScreen;
+			sourceTree = "<group>";
+		};
+		D45566C4246B178C00DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45566C7246B17A800DC1FAE /* InformationScreenViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566C5246B179200DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D45566C9246B17CA00DC1FAE /* InformationScreenPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D45566C6246B179600DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D45566CB246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift */,
+				D45566CD246B17F000DC1FAE /* MockInformationScreenPresenterDelegate.swift */,
+				D45566CF246B180C00DC1FAE /* MockInformationScreenPresenter.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D45566D1246B183500DC1FAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D45566D2246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D45566D4246B19AD00DC1FAE /* ErrorScreens */ = {
+			isa = PBXGroup;
+			children = (
+				D45566D5246B19BD00DC1FAE /* Coordinator */,
+				D45566D6246B19C400DC1FAE /* View */,
+			);
+			path = ErrorScreens;
+			sourceTree = "<group>";
+		};
+		D45566D5246B19BD00DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D45566D7246B19D300DC1FAE /* ErrorScreensCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D45566D6246B19C400DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45566D9246B19DA00DC1FAE /* EnableNotifications */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566D9246B19DA00DC1FAE /* EnableNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				D45566DA246B19EA00DC1FAE /* Presenter */,
+				D45566DB246B19EE00DC1FAE /* View */,
+			);
+			path = EnableNotifications;
+			sourceTree = "<group>";
+		};
+		D45566DA246B19EA00DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D45566E0246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift */,
+				D45566E2246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D45566DB246B19EE00DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45566DC246B1A0F00DC1FAE /* EnableNotificationsViewController.swift */,
+				D45566DE246B1A1E00DC1FAE /* EnableNotifications.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566E4246B1BD500DC1FAE /* ErrorScreens */ = {
+			isa = PBXGroup;
+			children = (
+				D45566E5246B1BDA00DC1FAE /* View */,
+			);
+			path = ErrorScreens;
+			sourceTree = "<group>";
+		};
+		D45566E5246B1BDA00DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45566E6246B1BDE00DC1FAE /* EnableNotifications */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566E6246B1BDE00DC1FAE /* EnableNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				D45566E9246B1BF100DC1FAE /* Mocks */,
+				D45566E7246B1BE400DC1FAE /* Presenter */,
+				D45566E8246B1BE800DC1FAE /* View */,
+			);
+			path = EnableNotifications;
+			sourceTree = "<group>";
+		};
+		D45566E7246B1BE400DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D45566EC246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D45566E8246B1BE800DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45566EA246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566E9246B1BF100DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D45566EE246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift */,
+				D45566F0246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift */,
+				D45566F2246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -710,9 +1004,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4556633246AE77900DC1FAE /* Workout.storyboard in Resources */,
+				D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
 				D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */,
+				D45566DF246B1A1E00DC1FAE /* EnableNotifications.storyboard in Resources */,
 				D455667E246B0BE400DC1FAE /* Stretches.storyboard in Resources */,
 				D4556688246B0C2900DC1FAE /* StretchInfo.storyboard in Resources */,
 				D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */,
@@ -798,11 +1094,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4556682246B0C0800DC1FAE /* StretchInfoPresenter.swift in Sources */,
+				D45566B8246B15CD00DC1FAE /* PSDestructiveButton.swift in Sources */,
 				D455662B246AE62C00DC1FAE /* WorkoutCoordinator.swift in Sources */,
 				D455667C246B0BD900DC1FAE /* StretchesViewController.swift in Sources */,
 				D4556631246AE66E00DC1FAE /* WorkoutViewController.swift in Sources */,
+				D45566BE246B167800DC1FAE /* UIColor-AppColours.swift in Sources */,
 				D4556675246B0B4B00DC1FAE /* StretchesCoordinator.swift in Sources */,
 				D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */,
+				D45566E3246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift in Sources */,
+				D45566B6246B157D00DC1FAE /* PSSecondaryButton.swift in Sources */,
+				D45566D8246B19D300DC1FAE /* ErrorScreensCoordinator.swift in Sources */,
+				D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */,
 				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
 				D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */,
 				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
@@ -811,10 +1113,17 @@
 				D4556616246AE47900DC1FAE /* AppCoordinator.swift in Sources */,
 				D4556623246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift in Sources */,
 				D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */,
+				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
+				D45566DD246B1A0F00DC1FAE /* EnableNotificationsViewController.swift in Sources */,
+				D45566E1246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift in Sources */,
+				D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */,
+				D45566C1246B173800DC1FAE /* FatalError.swift in Sources */,
 				D4556679246B0B8C00DC1FAE /* StretchesPresenterProtocol.swift in Sources */,
 				D4556677246B0B8100DC1FAE /* StretchesPresenter.swift in Sources */,
+				D45566A9246B148000DC1FAE /* InformationScreenViewController.swift in Sources */,
 				D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */,
+				D45566BB246B164400DC1FAE /* Fonts.swift in Sources */,
 				D4556667246AED1C00DC1FAE /* SettingsCoordinator.swift in Sources */,
 				D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */,
 				D4556684246B0C1100DC1FAE /* StretchInfoPresenterProtocol.swift in Sources */,
@@ -832,6 +1141,10 @@
 				D4556647246AE99D00DC1FAE /* MockWorkoutPresenterView.swift in Sources */,
 				D4556696246B0F6C00DC1FAE /* MockStretchesPresenterView.swift in Sources */,
 				D4556671246AEDFE00DC1FAE /* MockSettingsPresenterView.swift in Sources */,
+				D45566F3246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift in Sources */,
+				D45566C8246B17A800DC1FAE /* InformationScreenViewControllerTests.swift in Sources */,
+				D45566D0246B180C00DC1FAE /* MockInformationScreenPresenter.swift in Sources */,
+				D45566CC246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift in Sources */,
 				D45566A2246B116700DC1FAE /* StretchInfoPresenterTests.swift in Sources */,
 				D455669E246B107E00DC1FAE /* StretchesViewControllerTests.swift in Sources */,
 				D4556698246B0F7400DC1FAE /* MockStretchesPresenterDelegate.swift in Sources */,
@@ -840,8 +1153,14 @@
 				D455663F246AE96A00DC1FAE /* WorkoutPresenterTests.swift in Sources */,
 				D455663D246AE96000DC1FAE /* WorkoutViewControllerTests.swift in Sources */,
 				D4556690246B0EC100DC1FAE /* MockStretchInfoPresenterView.swift in Sources */,
+				D45566EB246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift in Sources */,
+				D45566ED246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift in Sources */,
+				D45566EF246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift in Sources */,
 				D4556641246AE97800DC1FAE /* WorkoutCoordinatorTests.swift in Sources */,
+				D45566F1246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift in Sources */,
 				D455666D246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift in Sources */,
+				D45566D3246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift in Sources */,
+				D45566CE246B17F000DC1FAE /* MockInformationScreenPresenterDelegate.swift in Sources */,
 				D4556669246AEDD400DC1FAE /* SettingsViewControllerTests.swift in Sources */,
 				D455664F246AEA6900DC1FAE /* MockUserDefaultsService.swift in Sources */,
 				D455669C246B104700DC1FAE /* StretchesPresenterTests.swift in Sources */,
@@ -852,6 +1171,7 @@
 				D4556643246AE98A00DC1FAE /* MockWorkoutPresenter.swift in Sources */,
 				D4556649246AE9C600DC1FAE /* MockObjectProtocol.swift in Sources */,
 				D45566A0246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift in Sources */,
+				D45566CA246B17CA00DC1FAE /* InformationScreenPresenterTests.swift in Sources */,
 				D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */,
 				D455666B246AEDDD00DC1FAE /* SettingsPresenterTests.swift in Sources */,
 			);

@@ -104,7 +104,7 @@ class AlertHandlerService: AlertHandlerServiceProtocol {
     func showNetworkConnectivityLostAlert(view: UIViewController) {
         let alert = UIAlertController(
             title: "Network Connectivity Lost",
-            message: "Connection to your phones internet has been lost, please reconnect to continue using PTHub. \n\n On reconnection, this alert will disappear.",
+            message: "Connection to your phones internet has been lost, please reconnect to continue using the app. \n\n On reconnection, this alert will disappear.",
             preferredStyle: UIAlertController.Style.alert)
         
         DispatchQueue.main.async {

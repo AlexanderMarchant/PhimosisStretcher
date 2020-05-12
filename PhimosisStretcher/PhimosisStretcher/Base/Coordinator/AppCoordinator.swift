@@ -45,6 +45,9 @@ class AppCoordinator: Coordinator {
             alertHandlerService,
             userDefaultsService,
             delegate: self)
+            
+            ErrorScreensCoordinator.shared.navigationController = self.navigationController
+            ErrorScreensCoordinator.shared.delegate = self
     }
 
     // MARK: - Start
@@ -77,4 +80,7 @@ extension AppCoordinator: WorkoutCoordinatorDelegate {
 
 extension AppCoordinator: SettingsCoordinatorDelegate {
     
+}
+
+extension AppCoordinator: ErrorScreensCoordinatorDelegate {
 }

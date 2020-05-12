@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Information Screen View Controller-->
+        <scene sceneID="FmR-BS-MRU">
+            <objects>
+                <viewController storyboardIdentifier="InformationScreenViewController" id="Yd5-Kf-b6B" customClass="InformationScreenViewController" customModule="PhimosisStretcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWy-6I-SbD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FT1-Ns-407" customClass="PSSecondaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="777" width="364" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XJy-5e-R8B"/>
+                                </constraints>
+                                <state key="normal" title="Secondary Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxy-f4-Nzc" customClass="PSPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="702" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RXI-w5-zTg"/>
+                                </constraints>
+                                <state key="normal" title="Primary Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost" translatesAutoresizingMaskIntoConstraints="NO" id="EwG-ui-wik">
+                                <rect key="frame" x="50" y="119" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EwG-ui-wik" secondAttribute="height" multiplier="1:1" id="wTJ-bp-kDr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJA-Ti-BU5">
+                                <rect key="frame" x="25" y="458" width="364" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EB-yg-pLH" customClass="PTHubUILabel" customModule="PTHub" customModuleProvider="target">
+                                <rect key="frame" x="25" y="516" width="364" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Wkt-OM-jbL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dap-T5-tkb" customClass="MDCFloatingButton">
+                                <rect key="frame" x="339" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rne-xK-8yB"/>
+                                    <constraint firstAttribute="width" constant="50" id="kec-fu-cSu"/>
+                                </constraints>
+                                <state key="normal" image="close-icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2GP-85-npe" firstAttribute="trailing" secondItem="UJA-Ti-BU5" secondAttribute="trailing" constant="25" id="9ta-TV-mCY"/>
+                            <constraint firstItem="UJA-Ti-BU5" firstAttribute="centerX" secondItem="aWy-6I-SbD" secondAttribute="centerX" id="DHD-6M-IZO"/>
+                            <constraint firstItem="2GP-85-npe" firstAttribute="trailing" secondItem="EwG-ui-wik" secondAttribute="trailing" constant="50" id="Lju-2x-OhN"/>
+                            <constraint firstItem="Uxy-f4-Nzc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0EB-yg-pLH" secondAttribute="bottom" constant="25" id="M1P-PR-U2e"/>
+                            <constraint firstItem="Uxy-f4-Nzc" firstAttribute="leading" secondItem="2GP-85-npe" secondAttribute="leading" constant="25" id="M8h-R6-S8y"/>
+                            <constraint firstItem="0EB-yg-pLH" firstAttribute="top" secondItem="UJA-Ti-BU5" secondAttribute="bottom" constant="16" id="OYg-OF-gut"/>
+                            <constraint firstItem="FT1-Ns-407" firstAttribute="top" secondItem="Uxy-f4-Nzc" secondAttribute="bottom" constant="25" id="PYQ-Lu-1Vc"/>
+                            <constraint firstItem="2GP-85-npe" firstAttribute="trailing" secondItem="Dap-T5-tkb" secondAttribute="trailing" constant="25" id="ZId-G8-9T1"/>
+                            <constraint firstItem="2GP-85-npe" firstAttribute="trailing" secondItem="FT1-Ns-407" secondAttribute="trailing" constant="25" id="aXm-38-BtO"/>
+                            <constraint firstItem="UJA-Ti-BU5" firstAttribute="leading" secondItem="2GP-85-npe" secondAttribute="leading" constant="25" id="goV-vS-I58"/>
+                            <constraint firstItem="0EB-yg-pLH" firstAttribute="leading" secondItem="2GP-85-npe" secondAttribute="leading" constant="25" id="hKR-H8-WV0"/>
+                            <constraint firstItem="UJA-Ti-BU5" firstAttribute="top" secondItem="EwG-ui-wik" secondAttribute="bottom" constant="25" id="kIE-Ys-z4g"/>
+                            <constraint firstItem="FT1-Ns-407" firstAttribute="leading" secondItem="2GP-85-npe" secondAttribute="leading" constant="25" id="r1k-7I-evt"/>
+                            <constraint firstItem="EwG-ui-wik" firstAttribute="top" secondItem="2GP-85-npe" secondAttribute="top" constant="75" id="t9L-bK-mj7"/>
+                            <constraint firstItem="2GP-85-npe" firstAttribute="trailing" secondItem="0EB-yg-pLH" secondAttribute="trailing" constant="25" id="tVQ-lW-MXJ"/>
+                            <constraint firstItem="EwG-ui-wik" firstAttribute="leading" secondItem="2GP-85-npe" secondAttribute="leading" constant="50" id="un4-At-qtW"/>
+                            <constraint firstItem="Dap-T5-tkb" firstAttribute="top" secondItem="2GP-85-npe" secondAttribute="top" constant="25" id="z0C-ET-Vky"/>
+                            <constraint firstItem="2GP-85-npe" firstAttribute="trailing" secondItem="Uxy-f4-Nzc" secondAttribute="trailing" constant="25" id="zTI-lx-arl"/>
+                            <constraint firstItem="2GP-85-npe" firstAttribute="bottom" secondItem="FT1-Ns-407" secondAttribute="bottom" constant="50" id="zcm-iK-hb0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2GP-85-npe"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="Dap-T5-tkb" id="sKx-Hc-CF0"/>
+                        <outlet property="primaryButton" destination="Uxy-f4-Nzc" id="WUh-wH-tcY"/>
+                        <outlet property="screenDescription" destination="0EB-yg-pLH" id="H2T-tE-yyt"/>
+                        <outlet property="screenImage" destination="EwG-ui-wik" id="dFw-IQ-1Yf"/>
+                        <outlet property="screenTitle" destination="UJA-Ti-BU5" id="kBV-t3-DUM"/>
+                        <outlet property="secondaryButton" destination="FT1-Ns-407" id="7MS-yV-WMA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIG-KI-PYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-icon" width="128" height="128"/>
+        <image name="lost" width="128" height="128"/>
+    </resources>
+</document>

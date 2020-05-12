@@ -1,0 +1,39 @@
+//
+//  InformationScreenPresenterTests.swift
+//  PhimosisStretcherTests
+//
+//  Created by Alex Marchant on 12/05/2020.
+//  Copyright © 2020 Alex Marchant. All rights reserved.
+//
+
+import XCTest
+@testable import PhimosisStretcher
+
+class InformationScreenPresenterTests: XCTestCase {
+    
+    var informationScreenPresenter: InformationScreenPresenter!
+    var mockInformationScreenPresenterView: MockInformationScreenPresenterView!
+    var mockInformationScreenPresenterDelegate: MockInformationScreenPresenterDelegate!
+
+    override func setUp() {
+        mockInformationScreenPresenterView = MockInformationScreenPresenterView()
+        mockInformationScreenPresenterDelegate = MockInformationScreenPresenterDelegate()
+        
+        informationScreenPresenter = InformationScreenPresenter(with: mockInformationScreenPresenterView, delegate: mockInformationScreenPresenterDelegate)
+    }
+
+    override func tearDown() {
+        informationScreenPresenter = nil
+        mockInformationScreenPresenterView = nil
+        mockInformationScreenPresenterDelegate = nil
+    }
+    
+    func testDidTapClose() {
+        // Arrange/Act
+        informationScreenPresenter.didTapClose()
+        
+        // Assert
+        XCTAssertEqual(1, mockInformationScreenPresenterDelegate.didTapCloseCallCount)
+    }
+
+}
