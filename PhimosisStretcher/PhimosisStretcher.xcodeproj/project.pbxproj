@@ -305,6 +305,7 @@
 			children = (
 				D4556626246AE5ED00DC1FAE /* Stretches */,
 				D4556624246AE5DC00DC1FAE /* Workout */,
+				D45566F5246B1E0A00DC1FAE /* Reminders */,
 				D4556625246AE5E700DC1FAE /* Settings */,
 			);
 			path = Tabs;
@@ -408,6 +409,7 @@
 			children = (
 				D4556635246AE92A00DC1FAE /* Stretches */,
 				D4556636246AE92E00DC1FAE /* Workout */,
+				D45566F6246B1E1700DC1FAE /* Reminders */,
 				D4556637246AE93400DC1FAE /* Settings */,
 			);
 			path = Tabs;
@@ -915,6 +917,76 @@
 				D45566EE246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift */,
 				D45566F0246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift */,
 				D45566F2246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D45566F5246B1E0A00DC1FAE /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				D45566F9246B1E8500DC1FAE /* Coordinator */,
+				D45566F8246B1E8100DC1FAE /* Presenter */,
+				D45566F7246B1E7900DC1FAE /* View */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		D45566F6246B1E1700DC1FAE /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				D45566FD246B1E9600DC1FAE /* Mocks */,
+				D45566FC246B1E9100DC1FAE /* Coordinator */,
+				D45566FB246B1E8E00DC1FAE /* Presenter */,
+				D45566FA246B1E8A00DC1FAE /* View */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		D45566F7246B1E7900DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566F8246B1E8100DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D45566F9246B1E8500DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D45566FA246B1E8A00DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566FB246B1E8E00DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D45566FC246B1E9100DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D45566FD246B1E9600DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Mocks;
 			sourceTree = "<group>";
