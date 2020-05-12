@@ -1,0 +1,6 @@
+framework module Pods_PhimosisStretcherTests {
+  umbrella header "Pods-PhimosisStretcherTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
