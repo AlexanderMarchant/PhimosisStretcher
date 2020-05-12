@@ -11,11 +11,41 @@
 		BEB2987912609F78F3A90C04 /* Pods_PhimosisStretcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132129F5388B8A5322411F12 /* Pods_PhimosisStretcherTests.framework */; };
 		D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45565EE246AAD8000DC1FAE /* AppDelegate.swift */; };
 		D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45565F0246AAD8000DC1FAE /* SceneDelegate.swift */; };
-		D45565F3246AAD8000DC1FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45565F2246AAD8000DC1FAE /* ViewController.swift */; };
 		D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45565F4246AAD8000DC1FAE /* Main.storyboard */; };
 		D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45565F7246AAD8200DC1FAE /* Assets.xcassets */; };
 		D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45565F9246AAD8200DC1FAE /* LaunchScreen.storyboard */; };
-		D4556606246AAD8200DC1FAE /* PhimosisStretcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556605246AAD8200DC1FAE /* PhimosisStretcherTests.swift */; };
+		D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556613246AE47000DC1FAE /* Storyboarded.swift */; };
+		D4556616246AE47900DC1FAE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556615246AE47900DC1FAE /* AppCoordinator.swift */; };
+		D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556617246AE48100DC1FAE /* Coordinator.swift */; };
+		D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455661C246AE59000DC1FAE /* AlertHandlerService.swift */; };
+		D455661F246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455661E246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift */; };
+		D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556620246AE5B900DC1FAE /* UserDefaultsService.swift */; };
+		D4556623246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556622246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift */; };
+		D455662B246AE62C00DC1FAE /* WorkoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455662A246AE62C00DC1FAE /* WorkoutCoordinator.swift */; };
+		D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455662C246AE63D00DC1FAE /* WorkoutPresenter.swift */; };
+		D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455662E246AE64600DC1FAE /* WorkoutPresenterProtocol.swift */; };
+		D4556631246AE66E00DC1FAE /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556630246AE66E00DC1FAE /* WorkoutViewController.swift */; };
+		D4556633246AE77900DC1FAE /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4556632246AE77900DC1FAE /* Workout.storyboard */; };
+		D455663D246AE96000DC1FAE /* WorkoutViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455663C246AE96000DC1FAE /* WorkoutViewControllerTests.swift */; };
+		D455663F246AE96A00DC1FAE /* WorkoutPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455663E246AE96A00DC1FAE /* WorkoutPresenterTests.swift */; };
+		D4556641246AE97800DC1FAE /* WorkoutCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556640246AE97800DC1FAE /* WorkoutCoordinatorTests.swift */; };
+		D4556643246AE98A00DC1FAE /* MockWorkoutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556642246AE98A00DC1FAE /* MockWorkoutPresenter.swift */; };
+		D4556645246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556644246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift */; };
+		D4556647246AE99D00DC1FAE /* MockWorkoutPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556646246AE99D00DC1FAE /* MockWorkoutPresenterView.swift */; };
+		D4556649246AE9C600DC1FAE /* MockObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556648246AE9C600DC1FAE /* MockObjectProtocol.swift */; };
+		D455664D246AEA5F00DC1FAE /* MockAlertHandlerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455664C246AEA5F00DC1FAE /* MockAlertHandlerService.swift */; };
+		D455664F246AEA6900DC1FAE /* MockUserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455664E246AEA6900DC1FAE /* MockUserDefaultsService.swift */; };
+		D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D455665E246AEC5500DC1FAE /* Settings.storyboard */; };
+		D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556660246AEC6100DC1FAE /* SettingsViewController.swift */; };
+		D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556662246AECA800DC1FAE /* SettingsPresenter.swift */; };
+		D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556664246AECB300DC1FAE /* SettingsPresenterProtocol.swift */; };
+		D4556667246AED1C00DC1FAE /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556666246AED1C00DC1FAE /* SettingsCoordinator.swift */; };
+		D4556669246AEDD400DC1FAE /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556668246AEDD400DC1FAE /* SettingsViewControllerTests.swift */; };
+		D455666B246AEDDD00DC1FAE /* SettingsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455666A246AEDDD00DC1FAE /* SettingsPresenterTests.swift */; };
+		D455666D246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455666C246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift */; };
+		D455666F246AEDF700DC1FAE /* MockSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455666E246AEDF700DC1FAE /* MockSettingsPresenter.swift */; };
+		D4556671246AEDFE00DC1FAE /* MockSettingsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556670246AEDFE00DC1FAE /* MockSettingsPresenterView.swift */; };
+		D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556672246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +68,44 @@
 		D45565EB246AAD8000DC1FAE /* PhimosisStretcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhimosisStretcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45565EE246AAD8000DC1FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45565F0246AAD8000DC1FAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D45565F2246AAD8000DC1FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D45565F5246AAD8000DC1FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D45565F7246AAD8200DC1FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D45565FA246AAD8200DC1FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D45565FC246AAD8200DC1FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4556601246AAD8200DC1FAE /* PhimosisStretcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhimosisStretcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4556605246AAD8200DC1FAE /* PhimosisStretcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhimosisStretcherTests.swift; sourceTree = "<group>"; };
 		D4556607246AAD8200DC1FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4556613246AE47000DC1FAE /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		D4556615246AE47900DC1FAE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D4556617246AE48100DC1FAE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D455661C246AE59000DC1FAE /* AlertHandlerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandlerService.swift; sourceTree = "<group>"; };
+		D455661E246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandlerServiceProtocol.swift; sourceTree = "<group>"; };
+		D4556620246AE5B900DC1FAE /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		D4556622246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceProtocol.swift; sourceTree = "<group>"; };
+		D455662A246AE62C00DC1FAE /* WorkoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCoordinator.swift; sourceTree = "<group>"; };
+		D455662C246AE63D00DC1FAE /* WorkoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPresenter.swift; sourceTree = "<group>"; };
+		D455662E246AE64600DC1FAE /* WorkoutPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPresenterProtocol.swift; sourceTree = "<group>"; };
+		D4556630246AE66E00DC1FAE /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		D4556632246AE77900DC1FAE /* Workout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Workout.storyboard; sourceTree = "<group>"; };
+		D455663C246AE96000DC1FAE /* WorkoutViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewControllerTests.swift; sourceTree = "<group>"; };
+		D455663E246AE96A00DC1FAE /* WorkoutPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPresenterTests.swift; sourceTree = "<group>"; };
+		D4556640246AE97800DC1FAE /* WorkoutCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCoordinatorTests.swift; sourceTree = "<group>"; };
+		D4556642246AE98A00DC1FAE /* MockWorkoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutPresenter.swift; sourceTree = "<group>"; };
+		D4556644246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutPresenterDelegate.swift; sourceTree = "<group>"; };
+		D4556646246AE99D00DC1FAE /* MockWorkoutPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutPresenterView.swift; sourceTree = "<group>"; };
+		D4556648246AE9C600DC1FAE /* MockObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjectProtocol.swift; sourceTree = "<group>"; };
+		D455664C246AEA5F00DC1FAE /* MockAlertHandlerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlertHandlerService.swift; sourceTree = "<group>"; };
+		D455664E246AEA6900DC1FAE /* MockUserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsService.swift; sourceTree = "<group>"; };
+		D455665E246AEC5500DC1FAE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		D4556660246AEC6100DC1FAE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D4556662246AECA800DC1FAE /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		D4556664246AECB300DC1FAE /* SettingsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterProtocol.swift; sourceTree = "<group>"; };
+		D4556666246AED1C00DC1FAE /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		D4556668246AEDD400DC1FAE /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
+		D455666A246AEDDD00DC1FAE /* SettingsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterTests.swift; sourceTree = "<group>"; };
+		D455666C246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorTests.swift; sourceTree = "<group>"; };
+		D455666E246AEDF700DC1FAE /* MockSettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsPresenter.swift; sourceTree = "<group>"; };
+		D4556670246AEDFE00DC1FAE /* MockSettingsPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsPresenterView.swift; sourceTree = "<group>"; };
+		D4556672246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsPresenterDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +145,6 @@
 				AFC196A122C8FFA64689ACE1 /* Pods-PhimosisStretcherTests.debug.xcconfig */,
 				21224CFF4444AD15DB76D622 /* Pods-PhimosisStretcherTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,9 +171,11 @@
 		D45565ED246AAD8000DC1FAE /* PhimosisStretcher */ = {
 			isa = PBXGroup;
 			children = (
+				D4556619246AE55A00DC1FAE /* Services */,
+				D4556610246AE44900DC1FAE /* Base */,
+				D4556611246AE45400DC1FAE /* Tabs */,
 				D45565EE246AAD8000DC1FAE /* AppDelegate.swift */,
 				D45565F0246AAD8000DC1FAE /* SceneDelegate.swift */,
-				D45565F2246AAD8000DC1FAE /* ViewController.swift */,
 				D45565F4246AAD8000DC1FAE /* Main.storyboard */,
 				D45565F7246AAD8200DC1FAE /* Assets.xcassets */,
 				D45565F9246AAD8200DC1FAE /* LaunchScreen.storyboard */,
@@ -126,10 +187,326 @@
 		D4556604246AAD8200DC1FAE /* PhimosisStretcherTests */ = {
 			isa = PBXGroup;
 			children = (
-				D4556605246AAD8200DC1FAE /* PhimosisStretcherTests.swift */,
+				D455664A246AEA4A00DC1FAE /* Mocks */,
+				D4556634246AE92600DC1FAE /* Tabs */,
 				D4556607246AAD8200DC1FAE /* Info.plist */,
+				D4556648246AE9C600DC1FAE /* MockObjectProtocol.swift */,
 			);
 			path = PhimosisStretcherTests;
+			sourceTree = "<group>";
+		};
+		D4556610246AE44900DC1FAE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D4556612246AE45B00DC1FAE /* Coordinator */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D4556611246AE45400DC1FAE /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D4556626246AE5ED00DC1FAE /* Info */,
+				D4556624246AE5DC00DC1FAE /* Workout */,
+				D4556625246AE5E700DC1FAE /* Settings */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		D4556612246AE45B00DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D4556613246AE47000DC1FAE /* Storyboarded.swift */,
+				D4556615246AE47900DC1FAE /* AppCoordinator.swift */,
+				D4556617246AE48100DC1FAE /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4556619246AE55A00DC1FAE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D455661A246AE56A00DC1FAE /* AlertHandlerService */,
+				D455661B246AE57800DC1FAE /* UserDefaultsService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D455661A246AE56A00DC1FAE /* AlertHandlerService */ = {
+			isa = PBXGroup;
+			children = (
+				D455661C246AE59000DC1FAE /* AlertHandlerService.swift */,
+				D455661E246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift */,
+			);
+			path = AlertHandlerService;
+			sourceTree = "<group>";
+		};
+		D455661B246AE57800DC1FAE /* UserDefaultsService */ = {
+			isa = PBXGroup;
+			children = (
+				D4556620246AE5B900DC1FAE /* UserDefaultsService.swift */,
+				D4556622246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift */,
+			);
+			path = UserDefaultsService;
+			sourceTree = "<group>";
+		};
+		D4556624246AE5DC00DC1FAE /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				D4556627246AE5FF00DC1FAE /* Coordinator */,
+				D4556628246AE60400DC1FAE /* Presenter */,
+				D4556629246AE60800DC1FAE /* View */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		D4556625246AE5E700DC1FAE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D455665D246AEC4B00DC1FAE /* Coordinator */,
+				D455665C246AEC4700DC1FAE /* Presenter */,
+				D455665B246AEC4300DC1FAE /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D4556626246AE5ED00DC1FAE /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				D455665A246AEC3D00DC1FAE /* Coordinator */,
+				D4556659246AEC3700DC1FAE /* Presenter */,
+				D4556658246AEC3400DC1FAE /* View */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		D4556627246AE5FF00DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D455662A246AE62C00DC1FAE /* WorkoutCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4556628246AE60400DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D455662C246AE63D00DC1FAE /* WorkoutPresenter.swift */,
+				D455662E246AE64600DC1FAE /* WorkoutPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D4556629246AE60800DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4556630246AE66E00DC1FAE /* WorkoutViewController.swift */,
+				D4556632246AE77900DC1FAE /* Workout.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4556634246AE92600DC1FAE /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D4556635246AE92A00DC1FAE /* Info */,
+				D4556636246AE92E00DC1FAE /* Workout */,
+				D4556637246AE93400DC1FAE /* Settings */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		D4556635246AE92A00DC1FAE /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				D4556653246AEC1A00DC1FAE /* Mocks */,
+				D4556652246AEC1600DC1FAE /* Coordinator */,
+				D4556651246AEC1100DC1FAE /* Presenter */,
+				D4556650246AEC0100DC1FAE /* View */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		D4556636246AE92E00DC1FAE /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				D4556639246AE94400DC1FAE /* Mocks */,
+				D4556638246AE93F00DC1FAE /* Coordinator */,
+				D455663A246AE94700DC1FAE /* Presenter */,
+				D455663B246AE94C00DC1FAE /* View */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		D4556637246AE93400DC1FAE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D4556657246AEC2D00DC1FAE /* Mocks */,
+				D4556656246AEC2700DC1FAE /* Coordinator */,
+				D4556655246AEC2200DC1FAE /* Presenter */,
+				D4556654246AEC1F00DC1FAE /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D4556638246AE93F00DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D4556640246AE97800DC1FAE /* WorkoutCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4556639246AE94400DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D4556642246AE98A00DC1FAE /* MockWorkoutPresenter.swift */,
+				D4556644246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift */,
+				D4556646246AE99D00DC1FAE /* MockWorkoutPresenterView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D455663A246AE94700DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D455663E246AE96A00DC1FAE /* WorkoutPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D455663B246AE94C00DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D455663C246AE96000DC1FAE /* WorkoutViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D455664A246AEA4A00DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D455664B246AEA4E00DC1FAE /* Services */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D455664B246AEA4E00DC1FAE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D455664C246AEA5F00DC1FAE /* MockAlertHandlerService.swift */,
+				D455664E246AEA6900DC1FAE /* MockUserDefaultsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D4556650246AEC0100DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4556651246AEC1100DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D4556652246AEC1600DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4556653246AEC1A00DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D4556654246AEC1F00DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4556668246AEDD400DC1FAE /* SettingsViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4556655246AEC2200DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D455666A246AEDDD00DC1FAE /* SettingsPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D4556656246AEC2700DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D455666C246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4556657246AEC2D00DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D455666E246AEDF700DC1FAE /* MockSettingsPresenter.swift */,
+				D4556670246AEDFE00DC1FAE /* MockSettingsPresenterView.swift */,
+				D4556672246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D4556658246AEC3400DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4556659246AEC3700DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D455665A246AEC3D00DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D455665B246AEC4300DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4556660246AEC6100DC1FAE /* SettingsViewController.swift */,
+				D455665E246AEC5500DC1FAE /* Settings.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D455665C246AEC4700DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D4556662246AECA800DC1FAE /* SettingsPresenter.swift */,
+				D4556664246AECB300DC1FAE /* SettingsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D455665D246AEC4B00DC1FAE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D4556666246AED1C00DC1FAE /* SettingsCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +592,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4556633246AE77900DC1FAE /* Workout.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
 				D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */,
+				D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +661,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D45565F3246AAD8000DC1FAE /* ViewController.swift in Sources */,
+				D455662B246AE62C00DC1FAE /* WorkoutCoordinator.swift in Sources */,
+				D4556631246AE66E00DC1FAE /* WorkoutViewController.swift in Sources */,
 				D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */,
+				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
+				D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */,
+				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
+				D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */,
+				D4556616246AE47900DC1FAE /* AppCoordinator.swift in Sources */,
+				D4556623246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift in Sources */,
 				D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */,
+				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
+				D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */,
+				D4556667246AED1C00DC1FAE /* SettingsCoordinator.swift in Sources */,
+				D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */,
+				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,
+				D455661F246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift in Sources */,
+				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +685,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4556606246AAD8200DC1FAE /* PhimosisStretcherTests.swift in Sources */,
+				D455666F246AEDF700DC1FAE /* MockSettingsPresenter.swift in Sources */,
+				D4556647246AE99D00DC1FAE /* MockWorkoutPresenterView.swift in Sources */,
+				D4556671246AEDFE00DC1FAE /* MockSettingsPresenterView.swift in Sources */,
+				D455664D246AEA5F00DC1FAE /* MockAlertHandlerService.swift in Sources */,
+				D455663F246AE96A00DC1FAE /* WorkoutPresenterTests.swift in Sources */,
+				D455663D246AE96000DC1FAE /* WorkoutViewControllerTests.swift in Sources */,
+				D4556641246AE97800DC1FAE /* WorkoutCoordinatorTests.swift in Sources */,
+				D455666D246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift in Sources */,
+				D4556669246AEDD400DC1FAE /* SettingsViewControllerTests.swift in Sources */,
+				D455664F246AEA6900DC1FAE /* MockUserDefaultsService.swift in Sources */,
+				D4556645246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift in Sources */,
+				D4556643246AE98A00DC1FAE /* MockWorkoutPresenter.swift in Sources */,
+				D4556649246AE9C600DC1FAE /* MockObjectProtocol.swift in Sources */,
+				D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */,
+				D455666B246AEDDD00DC1FAE /* SettingsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
