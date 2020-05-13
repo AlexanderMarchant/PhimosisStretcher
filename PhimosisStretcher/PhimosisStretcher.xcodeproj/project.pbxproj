@@ -92,6 +92,12 @@
 		D45566EF246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566EE246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift */; };
 		D45566F1246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566F0246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift */; };
 		D45566F3246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45566F2246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift */; };
+		D4556705246B22A900DC1FAE /* WorkoutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556704246B22A900DC1FAE /* WorkoutMenuViewController.swift */; };
+		D4556707246B22C200DC1FAE /* WorkoutMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556706246B22C200DC1FAE /* WorkoutMenuPresenter.swift */; };
+		D4556709246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556708246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift */; };
+		D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D455670A246B24E000DC1FAE /* WorkoutMenu.storyboard */; };
+		D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556712246BCAA900DC1FAE /* TimerService.swift */; };
+		D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +204,12 @@
 		D45566EE246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnableNotificationsPresenter.swift; sourceTree = "<group>"; };
 		D45566F0246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnableNotificationsPresenterView.swift; sourceTree = "<group>"; };
 		D45566F2246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnableNotificationsPresenterDelegate.swift; sourceTree = "<group>"; };
+		D4556704246B22A900DC1FAE /* WorkoutMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutMenuViewController.swift; path = PhimosisStretcher/Tabs/Workout/View/WorkoutMenuViewController.swift; sourceTree = SOURCE_ROOT; };
+		D4556706246B22C200DC1FAE /* WorkoutMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMenuPresenter.swift; sourceTree = "<group>"; };
+		D4556708246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMenuPresenterProtocol.swift; sourceTree = "<group>"; };
+		D455670A246B24E000DC1FAE /* WorkoutMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutMenu.storyboard; sourceTree = "<group>"; };
+		D4556712246BCAA900DC1FAE /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +336,7 @@
 		D4556619246AE55A00DC1FAE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4556711246BCA9600DC1FAE /* TimerService */,
 				D455661A246AE56A00DC1FAE /* AlertHandlerService */,
 				D455661B246AE57800DC1FAE /* UserDefaultsService */,
 			);
@@ -352,8 +365,8 @@
 			isa = PBXGroup;
 			children = (
 				D4556627246AE5FF00DC1FAE /* Coordinator */,
-				D4556628246AE60400DC1FAE /* Presenter */,
-				D4556629246AE60800DC1FAE /* View */,
+				D45566FF246B223B00DC1FAE /* Presenter */,
+				D45566FE246B222700DC1FAE /* View */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -431,8 +444,8 @@
 			children = (
 				D4556639246AE94400DC1FAE /* Mocks */,
 				D4556638246AE93F00DC1FAE /* Coordinator */,
-				D455663A246AE94700DC1FAE /* Presenter */,
-				D455663B246AE94C00DC1FAE /* View */,
+				D455670F246B27F300DC1FAE /* Presenter */,
+				D455670C246B27B300DC1FAE /* View */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -459,9 +472,6 @@
 		D4556639246AE94400DC1FAE /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				D4556642246AE98A00DC1FAE /* MockWorkoutPresenter.swift */,
-				D4556644246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift */,
-				D4556646246AE99D00DC1FAE /* MockWorkoutPresenterView.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -991,6 +1001,78 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D45566FE246B222700DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4556704246B22A900DC1FAE /* WorkoutMenuViewController.swift */,
+				D455670A246B24E000DC1FAE /* WorkoutMenu.storyboard */,
+				D455670E246B27E100DC1FAE /* PerformWorkout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45566FF246B223B00DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D4556706246B22C200DC1FAE /* WorkoutMenuPresenter.swift */,
+				D4556708246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D455670C246B27B300DC1FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D455670D246B27C400DC1FAE /* PerformWorkout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D455670D246B27C400DC1FAE /* PerformWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				D4556710246B280100DC1FAE /* Mocks */,
+				D455663A246AE94700DC1FAE /* Presenter */,
+				D455663B246AE94C00DC1FAE /* View */,
+			);
+			path = PerformWorkout;
+			sourceTree = "<group>";
+		};
+		D455670E246B27E100DC1FAE /* PerformWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				D4556628246AE60400DC1FAE /* Presenter */,
+				D4556629246AE60800DC1FAE /* View */,
+			);
+			path = PerformWorkout;
+			sourceTree = "<group>";
+		};
+		D455670F246B27F300DC1FAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D4556710246B280100DC1FAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D4556642246AE98A00DC1FAE /* MockWorkoutPresenter.swift */,
+				D4556644246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift */,
+				D4556646246AE99D00DC1FAE /* MockWorkoutPresenterView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D4556711246BCA9600DC1FAE /* TimerService */ = {
+			isa = PBXGroup;
+			children = (
+				D4556712246BCAA900DC1FAE /* TimerService.swift */,
+				D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */,
+			);
+			path = TimerService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1076,6 +1158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4556633246AE77900DC1FAE /* Workout.storyboard in Resources */,
+				D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */,
 				D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
@@ -1173,6 +1256,7 @@
 				D45566BE246B167800DC1FAE /* UIColor-AppColours.swift in Sources */,
 				D4556675246B0B4B00DC1FAE /* StretchesCoordinator.swift in Sources */,
 				D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */,
+				D4556705246B22A900DC1FAE /* WorkoutMenuViewController.swift in Sources */,
 				D45566E3246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift in Sources */,
 				D45566B6246B157D00DC1FAE /* PSSecondaryButton.swift in Sources */,
 				D45566D8246B19D300DC1FAE /* ErrorScreensCoordinator.swift in Sources */,
@@ -1181,7 +1265,9 @@
 				D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */,
 				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
 				D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */,
+				D4556707246B22C200DC1FAE /* WorkoutMenuPresenter.swift in Sources */,
 				D4556686246B0C2000DC1FAE /* StretchInfoViewController.swift in Sources */,
+				D4556709246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift in Sources */,
 				D4556616246AE47900DC1FAE /* AppCoordinator.swift in Sources */,
 				D4556623246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift in Sources */,
 				D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */,
@@ -1197,9 +1283,11 @@
 				D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */,
 				D45566BB246B164400DC1FAE /* Fonts.swift in Sources */,
 				D4556667246AED1C00DC1FAE /* SettingsCoordinator.swift in Sources */,
+				D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */,
 				D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */,
 				D4556684246B0C1100DC1FAE /* StretchInfoPresenterProtocol.swift in Sources */,
 				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,
+				D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */,
 				D455661F246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift in Sources */,
 				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
 			);

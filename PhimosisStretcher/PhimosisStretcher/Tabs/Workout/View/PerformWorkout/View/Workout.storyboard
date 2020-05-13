@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout View Controller-->
+        <scene sceneID="HRl-uZ-M4T">
+            <objects>
+                <viewController storyboardIdentifier="WorkoutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4ek-JA-c1q" customClass="WorkoutViewController" customModule="PhimosisStretcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qE4-2B-9F4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sp-On-iYC" customClass="PSPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="737" width="364" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="jdh-uW-ZS6"/>
+                                </constraints>
+                                <state key="normal" title="Resume"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCx-d4-JRM">
+                                <rect key="frame" x="25" y="94" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvj-ow-5Gh">
+                                <rect key="frame" x="25" y="165" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ2-2O-Qie">
+                                <rect key="frame" x="25" y="443" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckr-ZF-K7O" customClass="PSDestructiveButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="737" width="364" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="l9X-YZ-AXl"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zem-4Z-61P" firstAttribute="bottom" secondItem="Ckr-ZF-K7O" secondAttribute="bottom" constant="50" id="1nf-XY-rAp"/>
+                            <constraint firstItem="hZ2-2O-Qie" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Dvj-ow-5Gh" secondAttribute="bottom" constant="50" id="3qL-IA-NEL"/>
+                            <constraint firstItem="Dvj-ow-5Gh" firstAttribute="top" secondItem="JCx-d4-JRM" secondAttribute="bottom" constant="50" id="4tX-z5-0Wf"/>
+                            <constraint firstItem="Zem-4Z-61P" firstAttribute="trailing" secondItem="hZ2-2O-Qie" secondAttribute="trailing" constant="25" id="5x6-KO-Jd4"/>
+                            <constraint firstItem="Ckr-ZF-K7O" firstAttribute="leading" secondItem="Zem-4Z-61P" secondAttribute="leading" constant="25" id="L9u-Tb-fLl"/>
+                            <constraint firstItem="JCx-d4-JRM" firstAttribute="top" secondItem="Zem-4Z-61P" secondAttribute="top" constant="50" id="Q1j-uo-8lP"/>
+                            <constraint firstItem="Zem-4Z-61P" firstAttribute="bottom" secondItem="1Sp-On-iYC" secondAttribute="bottom" constant="50" id="RcX-Dq-51a"/>
+                            <constraint firstItem="Zem-4Z-61P" firstAttribute="trailing" secondItem="JCx-d4-JRM" secondAttribute="trailing" constant="25" id="U86-AD-Ait"/>
+                            <constraint firstItem="Zem-4Z-61P" firstAttribute="trailing" secondItem="Dvj-ow-5Gh" secondAttribute="trailing" constant="25" id="Voh-MQ-lZh"/>
+                            <constraint firstItem="Zem-4Z-61P" firstAttribute="trailing" secondItem="Ckr-ZF-K7O" secondAttribute="trailing" constant="25" id="WkD-qW-sAw"/>
+                            <constraint firstItem="1Sp-On-iYC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hZ2-2O-Qie" secondAttribute="bottom" constant="50" id="Z7q-rm-ytm"/>
+                            <constraint firstItem="Dvj-ow-5Gh" firstAttribute="leading" secondItem="Zem-4Z-61P" secondAttribute="leading" constant="25" id="ZEE-jl-o2I"/>
+                            <constraint firstItem="JCx-d4-JRM" firstAttribute="leading" secondItem="Zem-4Z-61P" secondAttribute="leading" constant="25" id="flX-Fq-yGs"/>
+                            <constraint firstItem="hZ2-2O-Qie" firstAttribute="leading" secondItem="Zem-4Z-61P" secondAttribute="leading" constant="25" id="jdz-D6-xvS"/>
+                            <constraint firstItem="1Sp-On-iYC" firstAttribute="leading" secondItem="Zem-4Z-61P" secondAttribute="leading" constant="25" id="ofo-lr-Pvt"/>
+                            <constraint firstItem="hZ2-2O-Qie" firstAttribute="centerY" secondItem="Zem-4Z-61P" secondAttribute="centerY" id="t5R-pd-IM3"/>
+                            <constraint firstItem="Zem-4Z-61P" firstAttribute="trailing" secondItem="1Sp-On-iYC" secondAttribute="trailing" constant="25" id="z5O-EC-fDK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zem-4Z-61P"/>
+                    </view>
+                    <connections>
+                        <outlet property="instructionLabel" destination="hZ2-2O-Qie" id="uWB-O1-hjx"/>
+                        <outlet property="pauseWorkoutButton" destination="Ckr-ZF-K7O" id="nwX-gR-2fg"/>
+                        <outlet property="repsLeftLabel" destination="JCx-d4-JRM" id="qtB-8B-dEX"/>
+                        <outlet property="resumeWorkoutButton" destination="1Sp-On-iYC" id="BET-NW-CbG"/>
+                        <outlet property="timerLabel" destination="Dvj-ow-5Gh" id="mtW-ba-f0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8T-PZ-9Xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="125"/>
+        </scene>
+    </scenes>
+</document>

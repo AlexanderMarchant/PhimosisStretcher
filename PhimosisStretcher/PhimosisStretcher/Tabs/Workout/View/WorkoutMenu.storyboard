@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout Menu View Controller-->
+        <scene sceneID="N6A-pD-rbH">
+            <objects>
+                <viewController storyboardIdentifier="WorkoutMenuViewController" id="QAK-cc-kZc" customClass="WorkoutMenuViewController" customModule="PhimosisStretcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ERB-5k-Clh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-5N-Ebh" customClass="PSPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="50" y="737" width="314" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="xem-qg-hn1"/>
+                                </constraints>
+                                <state key="normal" title="Begin Workout"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="DxB-Xl-rzf">
+                                <rect key="frame" x="25" y="144" width="364" height="232"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-Fd-vhW">
+                                        <rect key="frame" x="104" y="0.0" width="156" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workouts Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkc-5K-WXP">
+                                                <rect key="frame" x="16.5" y="0.0" width="123.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iz-E4-YKs">
+                                                <rect key="frame" x="0.0" y="45.5" width="156" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="KLv-Wm-pH2">
+                                        <rect key="frame" x="109.5" y="166" width="145.5" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total workout Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr0-9b-Mu0">
+                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDO-xp-yvG">
+                                                <rect key="frame" x="35" y="45.5" width="75" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tbo-5N-Ebh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DxB-Xl-rzf" secondAttribute="bottom" constant="50" id="Dzt-YJ-VQR"/>
+                            <constraint firstItem="DxB-Xl-rzf" firstAttribute="leading" secondItem="LvA-kG-5wC" secondAttribute="leading" constant="25" id="LW0-Jg-mLg"/>
+                            <constraint firstItem="DxB-Xl-rzf" firstAttribute="top" secondItem="LvA-kG-5wC" secondAttribute="top" constant="100" id="UO4-Va-aph"/>
+                            <constraint firstItem="tbo-5N-Ebh" firstAttribute="leading" secondItem="LvA-kG-5wC" secondAttribute="leading" constant="50" id="bms-6X-IWB"/>
+                            <constraint firstItem="LvA-kG-5wC" firstAttribute="trailing" secondItem="DxB-Xl-rzf" secondAttribute="trailing" constant="25" id="lSk-FY-Gu0"/>
+                            <constraint firstItem="LvA-kG-5wC" firstAttribute="bottom" secondItem="tbo-5N-Ebh" secondAttribute="bottom" constant="50" id="sIb-OJ-WhB"/>
+                            <constraint firstItem="LvA-kG-5wC" firstAttribute="trailing" secondItem="tbo-5N-Ebh" secondAttribute="trailing" constant="50" id="tKQ-c2-q3N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LvA-kG-5wC"/>
+                    </view>
+                    <connections>
+                        <outlet property="beginWorkoutButton" destination="tbo-5N-Ebh" id="S5m-XD-7yd"/>
+                        <outlet property="workoutTimeLabel" destination="bDO-xp-yvG" id="dKS-t3-ayl"/>
+                        <outlet property="workoutsTodayLabel" destination="7iz-E4-YKs" id="PiV-XH-nJX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hqy-6E-tLi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+    </scenes>
+</document>

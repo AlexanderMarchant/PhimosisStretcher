@@ -14,7 +14,9 @@ class PSPrimaryButton: MDCRaisedButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
+        
+        self.layer.cornerRadius = 5
+        self.setShadowColor(UIColor.clear, for: .normal)
         self.backgroundColor = UIColor.appGreen
         self.setTitleFont(Fonts.buttonFont, for: .normal)
         self.setTitleColor(UIColor.white, for: .normal)

@@ -36,7 +36,21 @@ class WorkoutCoordinator: Coordinator {
     }
     
     override func start() {
-        self.showWorkout()
+        self.showWorkoutMenu()
+    }
+    
+    func showWorkoutMenu() {
+        let workoutMenuViewController = WorkoutMenuViewController.instantiate(storyboard: "WorkoutMenu")
+        
+        let workoutMenuPresenter = WorkoutMenuPresenter(
+            userDefaultsService,
+            with: workoutMenuViewController,
+            delegate: self)
+        
+        workoutMenuViewController.workoutMenuPresenter = workoutMenuPresenter
+        workoutMenuViewController.alertHandlerService = self.alertHandlerService
+        
+        navigationController.pushViewController(workoutMenuViewController, animated: true)
     }
     
     func showWorkout() {
@@ -55,5 +69,15 @@ class WorkoutCoordinator: Coordinator {
     
 }
 
+extension WorkoutCoordinator: WorkoutMenuPresenterDelegate {
+    func didStartWorkout() {
+        showWorkout()
+    }
+}
+
 extension WorkoutCoordinator: WorkoutPresenterDelegate {
+    func didCompleteWorkout() {
+        showWorkoutMenu()
+    }
+    
 }

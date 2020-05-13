@@ -15,6 +15,8 @@ class PSSecondaryButton: MDCButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        self.layer.cornerRadius = 5
+        self.setShadowColor(UIColor.clear, for: .normal)
         self.setBackgroundColor(UIColor.clear)
         self.setBorderColor(UIColor.appGreen, for: .normal)
         self.setTitleFont(Fonts.buttonFont, for: .normal)

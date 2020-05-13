@@ -22,7 +22,7 @@ struct Fonts {
     }
     
     static var buttonFont : UIFont {
-        let buttonFont = UIFont.systemFont(ofSize: 16, weight: .medium)
+        let buttonFont = UIFont.systemFont(ofSize: 20, weight: .bold)
         let metrics = UIFontMetrics(forTextStyle: .title1)
         return metrics.scaledFont(for: buttonFont)
     }

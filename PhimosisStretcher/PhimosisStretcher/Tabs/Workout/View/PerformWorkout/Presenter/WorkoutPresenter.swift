@@ -9,9 +9,13 @@
 import Foundation
 
 protocol WorkoutPresenterView {
+    func workoutDidResume()
+    func workoutDidPause()
+    func workoutDidComplete()
 }
 
 protocol WorkoutPresenterDelegate {
+    func didCompleteWorkout()
 }
 
 class WorkoutPresenter: WorkoutPresenterProtocol {
@@ -28,6 +32,14 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.userDefaultsService = userDefaultsService
         self.view = view
         self.delegate = delegate
+    }
+    
+    func resumeWorkout() {
+        // Resume the workout and timer
+    }
+    
+    func pauseWorkout() {
+        // Pause the workout and timer
     }
     
 }

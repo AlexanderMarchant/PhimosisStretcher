@@ -15,6 +15,8 @@ class PSDestructiveButton: MDCRaisedButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        self.layer.cornerRadius = 5
+        self.setShadowColor(UIColor.clear, for: .normal)
         self.setBackgroundColor(UIColor.appRed)
         self.setTitleFont(Fonts.buttonFont, for: .normal)
         self.setTitleColor(UIColor.white, for: .normal)
