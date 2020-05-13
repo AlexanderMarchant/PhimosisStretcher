@@ -11,7 +11,13 @@ import Foundation
 
 class MockWorkoutPresenterDelegate: MockObjectProtocol, WorkoutPresenterDelegate {
     
+    var didCompleteWorkoutCallCount = 0
+    
     func resetCallCounts() {
-        
+        self.didCompleteWorkoutCallCount = 0
+    }
+    
+    func didCompleteWorkout() {
+        didCompleteWorkoutCallCount += 1
     }
 }

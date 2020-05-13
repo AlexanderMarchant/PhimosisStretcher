@@ -98,6 +98,7 @@
 		D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D455670A246B24E000DC1FAE /* WorkoutMenu.storyboard */; };
 		D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556712246BCAA900DC1FAE /* TimerService.swift */; };
 		D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */; };
+		D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556716246BCC6E00DC1FAE /* MockTimerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		D455670A246B24E000DC1FAE /* WorkoutMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutMenu.storyboard; sourceTree = "<group>"; };
 		D4556712246BCAA900DC1FAE /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceProtocol.swift; sourceTree = "<group>"; };
+		D4556716246BCC6E00DC1FAE /* MockTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,6 +507,7 @@
 			children = (
 				D455664C246AEA5F00DC1FAE /* MockAlertHandlerService.swift */,
 				D455664E246AEA6900DC1FAE /* MockUserDefaultsService.swift */,
+				D4556716246BCC6E00DC1FAE /* MockTimerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1330,6 +1333,7 @@
 				D4556692246B0ECA00DC1FAE /* MockStretchInfoPresenterDelegate.swift in Sources */,
 				D4556643246AE98A00DC1FAE /* MockWorkoutPresenter.swift in Sources */,
 				D4556649246AE9C600DC1FAE /* MockObjectProtocol.swift in Sources */,
+				D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */,
 				D45566A0246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift in Sources */,
 				D45566CA246B17CA00DC1FAE /* InformationScreenPresenterTests.swift in Sources */,
 				D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */,

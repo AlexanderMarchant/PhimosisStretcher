@@ -11,7 +11,19 @@ import Foundation
 
 class MockWorkoutPresenter: MockObjectProtocol, WorkoutPresenterProtocol {
     
+    var resumeWorkoutCallCount = 0
+    var pauseWorkoutCallCount = 0
+    
     func resetCallCounts() {
-        
+        self.resumeWorkoutCallCount = 0
+        self.pauseWorkoutCallCount = 0
+    }
+    
+    func resumeWorkout() {
+        resumeWorkoutCallCount += 1
+    }
+    
+    func pauseWorkout() {
+        pauseWorkoutCallCount += 1
     }
 }
