@@ -99,6 +99,7 @@
 		D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556712246BCAA900DC1FAE /* TimerService.swift */; };
 		D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */; };
 		D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556716246BCC6E00DC1FAE /* MockTimerService.swift */; };
+		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		D4556712246BCAA900DC1FAE /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceProtocol.swift; sourceTree = "<group>"; };
 		D4556716246BCC6E00DC1FAE /* MockTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerService.swift; sourceTree = "<group>"; };
+		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,6 +729,7 @@
 		D45566B0246B154700DC1FAE /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				D47FA847246BD070006B3A69 /* Constants */,
 				D45566BF246B172600DC1FAE /* FatalError */,
 				D45566BC246B165E00DC1FAE /* Colors */,
 				D45566B9246B163400DC1FAE /* Fonts */,
@@ -1076,6 +1079,14 @@
 			path = TimerService;
 			sourceTree = "<group>";
 		};
+		D47FA847246BD070006B3A69 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA848246BD07D006B3A69 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1259,6 +1270,7 @@
 				D45566BE246B167800DC1FAE /* UIColor-AppColours.swift in Sources */,
 				D4556675246B0B4B00DC1FAE /* StretchesCoordinator.swift in Sources */,
 				D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */,
+				D47FA849246BD07D006B3A69 /* Constants.swift in Sources */,
 				D4556705246B22A900DC1FAE /* WorkoutMenuViewController.swift in Sources */,
 				D45566E3246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift in Sources */,
 				D45566B6246B157D00DC1FAE /* PSSecondaryButton.swift in Sources */,

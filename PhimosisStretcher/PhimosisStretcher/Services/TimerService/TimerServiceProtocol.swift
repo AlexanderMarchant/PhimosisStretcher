@@ -12,4 +12,6 @@ protocol TimerServiceProtocol {
     func start(delayTime: TimeInterval)
     func pause()
     func resume()
+    
+    var timeRemaining : TimeInterval! { get }
 }

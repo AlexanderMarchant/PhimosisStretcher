@@ -81,7 +81,7 @@ extension WorkoutCoordinator: WorkoutMenuPresenterDelegate {
 
 extension WorkoutCoordinator: WorkoutPresenterDelegate {
     func didCompleteWorkout() {
-        showWorkoutMenu()
+        self.navigationController.popViewController(animated: true)
     }
     
 }

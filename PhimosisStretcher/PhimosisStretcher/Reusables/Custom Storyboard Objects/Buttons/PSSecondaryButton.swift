@@ -17,10 +17,10 @@ class PSSecondaryButton: MDCButton {
         
         self.layer.cornerRadius = 5
         self.setShadowColor(UIColor.clear, for: .normal)
-        self.setBackgroundColor(UIColor.clear)
-        self.setBorderColor(UIColor.appGreen, for: .normal)
+        self.setBackgroundColor(UIColor.black)
+        self.setBorderColor(UIColor.black, for: .normal)
         self.setTitleFont(Fonts.buttonFont, for: .normal)
-        self.setTitleColor(UIColor.appGreen, for: .normal)
+        self.setTitleColor(UIColor.white, for: .normal)
         self.isUppercaseTitle = false
     }
 

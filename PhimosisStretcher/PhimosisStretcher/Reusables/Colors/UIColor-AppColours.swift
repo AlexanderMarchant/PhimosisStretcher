@@ -18,8 +18,13 @@ extension UIColor {
     static let textGray = UIColor.rgb(r: 180, g: 180, b: 180)
     
     static let appGreen = UIColor.rgb(r: 52, g: 209, b: 84)
-    static let appRed = UIColor.rgb(r: 209, g: 52, b: 84)
+    static let appRed = UIColor.rgb(r: 230, g: 57, b: 70)
     static let appBlue = UIColor.rgb(r: 52, g: 84, b: 209)
+    
+    static let workoutBackgroundColour = UIColor.rgb(r: 0, g: 31, b: 255)
+    static let restBackgroundColour = UIColor.rgb(r: 255, g: 141, b: 50)
+    static let prepareBackgroundColour = UIColor.rgb(r: 85, g: 0, b: 251)
+    static let completeBackgroundColour = UIColor.rgb(r: 52, g: 84, b: 209)
     
     static let psLightGray = UIColor.rgb(r: 240, g: 240, b: 240)
     

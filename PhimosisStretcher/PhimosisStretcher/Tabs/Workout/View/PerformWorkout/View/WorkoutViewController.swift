@@ -18,10 +18,13 @@ class WorkoutViewController: UIViewController, Storyboarded {
     @IBOutlet var instructionLabel: UILabel!
     
     @IBOutlet var resumeWorkoutButton: PSPrimaryButton!
-    @IBOutlet var pauseWorkoutButton: PSDestructiveButton!
+    @IBOutlet var pauseWorkoutButton: PSSecondaryButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        repsLeftLabel.layer.masksToBounds = true
+        repsLeftLabel.layer.cornerRadius = 5
         
         timerLabel.text = "00:00:00"
         
@@ -29,14 +32,26 @@ class WorkoutViewController: UIViewController, Storyboarded {
         
         resumeWorkoutButton.addTarget(self, action: #selector(beginWorkoutButtonTapped), for: .touchUpInside)
         pauseWorkoutButton.addTarget(self, action: #selector(pauseWorkoutButtonTapped), for: .touchUpInside)
+        
+        workoutPresenter.resumeWorkout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     @objc func beginWorkoutButtonTapped() {
         workoutPresenter.resumeWorkout()
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     @objc func pauseWorkoutButtonTapped() {
         workoutPresenter.pauseWorkout()
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     internal func manageButtons(isPaused: Bool) {
@@ -68,5 +83,19 @@ extension WorkoutViewController: WorkoutPresenterView {
     
     func workoutDidComplete() {
         manageButtons(isPaused: true)
+    }
+    
+    func timeStringDidUpdate(_ time: String) {
+        self.timerLabel.text = time
+    }
+    
+    func didCompleteRep(repsLeft: Int) {
+        self.repsLeftLabel.text = "\(repsLeft) Reps Left"
+    }
+    
+    func instructionDidUpdate(instruction: String, backgroundColor: UIColor) {
+        self.repsLeftLabel.textColor = backgroundColor
+        self.view.backgroundColor = backgroundColor
+        self.instructionLabel.text = instruction
     }
 }
