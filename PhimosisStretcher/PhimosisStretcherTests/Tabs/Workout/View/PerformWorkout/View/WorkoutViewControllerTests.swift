@@ -240,6 +240,18 @@ class WorkoutViewControllerTests: XCTestCase {
         XCTAssertEqual(TIME_STRING, workoutViewController.timerLabel.text)
     }
     
+    func testWorkoutPresenterView_DidCompleteRep_OneRep() {
+        // Arrange
+        let REPS_LEFT = 1
+        let EXPECTED_STRING = "\(REPS_LEFT) Rep Left"
+        
+        // Act
+        workoutViewController.didCompleteRep(repsLeft: REPS_LEFT)
+        
+        // Assert
+        XCTAssertEqual(EXPECTED_STRING, workoutViewController.repsLeftLabel.text)
+    }
+    
     func testWorkoutPresenterView_DidCompleteRep() {
         // Arrange
         let REPS_LEFT = 10

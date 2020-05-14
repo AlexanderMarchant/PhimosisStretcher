@@ -114,7 +114,15 @@ extension WorkoutViewController: WorkoutPresenterView {
     }
     
     func didCompleteRep(repsLeft: Int) {
-        self.repsLeftLabel.text = "\(repsLeft) Reps Left"
+        var repsLeftText: String!
+        
+        if(repsLeft == 1) {
+            repsLeftText = "\(repsLeft) Rep Left"
+        } else {
+            repsLeftText = "\(repsLeft) Reps Left"
+        }
+        
+        self.repsLeftLabel.text = repsLeftText
     }
     
     func instructionDidUpdate(instruction: String, backgroundColor: UIColor) {

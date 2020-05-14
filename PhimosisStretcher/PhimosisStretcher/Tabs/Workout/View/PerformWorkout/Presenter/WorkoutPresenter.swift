@@ -57,11 +57,6 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.restLength = userDefaultsService.integer(forKey: Constants.restLength)
         self.prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
         
-//        self.repLength = 1
-//        self.repsPerSet = 1
-//        self.restLength = 1
-//        self.prepareLength = 1
-        
         self.timerService.delegate = self
         
         secondsRemaining = prepareLength
