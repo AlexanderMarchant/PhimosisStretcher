@@ -37,7 +37,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     var dispatchWorkItem = DispatchWorkItem(block: {})
     var timer = Timer()
     var secondsRemaining = 10
-    var miliseconds = 100
+    var milliseconds = 100
     var currentRep = 0
     var isWorkoutState = false
     var isRestState = false
@@ -122,17 +122,17 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     }
     
     @objc func timerDidChange() {
-        miliseconds -= 1
-        if(miliseconds == 0)
+        milliseconds -= 1
+        if(milliseconds == 0)
         {
             secondsRemaining -= 1
-            miliseconds = 99
+            milliseconds = 99
         }
         
         if(secondsRemaining == -1)
         {
             timer.invalidate()
-            updateTimeString(time: TimeInterval(0), miliseconds: 0)
+            updateTimeString(time: TimeInterval(0), milliseconds: 0)
             
             if(currentRep < repsPerSet - 1) {
                 if(isWorkoutState) {
@@ -169,16 +169,16 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
                 self.delegate.didCompleteWorkout()
             }
         } else {
-            updateTimeString(time: TimeInterval(secondsRemaining), miliseconds: miliseconds)
+            updateTimeString(time: TimeInterval(secondsRemaining), milliseconds: milliseconds)
         }
     }
     
-    internal func updateTimeString(time: TimeInterval, miliseconds: Int)
+    internal func updateTimeString(time: TimeInterval, milliseconds: Int)
     {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         
-        let timerString = String(format:"%02i:%02i:%02i", minutes, seconds, miliseconds)
+        let timerString = String(format:"%02i:%02i:%02i", minutes, seconds, milliseconds)
         
         self.view.timeStringDidUpdate(timerString)
     }

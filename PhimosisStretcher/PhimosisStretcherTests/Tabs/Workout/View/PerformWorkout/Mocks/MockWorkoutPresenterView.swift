@@ -16,6 +16,7 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     var workoutDidPauseCallCount = 0
     var workoutDidCompleteCallCount = 0
     var timeStringDidUpdateCallCount = 0
+    var timeString = ""
     var instructionDidUpdateCallCount = 0
     var didCompleteRepCallCount = 0
     
@@ -43,6 +44,7 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     
     func timeStringDidUpdate(_ time: String) {
         timeStringDidUpdateCallCount += 1
+        timeString = time
     }
     
     func instructionDidUpdate(instruction: String, backgroundColor: UIColor) {
