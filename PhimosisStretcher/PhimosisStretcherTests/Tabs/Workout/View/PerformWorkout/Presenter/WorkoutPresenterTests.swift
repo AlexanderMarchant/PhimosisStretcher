@@ -221,6 +221,8 @@ class WorkoutPresenterTests: XCTestCase {
         XCTAssertEqual(1, mockWorkoutPresenterView.timeStringDidUpdateCallCount)
         
         XCTAssertEqual(1, mockWorkoutPresenterDelegate.didCompleteWorkoutCallCount)
+        
+        XCTAssertEqual(1, mockTimerService.pauseCallCount)
     }
     
     func testTimerDidChange_SecondsIsLessThan0() {
@@ -230,12 +232,6 @@ class WorkoutPresenterTests: XCTestCase {
         
         let EXPECTED_SECONDS = -6
         let EXPECTED_MILLISECONDS = 99
-        
-        workoutPresenter = WorkoutPresenter(
-            mockUserDefaultsService,
-            mockTimerService,
-            with: mockWorkoutPresenterView,
-            delegate: mockWorkoutPresenterDelegate)
         
         workoutPresenter.currentRep = workoutPresenter.repsPerSet
         workoutPresenter.secondsRemaining = SECONDS
@@ -251,6 +247,8 @@ class WorkoutPresenterTests: XCTestCase {
         XCTAssertEqual(1, mockWorkoutPresenterView.timeStringDidUpdateCallCount)
         
         XCTAssertEqual(1, mockWorkoutPresenterDelegate.didCompleteWorkoutCallCount)
+        
+        XCTAssertEqual(1, mockTimerService.pauseCallCount)
     }
     
     func testTimerDidChange_TimerFinished_WorkoutState() {
