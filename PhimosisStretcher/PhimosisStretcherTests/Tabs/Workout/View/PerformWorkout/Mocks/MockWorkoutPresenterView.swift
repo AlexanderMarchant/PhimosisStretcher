@@ -18,6 +18,8 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     var timeStringDidUpdateCallCount = 0
     var timeString = ""
     var instructionDidUpdateCallCount = 0
+    var instruction = ""
+    var backgroundColor: UIColor!
     var didCompleteRepCallCount = 0
     
     func resetCallCounts() {
@@ -49,6 +51,9 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     
     func instructionDidUpdate(instruction: String, backgroundColor: UIColor) {
         instructionDidUpdateCallCount += 1
+        
+        self.instruction = instruction
+        self.backgroundColor = backgroundColor
     }
     
     func didCompleteRep(repsLeft: Int) {

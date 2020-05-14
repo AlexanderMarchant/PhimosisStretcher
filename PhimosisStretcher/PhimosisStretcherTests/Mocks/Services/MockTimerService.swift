@@ -16,6 +16,7 @@ class MockTimerService: TimerServiceProtocol, MockObjectProtocol {
     var workoutTimer: Timer = Timer()
     
     var startCallCount = 0
+    var startDelayTime: TimeInterval!
     var pauseCallCount = 0
     var resumeCallCount = 0
     
@@ -27,6 +28,7 @@ class MockTimerService: TimerServiceProtocol, MockObjectProtocol {
     
     func start(delayTime: TimeInterval) {
         startCallCount += 1
+        startDelayTime = delayTime
     }
     
     func pause() {
