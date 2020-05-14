@@ -76,13 +76,14 @@ class SettingsViewControllerTests: XCTestCase {
     
     func testSettingsPresenterView_DidGetWorkoutSettings() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "15"
         let REP_LENGTH = "30"
         let REST_LENGTH = "5"
         let PREPARE_LENGTH = "10"
         
         // Act
-        settingsViewController.didGetWorkoutSettings(REPS_PER_WORKOUT, REP_LENGTH, REST_LENGTH, PREPARE_LENGTH)
+        settingsViewController.didGetWorkoutSettings(TARGET_WORKOUTS_PER_DAY, REPS_PER_WORKOUT, REP_LENGTH, REST_LENGTH, PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(REPS_PER_WORKOUT, settingsViewController.repsPerWorkoutTextBox.text)

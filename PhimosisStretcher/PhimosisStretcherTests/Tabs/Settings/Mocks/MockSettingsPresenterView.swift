@@ -21,7 +21,7 @@ class MockSettingsPresenterView: MockObjectProtocol, SettingsPresenterView {
         self.errorOccurredCallCount = 0
     }
     
-    func didGetWorkoutSettings(_ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String) {
+    func didGetWorkoutSettings(_ targetWorkoutsPerDay: String, _ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String) {
         didGetWorkoutSettingsCallCount += 1
     }
     

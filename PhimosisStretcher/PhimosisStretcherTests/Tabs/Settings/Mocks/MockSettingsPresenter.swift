@@ -25,7 +25,7 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
         getWorkoutSettingsCallCount += 1
     }
     
-    func saveChanges(repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
+    func saveChanges(targetWorkoutsPerDay: String?, repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
         saveChangesCallCount += 1
     }
     

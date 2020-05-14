@@ -69,11 +69,15 @@ class AppCoordinator: Coordinator {
             settingsCoordinator.navigationController
         ]
         
+        let targetWorkoutsPerDay = userDefaultsService.integer(forKey: Constants.targetWorkoutsPerDay)
         let repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerWorkout)
         let repLength = userDefaultsService.integer(forKey: Constants.repLength)
         let restLength = userDefaultsService.integer(forKey: Constants.restLength)
         let prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
         
+        if(targetWorkoutsPerDay == 0) {
+            userDefaultsService.set(3, forKey: Constants.targetWorkoutsPerDay)
+        }
         if(repsPerSet == 0) {
             userDefaultsService.set(5, forKey: Constants.repsPerWorkout)
         }

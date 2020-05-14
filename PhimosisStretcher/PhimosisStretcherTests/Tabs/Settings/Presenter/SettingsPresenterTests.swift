@@ -43,13 +43,27 @@ class SettingsPresenterTests: XCTestCase {
         settingsPresenter.getWorkoutSettings()
         
         // Assert
-        XCTAssertEqual(4, mockUserDefaultsService.getIntValueCallCount)
+        XCTAssertEqual(5, mockUserDefaultsService.getIntValueCallCount)
         XCTAssertEqual(1, mockSettingsPresenterView.didGetWorkoutSettingsCallCount)
     }
     
-    func testSaveChanges_RepsPerWorkoutIsNil() {
+    func testSaveChanges_TargetWorkoutsPerDayIsNil() {
         // Arrange/Act
-        settingsPresenter.saveChanges(repsPerWorkout: nil, repLength: nil, restLength: nil, prepareLength: nil)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: nil, repsPerWorkout: nil, repLength: nil, restLength: nil, prepareLength: nil)
+        
+        // Assert
+        XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
+        
+        XCTAssertEqual(0, mockSettingsPresenterView.savedChangesCallCount)
+        XCTAssertEqual(1, mockSettingsPresenterView.errorOccurredCallCount)
+    }
+    
+    func testSaveChanges_RepsPerWorkoutIsNil() {
+        // Arrange
+        let TARGET_WORKOUTS_PER_DAY = ""
+        
+        // Act
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: nil, repLength: nil, restLength: nil, prepareLength: nil)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -60,10 +74,11 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RepLengthIsNil() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = ""
         let REPS_PER_WORKOUT = ""
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: nil, restLength: nil, prepareLength: nil)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: nil, restLength: nil, prepareLength: nil)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -74,11 +89,12 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RestLengthIsNil() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = ""
         let REPS_PER_WORKOUT = ""
         let REP_LENGTH = ""
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: nil, prepareLength: nil)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: nil, prepareLength: nil)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -89,12 +105,13 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_PrepareLengthtIsNil() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = ""
         let REPS_PER_WORKOUT = ""
         let REP_LENGTH = ""
         let REST_LENGTH = ""
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: nil)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: nil)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -105,13 +122,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RepsPerWorkoutIsEmpty() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = ""
         let REPS_PER_WORKOUT = ""
         let REP_LENGTH = ""
         let REST_LENGTH = ""
         let PREPARE_LENGTH = ""
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -122,13 +140,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RepLengthIsEmpty() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "10"
         let REP_LENGTH = ""
         let REST_LENGTH = ""
         let PREPARE_LENGTH = ""
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -139,13 +158,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RestLengthIsEmpty() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "10"
         let REP_LENGTH = "30"
         let REST_LENGTH = ""
         let PREPARE_LENGTH = ""
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -156,13 +176,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_PrepareLengthtIsEmpty() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "10"
         let REP_LENGTH = "30"
         let REST_LENGTH = "5"
         let PREPARE_LENGTH = ""
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -173,13 +194,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RepsPerWorkoutIsNotAnInteger() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "Ten"
         let REP_LENGTH = "30"
         let REST_LENGTH = "5"
         let PREPARE_LENGTH = "15"
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -190,13 +212,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RepLengthIsNotAnInteger() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "10"
         let REP_LENGTH = "Thirty"
         let REST_LENGTH = "5"
         let PREPARE_LENGTH = "15"
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -207,13 +230,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_RestLengthIsNotAnInteger() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "10"
         let REP_LENGTH = "30"
         let REST_LENGTH = "Five"
         let PREPARE_LENGTH = "15"
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -224,13 +248,14 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_PrepareLengthIsNotAnInteger() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "10"
         let REP_LENGTH = "30"
         let REST_LENGTH = "5"
         let PREPARE_LENGTH = "Fifteen"
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
         XCTAssertEqual(0, mockUserDefaultsService.setAnyValueCallCount)
@@ -241,16 +266,17 @@ class SettingsPresenterTests: XCTestCase {
     
     func testSaveChanges_Success() {
         // Arrange
+        let TARGET_WORKOUTS_PER_DAY = "3"
         let REPS_PER_WORKOUT = "10"
         let REP_LENGTH = "30"
         let REST_LENGTH = "5"
         let PREPARE_LENGTH = "15"
         
         // Act
-        settingsPresenter.saveChanges(repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
+        settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
-        XCTAssertEqual(4, mockUserDefaultsService.setAnyValueCallCount)
+        XCTAssertEqual(5, mockUserDefaultsService.setAnyValueCallCount)
         
         XCTAssertEqual(1, mockSettingsPresenterView.savedChangesCallCount)
         XCTAssertEqual(0, mockSettingsPresenterView.errorOccurredCallCount)

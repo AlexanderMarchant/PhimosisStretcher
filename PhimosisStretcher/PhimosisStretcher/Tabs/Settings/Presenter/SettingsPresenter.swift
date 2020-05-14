@@ -10,7 +10,7 @@ import Foundation
 import MessageUI
 
 protocol SettingsPresenterView {
-    func didGetWorkoutSettings(_ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String)
+    func didGetWorkoutSettings(_ targetWorkoutsPerDay: String, _ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String)
     func savedChanges()
     func errorOccurred(message: String)
 }
@@ -36,16 +36,17 @@ class SettingsPresenter: SettingsPresenterProtocol {
     }
     
     func getWorkoutSettings() {
+        let targetWorkoutsPerDay = String(userDefaultsService.integer(forKey: Constants.targetWorkoutsPerDay))
         let repsPerWorkout = String(userDefaultsService.integer(forKey: Constants.repsPerWorkout))
         let repLength = String(userDefaultsService.integer(forKey: Constants.repLength))
         let restLength = String(userDefaultsService.integer(forKey: Constants.restLength))
         let prepareLength = String(userDefaultsService.integer(forKey: Constants.prepareLength))
         
-        self.view.didGetWorkoutSettings(repsPerWorkout, repLength, restLength, prepareLength)
+        self.view.didGetWorkoutSettings(targetWorkoutsPerDay, repsPerWorkout, repLength, restLength, prepareLength)
     }
     
-    func saveChanges(repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
-        guard let repsPerWorkout = repsPerWorkout, let repLength = repLength, let restLength = restLength, let prepareLength = prepareLength else {
+    func saveChanges(targetWorkoutsPerDay: String?, repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
+        guard let targetWorkoutsPerDay = targetWorkoutsPerDay, let repsPerWorkout = repsPerWorkout, let repLength = repLength, let restLength = restLength, let prepareLength = prepareLength else {
             self.view.errorOccurred(message: "Please enter a value for all workout settings")
             return
         }
@@ -60,6 +61,7 @@ class SettingsPresenter: SettingsPresenterProtocol {
             return
         }
         
+        userDefaultsService.set(Int(targetWorkoutsPerDay), forKey: Constants.targetWorkoutsPerDay)
         userDefaultsService.set(Int(repsPerWorkout), forKey: Constants.repsPerWorkout)
         userDefaultsService.set(Int(repLength), forKey: Constants.repLength)
         userDefaultsService.set(Int(restLength), forKey: Constants.restLength)

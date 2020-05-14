@@ -18,6 +18,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
     @IBOutlet weak var repLengthTextBox: MDCTextField!
     @IBOutlet weak var restLengthTextBox: MDCTextField!
     @IBOutlet weak var prepareLengthTextBox: MDCTextField!
+    @IBOutlet weak var targetWorkoutsPerDayTextBox: MDCTextField!
     
     @IBOutlet weak var vibrateCueSwitch: UISwitch!
     @IBOutlet weak var visualCueSwitch: UISwitch!
@@ -27,6 +28,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
     var repLengthTextBoxController: MDCTextInputControllerOutlined!
     var restLengthTextBoxController: MDCTextInputControllerOutlined!
     var prepareLengthTextBoxController: MDCTextInputControllerOutlined!
+    var targetWorkoutsPerDayTextBoxController: MDCTextInputControllerOutlined!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,10 @@ class SettingsViewController: UITableViewController, Storyboarded {
         prepareLengthTextBoxController = MDCTextInputControllerOutlined(textInput: prepareLengthTextBox)
         prepareLengthTextBoxController.activeColor = UIColor.appBlue
         prepareLengthTextBoxController.placeholderText = "Prepare Length"
+
+        targetWorkoutsPerDayTextBoxController = MDCTextInputControllerOutlined(textInput: targetWorkoutsPerDayTextBox)
+        targetWorkoutsPerDayTextBoxController.activeColor = UIColor.appBlue
+        targetWorkoutsPerDayTextBoxController.placeholderText = "Target Workouts Per Day"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +81,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
     @objc func saveChanges()
     {
         settingsPresenter.saveChanges(
+            targetWorkoutsPerDay: targetWorkoutsPerDayTextBox.text,
             repsPerWorkout: repsPerWorkoutTextBox.text,
             repLength: repLengthTextBox.text,
             restLength: restLengthTextBox.text,
@@ -98,7 +105,8 @@ class SettingsViewController: UITableViewController, Storyboarded {
 }
 
 extension SettingsViewController: SettingsPresenterView {
-    func didGetWorkoutSettings(_ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String) {
+    func didGetWorkoutSettings(_ targetWorkoutsPerDay: String, _ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String) {
+        targetWorkoutsPerDayTextBox.text = targetWorkoutsPerDay
         repsPerWorkoutTextBox.text = repsPerWorkout
         repLengthTextBox.text = repLength
         restLengthTextBox.text = restLength
