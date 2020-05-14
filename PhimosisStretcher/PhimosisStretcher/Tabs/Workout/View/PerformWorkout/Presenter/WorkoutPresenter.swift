@@ -57,6 +57,11 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.restLength = userDefaultsService.integer(forKey: Constants.restLength)
         self.prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
         
+//        self.repLength = 2
+//        self.repsPerSet = 5
+//        self.restLength = 2
+//        self.prepareLength = 2
+        
         self.timerService.delegate = self
         
         secondsRemaining = prepareLength
@@ -119,12 +124,9 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
             
             if(currentRep < repsPerSet) {
                 if(isWorkoutState) {
-                    self.currentRep += 1
                     isWorkoutState = false
                     isRestState = true
                     isPrepareState = false
-                    
-                    self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
                     
                     queueRest()
                 } else if (isRestState) {
@@ -133,10 +135,14 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
                     isPrepareState = true
                     
                     queuePrepare()
+
                 } else {
                     isWorkoutState = true
                     isRestState = false
                     isPrepareState = false
+                    
+                    self.currentRep += 1
+                    self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
                     
                     queueRep()
                 }

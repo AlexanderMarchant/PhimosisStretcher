@@ -259,7 +259,7 @@ class WorkoutPresenterTests: XCTestCase {
         
         let EXPECTED_SECONDS = workoutPresenter.restLength - 1
         let EXPECTED_MILLISECONDS = 99
-        let EXPECTED_CURRENT_REP = 1
+        let EXPECTED_CURRENT_REP = 0
         
         workoutPresenter.isWorkoutState = true
         workoutPresenter.isRestState = false
@@ -280,7 +280,7 @@ class WorkoutPresenterTests: XCTestCase {
         XCTAssertTrue(workoutPresenter.isRestState)
         XCTAssertFalse(workoutPresenter.isPrepareState)
         
-        XCTAssertEqual(1, mockWorkoutPresenterView.didCompleteRepCallCount)
+        XCTAssertEqual(0, mockWorkoutPresenterView.didCompleteRepCallCount)
         XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
         XCTAssertEqual("Rest", mockWorkoutPresenterView.instruction)
         XCTAssertEqual(UIColor.restBackgroundColour, mockWorkoutPresenterView.backgroundColor)
@@ -333,7 +333,7 @@ class WorkoutPresenterTests: XCTestCase {
         
         let EXPECTED_SECONDS = workoutPresenter.repLength - 1
         let EXPECTED_MILLISECONDS = 99
-        let EXPECTED_CURRENT_REP = 1
+        let EXPECTED_CURRENT_REP = 2
         
         workoutPresenter.isWorkoutState = false
         workoutPresenter.isRestState = false
@@ -354,7 +354,7 @@ class WorkoutPresenterTests: XCTestCase {
         XCTAssertFalse(workoutPresenter.isRestState)
         XCTAssertFalse(workoutPresenter.isPrepareState)
         
-        XCTAssertEqual(0, mockWorkoutPresenterView.didCompleteRepCallCount)
+        XCTAssertEqual(1, mockWorkoutPresenterView.didCompleteRepCallCount)
         XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
         XCTAssertEqual("Stretch", mockWorkoutPresenterView.instruction)
         XCTAssertEqual(UIColor.workoutBackgroundColour, mockWorkoutPresenterView.backgroundColor)
