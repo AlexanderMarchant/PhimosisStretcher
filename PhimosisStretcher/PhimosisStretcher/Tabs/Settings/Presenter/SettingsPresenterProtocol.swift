@@ -11,4 +11,5 @@ import Foundation
 protocol SettingsPresenterProtocol {
     func getWorkoutSettings()
     func saveChanges(repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?)
+    func sendEmail()
 }

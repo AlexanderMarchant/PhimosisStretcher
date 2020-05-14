@@ -13,10 +13,12 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     
     var getWorkoutSettingsCallCount = 0
     var saveChangesCallCount = 0
+    var sendEmailCallCount = 0
     
     func resetCallCounts() {
         self.getWorkoutSettingsCallCount = 0
         self.saveChangesCallCount = 0
+        self.sendEmailCallCount = 0
     }
     
     func getWorkoutSettings() {
@@ -25,5 +27,9 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     
     func saveChanges(repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
         saveChangesCallCount += 1
+    }
+    
+    func sendEmail() {
+        sendEmailCallCount += 1
     }
 }

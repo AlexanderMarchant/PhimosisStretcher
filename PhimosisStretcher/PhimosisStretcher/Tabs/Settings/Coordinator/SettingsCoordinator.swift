@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 protocol SettingsCoordinatorDelegate {
 }
@@ -52,7 +53,26 @@ class SettingsCoordinator: Coordinator {
         navigationController.pushViewController(settingsViewController, animated: true)
     }
     
+    func showEmail() {
+        let vc = MFMailComposeViewController()
+        
+        vc.mailComposeDelegate = self
+        
+        vc.setToRecipients(["\(Constants.email)"])
+        
+        self.navigationController.present(vc, animated: true, completion: nil)
+    }
+    
 }
 
 extension SettingsCoordinator: SettingsPresenterDelegate {
+    func sendEmail() {
+        showEmail()
+    }
+}
+
+extension SettingsCoordinator: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
 }

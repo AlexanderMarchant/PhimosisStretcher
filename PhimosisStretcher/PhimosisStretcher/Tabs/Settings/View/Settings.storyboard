@@ -247,6 +247,9 @@
                         <outlet property="repLengthTextBox" destination="mPj-Bs-y5n" id="Ehr-su-ZOZ"/>
                         <outlet property="repsPerWorkoutTextBox" destination="o0e-li-0MB" id="TKj-lG-Ua4"/>
                         <outlet property="restLengthTextBox" destination="Li9-UQ-RsM" id="7Ia-m8-Wdy"/>
+                        <outlet property="soundCueSwitch" destination="ZRM-8A-Z9a" id="7Nm-In-RMn"/>
+                        <outlet property="vibrateCueSwitch" destination="JWH-wz-4sY" id="4Pn-AJ-dAz"/>
+                        <outlet property="visualCueSwitch" destination="Y5m-Dc-iVy" id="jaC-6Q-c9s"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ET4-kg-GUO" userLabel="First Responder" sceneMemberID="firstResponder"/>

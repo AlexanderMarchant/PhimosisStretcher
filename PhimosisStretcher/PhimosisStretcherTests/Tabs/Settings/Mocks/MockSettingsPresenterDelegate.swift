@@ -11,7 +11,13 @@ import Foundation
 
 class MockSettingsPresenterDelegate: MockObjectProtocol, SettingsPresenterDelegate {
     
+    var sendEmailCallCount = 0
+    
     func resetCallCounts() {
-        
+        self.sendEmailCallCount = 0
+    }
+    
+    func sendEmail() {
+        sendEmailCallCount += 1
     }
 }

@@ -12,7 +12,7 @@ protocol CoordinatorProtocol: class {
     func start()
 }
 
-class Coordinator: CoordinatorProtocol {
+class Coordinator: NSObject, CoordinatorProtocol {
     
     private(set) var childCoordinators: [Coordinator] = []
     
@@ -44,12 +44,6 @@ class Coordinator: CoordinatorProtocol {
         if let lastCoordinator = childCoordinators.last {
             removeChildCoordinator(lastCoordinator)
         }
-    }
-}
-
-extension Coordinator: Equatable {
-    static func == (lhs: Coordinator, rhs: Coordinator) -> Bool {
-        return lhs === rhs
     }
 }
 

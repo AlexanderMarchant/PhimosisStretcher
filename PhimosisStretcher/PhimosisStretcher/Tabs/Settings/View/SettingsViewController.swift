@@ -23,7 +23,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
     @IBOutlet weak var visualCueSwitch: UISwitch!
     @IBOutlet weak var soundCueSwitch: UISwitch!
     
-    var repsPerSetTextBoxController: MDCTextInputControllerOutlined!
+    var repsPerWorkoutTextBoxController: MDCTextInputControllerOutlined!
     var repLengthTextBoxController: MDCTextInputControllerOutlined!
     var restLengthTextBoxController: MDCTextInputControllerOutlined!
     var prepareLengthTextBoxController: MDCTextInputControllerOutlined!
@@ -33,6 +33,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
         
         title = "Settings"
         
+        navigationItem.setLeftBarButton(nil, animated: false)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveChanges))
         
         repsPerWorkoutTextBox.keyboardType = .numberPad
@@ -50,20 +51,20 @@ class SettingsViewController: UITableViewController, Storyboarded {
         restLengthTextBox.delegate = self
         prepareLengthTextBox.delegate = self
 
-        repsPerSetTextBoxController = MDCTextInputControllerOutlined(textInput: repsPerWorkoutTextBox)
-        repsPerSetTextBoxController.activeColor = UIColor.black
-        repsPerSetTextBoxController.placeholderText = "Reps Per Workout"
+        repsPerWorkoutTextBoxController = MDCTextInputControllerOutlined(textInput: repsPerWorkoutTextBox)
+        repsPerWorkoutTextBoxController.activeColor = UIColor.appBlue
+        repsPerWorkoutTextBoxController.placeholderText = "Reps Per Workout"
 
         repLengthTextBoxController = MDCTextInputControllerOutlined(textInput: repLengthTextBox)
-        repLengthTextBoxController.activeColor = UIColor.black
+        repLengthTextBoxController.activeColor = UIColor.appBlue
         repLengthTextBoxController.placeholderText = "Rep Length"
 
         restLengthTextBoxController = MDCTextInputControllerOutlined(textInput: restLengthTextBox)
-        restLengthTextBoxController.activeColor = UIColor.black
+        restLengthTextBoxController.activeColor = UIColor.appBlue
         restLengthTextBoxController.placeholderText = "Rest Length"
 
         prepareLengthTextBoxController = MDCTextInputControllerOutlined(textInput: prepareLengthTextBox)
-        prepareLengthTextBoxController.activeColor = UIColor.black
+        prepareLengthTextBoxController.activeColor = UIColor.appBlue
         prepareLengthTextBoxController.placeholderText = "Prepare Length"
     }
     
@@ -80,6 +81,19 @@ class SettingsViewController: UITableViewController, Storyboarded {
             prepareLength: prepareLengthTextBox.text
         )
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emailIndexPath = IndexPath(row: 0, section: 2)
+        
+        switch indexPath {
+        case emailIndexPath:
+            settingsPresenter.sendEmail()
+        default:
+            break
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
 
@@ -92,6 +106,15 @@ extension SettingsViewController: SettingsPresenterView {
     }
     
     func savedChanges() {
+        self.alertHandlerService.showCustomAlert(
+            view: self,
+            title: "Settings Saved",
+            message: "Your settings have been saved",
+            actionTitles: ["Ok"],
+            actions: [
+                { (alert: UIAlertAction!) in print("Changes have been saved") }
+            ]
+        )
     }
     
     func errorOccurred(message: String) {

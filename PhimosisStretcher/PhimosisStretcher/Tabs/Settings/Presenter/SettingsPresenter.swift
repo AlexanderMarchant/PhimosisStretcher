@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MessageUI
 
 protocol SettingsPresenterView {
     func didGetWorkoutSettings(_ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String)
@@ -15,6 +16,7 @@ protocol SettingsPresenterView {
 }
 
 protocol SettingsPresenterDelegate {
+    func sendEmail()
 }
 
 class SettingsPresenter: SettingsPresenterProtocol {
@@ -65,6 +67,14 @@ class SettingsPresenter: SettingsPresenterProtocol {
         
         self.view.savedChanges()
         
+    }
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            self.delegate.sendEmail()
+        } else {
+            self.view.errorOccurred(message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n My Email: \n \(Constants.email)")
+        }
     }
     
 }

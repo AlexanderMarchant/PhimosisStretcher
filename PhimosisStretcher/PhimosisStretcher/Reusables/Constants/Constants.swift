@@ -33,4 +33,6 @@ struct Constants {
     //  AdMob Ad Unit Id's
     static let generalBannerAdId = ""
     static let generalInterstitialAdId = ""
+    
+    static let email = "alex_marchant@outlook.com"
 }
