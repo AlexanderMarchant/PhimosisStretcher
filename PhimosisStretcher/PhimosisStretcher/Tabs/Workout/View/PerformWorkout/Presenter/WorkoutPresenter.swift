@@ -64,7 +64,11 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.restLength = 10
         self.prepareLength = 10
         
-        secondsRemaining = repLength
+        secondsRemaining = prepareLength
+        
+        timerService.start(delayTime: TimeInterval(exactly: prepareLength)!)
+        timerService.pause()
+        isPrepareState = true
     }
     
     func beginTimer() {
@@ -78,18 +82,31 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     
     func resumeWorkout() {
         
+        var instruction: String!
+        var backgroundColor: UIColor!
+        
         if (isRestState) {
+            instruction = "Rest"
+            backgroundColor = UIColor.restBackgroundColour
             timerService.start(delayTime: TimeInterval(timerService.timeRemaining))
+            
             beginTimer()
         } else if (isPrepareState) {
+            instruction = "Prepare"
+            backgroundColor = UIColor.prepareBackgroundColour
             timerService.start(delayTime: TimeInterval(timerService.timeRemaining))
+            
             beginTimer()
         } else {
             isWorkoutState = true
-            self.view.instructionDidUpdate(instruction: "Stretch", backgroundColor: UIColor.workoutBackgroundColour)
-            self.view.didCompleteRep(repsLeft: repsPerSet - 1 - currentRep)
+            instruction = "Stretch"
+            backgroundColor = UIColor.workoutBackgroundColour
+            
             beginTimer()
         }
+
+        self.view.instructionDidUpdate(instruction: instruction, backgroundColor: backgroundColor)
+        self.view.didCompleteRep(repsLeft: repsPerSet - 1 - currentRep)
         self.view.workoutDidResume()
     }
     
@@ -98,6 +115,10 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         dispatchWorkItem.cancel()
         timerService.pause()
         self.view.workoutDidPause()
+    }
+    
+    func closeWorkout() {
+        self.delegate.didCompleteWorkout()
     }
     
     @objc func timerDidChange() {

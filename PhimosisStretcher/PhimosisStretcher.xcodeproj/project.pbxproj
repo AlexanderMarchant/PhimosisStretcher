@@ -100,6 +100,7 @@
 		D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */; };
 		D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556716246BCC6E00DC1FAE /* MockTimerService.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
+		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,7 @@
 		D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceProtocol.swift; sourceTree = "<group>"; };
 		D4556716246BCC6E00DC1FAE /* MockTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerService.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -741,6 +743,7 @@
 		D45566B1246B155900DC1FAE /* Custom Storyboard Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D47FA84A246D1AA1006B3A69 /* Labels */,
 				D45566B2246B156000DC1FAE /* Buttons */,
 			);
 			path = "Custom Storyboard Objects";
@@ -1087,6 +1090,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D47FA84A246D1AA1006B3A69 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1277,6 +1288,7 @@
 				D45566D8246B19D300DC1FAE /* ErrorScreensCoordinator.swift in Sources */,
 				D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */,
 				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
+				D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */,
 				D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */,
 				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
 				D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */,
@@ -1505,6 +1517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = PhimosisStretcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1524,6 +1537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = PhimosisStretcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

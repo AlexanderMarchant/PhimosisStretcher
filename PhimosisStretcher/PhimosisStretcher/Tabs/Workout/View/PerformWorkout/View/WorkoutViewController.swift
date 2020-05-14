@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialButtons
 
 class WorkoutViewController: UIViewController, Storyboarded {
     
     var workoutPresenter: WorkoutPresenterProtocol!
     var alertHandlerService: AlertHandlerServiceProtocol!
     
-    @IBOutlet var repsLeftLabel: UILabel!
+    @IBOutlet var repsLeftLabel: RepsLeftLabel!
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var instructionLabel: UILabel!
     
+    @IBOutlet var backButton: MDCFloatingButton!
     @IBOutlet var resumeWorkoutButton: PSPrimaryButton!
     @IBOutlet var pauseWorkoutButton: PSSecondaryButton!
     
@@ -30,6 +32,14 @@ class WorkoutViewController: UIViewController, Storyboarded {
         
         manageButtons(isPaused: true)
         
+        backButton.setImage(UIImage(named: "close-icon")!.withRenderingMode(.alwaysTemplate), for: .normal)
+        
+        backButton.setBackgroundColor(UIColor.black, for: .normal)
+        backButton.setTitleFont(Fonts.buttonFont, for: .normal)
+        backButton.setTitleColor(UIColor.white, for: .normal)
+        backButton.setImageTintColor(UIColor.white, for: .normal)
+        backButton.setShadowColor(UIColor.clear, for: .normal)
+        
         resumeWorkoutButton.addTarget(self, action: #selector(beginWorkoutButtonTapped), for: .touchUpInside)
         pauseWorkoutButton.addTarget(self, action: #selector(pauseWorkoutButtonTapped), for: .touchUpInside)
         
@@ -42,6 +52,22 @@ class WorkoutViewController: UIViewController, Storyboarded {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        alertHandlerService.showCustomAlert(
+            view: self,
+            title: "Stop Workout",
+            message: "Are you sure you want to stop this workout?",
+            actionTitles: ["Stop", "Cancel"],
+            actions: [
+                { (alert: UIAlertAction!) in
+                    self.workoutPresenter.closeWorkout();
+                    UIApplication.shared.isIdleTimerDisabled = true
+                },
+                { (alert: UIAlertAction!) in print("Don't stop") }
+            ]
+        )
     }
     
     @objc func beginWorkoutButtonTapped() {
