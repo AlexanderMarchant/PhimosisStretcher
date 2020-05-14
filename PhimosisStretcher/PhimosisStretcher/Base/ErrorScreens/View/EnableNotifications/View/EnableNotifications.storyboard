@@ -15,21 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-ja-OtZ" customClass="PTHubLightBackgroundSecondaryButton" customModule="PTHub" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-ja-OtZ" customClass="PTHubLightBackgroundSecondaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
                                 <rect key="frame" x="25" y="762" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="O0K-y5-PLI"/>
                                 </constraints>
                                 <state key="normal" title="Secondary Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-ey-93W" customClass="PTHubPrimaryButton" customModule="PTHub" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-ey-93W" customClass="PTHubPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
                                 <rect key="frame" x="25" y="687" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M1I-YD-qJn"/>
                                 </constraints>
                                 <state key="normal" title="Primary Button"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enable-location" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-eI-JeR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enable-notifications" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-eI-JeR">
                                 <rect key="frame" x="50" y="119" width="314" height="314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ulx-eI-JeR" secondAttribute="height" multiplier="1:1" id="QUG-5S-cXq"/>
@@ -96,6 +96,6 @@
     </scenes>
     <resources>
         <image name="close-icon" width="16" height="16"/>
-        <image name="enable-location" width="128" height="128"/>
+        <image name="enable-notifications" width="2000" height="2000"/>
     </resources>
 </document>

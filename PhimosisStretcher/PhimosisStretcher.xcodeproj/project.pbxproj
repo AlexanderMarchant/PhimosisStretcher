@@ -101,6 +101,15 @@
 		D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556716246BCC6E00DC1FAE /* MockTimerService.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
+		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
+		D47FA853246D9FA3006B3A69 /* WorkoutCompletePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA852246D9FA3006B3A69 /* WorkoutCompletePresenterProtocol.swift */; };
+		D47FA855246D9FB2006B3A69 /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA854246D9FB2006B3A69 /* WorkoutCompleteViewController.swift */; };
+		D47FA857246D9FBB006B3A69 /* WorkoutComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47FA856246D9FBB006B3A69 /* WorkoutComplete.storyboard */; };
+		D47FA85D246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA85C246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift */; };
+		D47FA85F246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA85E246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift */; };
+		D47FA861246DA554006B3A69 /* MockWorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA860246DA554006B3A69 /* MockWorkoutCompletePresenter.swift */; };
+		D47FA863246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA862246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift */; };
+		D47FA865246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA864246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +225,15 @@
 		D4556716246BCC6E00DC1FAE /* MockTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerService.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
+		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
+		D47FA852246D9FA3006B3A69 /* WorkoutCompletePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenterProtocol.swift; sourceTree = "<group>"; };
+		D47FA854246D9FB2006B3A69 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
+		D47FA856246D9FBB006B3A69 /* WorkoutComplete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutComplete.storyboard; sourceTree = "<group>"; };
+		D47FA85C246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewControllerTests.swift; sourceTree = "<group>"; };
+		D47FA85E246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenterTests.swift; sourceTree = "<group>"; };
+		D47FA860246DA554006B3A69 /* MockWorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCompletePresenter.swift; sourceTree = "<group>"; };
+		D47FA862246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCompletePresenterView.swift; sourceTree = "<group>"; };
+		D47FA864246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCompletePresenterDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1016,6 +1034,7 @@
 				D4556704246B22A900DC1FAE /* WorkoutMenuViewController.swift */,
 				D455670A246B24E000DC1FAE /* WorkoutMenu.storyboard */,
 				D455670E246B27E100DC1FAE /* PerformWorkout */,
+				D47FA84D246D9F5C006B3A69 /* WorkoutComplete */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1033,6 +1052,7 @@
 			isa = PBXGroup;
 			children = (
 				D455670D246B27C400DC1FAE /* PerformWorkout */,
+				D47FA858246DA482006B3A69 /* WorkoutComplete */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1096,6 +1116,69 @@
 				D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */,
 			);
 			path = Labels;
+			sourceTree = "<group>";
+		};
+		D47FA84D246D9F5C006B3A69 /* WorkoutComplete */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA84E246D9F6B006B3A69 /* Presenter */,
+				D47FA84F246D9F6F006B3A69 /* View */,
+			);
+			path = WorkoutComplete;
+			sourceTree = "<group>";
+		};
+		D47FA84E246D9F6B006B3A69 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */,
+				D47FA852246D9FA3006B3A69 /* WorkoutCompletePresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D47FA84F246D9F6F006B3A69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA854246D9FB2006B3A69 /* WorkoutCompleteViewController.swift */,
+				D47FA856246D9FBB006B3A69 /* WorkoutComplete.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D47FA858246DA482006B3A69 /* WorkoutComplete */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA859246DA492006B3A69 /* Mocks */,
+				D47FA85A246DA496006B3A69 /* Presenter */,
+				D47FA85B246DA49A006B3A69 /* View */,
+			);
+			path = WorkoutComplete;
+			sourceTree = "<group>";
+		};
+		D47FA859246DA492006B3A69 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA860246DA554006B3A69 /* MockWorkoutCompletePresenter.swift */,
+				D47FA862246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift */,
+				D47FA864246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D47FA85A246DA496006B3A69 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA85E246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D47FA85B246DA49A006B3A69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA85C246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1183,6 +1266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4556633246AE77900DC1FAE /* Workout.storyboard in Resources */,
+				D47FA857246D9FBB006B3A69 /* WorkoutComplete.storyboard in Resources */,
 				D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */,
 				D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
@@ -1282,6 +1366,7 @@
 				D4556675246B0B4B00DC1FAE /* StretchesCoordinator.swift in Sources */,
 				D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */,
 				D47FA849246BD07D006B3A69 /* Constants.swift in Sources */,
+				D47FA855246D9FB2006B3A69 /* WorkoutCompleteViewController.swift in Sources */,
 				D4556705246B22A900DC1FAE /* WorkoutMenuViewController.swift in Sources */,
 				D45566E3246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift in Sources */,
 				D45566B6246B157D00DC1FAE /* PSSecondaryButton.swift in Sources */,
@@ -1296,10 +1381,12 @@
 				D4556686246B0C2000DC1FAE /* StretchInfoViewController.swift in Sources */,
 				D4556709246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift in Sources */,
 				D4556616246AE47900DC1FAE /* AppCoordinator.swift in Sources */,
+				D47FA853246D9FA3006B3A69 /* WorkoutCompletePresenterProtocol.swift in Sources */,
 				D4556623246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift in Sources */,
 				D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */,
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
+				D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */,
 				D45566DD246B1A0F00DC1FAE /* EnableNotificationsViewController.swift in Sources */,
 				D45566E1246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift in Sources */,
 				D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */,
@@ -1333,14 +1420,17 @@
 				D45566D0246B180C00DC1FAE /* MockInformationScreenPresenter.swift in Sources */,
 				D45566CC246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift in Sources */,
 				D45566A2246B116700DC1FAE /* StretchInfoPresenterTests.swift in Sources */,
+				D47FA85D246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift in Sources */,
 				D455669E246B107E00DC1FAE /* StretchesViewControllerTests.swift in Sources */,
 				D4556698246B0F7400DC1FAE /* MockStretchesPresenterDelegate.swift in Sources */,
 				D455664D246AEA5F00DC1FAE /* MockAlertHandlerService.swift in Sources */,
+				D47FA85F246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift in Sources */,
 				D455668E246B0EB900DC1FAE /* MockStretchInfoPresenter.swift in Sources */,
 				D455663F246AE96A00DC1FAE /* WorkoutPresenterTests.swift in Sources */,
 				D455663D246AE96000DC1FAE /* WorkoutViewControllerTests.swift in Sources */,
 				D4556690246B0EC100DC1FAE /* MockStretchInfoPresenterView.swift in Sources */,
 				D45566EB246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift in Sources */,
+				D47FA865246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift in Sources */,
 				D45566ED246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift in Sources */,
 				D45566EF246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift in Sources */,
 				D4556641246AE97800DC1FAE /* WorkoutCoordinatorTests.swift in Sources */,
@@ -1356,11 +1446,13 @@
 				D455669A246B0FF100DC1FAE /* StretchesCoordinatorTests.swift in Sources */,
 				D4556692246B0ECA00DC1FAE /* MockStretchInfoPresenterDelegate.swift in Sources */,
 				D4556643246AE98A00DC1FAE /* MockWorkoutPresenter.swift in Sources */,
+				D47FA863246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift in Sources */,
 				D4556649246AE9C600DC1FAE /* MockObjectProtocol.swift in Sources */,
 				D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */,
 				D45566A0246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift in Sources */,
 				D45566CA246B17CA00DC1FAE /* InformationScreenPresenterTests.swift in Sources */,
 				D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */,
+				D47FA861246DA554006B3A69 /* MockWorkoutCompletePresenter.swift in Sources */,
 				D455666B246AEDDD00DC1FAE /* SettingsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

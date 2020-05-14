@@ -57,6 +57,11 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.restLength = userDefaultsService.integer(forKey: Constants.restLength)
         self.prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
         
+//        self.repLength = 1
+//        self.repsPerSet = 1
+//        self.restLength = 1
+//        self.prepareLength = 1
+        
         self.timerService.delegate = self
         
         secondsRemaining = prepareLength
@@ -69,7 +74,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     func beginWorkout() {
         timerService.start(delayTime: TimeInterval(prepareLength))
         self.view.instructionDidUpdate(instruction: "Prepare", backgroundColor: UIColor.prepareBackgroundColour)
-        self.view.didCompleteRep(repsLeft: repsPerSet - 1 - currentRep)
+        self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
         self.view.workoutDidResume()
     }
     
@@ -92,7 +97,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
 
         timerService.resume()
         self.view.instructionDidUpdate(instruction: instruction, backgroundColor: backgroundColor)
-        self.view.didCompleteRep(repsLeft: repsPerSet - 1 - currentRep)
+        self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
         self.view.workoutDidResume()
     }
     
@@ -117,14 +122,14 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         {
             updateTimeString(time: TimeInterval(0), milliseconds: 0)
             
-            if(currentRep < repsPerSet - 1) {
+            if(currentRep < repsPerSet) {
                 if(isWorkoutState) {
                     self.currentRep += 1
                     isWorkoutState = false
                     isRestState = true
                     isPrepareState = false
                     
-                    self.view.didCompleteRep(repsLeft: repsPerSet - 1 - currentRep)
+                    self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
                     
                     queueRest()
                 } else if (isRestState) {
@@ -141,6 +146,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
                     queueRep()
                 }
             } else {
+                timerService.pause()
                 self.delegate.didCompleteWorkout()
             }
         } else {

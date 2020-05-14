@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout Complete View Controller-->
+        <scene sceneID="exf-9V-aeQ">
+            <objects>
+                <viewController storyboardIdentifier="WorkoutCompleteViewController" id="Zqd-bh-dDt" customClass="WorkoutCompleteViewController" customModule="PhimosisStretcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjR-u9-VDa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iw-T8-aAo" customClass="PSSecondaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="762" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oE7-z2-6lz"/>
+                                </constraints>
+                                <state key="normal" title="Secondary Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-W4-cfQ" customClass="PSPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="687" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tty-aK-gU0"/>
+                                </constraints>
+                                <state key="normal" title="Primary Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workout-complete" translatesAutoresizingMaskIntoConstraints="NO" id="ut4-ny-XMo">
+                                <rect key="frame" x="50" y="119" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ut4-ny-XMo" secondAttribute="height" multiplier="1:1" id="8vb-gR-rp4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q72-KB-mZD">
+                                <rect key="frame" x="25" y="458" width="364" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USo-qV-ZAs">
+                                <rect key="frame" x="25" y="505.5" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqp-aA-6IY" customClass="MDCFloatingButton">
+                                <rect key="frame" x="339" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fIc-Ts-Twf"/>
+                                    <constraint firstAttribute="height" constant="50" id="pr6-3Y-GjV"/>
+                                </constraints>
+                                <state key="normal" image="close-icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ut4-ny-XMo" firstAttribute="top" secondItem="8d8-HH-qDj" secondAttribute="top" constant="75" id="4B5-iB-SLu"/>
+                            <constraint firstItem="USo-qV-ZAs" firstAttribute="leading" secondItem="8d8-HH-qDj" secondAttribute="leading" constant="25" id="5nP-QM-GDP"/>
+                            <constraint firstItem="bBf-W4-cfQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="USo-qV-ZAs" secondAttribute="bottom" constant="25" id="62a-lu-Ek3"/>
+                            <constraint firstItem="8d8-HH-qDj" firstAttribute="trailing" secondItem="gqp-aA-6IY" secondAttribute="trailing" constant="25" id="66C-R4-h6l"/>
+                            <constraint firstItem="3iw-T8-aAo" firstAttribute="leading" secondItem="8d8-HH-qDj" secondAttribute="leading" constant="25" id="ABR-01-jZs"/>
+                            <constraint firstItem="8d8-HH-qDj" firstAttribute="trailing" secondItem="ut4-ny-XMo" secondAttribute="trailing" constant="50" id="AWU-Jq-02l"/>
+                            <constraint firstItem="bBf-W4-cfQ" firstAttribute="leading" secondItem="8d8-HH-qDj" secondAttribute="leading" constant="25" id="G4F-A6-gtd"/>
+                            <constraint firstItem="8d8-HH-qDj" firstAttribute="trailing" secondItem="bBf-W4-cfQ" secondAttribute="trailing" constant="25" id="Lmi-uh-zTa"/>
+                            <constraint firstItem="8d8-HH-qDj" firstAttribute="bottom" secondItem="3iw-T8-aAo" secondAttribute="bottom" constant="50" id="SHv-AZ-Fx5"/>
+                            <constraint firstItem="Q72-KB-mZD" firstAttribute="leading" secondItem="8d8-HH-qDj" secondAttribute="leading" constant="25" id="Seo-kG-5Lb"/>
+                            <constraint firstItem="8d8-HH-qDj" firstAttribute="trailing" secondItem="Q72-KB-mZD" secondAttribute="trailing" constant="25" id="UJc-ti-yKR"/>
+                            <constraint firstItem="gqp-aA-6IY" firstAttribute="top" secondItem="8d8-HH-qDj" secondAttribute="top" constant="25" id="Yev-CB-aUE"/>
+                            <constraint firstItem="ut4-ny-XMo" firstAttribute="leading" secondItem="8d8-HH-qDj" secondAttribute="leading" constant="50" id="ZsG-u7-BZ2"/>
+                            <constraint firstItem="Q72-KB-mZD" firstAttribute="top" secondItem="ut4-ny-XMo" secondAttribute="bottom" constant="25" id="cWn-XB-luw"/>
+                            <constraint firstItem="3iw-T8-aAo" firstAttribute="top" secondItem="bBf-W4-cfQ" secondAttribute="bottom" constant="25" id="hwm-UT-R7Z"/>
+                            <constraint firstItem="Q72-KB-mZD" firstAttribute="centerX" secondItem="bjR-u9-VDa" secondAttribute="centerX" id="jd3-u0-tvY"/>
+                            <constraint firstItem="8d8-HH-qDj" firstAttribute="trailing" secondItem="3iw-T8-aAo" secondAttribute="trailing" constant="25" id="tJY-Qk-CYf"/>
+                            <constraint firstItem="USo-qV-ZAs" firstAttribute="top" secondItem="Q72-KB-mZD" secondAttribute="bottom" constant="16" id="uqI-y2-HQZ"/>
+                            <constraint firstItem="8d8-HH-qDj" firstAttribute="trailing" secondItem="USo-qV-ZAs" secondAttribute="trailing" constant="25" id="via-80-jwv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8d8-HH-qDj"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="gqp-aA-6IY" id="0mk-xr-PBO"/>
+                        <outlet property="primaryButton" destination="bBf-W4-cfQ" id="5y1-fw-T4l"/>
+                        <outlet property="screenDescription" destination="USo-qV-ZAs" id="NPT-gd-rk6"/>
+                        <outlet property="screenImage" destination="ut4-ny-XMo" id="yQX-PF-I1t"/>
+                        <outlet property="screenTitle" destination="Q72-KB-mZD" id="mm1-j2-7hD"/>
+                        <outlet property="secondaryButton" destination="3iw-T8-aAo" id="8EE-0p-lVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uN-b0-K6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-icon" width="16" height="16"/>
+        <image name="workout-complete" width="2000" height="2000"/>
+    </resources>
+</document>

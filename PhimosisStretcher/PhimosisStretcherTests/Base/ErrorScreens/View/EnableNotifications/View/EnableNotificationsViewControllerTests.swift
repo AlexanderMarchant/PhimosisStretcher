@@ -36,13 +36,13 @@ class EnableNotificationsViewControllerTests: XCTestCase {
     
     func testViewDidLoad() {
         // Arrange
-//        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "enable-notifications", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "enable-notifications", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
         
         // Act
         enableNotificationsViewController.viewDidLoad()
         
         // Assert
-//        XCTAssertEqual(ENABLE_NOTIFICATIONS_IMAGE, enableLocationViewController.screenImage.image)
+        XCTAssertEqual(ENABLE_NOTIFICATIONS_IMAGE, enableNotificationsViewController.screenImage.image)
         
         XCTAssertEqual("Enable notifications", enableNotificationsViewController.screenTitle.text)
         XCTAssertEqual("If you would like the app to send you workout reminders, you will need to enable notifications.", enableNotificationsViewController.screenDescription.text)

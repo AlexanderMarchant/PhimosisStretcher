@@ -71,6 +71,20 @@ class WorkoutCoordinator: Coordinator {
         navigationController.pushViewController(workoutViewController, animated: true)
     }
     
+    func showWorkoutComplete() {
+        let workoutCompleteViewController = WorkoutCompleteViewController.instantiate(storyboard: "WorkoutComplete")
+        
+        let workoutCompletePresenter = WorkoutCompletePresenter(
+            with: workoutCompleteViewController,
+            delegate: self)
+        
+        workoutCompleteViewController.informationScreenPresenter = workoutCompletePresenter
+        workoutCompleteViewController.workoutCompletePresenter = workoutCompletePresenter
+        workoutCompleteViewController.alertHandlerService = alertHandlerService
+        
+        navigationController.pushViewController(workoutCompleteViewController, animated: true)
+    }
+    
 }
 
 extension WorkoutCoordinator: WorkoutMenuPresenterDelegate {
@@ -81,7 +95,12 @@ extension WorkoutCoordinator: WorkoutMenuPresenterDelegate {
 
 extension WorkoutCoordinator: WorkoutPresenterDelegate {
     func didCompleteWorkout() {
-        self.navigationController.popViewController(animated: true)
+        self.showWorkoutComplete()
     }
-    
+}
+
+extension WorkoutCoordinator: WorkoutCompletePresenterDelegate {
+    func didTapClose() {
+        self.navigationController.popToRootViewController(animated: true)
+    }
 }

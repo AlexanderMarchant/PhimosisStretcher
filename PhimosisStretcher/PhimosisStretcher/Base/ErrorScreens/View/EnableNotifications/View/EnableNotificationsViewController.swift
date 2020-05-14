@@ -15,7 +15,7 @@ class EnableNotificationsViewController: InformationScreenViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.screenImage.image = UIImage(named: "enable-notifications")!
+        self.screenImage.image = UIImage(named: "enable-notifications")!
         self.screenTitle.text = "Enable notifications"
         self.screenDescription.text = "If you would like the app to send you workout reminders, you will need to enable notifications."
         
