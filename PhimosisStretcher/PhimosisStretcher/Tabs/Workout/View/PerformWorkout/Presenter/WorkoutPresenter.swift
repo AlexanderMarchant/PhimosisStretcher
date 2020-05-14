@@ -20,6 +20,7 @@ protocol WorkoutPresenterView {
 
 protocol WorkoutPresenterDelegate {
     func didCompleteWorkout()
+    func didCancelWorkout()
 }
 
 class WorkoutPresenter: WorkoutPresenterProtocol {
@@ -52,15 +53,10 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.view = view
         self.delegate = delegate
         
-        self.repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerSet)
+        self.repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerWorkout)
         self.repLength = userDefaultsService.integer(forKey: Constants.repLength)
         self.restLength = userDefaultsService.integer(forKey: Constants.restLength)
         self.prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
-        
-//        self.repLength = 2
-//        self.repsPerSet = 5
-//        self.restLength = 2
-//        self.prepareLength = 2
         
         self.timerService.delegate = self
         
@@ -107,7 +103,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     }
     
     func closeWorkout() {
-        self.delegate.didCompleteWorkout()
+        self.delegate.didCancelWorkout()
     }
     
     @objc func timerDidChange() {

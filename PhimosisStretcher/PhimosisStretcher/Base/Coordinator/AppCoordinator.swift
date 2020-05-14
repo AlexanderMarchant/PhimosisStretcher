@@ -49,8 +49,8 @@ class AppCoordinator: Coordinator {
             userDefaultsService,
             delegate: self)
             
-            ErrorScreensCoordinator.shared.navigationController = self.navigationController
-            ErrorScreensCoordinator.shared.delegate = self
+        ErrorScreensCoordinator.shared.navigationController = self.navigationController
+        ErrorScreensCoordinator.shared.delegate = self
     }
 
     // MARK: - Start
@@ -69,13 +69,13 @@ class AppCoordinator: Coordinator {
             settingsCoordinator.navigationController
         ]
         
-        let repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerSet)
+        let repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerWorkout)
         let repLength = userDefaultsService.integer(forKey: Constants.repLength)
         let restLength = userDefaultsService.integer(forKey: Constants.restLength)
         let prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
         
         if(repsPerSet == 0) {
-            userDefaultsService.set(5, forKey: Constants.repsPerSet)
+            userDefaultsService.set(5, forKey: Constants.repsPerWorkout)
         }
         if(repLength == 0) {
             userDefaultsService.set(20, forKey: Constants.repLength)
@@ -87,6 +87,7 @@ class AppCoordinator: Coordinator {
             userDefaultsService.set(10, forKey: Constants.prepareLength)
         }
         
+        self.navigationController.navigationBar.isHidden = true
         self.navigationController.pushViewController(tabBarController, animated: true)
     }
 }

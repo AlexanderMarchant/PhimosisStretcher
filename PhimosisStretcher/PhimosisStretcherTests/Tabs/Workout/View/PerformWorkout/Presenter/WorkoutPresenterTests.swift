@@ -133,7 +133,7 @@ class WorkoutPresenterTests: XCTestCase {
         workoutPresenter.closeWorkout()
         
         // Assert
-        XCTAssertEqual(1, mockWorkoutPresenterDelegate.didCompleteWorkoutCallCount)
+        XCTAssertEqual(1, mockWorkoutPresenterDelegate.didCancelWorkoutCallCount)
     }
     
     func testTimerDidChange_SecondsIsGreaterThan0_MillisecondsIsGreaterThan0() {

@@ -26,7 +26,6 @@ class SettingsCoordinator: Coordinator {
         delegate: SettingsCoordinatorDelegate) {
         
         self.navigationController = UINavigationController()
-        self.navigationController.isNavigationBarHidden = true
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings-icon"), tag: 0)
         

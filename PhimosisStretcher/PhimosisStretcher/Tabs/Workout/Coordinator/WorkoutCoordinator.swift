@@ -97,6 +97,10 @@ extension WorkoutCoordinator: WorkoutPresenterDelegate {
     func didCompleteWorkout() {
         self.showWorkoutComplete()
     }
+    
+    func didCancelWorkout() {
+        self.navigationController.popToRootViewController(animated: true)
+    }
 }
 
 extension WorkoutCoordinator: WorkoutCompletePresenterDelegate {

@@ -11,7 +11,19 @@ import Foundation
 
 class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     
+    var getWorkoutSettingsCallCount = 0
+    var saveChangesCallCount = 0
+    
     func resetCallCounts() {
-        
+        self.getWorkoutSettingsCallCount = 0
+        self.saveChangesCallCount = 0
+    }
+    
+    func getWorkoutSettings() {
+        getWorkoutSettingsCallCount += 1
+    }
+    
+    func saveChanges(repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
+        saveChangesCallCount += 1
     }
 }

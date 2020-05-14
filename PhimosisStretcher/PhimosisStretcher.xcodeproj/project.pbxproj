@@ -110,6 +110,8 @@
 		D47FA861246DA554006B3A69 /* MockWorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA860246DA554006B3A69 /* MockWorkoutCompletePresenter.swift */; };
 		D47FA863246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA862246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift */; };
 		D47FA865246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA864246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift */; };
+		D47FA868246DC36C006B3A69 /* UITextField-AddToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA867246DC36C006B3A69 /* UITextField-AddToolbar.swift */; };
+		D47FA86A246DC78E006B3A69 /* String-IsInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA869246DC78E006B3A69 /* String-IsInt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +236,8 @@
 		D47FA860246DA554006B3A69 /* MockWorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCompletePresenter.swift; sourceTree = "<group>"; };
 		D47FA862246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCompletePresenterView.swift; sourceTree = "<group>"; };
 		D47FA864246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCompletePresenterDelegate.swift; sourceTree = "<group>"; };
+		D47FA867246DC36C006B3A69 /* UITextField-AddToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField-AddToolbar.swift"; sourceTree = "<group>"; };
+		D47FA869246DC78E006B3A69 /* String-IsInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-IsInt.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -749,6 +753,7 @@
 		D45566B0246B154700DC1FAE /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				D47FA866246DC35C006B3A69 /* Extensions */,
 				D47FA847246BD070006B3A69 /* Constants */,
 				D45566BF246B172600DC1FAE /* FatalError */,
 				D45566BC246B165E00DC1FAE /* Colors */,
@@ -1181,6 +1186,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D47FA866246DC35C006B3A69 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D47FA867246DC36C006B3A69 /* UITextField-AddToolbar.swift */,
+				D47FA869246DC78E006B3A69 /* String-IsInt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1387,6 +1401,7 @@
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
 				D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */,
+				D47FA86A246DC78E006B3A69 /* String-IsInt.swift in Sources */,
 				D45566DD246B1A0F00DC1FAE /* EnableNotificationsViewController.swift in Sources */,
 				D45566E1246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift in Sources */,
 				D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */,
@@ -1396,6 +1411,7 @@
 				D45566A9246B148000DC1FAE /* InformationScreenViewController.swift in Sources */,
 				D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */,
 				D45566BB246B164400DC1FAE /* Fonts.swift in Sources */,
+				D47FA868246DC36C006B3A69 /* UITextField-AddToolbar.swift in Sources */,
 				D4556667246AED1C00DC1FAE /* SettingsCoordinator.swift in Sources */,
 				D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */,
 				D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */,

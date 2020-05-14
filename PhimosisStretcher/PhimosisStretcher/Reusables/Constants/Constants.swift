@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     //  User Preference Keys
-    static let repsPerSet = "RepsPerSet"
+    static let repsPerWorkout = "RepsPerWorkout"
     static let repLength = "RepLength"
     static let restLength = "RestLength"
     static let prepareLength = "PrepareLength"
