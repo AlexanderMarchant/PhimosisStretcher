@@ -95,12 +95,14 @@ class WorkoutViewControllerTests: XCTestCase {
     func testViewWillDisappear() {
         // Arrange
         workoutViewController.tabBarController?.tabBar.isHidden = true
+        UIApplication.shared.isIdleTimerDisabled = true
         
         // Act
         workoutViewController.viewWillDisappear(true)
         
         // Assert
         XCTAssertFalse((workoutViewController.tabBarController?.tabBar.isHidden)!)
+        XCTAssertFalse(UIApplication.shared.isIdleTimerDisabled)
     }
     
     func testCloseButtonTapped() {
@@ -117,14 +119,19 @@ class WorkoutViewControllerTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(1, mockWorkoutPresenter.resumeWorkoutCallCount)
+        XCTAssertTrue(UIApplication.shared.isIdleTimerDisabled)
     }
     
-    func testPauseeWorkoutButtonTapped() {
-        // Arrange/Act
+    func testPauseWorkoutButtonTapped() {
+        // Arrange
+        UIApplication.shared.isIdleTimerDisabled = true
+        
+        // Act
         workoutViewController.pauseWorkoutButtonTapped()
         
         // Assert
         XCTAssertEqual(1, mockWorkoutPresenter.pauseWorkoutCallCount)
+        XCTAssertFalse(UIApplication.shared.isIdleTimerDisabled)
     }
     
     func testManageButtons_NotPaused() {

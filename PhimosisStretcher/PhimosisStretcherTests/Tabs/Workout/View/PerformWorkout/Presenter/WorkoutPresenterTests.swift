@@ -23,11 +23,15 @@ class WorkoutPresenterTests: XCTestCase {
         mockWorkoutPresenterView = MockWorkoutPresenterView()
         mockWorkoutPresenterDelegate = MockWorkoutPresenterDelegate()
         
+        mockUserDefaultsService.getIntValueReturnValue = 5
+        
         workoutPresenter = WorkoutPresenter(
             mockUserDefaultsService,
             mockTimerService,
             with: mockWorkoutPresenterView,
             delegate: mockWorkoutPresenterDelegate)
+        
+        XCTAssertEqual(4, mockUserDefaultsService.getIntValueCallCount)
         
         mockUserDefaultsService.resetCallCounts()
         mockTimerService.resetCallCounts()

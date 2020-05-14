@@ -52,15 +52,10 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.view = view
         self.delegate = delegate
         
-//        self.repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerSet)
-//        self.repLength = userDefaultsService.integer(forKey: Constants.repLength)
-//        self.restLength = userDefaultsService.integer(forKey: Constants.restLength)
-//        self.prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
-        
-        self.repsPerSet = 10
-        self.repLength = 30
-        self.restLength = 10
-        self.prepareLength = 10
+        self.repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerSet)
+        self.repLength = userDefaultsService.integer(forKey: Constants.repLength)
+        self.restLength = userDefaultsService.integer(forKey: Constants.restLength)
+        self.prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
         
         self.timerService.delegate = self
         

@@ -49,6 +49,7 @@ class WorkoutViewController: UIViewController, Storyboarded {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
@@ -69,12 +70,12 @@ class WorkoutViewController: UIViewController, Storyboarded {
     
     @objc func resumeWorkoutButtonTapped() {
         workoutPresenter.resumeWorkout()
-        UIApplication.shared.isIdleTimerDisabled = false
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     @objc func pauseWorkoutButtonTapped() {
         workoutPresenter.pauseWorkout()
-        UIApplication.shared.isIdleTimerDisabled = true
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     internal func manageButtons(isPaused: Bool) {

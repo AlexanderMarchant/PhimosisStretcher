@@ -69,6 +69,24 @@ class AppCoordinator: Coordinator {
             settingsCoordinator.navigationController
         ]
         
+        let repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerSet)
+        let repLength = userDefaultsService.integer(forKey: Constants.repLength)
+        let restLength = userDefaultsService.integer(forKey: Constants.restLength)
+        let prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
+        
+        if(repsPerSet == 0) {
+            userDefaultsService.set(5, forKey: Constants.repsPerSet)
+        }
+        if(repLength == 0) {
+            userDefaultsService.set(20, forKey: Constants.repLength)
+        }
+        if(restLength == 0) {
+            userDefaultsService.set(10, forKey: Constants.restLength)
+        }
+        if(prepareLength == 0) {
+            userDefaultsService.set(10, forKey: Constants.prepareLength)
+        }
+        
         self.navigationController.pushViewController(tabBarController, animated: true)
     }
 }
