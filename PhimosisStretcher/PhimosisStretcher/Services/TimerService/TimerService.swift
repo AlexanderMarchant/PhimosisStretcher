@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol TimerServiceDelegate {
+    func workoutTimerDidChange()
+}
+
 class TimerService: TimerServiceProtocol {
     
     private enum State {
@@ -23,6 +27,9 @@ class TimerService: TimerServiceProtocol {
     private var f : (()->Void)!
     
     public var timeRemaining : TimeInterval!
+    public var workoutTimer = Timer()
+    
+    public var delegate: TimerServiceDelegate?
     
     func start(delayTime: TimeInterval) {
         timeRemaining = delayTime
@@ -30,6 +37,14 @@ class TimerService: TimerServiceProtocol {
         timer.schedule(deadline: DispatchTime.now() + timeRemaining, repeating: .never)
         timer.setEventHandler(handler: f)
         d = Date()
+        
+        workoutTimer = Timer.scheduledTimer(
+            timeInterval: 0.01,
+            target: self,
+            selector: (#selector(workoutTimerDidChange)),
+            userInfo: nil,
+            repeats: true)
+        
         timer.resume()
         state = .resumed
     }
@@ -39,6 +54,7 @@ class TimerService: TimerServiceProtocol {
             return
         }
         
+        workoutTimer.invalidate()
         timer.cancel()
         diff = Date().timeIntervalSince(d)
         state = .paused
@@ -56,7 +72,18 @@ class TimerService: TimerServiceProtocol {
             d = Date()
             state = .resumed
             
+            workoutTimer = Timer.scheduledTimer(
+                timeInterval: 0.01,
+                target: self,
+                selector: (#selector(workoutTimerDidChange)),
+                userInfo: nil,
+                repeats: true)
+            
             timer.resume()
         }
+    }
+    
+    @objc func workoutTimerDidChange() {
+        self.delegate?.workoutTimerDidChange()
     }
 }

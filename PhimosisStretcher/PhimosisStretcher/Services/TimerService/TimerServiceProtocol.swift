@@ -13,5 +13,7 @@ protocol TimerServiceProtocol {
     func pause()
     func resume()
     
+    var delegate: TimerServiceDelegate? { get set }
+    var workoutTimer: Timer { get }
     var timeRemaining : TimeInterval! { get }
 }

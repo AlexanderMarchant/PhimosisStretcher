@@ -25,7 +25,7 @@ protocol WorkoutPresenterDelegate {
 class WorkoutPresenter: WorkoutPresenterProtocol {
     
     let userDefaultsService: UserDefaultsServiceProtocol
-    let timerService: TimerServiceProtocol
+    var timerService: TimerServiceProtocol
     let view: WorkoutPresenterView
     let delegate: WorkoutPresenterDelegate
     
@@ -35,7 +35,6 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     let prepareLength: Int
     
     var dispatchWorkItem = DispatchWorkItem(block: {})
-    var timer = Timer()
     var secondsRemaining = 10
     var milliseconds = 100
     var currentRep = 0
@@ -64,6 +63,8 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.restLength = 10
         self.prepareLength = 10
         
+        self.timerService.delegate = self
+        
         secondsRemaining = prepareLength
         
         timerService.start(delayTime: TimeInterval(exactly: prepareLength)!)
@@ -71,13 +72,11 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         isPrepareState = true
     }
     
-    func beginTimer() {
-        timer = Timer.scheduledTimer(
-            timeInterval: 0.01,
-            target: self,
-            selector: (#selector(timerDidChange)),
-            userInfo: nil,
-            repeats: true)
+    func beginWorkout() {
+        timerService.start(delayTime: TimeInterval(prepareLength))
+        self.view.instructionDidUpdate(instruction: "Prepare", backgroundColor: UIColor.prepareBackgroundColour)
+        self.view.didCompleteRep(repsLeft: repsPerSet - 1 - currentRep)
+        self.view.workoutDidResume()
     }
     
     func resumeWorkout() {
@@ -88,30 +87,22 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         if (isRestState) {
             instruction = "Rest"
             backgroundColor = UIColor.restBackgroundColour
-            timerService.start(delayTime: TimeInterval(timerService.timeRemaining))
-            
-            beginTimer()
         } else if (isPrepareState) {
             instruction = "Prepare"
             backgroundColor = UIColor.prepareBackgroundColour
-            timerService.start(delayTime: TimeInterval(timerService.timeRemaining))
-            
-            beginTimer()
         } else {
             isWorkoutState = true
             instruction = "Stretch"
             backgroundColor = UIColor.workoutBackgroundColour
-            
-            beginTimer()
         }
 
+        timerService.resume()
         self.view.instructionDidUpdate(instruction: instruction, backgroundColor: backgroundColor)
         self.view.didCompleteRep(repsLeft: repsPerSet - 1 - currentRep)
         self.view.workoutDidResume()
     }
     
     func pauseWorkout() {
-        timer.invalidate()
         dispatchWorkItem.cancel()
         timerService.pause()
         self.view.workoutDidPause()
@@ -131,7 +122,6 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         
         if(secondsRemaining == -1)
         {
-            timer.invalidate()
             updateTimeString(time: TimeInterval(0), milliseconds: 0)
             
             if(currentRep < repsPerSet - 1) {
@@ -159,9 +149,9 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
                     isRestState = false
                     isPrepareState = false
 
+                    timerService.pause()
                     timerService.start(delayTime: TimeInterval(repLength))
                     secondsRemaining = repLength - 1
-                    beginTimer()
                     
                     self.view.instructionDidUpdate(instruction: "Stretch", backgroundColor: UIColor.workoutBackgroundColour)
                 }
@@ -184,15 +174,21 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     }
     
     internal func queueRest(delay: TimeInterval? = nil) {
+        timerService.pause()
         timerService.start(delayTime: delay ?? TimeInterval(restLength))
         secondsRemaining = restLength - 1
-        beginTimer()
     }
     
     internal func queuePrepare(delay: TimeInterval? = nil) {
+        timerService.pause()
         timerService.start(delayTime: delay ?? TimeInterval(prepareLength))
         secondsRemaining = prepareLength - 1
-        beginTimer()
     }
     
+}
+
+extension WorkoutPresenter: TimerServiceDelegate {
+    func workoutTimerDidChange() {
+        self.timerDidChange()
+    }
 }

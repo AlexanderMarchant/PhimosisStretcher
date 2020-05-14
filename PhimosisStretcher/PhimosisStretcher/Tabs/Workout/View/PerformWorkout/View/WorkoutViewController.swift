@@ -40,7 +40,7 @@ class WorkoutViewController: UIViewController, Storyboarded {
         resumeWorkoutButton.addTarget(self, action: #selector(resumeWorkoutButtonTapped), for: .touchUpInside)
         pauseWorkoutButton.addTarget(self, action: #selector(pauseWorkoutButtonTapped), for: .touchUpInside)
         
-        workoutPresenter.resumeWorkout()
+        workoutPresenter.beginWorkout()
     }
     
     override func viewWillAppear(_ animated: Bool) {

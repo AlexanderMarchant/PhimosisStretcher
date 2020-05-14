@@ -9,6 +9,7 @@
 import Foundation
 
 protocol WorkoutPresenterProtocol {
+    func beginWorkout()
     func resumeWorkout()
     func pauseWorkout()
     func closeWorkout()

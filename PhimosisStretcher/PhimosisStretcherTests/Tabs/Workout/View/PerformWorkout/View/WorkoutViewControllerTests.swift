@@ -78,7 +78,7 @@ class WorkoutViewControllerTests: XCTestCase {
         XCTAssertEqual(UIColor.white, workoutViewController.backButton.imageTintColor(for: .normal))
         XCTAssertEqual(UIColor.clear, workoutViewController.backButton.shadowColor(for: .normal))
         
-        XCTAssertEqual(1, mockWorkoutPresenter.resumeWorkoutCallCount)
+        XCTAssertEqual(1, mockWorkoutPresenter.beginWorkoutCallCount)
         
         XCTAssertEqual("resumeWorkoutButtonTapped", resumeWorkoutButtonTargetActionName)
         XCTAssertEqual("pauseWorkoutButtonTapped", pauseWorkoutButtonTargetActionName)

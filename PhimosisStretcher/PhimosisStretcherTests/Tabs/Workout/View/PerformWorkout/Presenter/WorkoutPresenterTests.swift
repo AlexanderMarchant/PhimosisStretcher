@@ -87,19 +87,5 @@ class WorkoutPresenterTests: XCTestCase {
         XCTAssertEqual(EXPECTED_TIME_STRING, mockWorkoutPresenterView.timeString)
         XCTAssertEqual(1, mockWorkoutPresenterView.timeStringDidUpdateCallCount)
     }
-    
-    func testUpdateTimeString_VeryLargeTime() {
-        // Arrange
-        let TIME_INTERVAL = TimeInterval(exactly: 100000)!
-        let MILLISECONDS = 87
-        let EXPECTED_TIME_STRING = "46:40:87"
-        
-        // Act
-        workoutPresenter.updateTimeString(time: TIME_INTERVAL, milliseconds: MILLISECONDS)
-        
-        // Assert
-        XCTAssertEqual(EXPECTED_TIME_STRING, mockWorkoutPresenterView.timeString)
-        XCTAssertEqual(1, mockWorkoutPresenterView.timeStringDidUpdateCallCount)
-    }
 
 }
