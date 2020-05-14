@@ -207,7 +207,7 @@ class WorkoutPresenterTests: XCTestCase {
         let EXPECTED_SECONDS = -1
         let EXPECTED_MILLISECONDS = 99
         
-        workoutPresenter.currentRep = workoutPresenter.repsPerSet - 1
+        workoutPresenter.currentRep = workoutPresenter.repsPerSet
         workoutPresenter.secondsRemaining = SECONDS
         workoutPresenter.milliseconds = MILLISECONDS
         
@@ -231,7 +231,13 @@ class WorkoutPresenterTests: XCTestCase {
         let EXPECTED_SECONDS = -6
         let EXPECTED_MILLISECONDS = 99
         
-        workoutPresenter.currentRep = workoutPresenter.repsPerSet - 1
+        workoutPresenter = WorkoutPresenter(
+            mockUserDefaultsService,
+            mockTimerService,
+            with: mockWorkoutPresenterView,
+            delegate: mockWorkoutPresenterDelegate)
+        
+        workoutPresenter.currentRep = workoutPresenter.repsPerSet
         workoutPresenter.secondsRemaining = SECONDS
         workoutPresenter.milliseconds = MILLISECONDS
         
