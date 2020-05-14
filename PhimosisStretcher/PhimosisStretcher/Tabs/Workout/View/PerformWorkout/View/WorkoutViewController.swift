@@ -25,9 +25,6 @@ class WorkoutViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        repsLeftLabel.layer.masksToBounds = true
-        repsLeftLabel.layer.cornerRadius = 5
-        
         timerLabel.text = "00:00:00"
         
         manageButtons(isPaused: true)
@@ -40,7 +37,7 @@ class WorkoutViewController: UIViewController, Storyboarded {
         backButton.setImageTintColor(UIColor.white, for: .normal)
         backButton.setShadowColor(UIColor.clear, for: .normal)
         
-        resumeWorkoutButton.addTarget(self, action: #selector(beginWorkoutButtonTapped), for: .touchUpInside)
+        resumeWorkoutButton.addTarget(self, action: #selector(resumeWorkoutButtonTapped), for: .touchUpInside)
         pauseWorkoutButton.addTarget(self, action: #selector(pauseWorkoutButtonTapped), for: .touchUpInside)
         
         workoutPresenter.resumeWorkout()
@@ -70,7 +67,7 @@ class WorkoutViewController: UIViewController, Storyboarded {
         )
     }
     
-    @objc func beginWorkoutButtonTapped() {
+    @objc func resumeWorkoutButtonTapped() {
         workoutPresenter.resumeWorkout()
         UIApplication.shared.isIdleTimerDisabled = false
     }

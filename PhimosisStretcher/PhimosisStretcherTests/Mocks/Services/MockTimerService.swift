@@ -11,6 +11,8 @@ import Foundation
 
 class MockTimerService: TimerServiceProtocol, MockObjectProtocol {
     
+    var timeRemaining: TimeInterval!
+    
     var startCallCount = 0
     var pauseCallCount = 0
     var resumeCallCount = 0

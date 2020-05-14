@@ -13,10 +13,12 @@ class MockWorkoutPresenter: MockObjectProtocol, WorkoutPresenterProtocol {
     
     var resumeWorkoutCallCount = 0
     var pauseWorkoutCallCount = 0
+    var closeWorkoutCallCount = 0
     
     func resetCallCounts() {
         self.resumeWorkoutCallCount = 0
         self.pauseWorkoutCallCount = 0
+        self.closeWorkoutCallCount = 0
     }
     
     func resumeWorkout() {
@@ -25,5 +27,9 @@ class MockWorkoutPresenter: MockObjectProtocol, WorkoutPresenterProtocol {
     
     func pauseWorkout() {
         pauseWorkoutCallCount += 1
+    }
+    
+    func closeWorkout() {
+        closeWorkoutCallCount += 1
     }
 }

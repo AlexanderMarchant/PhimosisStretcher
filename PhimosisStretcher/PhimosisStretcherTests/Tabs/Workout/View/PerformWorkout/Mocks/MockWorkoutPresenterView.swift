@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 @testable import PhimosisStretcher
 
 class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
@@ -14,11 +15,17 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     var workoutDidResumeCallCount = 0
     var workoutDidPauseCallCount = 0
     var workoutDidCompleteCallCount = 0
+    var timeStringDidUpdateCallCount = 0
+    var instructionDidUpdateCallCount = 0
+    var didCompleteRepCallCount = 0
     
     func resetCallCounts() {
         self.workoutDidResumeCallCount = 0
         self.workoutDidPauseCallCount = 0
         self.workoutDidCompleteCallCount = 0
+        self.timeStringDidUpdateCallCount = 0
+        self.instructionDidUpdateCallCount = 0
+        self.didCompleteRepCallCount = 0
     }
     
     
@@ -32,6 +39,18 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     
     func workoutDidComplete() {
         workoutDidCompleteCallCount += 1
+    }
+    
+    func timeStringDidUpdate(_ time: String) {
+        timeStringDidUpdateCallCount += 1
+    }
+    
+    func instructionDidUpdate(instruction: String, backgroundColor: UIColor) {
+        instructionDidUpdateCallCount += 1
+    }
+    
+    func didCompleteRep(repsLeft: Int) {
+        didCompleteRepCallCount += 1
     }
 }
 
