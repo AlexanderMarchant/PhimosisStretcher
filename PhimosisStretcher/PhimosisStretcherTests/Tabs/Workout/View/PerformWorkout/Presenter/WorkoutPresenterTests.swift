@@ -13,12 +13,14 @@ class WorkoutPresenterTests: XCTestCase {
     
     var workoutPresenter: WorkoutPresenter!
     var mockUserDefaultsService: MockUserDefaultsService!
+    var mockWorkoutCueService: MockWorkoutCueService!
     var mockTimerService: MockTimerService!
     var mockWorkoutPresenterView: MockWorkoutPresenterView!
     var mockWorkoutPresenterDelegate: MockWorkoutPresenterDelegate!
 
     override func setUpWithError() throws {
         mockUserDefaultsService = MockUserDefaultsService()
+        mockWorkoutCueService = MockWorkoutCueService()
         mockTimerService = MockTimerService()
         mockWorkoutPresenterView = MockWorkoutPresenterView()
         mockWorkoutPresenterDelegate = MockWorkoutPresenterDelegate()
@@ -28,6 +30,7 @@ class WorkoutPresenterTests: XCTestCase {
         
         workoutPresenter = WorkoutPresenter(
             mockUserDefaultsService,
+            mockWorkoutCueService,
             mockTimerService,
             with: mockWorkoutPresenterView,
             delegate: mockWorkoutPresenterDelegate)
@@ -42,12 +45,13 @@ class WorkoutPresenterTests: XCTestCase {
     override func tearDownWithError() throws {
         workoutPresenter = nil
         mockUserDefaultsService = nil
+        mockWorkoutCueService = nil
         mockTimerService = nil
         mockWorkoutPresenterView = nil
         mockWorkoutPresenterDelegate = nil
     }
     
-    func testBeingWorkout() {
+    func testBeginWorkout_UseAudioCues() {
         // Arrange/Act
         workoutPresenter.beginWorkout()
         
@@ -60,6 +64,26 @@ class WorkoutPresenterTests: XCTestCase {
         
         XCTAssertEqual(1, mockWorkoutPresenterView.didCompleteRepCallCount)
         XCTAssertEqual(1, mockWorkoutPresenterView.workoutDidResumeCallCount)
+    }
+    
+    func testBeginWorkout() {
+        // Arrange
+        workoutPresenter.useAudioCues = true
+        
+        // Act
+        workoutPresenter.beginWorkout()
+        
+        // Assert
+        XCTAssertEqual(1, mockTimerService.startCallCount)
+        
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual("Prepare", mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.prepareBackgroundColour, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(1, mockWorkoutPresenterView.didCompleteRepCallCount)
+        XCTAssertEqual(1, mockWorkoutPresenterView.workoutDidResumeCallCount)
+        
+        XCTAssertEqual(1, mockWorkoutCueService.playPrepareAudioCueCallCount)
     }
     
     func testResumeWorkout_RestState() {
@@ -79,6 +103,8 @@ class WorkoutPresenterTests: XCTestCase {
         
         XCTAssertEqual(1, mockWorkoutPresenterView.didCompleteRepCallCount)
         XCTAssertEqual(1, mockWorkoutPresenterView.workoutDidResumeCallCount)
+        
+        XCTAssertEqual(1, mockWorkoutCueService.playRestAudioCueCallCount)
     }
     
     func testResumeWorkout_PrepareState() {
@@ -98,6 +124,8 @@ class WorkoutPresenterTests: XCTestCase {
         
         XCTAssertEqual(1, mockWorkoutPresenterView.didCompleteRepCallCount)
         XCTAssertEqual(1, mockWorkoutPresenterView.workoutDidResumeCallCount)
+        
+        XCTAssertEqual(1, mockWorkoutCueService.playPrepareAudioCueCallCount)
     }
     
     func testResumeWorkout_WorkoutState() {
@@ -119,6 +147,8 @@ class WorkoutPresenterTests: XCTestCase {
         XCTAssertEqual(1, mockWorkoutPresenterView.workoutDidResumeCallCount)
         
         XCTAssertTrue(workoutPresenter.isWorkoutState)
+        
+        XCTAssertEqual(1, mockWorkoutCueService.playBeginAudioCueCallCount)
     }
     
     func testPauseWorkout() {
@@ -487,33 +517,158 @@ class WorkoutPresenterTests: XCTestCase {
         
     }
     
-    func testUpdateViewInstruction_NoVisualCues() {
+    func testUpdateViewInstruction_NoCues() {
         // Arrange
-        mockUserDefaultsService.getBoolValueReturnValue = false
+        let INSTRUCTION = WorkoutInstruction.prepare
         
-        workoutPresenter = WorkoutPresenter(
-            mockUserDefaultsService,
-            mockTimerService,
-            with: mockWorkoutPresenterView,
-            delegate: mockWorkoutPresenterDelegate)
+        workoutPresenter.useVibrateCues = false
+        workoutPresenter.useVisualCues = false
+        workoutPresenter.useAudioCues = false
         
         // Act
-        workoutPresenter.updateViewInstruction("Test", backgroundColor: UIColor.white)
+        workoutPresenter.updateViewInstruction(INSTRUCTION, backgroundColor: UIColor.white)
         
         // Assert
         XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
-        XCTAssertEqual("Test", mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(INSTRUCTION.rawValue, mockWorkoutPresenterView.instruction)
         XCTAssertEqual(UIColor.workoutBackgroundColour, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(0, mockWorkoutCueService.playBeginAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playPrepareAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playRestAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playVibrateCueCallCount)
     }
     
-    func testUpdateViewInstruction_WithVisualCues() {
-        // Arrange/Act
-        workoutPresenter.updateViewInstruction("Test", backgroundColor: UIColor.white)
+    func testUpdateViewInstruction_NoVibrateCues() {
+        // Arrange
+        let INSTRUCTION = WorkoutInstruction.prepare
+        
+        workoutPresenter.useVibrateCues = false
+        workoutPresenter.useVisualCues = true
+        workoutPresenter.useAudioCues = true
+        
+        // Act
+        workoutPresenter.updateViewInstruction(INSTRUCTION, backgroundColor: UIColor.white)
         
         // Assert
         XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
-        XCTAssertEqual("Test", mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(INSTRUCTION.rawValue, mockWorkoutPresenterView.instruction)
         XCTAssertEqual(UIColor.white, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(0, mockWorkoutCueService.playBeginAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playPrepareAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playRestAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playVibrateCueCallCount)
+    }
+    
+    func testUpdateViewInstruction_NoVisualCues() {
+        // Arrange
+        let INSTRUCTION = WorkoutInstruction.prepare
+        
+        workoutPresenter.useVibrateCues = true
+        workoutPresenter.useVisualCues = false
+        workoutPresenter.useAudioCues = true
+        
+        // Act
+        workoutPresenter.updateViewInstruction(INSTRUCTION, backgroundColor: UIColor.white)
+        
+        // Assert
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual(INSTRUCTION.rawValue, mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.workoutBackgroundColour, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(0, mockWorkoutCueService.playBeginAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playPrepareAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playRestAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playVibrateCueCallCount)
+    }
+    
+    func testUpdateViewInstruction_NoAudioCues() {
+        // Arrange
+        let INSTRUCTION = WorkoutInstruction.prepare
+        
+        workoutPresenter.useVibrateCues = true
+        workoutPresenter.useVisualCues = true
+        workoutPresenter.useAudioCues = false
+        
+        // Act
+        workoutPresenter.updateViewInstruction(INSTRUCTION, backgroundColor: UIColor.white)
+        
+        // Assert
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual(INSTRUCTION.rawValue, mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.white, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(0, mockWorkoutCueService.playBeginAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playPrepareAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playRestAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playVibrateCueCallCount)
+    }
+    
+    func testUpdateViewInstruction_BeginAudioQueue() {
+        // Arrange
+        let INSTRUCTION = WorkoutInstruction.stretch
+        
+        workoutPresenter.useVibrateCues = true
+        workoutPresenter.useVisualCues = true
+        workoutPresenter.useAudioCues = true
+        
+        // Act
+        workoutPresenter.updateViewInstruction(INSTRUCTION, backgroundColor: UIColor.white)
+        
+        // Assert
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual(INSTRUCTION.rawValue, mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.white, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(1, mockWorkoutCueService.playBeginAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playPrepareAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playRestAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playVibrateCueCallCount)
+    }
+    
+    func testUpdateViewInstruction_RestAudioQueue() {
+        // Arrange
+        let INSTRUCTION = WorkoutInstruction.rest
+        
+        workoutPresenter.useVibrateCues = true
+        workoutPresenter.useVisualCues = true
+        workoutPresenter.useAudioCues = true
+        
+        // Act
+        workoutPresenter.updateViewInstruction(INSTRUCTION, backgroundColor: UIColor.white)
+        
+        // Assert
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual(INSTRUCTION.rawValue, mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.white, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(0, mockWorkoutCueService.playBeginAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playPrepareAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playRestAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playVibrateCueCallCount)
+    }
+    
+    func testUpdateViewInstruction_AllCues() {
+        // Arrange
+        let INSTRUCTION = WorkoutInstruction.prepare
+        
+        workoutPresenter.useVibrateCues = true
+        workoutPresenter.useVisualCues = true
+        workoutPresenter.useAudioCues = true
+        
+        // Act
+        workoutPresenter.updateViewInstruction(INSTRUCTION, backgroundColor: UIColor.white)
+        
+        // Assert
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual(INSTRUCTION.rawValue, mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.white, mockWorkoutPresenterView.backgroundColor)
+        
+        XCTAssertEqual(0, mockWorkoutCueService.playBeginAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playPrepareAudioCueCallCount)
+        XCTAssertEqual(0, mockWorkoutCueService.playRestAudioCueCallCount)
+        XCTAssertEqual(1, mockWorkoutCueService.playVibrateCueCallCount)
     }
 
 }

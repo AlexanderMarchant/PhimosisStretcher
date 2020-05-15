@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+enum WorkoutInstruction: String {
+    case stretch = "Stretch"
+    case prepare = "Prepare"
+    case rest = "Rest"
+}
+
 protocol WorkoutPresenterView {
     func workoutDidResume()
     func workoutDidPause()
@@ -26,6 +32,7 @@ protocol WorkoutPresenterDelegate {
 class WorkoutPresenter: WorkoutPresenterProtocol {
     
     let userDefaultsService: UserDefaultsServiceProtocol
+    let workoutCueService: WorkoutCueServiceProtocol
     var timerService: TimerServiceProtocol
     let view: WorkoutPresenterView
     let delegate: WorkoutPresenterDelegate
@@ -35,9 +42,9 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     let restLength: Int
     let prepareLength: Int
     
-    let useVibrateCues: Bool
-    let useVisualCues: Bool
-    let useAudioCues: Bool
+    var useVibrateCues: Bool
+    var useVisualCues: Bool
+    var useAudioCues: Bool
     
     var secondsRemaining = 10
     var milliseconds = 100
@@ -48,11 +55,13 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     
     init(
         _ userDefaultsService: UserDefaultsServiceProtocol,
+        _ workoutCueService: WorkoutCueServiceProtocol,
         _ timerService: TimerServiceProtocol,
         with view: WorkoutPresenterView,
         delegate: WorkoutPresenterDelegate) {
         
         self.userDefaultsService = userDefaultsService
+        self.workoutCueService = workoutCueService
         self.timerService = timerService
         self.view = view
         self.delegate = delegate
@@ -76,9 +85,10 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     }
     
     func beginWorkout() {
+        
         timerService.start(delayTime: TimeInterval(prepareLength))
         
-        updateViewInstruction("Prepare", backgroundColor: UIColor.prepareBackgroundColour)
+        updateViewInstruction(.prepare, backgroundColor: UIColor.prepareBackgroundColour)
         
         self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
         self.view.workoutDidResume()
@@ -86,18 +96,18 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     
     func resumeWorkout() {
         
-        var instruction: String!
+        var instruction: WorkoutInstruction!
         var backgroundColor: UIColor!
         
         if (isRestState) {
-            instruction = "Rest"
+            instruction = .rest
             backgroundColor = UIColor.restBackgroundColour
         } else if (isPrepareState) {
-            instruction = "Prepare"
+            instruction = .prepare
             backgroundColor = UIColor.prepareBackgroundColour
         } else {
             isWorkoutState = true
-            instruction = "Stretch"
+            instruction = .stretch
             backgroundColor = UIColor.workoutBackgroundColour
         }
 
@@ -155,6 +165,11 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
                 }
             } else {
                 timerService.pause()
+                
+                if(useAudioCues) {
+                    workoutCueService.playWorkoutCompleteAudioCue()
+                }
+                
                 self.delegate.didCompleteWorkout()
             }
         } else {
@@ -177,7 +192,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         timerService.start(delayTime: TimeInterval(repLength))
         secondsRemaining = repLength - 1
         
-        updateViewInstruction("Stretch", backgroundColor: UIColor.workoutBackgroundColour)
+        updateViewInstruction(.stretch, backgroundColor: UIColor.workoutBackgroundColour)
     }
     
     internal func queueRest() {
@@ -185,7 +200,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         timerService.start(delayTime: TimeInterval(restLength))
         secondsRemaining = restLength - 1
         
-        updateViewInstruction("Rest", backgroundColor: UIColor.restBackgroundColour)
+        updateViewInstruction(.rest, backgroundColor: UIColor.restBackgroundColour)
     }
     
     internal func queuePrepare() {
@@ -193,15 +208,33 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         timerService.start(delayTime: TimeInterval(prepareLength))
         secondsRemaining = prepareLength - 1
         
-        updateViewInstruction("Prepare", backgroundColor: UIColor.prepareBackgroundColour)
+        updateViewInstruction(.prepare, backgroundColor: UIColor.prepareBackgroundColour)
     }
     
-    internal func updateViewInstruction(_ instruction: String, backgroundColor: UIColor) {
+    internal func updateViewInstruction(_ instruction: WorkoutInstruction, backgroundColor: UIColor) {
+        
+        if(useAudioCues) {
+            switch instruction {
+            case .stretch:
+                workoutCueService.playBeginAudioCue()
+                break
+            case .rest:
+                workoutCueService.playRestAudioCue()
+                break
+            case .prepare:
+                workoutCueService.playPrepareAudioCue()
+                break
+            }
+        }
+        
+        if(useVibrateCues) {
+            workoutCueService.playVibrateCue()
+        }
         
         if(useVisualCues) {
-            self.view.instructionDidUpdate(instruction: instruction, backgroundColor: backgroundColor)
+            self.view.instructionDidUpdate(instruction: instruction.rawValue, backgroundColor: backgroundColor)
         } else {
-            self.view.instructionDidUpdate(instruction: instruction, backgroundColor: UIColor.workoutBackgroundColour)
+            self.view.instructionDidUpdate(instruction: instruction.rawValue, backgroundColor: UIColor.workoutBackgroundColour)
         }
     }
     

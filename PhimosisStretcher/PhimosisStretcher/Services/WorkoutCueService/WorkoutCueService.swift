@@ -41,6 +41,16 @@ class WorkoutCueService: WorkoutCueServiceProtocol {
         }
     }
     
+    func playPrepareAudioCue() {
+        do {
+//            self._audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Prepare", ofType: "wav")!))
+//            self._audioPlayer.play()
+        }
+        catch {
+            print(error)
+        }
+    }
+    
     func playWorkoutCompleteAudioCue() {
         do {
             self._audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Workout Complete", ofType: "wav")!))

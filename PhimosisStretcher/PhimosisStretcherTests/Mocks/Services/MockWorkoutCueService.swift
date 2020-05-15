@@ -13,12 +13,14 @@ class MockWorkoutCueService: WorkoutCueServiceProtocol, MockObjectProtocol {
     
     var playBeginAudioCueCallCount = 0
     var playRestAudioCueCallCount = 0
+    var playPrepareAudioCueCallCount = 0
     var playWorkoutCompleteAudioCueCallCount = 0
     var playVibrateCueCallCount = 0
     
     func resetCallCounts() {
         self.playBeginAudioCueCallCount = 0
         self.playRestAudioCueCallCount = 0
+        self.playPrepareAudioCueCallCount = 0
         self.playWorkoutCompleteAudioCueCallCount = 0
         self.playVibrateCueCallCount = 0
     }
@@ -29,6 +31,10 @@ class MockWorkoutCueService: WorkoutCueServiceProtocol, MockObjectProtocol {
     
     func playRestAudioCue() {
         playRestAudioCueCallCount += 1
+    }
+    
+    func playPrepareAudioCue() {
+        playPrepareAudioCueCallCount += 1
     }
     
     func playWorkoutCompleteAudioCue() {

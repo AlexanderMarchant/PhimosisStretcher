@@ -17,14 +17,14 @@ class WorkoutCoordinator: Coordinator {
     
     let alertHandlerService: AlertHandlerServiceProtocol
     let userDefaultsService: UserDefaultsServiceProtocol
-    let timerService: TimerServiceProtocol
+    let workoutCueService: WorkoutCueServiceProtocol
     
     let delegate: WorkoutCoordinatorDelegate
     
     init(
         _ alertHandlerService: AlertHandlerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
-        _ timerService: TimerServiceProtocol,
+        _ workoutCueService: WorkoutCueServiceProtocol,
         delegate: WorkoutCoordinatorDelegate) {
         
         self.navigationController = UINavigationController()
@@ -34,7 +34,7 @@ class WorkoutCoordinator: Coordinator {
         
         self.alertHandlerService = alertHandlerService
         self.userDefaultsService = userDefaultsService
-        self.timerService = timerService
+        self.workoutCueService = workoutCueService
         self.delegate = delegate
     }
     
@@ -61,6 +61,7 @@ class WorkoutCoordinator: Coordinator {
         
         let workoutPresenter = WorkoutPresenter(
             userDefaultsService,
+            workoutCueService,
             TimerService(),
             with: workoutViewController,
             delegate: self)

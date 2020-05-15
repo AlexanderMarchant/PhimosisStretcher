@@ -11,6 +11,7 @@ import Foundation
 protocol WorkoutCueServiceProtocol {
     func playBeginAudioCue()
     func playRestAudioCue()
+    func playPrepareAudioCue()
     func playWorkoutCompleteAudioCue()
     func playVibrateCue()
 }

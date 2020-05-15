@@ -15,7 +15,7 @@ class AppCoordinator: Coordinator {
     
     let alertHandlerService: AlertHandlerServiceProtocol
     let userDefaultsService: UserDefaultsServiceProtocol
-    let timerService: TimerServiceProtocol
+    let workoutCueService: WorkoutCueServiceProtocol
     
     var stretchesCoordinator: StretchesCoordinator!
     var workoutCoordinator: WorkoutCoordinator!
@@ -29,7 +29,7 @@ class AppCoordinator: Coordinator {
         
         self.alertHandlerService = AlertHandlerService()
         self.userDefaultsService = UserDefaultsService()
-        self.timerService = TimerService()
+        self.workoutCueService = WorkoutCueService()
         
         super.init()
         
@@ -41,7 +41,7 @@ class AppCoordinator: Coordinator {
         self.workoutCoordinator = WorkoutCoordinator(
             alertHandlerService,
             userDefaultsService,
-            timerService,
+            workoutCueService,
             delegate: self)
         
         self.settingsCoordinator = SettingsCoordinator(

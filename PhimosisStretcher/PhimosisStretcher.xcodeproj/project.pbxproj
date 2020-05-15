@@ -121,6 +121,9 @@
 		D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C02E246F371D00D524DE /* WorkoutCueService.swift */; };
 		D4B5C031246F372900D524DE /* WorkoutCueServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C030246F372900D524DE /* WorkoutCueServiceProtocol.swift */; };
 		D4B5C033246F381600D524DE /* MockWorkoutCueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C032246F381600D524DE /* MockWorkoutCueService.swift */; };
+		D4B5C03C246F3F7800D524DE /* Workout Complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4B5C039246F3F7800D524DE /* Workout Complete.wav */; };
+		D4B5C03D246F3F7800D524DE /* Rest.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4B5C03A246F3F7800D524DE /* Rest.wav */; };
+		D4B5C03E246F3F7800D524DE /* Begin.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4B5C03B246F3F7800D524DE /* Begin.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +259,9 @@
 		D4B5C02E246F371D00D524DE /* WorkoutCueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCueService.swift; sourceTree = "<group>"; };
 		D4B5C030246F372900D524DE /* WorkoutCueServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCueServiceProtocol.swift; sourceTree = "<group>"; };
 		D4B5C032246F381600D524DE /* MockWorkoutCueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCueService.swift; sourceTree = "<group>"; };
+		D4B5C039246F3F7800D524DE /* Workout Complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Workout Complete.wav"; sourceTree = "<group>"; };
+		D4B5C03A246F3F7800D524DE /* Rest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Rest.wav; sourceTree = "<group>"; };
+		D4B5C03B246F3F7800D524DE /* Begin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Begin.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -776,6 +782,7 @@
 		D45566B0246B154700DC1FAE /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				D4B5C038246F3F7800D524DE /* Sound Bites */,
 				D47FA866246DC35C006B3A69 /* Extensions */,
 				D47FA847246BD070006B3A69 /* Constants */,
 				D45566BF246B172600DC1FAE /* FatalError */,
@@ -1230,6 +1237,16 @@
 			path = WorkoutCueService;
 			sourceTree = "<group>";
 		};
+		D4B5C038246F3F7800D524DE /* Sound Bites */ = {
+			isa = PBXGroup;
+			children = (
+				D4B5C039246F3F7800D524DE /* Workout Complete.wav */,
+				D4B5C03A246F3F7800D524DE /* Rest.wav */,
+				D4B5C03B246F3F7800D524DE /* Begin.wav */,
+			);
+			path = "Sound Bites";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1314,6 +1331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B5C03C246F3F7800D524DE /* Workout Complete.wav in Resources */,
 				D4556633246AE77900DC1FAE /* Workout.storyboard in Resources */,
 				D47FA857246D9FBB006B3A69 /* WorkoutComplete.storyboard in Resources */,
 				D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */,
@@ -1322,6 +1340,8 @@
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
 				D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */,
 				D45566DF246B1A1E00DC1FAE /* EnableNotifications.storyboard in Resources */,
+				D4B5C03D246F3F7800D524DE /* Rest.wav in Resources */,
+				D4B5C03E246F3F7800D524DE /* Begin.wav in Resources */,
 				D455667E246B0BE400DC1FAE /* Stretches.storyboard in Resources */,
 				D4556688246B0C2900DC1FAE /* StretchInfo.storyboard in Resources */,
 				D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */,
