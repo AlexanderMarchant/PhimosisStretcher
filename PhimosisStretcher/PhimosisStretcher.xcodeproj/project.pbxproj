@@ -120,6 +120,7 @@
 		D47FA87D246E8A12006B3A69 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA87C246E8A12006B3A69 /* GlobalFunctions.swift */; };
 		D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C02E246F371D00D524DE /* WorkoutCueService.swift */; };
 		D4B5C031246F372900D524DE /* WorkoutCueServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C030246F372900D524DE /* WorkoutCueServiceProtocol.swift */; };
+		D4B5C033246F381600D524DE /* MockWorkoutCueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C032246F381600D524DE /* MockWorkoutCueService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,6 +255,7 @@
 		D47FA87C246E8A12006B3A69 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		D4B5C02E246F371D00D524DE /* WorkoutCueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCueService.swift; sourceTree = "<group>"; };
 		D4B5C030246F372900D524DE /* WorkoutCueServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCueServiceProtocol.swift; sourceTree = "<group>"; };
+		D4B5C032246F381600D524DE /* MockWorkoutCueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCueService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,6 +556,7 @@
 				D455664C246AEA5F00DC1FAE /* MockAlertHandlerService.swift */,
 				D455664E246AEA6900DC1FAE /* MockUserDefaultsService.swift */,
 				D4556716246BCC6E00DC1FAE /* MockTimerService.swift */,
+				D4B5C032246F381600D524DE /* MockWorkoutCueService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1489,6 +1492,7 @@
 				D45566ED246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift in Sources */,
 				D45566EF246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift in Sources */,
 				D4556641246AE97800DC1FAE /* WorkoutCoordinatorTests.swift in Sources */,
+				D4B5C033246F381600D524DE /* MockWorkoutCueService.swift in Sources */,
 				D45566F1246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift in Sources */,
 				D455666D246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift in Sources */,
 				D45566D3246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift in Sources */,
