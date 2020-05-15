@@ -75,7 +75,7 @@ class SettingsPresenter: SettingsPresenterProtocol {
         if MFMailComposeViewController.canSendMail() {
             self.delegate.sendEmail()
         } else {
-            self.view.errorOccurred(message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n My Email: \n \(Constants.email)")
+            self.view.errorOccurred(message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n Email: \n \(Constants.email)")
         }
     }
     

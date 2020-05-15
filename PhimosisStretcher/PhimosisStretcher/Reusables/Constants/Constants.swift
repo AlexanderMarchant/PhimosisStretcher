@@ -35,5 +35,5 @@ struct Constants {
     static let generalBannerAdId = ""
     static let generalInterstitialAdId = ""
     
-    static let email = "alex_marchant@outlook.com"
+    static let email = "phimosisstretcher@gmail.com"
 }
