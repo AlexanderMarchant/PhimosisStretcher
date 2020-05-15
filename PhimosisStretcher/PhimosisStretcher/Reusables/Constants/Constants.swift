@@ -31,12 +31,12 @@ struct Constants {
     static let dispatchQueueLabel = "ResumeWorkout"
     
     // AdMob Test Ad Id's
-    static let testBannerAdId = ""
-    static let testInterstitialAdId = ""
+    static let testBannerAdId = "ca-app-pub-3940256099942544/2934735716"
+    static let testInterstitialAdId = "ca-app-pub-3940256099942544/4411468910"
     
     //  AdMob Ad Unit Id's
-    static let generalBannerAdId = ""
-    static let generalInterstitialAdId = ""
+    static let generalBannerAdId = "ca-app-pub-4293952743610750/5028075875"
+    static let workoutCompleteInterstitialAdId = "ca-app-pub-4293952743610750/2258921237"
     
     static let email = "phimosisstretcher@gmail.com"
 }
