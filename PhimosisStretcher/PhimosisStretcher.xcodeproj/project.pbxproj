@@ -124,6 +124,11 @@
 		D4B5C03C246F3F7800D524DE /* Workout Complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4B5C039246F3F7800D524DE /* Workout Complete.wav */; };
 		D4B5C03D246F3F7800D524DE /* Rest.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4B5C03A246F3F7800D524DE /* Rest.wav */; };
 		D4B5C03E246F3F7800D524DE /* Begin.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4B5C03B246F3F7800D524DE /* Begin.wav */; };
+		D4B5C049246F444400D524DE /* AdServerNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C040246F444300D524DE /* AdServerNotifications.swift */; };
+		D4B5C04A246F444400D524DE /* AdServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C041246F444300D524DE /* AdServerService.swift */; };
+		D4B5C04B246F444400D524DE /* AdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C043246F444400D524DE /* AdService.swift */; };
+		D4B5C04C246F444400D524DE /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C045246F444400D524DE /* AdMobService.swift */; };
+		D4B5C04E246F444400D524DE /* AdServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C048246F444400D524DE /* AdServiceDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +267,11 @@
 		D4B5C039246F3F7800D524DE /* Workout Complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Workout Complete.wav"; sourceTree = "<group>"; };
 		D4B5C03A246F3F7800D524DE /* Rest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Rest.wav; sourceTree = "<group>"; };
 		D4B5C03B246F3F7800D524DE /* Begin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Begin.wav; sourceTree = "<group>"; };
+		D4B5C040246F444300D524DE /* AdServerNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdServerNotifications.swift; sourceTree = "<group>"; };
+		D4B5C041246F444300D524DE /* AdServerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdServerService.swift; sourceTree = "<group>"; };
+		D4B5C043246F444400D524DE /* AdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdService.swift; sourceTree = "<group>"; };
+		D4B5C045246F444400D524DE /* AdMobService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
+		D4B5C048246F444400D524DE /* AdServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdServiceDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +398,7 @@
 		D4556619246AE55A00DC1FAE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4B5C03F246F441000D524DE /* AdServices */,
 				D4B5C02D246F370800D524DE /* WorkoutCueService */,
 				D4556711246BCA9600DC1FAE /* TimerService */,
 				D455661A246AE56A00DC1FAE /* AlertHandlerService */,
@@ -1247,6 +1258,26 @@
 			path = "Sound Bites";
 			sourceTree = "<group>";
 		};
+		D4B5C03F246F441000D524DE /* AdServices */ = {
+			isa = PBXGroup;
+			children = (
+				D4B5C041246F444300D524DE /* AdServerService.swift */,
+				D4B5C040246F444300D524DE /* AdServerNotifications.swift */,
+				D4B5C042246F444400D524DE /* AdService */,
+			);
+			path = AdServices;
+			sourceTree = "<group>";
+		};
+		D4B5C042246F444400D524DE /* AdService */ = {
+			isa = PBXGroup;
+			children = (
+				D4B5C043246F444400D524DE /* AdService.swift */,
+				D4B5C045246F444400D524DE /* AdMobService.swift */,
+				D4B5C048246F444400D524DE /* AdServiceDelegate.swift */,
+			);
+			path = AdService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1427,6 +1458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4556682246B0C0800DC1FAE /* StretchInfoPresenter.swift in Sources */,
+				D4B5C04C246F444400D524DE /* AdMobService.swift in Sources */,
 				D45566B8246B15CD00DC1FAE /* PSDestructiveButton.swift in Sources */,
 				D455662B246AE62C00DC1FAE /* WorkoutCoordinator.swift in Sources */,
 				D455667C246B0BD900DC1FAE /* StretchesViewController.swift in Sources */,
@@ -1443,10 +1475,12 @@
 				D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */,
 				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
 				D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */,
+				D4B5C04B246F444400D524DE /* AdService.swift in Sources */,
 				D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */,
 				D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */,
 				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
 				D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */,
+				D4B5C049246F444400D524DE /* AdServerNotifications.swift in Sources */,
 				D4B5C031246F372900D524DE /* WorkoutCueServiceProtocol.swift in Sources */,
 				D4556707246B22C200DC1FAE /* WorkoutMenuPresenter.swift in Sources */,
 				D4556686246B0C2000DC1FAE /* StretchInfoViewController.swift in Sources */,
@@ -1474,10 +1508,12 @@
 				D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */,
 				D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */,
 				D4556684246B0C1100DC1FAE /* StretchInfoPresenterProtocol.swift in Sources */,
+				D4B5C04A246F444400D524DE /* AdServerService.swift in Sources */,
 				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,
 				D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */,
 				D455661F246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift in Sources */,
 				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
+				D4B5C04E246F444400D524DE /* AdServiceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
