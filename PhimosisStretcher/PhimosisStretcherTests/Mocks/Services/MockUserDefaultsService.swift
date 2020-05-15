@@ -18,6 +18,8 @@ class MockUserDefaultsService: UserDefaults, MockObjectProtocol, UserDefaultsSer
     var getIntValueReturnValue: Int!
     
     var setBoolValueCallCount = 0
+    var setIntValueCallCount = 0
+    var setIntValue: Int!
     var setAnyValueCallCount = 0
     
     var getStringValueCallCount = 0
@@ -27,6 +29,7 @@ class MockUserDefaultsService: UserDefaults, MockObjectProtocol, UserDefaultsSer
         self.getBoolValueCallCount = 0
         self.getIntValueCallCount = 0
         self.setBoolValueCallCount = 0
+        self.setIntValueCallCount = 0
         self.setAnyValueCallCount = 0
         self.getStringValueCallCount = 0
     }
@@ -51,10 +54,15 @@ class MockUserDefaultsService: UserDefaults, MockObjectProtocol, UserDefaultsSer
         setAnyValueCallCount += 1
     }
     
+    override func set(_ value: Int, forKey defaultName: String) {
+        setIntValueCallCount += 1
+        setIntValue = value
+    }
+    
     override func string(forKey defaultName: String) -> String? {
         getStringValueCallCount += 1
         
-        return getStringValueReturnValue!
+        return getStringValueReturnValue ?? nil
     }
     
 }

@@ -75,6 +75,7 @@ class WorkoutCoordinator: Coordinator {
         let workoutCompleteViewController = WorkoutCompleteViewController.instantiate(storyboard: "WorkoutComplete")
         
         let workoutCompletePresenter = WorkoutCompletePresenter(
+            userDefaultsService,
             with: workoutCompleteViewController,
             delegate: self)
         

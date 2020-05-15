@@ -12,13 +12,19 @@ import Foundation
 class MockWorkoutCompletePresenter: WorkoutCompletePresenterProtocol, MockObjectProtocol {
     
     var didTapCloseCallCount = 0
+    var updateWorkoutsTodayCallCount = 0
     
     func resetCallCounts() {
         self.didTapCloseCallCount = 0
+        self.updateWorkoutsTodayCallCount = 0
     }
     
     func didTapClose() {
         didTapCloseCallCount += 1
+    }
+    
+    func updateWorkoutsToday() {
+        updateWorkoutsTodayCallCount += 1
     }
     
 }

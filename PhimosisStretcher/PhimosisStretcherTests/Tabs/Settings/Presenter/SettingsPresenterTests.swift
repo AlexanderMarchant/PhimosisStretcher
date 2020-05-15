@@ -276,7 +276,7 @@ class SettingsPresenterTests: XCTestCase {
         settingsPresenter.saveChanges(targetWorkoutsPerDay: TARGET_WORKOUTS_PER_DAY, repsPerWorkout: REPS_PER_WORKOUT, repLength: REP_LENGTH, restLength: REST_LENGTH, prepareLength: PREPARE_LENGTH)
         
         // Assert
-        XCTAssertEqual(5, mockUserDefaultsService.setAnyValueCallCount)
+        XCTAssertEqual(6, mockUserDefaultsService.setAnyValueCallCount)
         
         XCTAssertEqual(1, mockSettingsPresenterView.savedChangesCallCount)
         XCTAssertEqual(0, mockSettingsPresenterView.errorOccurredCallCount)

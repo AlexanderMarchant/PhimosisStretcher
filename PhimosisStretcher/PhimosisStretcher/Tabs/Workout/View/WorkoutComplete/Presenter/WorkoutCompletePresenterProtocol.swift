@@ -9,4 +9,5 @@
 import Foundation
 
 protocol WorkoutCompletePresenterProtocol: InformationScreenPresenterProtocol {
+    func updateWorkoutsToday()
 }

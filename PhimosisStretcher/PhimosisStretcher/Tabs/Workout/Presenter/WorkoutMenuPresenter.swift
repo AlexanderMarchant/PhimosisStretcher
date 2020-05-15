@@ -9,7 +9,7 @@
 import Foundation
 
 protocol WorkoutMenuPresenterView {
-    func didGetWorkoutInformation(numberOfWorkoutsToday: Int, workoutTime: String)
+    func didGetWorkoutInformation(_ numberOfWorkoutsToday: Int, _ targetWorkoutsPerDay: Int, _ workoutTime: String)
 }
 
 protocol WorkoutMenuPresenterDelegate {
@@ -33,7 +33,12 @@ class WorkoutMenuPresenter: WorkoutMenuPresenterProtocol {
     }
     
     func getWorkoutInformation() {
-        // Return worokut information
+        
+        let targetWorkoutsPerDay = userDefaultsService.integer(forKey: Constants.targetWorkoutsPerDay)
+        let workoutsToday = userDefaultsService.integer(forKey: Constants.workoutsToday)
+        let workoutTime = userDefaultsService.string(forKey: Constants.totalWorkoutTime) ?? "Not Set"
+        
+        self.view.didGetWorkoutInformation(workoutsToday, targetWorkoutsPerDay, workoutTime)
     }
     
     func startWorkout() {

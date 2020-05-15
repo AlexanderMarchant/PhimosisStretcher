@@ -20,9 +20,13 @@ class WorkoutMenuViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        workoutMenuPresenter.getWorkoutInformation()
-        
         beginWorkoutButton.addTarget(self, action: #selector(beginWorkoutButtonTapped), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        workoutMenuPresenter.getWorkoutInformation()
     }
     
     @objc func beginWorkoutButtonTapped() {
@@ -32,8 +36,8 @@ class WorkoutMenuViewController: UIViewController, Storyboarded {
 }
 
 extension WorkoutMenuViewController: WorkoutMenuPresenterView {
-    func didGetWorkoutInformation(numberOfWorkoutsToday: Int, workoutTime: String) {
-        workoutsTodayLabel.text = "\(numberOfWorkoutsToday)"
+    func didGetWorkoutInformation(_ numberOfWorkoutsToday: Int, _ targetWorkoutsPerDay: Int, _ workoutTime: String) {
+        workoutsTodayLabel.text = "\(numberOfWorkoutsToday) / \(targetWorkoutsPerDay)"
         workoutTimeLabel.text = workoutTime
     }
 }

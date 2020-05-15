@@ -112,6 +112,12 @@
 		D47FA865246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA864246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift */; };
 		D47FA868246DC36C006B3A69 /* UITextField-AddToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA867246DC36C006B3A69 /* UITextField-AddToolbar.swift */; };
 		D47FA86A246DC78E006B3A69 /* String-IsInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA869246DC78E006B3A69 /* String-IsInt.swift */; };
+		D47FA873246E8382006B3A69 /* MockWorkoutMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA872246E8382006B3A69 /* MockWorkoutMenuPresenter.swift */; };
+		D47FA875246E838C006B3A69 /* MockWorkoutMenuPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA874246E838C006B3A69 /* MockWorkoutMenuPresenterView.swift */; };
+		D47FA877246E8397006B3A69 /* MockWorkoutMenuPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA876246E8396006B3A69 /* MockWorkoutMenuPresenterDelegate.swift */; };
+		D47FA879246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA878246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift */; };
+		D47FA87B246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA87A246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift */; };
+		D47FA87D246E8A12006B3A69 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA87C246E8A12006B3A69 /* GlobalFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +244,12 @@
 		D47FA864246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutCompletePresenterDelegate.swift; sourceTree = "<group>"; };
 		D47FA867246DC36C006B3A69 /* UITextField-AddToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField-AddToolbar.swift"; sourceTree = "<group>"; };
 		D47FA869246DC78E006B3A69 /* String-IsInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-IsInt.swift"; sourceTree = "<group>"; };
+		D47FA872246E8382006B3A69 /* MockWorkoutMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutMenuPresenter.swift; sourceTree = "<group>"; };
+		D47FA874246E838C006B3A69 /* MockWorkoutMenuPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutMenuPresenterView.swift; sourceTree = "<group>"; };
+		D47FA876246E8396006B3A69 /* MockWorkoutMenuPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutMenuPresenterDelegate.swift; sourceTree = "<group>"; };
+		D47FA878246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMenuViewControllerTests.swift; sourceTree = "<group>"; };
+		D47FA87A246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMenuPresenterTests.swift; sourceTree = "<group>"; };
+		D47FA87C246E8A12006B3A69 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +512,9 @@
 		D4556639246AE94400DC1FAE /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				D47FA872246E8382006B3A69 /* MockWorkoutMenuPresenter.swift */,
+				D47FA874246E838C006B3A69 /* MockWorkoutMenuPresenterView.swift */,
+				D47FA876246E8396006B3A69 /* MockWorkoutMenuPresenterDelegate.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -759,6 +774,7 @@
 				D45566BC246B165E00DC1FAE /* Colors */,
 				D45566B9246B163400DC1FAE /* Fonts */,
 				D45566B1246B155900DC1FAE /* Custom Storyboard Objects */,
+				D47FA87C246E8A12006B3A69 /* GlobalFunctions.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -1056,6 +1072,7 @@
 		D455670C246B27B300DC1FAE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D47FA878246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift */,
 				D455670D246B27C400DC1FAE /* PerformWorkout */,
 				D47FA858246DA482006B3A69 /* WorkoutComplete */,
 			);
@@ -1084,6 +1101,7 @@
 		D455670F246B27F300DC1FAE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D47FA87A246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1403,6 +1421,7 @@
 				D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */,
 				D47FA86A246DC78E006B3A69 /* String-IsInt.swift in Sources */,
 				D45566DD246B1A0F00DC1FAE /* EnableNotificationsViewController.swift in Sources */,
+				D47FA87D246E8A12006B3A69 /* GlobalFunctions.swift in Sources */,
 				D45566E1246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift in Sources */,
 				D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */,
 				D45566C1246B173800DC1FAE /* FatalError.swift in Sources */,
@@ -1432,6 +1451,7 @@
 				D4556696246B0F6C00DC1FAE /* MockStretchesPresenterView.swift in Sources */,
 				D4556671246AEDFE00DC1FAE /* MockSettingsPresenterView.swift in Sources */,
 				D45566F3246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift in Sources */,
+				D47FA87B246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift in Sources */,
 				D45566C8246B17A800DC1FAE /* InformationScreenViewControllerTests.swift in Sources */,
 				D45566D0246B180C00DC1FAE /* MockInformationScreenPresenter.swift in Sources */,
 				D45566CC246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift in Sources */,
@@ -1439,6 +1459,7 @@
 				D47FA85D246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift in Sources */,
 				D455669E246B107E00DC1FAE /* StretchesViewControllerTests.swift in Sources */,
 				D4556698246B0F7400DC1FAE /* MockStretchesPresenterDelegate.swift in Sources */,
+				D47FA877246E8397006B3A69 /* MockWorkoutMenuPresenterDelegate.swift in Sources */,
 				D455664D246AEA5F00DC1FAE /* MockAlertHandlerService.swift in Sources */,
 				D47FA85F246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift in Sources */,
 				D455668E246B0EB900DC1FAE /* MockStretchInfoPresenter.swift in Sources */,
@@ -1446,7 +1467,9 @@
 				D455663D246AE96000DC1FAE /* WorkoutViewControllerTests.swift in Sources */,
 				D4556690246B0EC100DC1FAE /* MockStretchInfoPresenterView.swift in Sources */,
 				D45566EB246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift in Sources */,
+				D47FA873246E8382006B3A69 /* MockWorkoutMenuPresenter.swift in Sources */,
 				D47FA865246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift in Sources */,
+				D47FA875246E838C006B3A69 /* MockWorkoutMenuPresenterView.swift in Sources */,
 				D45566ED246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift in Sources */,
 				D45566EF246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift in Sources */,
 				D4556641246AE97800DC1FAE /* WorkoutCoordinatorTests.swift in Sources */,
@@ -1459,6 +1482,7 @@
 				D455669C246B104700DC1FAE /* StretchesPresenterTests.swift in Sources */,
 				D4556645246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift in Sources */,
 				D4556694246B0F6200DC1FAE /* MockStretchesPresenter.swift in Sources */,
+				D47FA879246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift in Sources */,
 				D455669A246B0FF100DC1FAE /* StretchesCoordinatorTests.swift in Sources */,
 				D4556692246B0ECA00DC1FAE /* MockStretchInfoPresenterDelegate.swift in Sources */,
 				D4556643246AE98A00DC1FAE /* MockWorkoutPresenter.swift in Sources */,

@@ -61,11 +61,20 @@ class SettingsPresenter: SettingsPresenterProtocol {
             return
         }
         
-        userDefaultsService.set(Int(targetWorkoutsPerDay), forKey: Constants.targetWorkoutsPerDay)
-        userDefaultsService.set(Int(repsPerWorkout), forKey: Constants.repsPerWorkout)
-        userDefaultsService.set(Int(repLength), forKey: Constants.repLength)
-        userDefaultsService.set(Int(restLength), forKey: Constants.restLength)
-        userDefaultsService.set(Int(prepareLength), forKey: Constants.prepareLength)
+        let targetWorkoutsPerDayInt = Int(targetWorkoutsPerDay)
+        let repsPerWorkoutInt = Int(repsPerWorkout)
+        let repLengthInt = Int(repLength)
+        let restLengthInt = Int(restLength)
+        let prepareLengthInt = Int(prepareLength)
+        
+        let totalWorkoutTime = GlobalFunctions.calculateTotalWorkoutTime(repsPerWorkoutInt!, repLengthInt!, restLengthInt!, prepareLengthInt!)
+        
+        userDefaultsService.set(targetWorkoutsPerDayInt, forKey: Constants.targetWorkoutsPerDay)
+        userDefaultsService.set(repsPerWorkoutInt, forKey: Constants.repsPerWorkout)
+        userDefaultsService.set(repLengthInt, forKey: Constants.repLength)
+        userDefaultsService.set(restLengthInt, forKey: Constants.restLength)
+        userDefaultsService.set(prepareLengthInt, forKey: Constants.prepareLength)
+        userDefaultsService.set(totalWorkoutTime, forKey: Constants.totalWorkoutTime)
         
         self.view.savedChanges()
         

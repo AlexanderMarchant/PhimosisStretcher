@@ -74,7 +74,18 @@ class AppCoordinator: Coordinator {
         let repLength = userDefaultsService.integer(forKey: Constants.repLength)
         let restLength = userDefaultsService.integer(forKey: Constants.restLength)
         let prepareLength = userDefaultsService.integer(forKey: Constants.prepareLength)
+        let workoutDate = userDefaultsService.string(forKey: Constants.todaysDate)
+        let totalWorkoutTime = userDefaultsService.string(forKey: Constants.totalWorkoutTime)
         
+        let dateFormatter = DateFormatter()
+        let today = Date()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let todayString = dateFormatter.string(from: today)
+        
+        if(workoutDate != todayString) {
+            userDefaultsService.set(todayString, forKey: Constants.todaysDate)
+            userDefaultsService.set(0, forKey: Constants.workoutsToday)
+        }
         if(targetWorkoutsPerDay == 0) {
             userDefaultsService.set(3, forKey: Constants.targetWorkoutsPerDay)
         }
@@ -89,6 +100,12 @@ class AppCoordinator: Coordinator {
         }
         if(prepareLength == 0) {
             userDefaultsService.set(10, forKey: Constants.prepareLength)
+        }
+        
+        if(totalWorkoutTime == nil || totalWorkoutTime!.isEmpty || totalWorkoutTime == "0 mins 0 secs") {
+            let totalWorkoutTime = GlobalFunctions.calculateTotalWorkoutTime(repsPerSet, repLength, restLength, prepareLength)
+            
+            userDefaultsService.set(totalWorkoutTime, forKey: Constants.totalWorkoutTime)
         }
         
         self.navigationController.navigationBar.isHidden = true

@@ -23,6 +23,8 @@ class WorkoutCompleteViewController: InformationScreenViewController {
         self.secondaryButton.setTitle("High Five", for: .normal)
         self.secondaryButton.isHidden = true
         self.secondaryButton.isEnabled = false
+        
+        workoutCompletePresenter.updateWorkoutsToday()
     }
     
     override func primaryButtonTapped() {
