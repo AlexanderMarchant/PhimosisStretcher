@@ -24,6 +24,7 @@ class WorkoutPresenterTests: XCTestCase {
         mockWorkoutPresenterDelegate = MockWorkoutPresenterDelegate()
         
         mockUserDefaultsService.getIntValueReturnValue = 5
+        mockUserDefaultsService.getBoolValueReturnValue = true
         
         workoutPresenter = WorkoutPresenter(
             mockUserDefaultsService,
@@ -32,6 +33,7 @@ class WorkoutPresenterTests: XCTestCase {
             delegate: mockWorkoutPresenterDelegate)
         
         XCTAssertEqual(4, mockUserDefaultsService.getIntValueCallCount)
+        XCTAssertEqual(3, mockUserDefaultsService.getBoolValueCallCount)
         
         mockUserDefaultsService.resetCallCounts()
         mockTimerService.resetCallCounts()
@@ -134,6 +136,8 @@ class WorkoutPresenterTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(1, mockWorkoutPresenterDelegate.didCancelWorkoutCallCount)
+        
+        XCTAssertEqual(1, mockTimerService.pauseCallCount)
     }
     
     func testTimerDidChange_SecondsIsGreaterThan0_MillisecondsIsGreaterThan0() {
@@ -481,6 +485,35 @@ class WorkoutPresenterTests: XCTestCase {
         
         XCTAssertEqual(1, mockWorkoutPresenterView.timeStringDidUpdateCallCount)
         
+    }
+    
+    func testUpdateViewInstruction_NoVisualCues() {
+        // Arrange
+        mockUserDefaultsService.getBoolValueReturnValue = false
+        
+        workoutPresenter = WorkoutPresenter(
+            mockUserDefaultsService,
+            mockTimerService,
+            with: mockWorkoutPresenterView,
+            delegate: mockWorkoutPresenterDelegate)
+        
+        // Act
+        workoutPresenter.updateViewInstruction("Test", backgroundColor: UIColor.white)
+        
+        // Assert
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual("Test", mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.workoutBackgroundColour, mockWorkoutPresenterView.backgroundColor)
+    }
+    
+    func testUpdateViewInstruction_WithVisualCues() {
+        // Arrange/Act
+        workoutPresenter.updateViewInstruction("Test", backgroundColor: UIColor.white)
+        
+        // Assert
+        XCTAssertEqual(1, mockWorkoutPresenterView.instructionDidUpdateCallCount)
+        XCTAssertEqual("Test", mockWorkoutPresenterView.instruction)
+        XCTAssertEqual(UIColor.white, mockWorkoutPresenterView.backgroundColor)
     }
 
 }

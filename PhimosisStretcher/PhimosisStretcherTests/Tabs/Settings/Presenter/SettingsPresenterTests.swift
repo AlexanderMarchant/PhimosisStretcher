@@ -47,6 +47,18 @@ class SettingsPresenterTests: XCTestCase {
         XCTAssertEqual(1, mockSettingsPresenterView.didGetWorkoutSettingsCallCount)
     }
     
+    func testGetCueSettings() {
+        // Arrange
+        mockUserDefaultsService.getBoolValueReturnValue = true
+        
+        // Act
+        settingsPresenter.getCueSettings()
+        
+        // Assert
+        XCTAssertEqual(3, mockUserDefaultsService.getBoolValueCallCount)
+        XCTAssertEqual(1, mockSettingsPresenterView.didGetCueSettingsCallCount)
+    }
+    
     func testSaveChanges_TargetWorkoutsPerDayIsNil() {
         // Arrange/Act
         settingsPresenter.saveChanges(targetWorkoutsPerDay: nil, repsPerWorkout: nil, repLength: nil, restLength: nil, prepareLength: nil)
@@ -290,6 +302,42 @@ class SettingsPresenterTests: XCTestCase {
         XCTAssertEqual(0, mockSettingsPresenterDelegate.sendEmailCallCount)
         
         XCTAssertEqual(1, mockSettingsPresenterView.errorOccurredCallCount)
+    }
+    
+    func testUpdateVibrateCue() {
+        // Arrange
+        mockUserDefaultsService.getBoolValueReturnValue = false
+        
+        // Act
+        settingsPresenter.updateVibrateCue()
+        
+        // Assert
+        XCTAssertEqual(1, mockUserDefaultsService.getBoolValueCallCount)
+        XCTAssertEqual(1, mockUserDefaultsService.setBoolValueCallCount)
+    }
+    
+    func testUpdateVisualCue() {
+        // Arrange
+        mockUserDefaultsService.getBoolValueReturnValue = false
+        
+        // Act
+        settingsPresenter.updateVisualCue()
+        
+        // Assert
+        XCTAssertEqual(1, mockUserDefaultsService.getBoolValueCallCount)
+        XCTAssertEqual(1, mockUserDefaultsService.setBoolValueCallCount)
+    }
+    
+    func testUpdateAudioCue() {
+        // Arrange
+        mockUserDefaultsService.getBoolValueReturnValue = false
+        
+        // Act
+        settingsPresenter.updateAudioCue()
+        
+        // Assert
+        XCTAssertEqual(1, mockUserDefaultsService.getBoolValueCallCount)
+        XCTAssertEqual(1, mockUserDefaultsService.setBoolValueCallCount)
     }
 
 }

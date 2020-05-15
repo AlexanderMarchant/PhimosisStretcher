@@ -18,9 +18,9 @@ struct Constants {
     static let workoutsToday = "WorkoutsToday"
     static let totalWorkoutTime = "TotalWorkoutTime"
     static let todaysDate = "TodaysDate"
-    static let vibrationCue = "VibrationCueOn"
-    static let visualCue = "VisualCueOn"
-    static let soundCue = "SoundCueOn"
+    static let useVibrateCues = "UseVibrateCues"
+    static let useVisualCues = "UseVisualCues"
+    static let useAudioCues = "UseSoundCues"
     static let adsDisabled = "AdsDisabled"
     
     //  User Default Keys

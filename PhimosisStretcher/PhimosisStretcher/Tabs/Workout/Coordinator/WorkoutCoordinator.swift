@@ -61,7 +61,7 @@ class WorkoutCoordinator: Coordinator {
         
         let workoutPresenter = WorkoutPresenter(
             userDefaultsService,
-            timerService,
+            TimerService(),
             with: workoutViewController,
             delegate: self)
         

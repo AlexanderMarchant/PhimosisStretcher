@@ -10,6 +10,10 @@ import Foundation
 
 protocol SettingsPresenterProtocol {
     func getWorkoutSettings()
+    func getCueSettings()
     func saveChanges(targetWorkoutsPerDay: String?, repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?)
     func sendEmail()
+    func updateVibrateCue()
+    func updateVisualCue()
+    func updateAudioCue()
 }

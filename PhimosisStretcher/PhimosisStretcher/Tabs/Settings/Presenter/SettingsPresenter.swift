@@ -11,6 +11,7 @@ import MessageUI
 
 protocol SettingsPresenterView {
     func didGetWorkoutSettings(_ targetWorkoutsPerDay: String, _ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String)
+    func didGetCueSettings(_ useVibrateCues: Bool, _ useVisualCues: Bool, _ useAudioCues: Bool)
     func savedChanges()
     func errorOccurred(message: String)
 }
@@ -43,6 +44,14 @@ class SettingsPresenter: SettingsPresenterProtocol {
         let prepareLength = String(userDefaultsService.integer(forKey: Constants.prepareLength))
         
         self.view.didGetWorkoutSettings(targetWorkoutsPerDay, repsPerWorkout, repLength, restLength, prepareLength)
+    }
+    
+    func getCueSettings() {
+        let useVibrateCues = userDefaultsService.bool(forKey: Constants.useVibrateCues)
+        let useVisualCues = userDefaultsService.bool(forKey: Constants.useVisualCues)
+        let useAudioCues = userDefaultsService.bool(forKey: Constants.useAudioCues)
+        
+        self.view.didGetCueSettings(useVibrateCues, useVisualCues, useAudioCues)
     }
     
     func saveChanges(targetWorkoutsPerDay: String?, repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
@@ -86,6 +95,21 @@ class SettingsPresenter: SettingsPresenterProtocol {
         } else {
             self.view.errorOccurred(message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n Email: \n \(Constants.email)")
         }
+    }
+    
+    func updateVibrateCue() {
+        let useVibrateCues = userDefaultsService.bool(forKey: Constants.useVibrateCues)
+        userDefaultsService.set(!useVibrateCues, forKey: Constants.useVibrateCues)
+    }
+    
+    func updateVisualCue() {
+        let useVisualCues = userDefaultsService.bool(forKey: Constants.useVisualCues)
+        userDefaultsService.set(!useVisualCues, forKey: Constants.useVisualCues)
+    }
+    
+    func updateAudioCue() {
+        let useAudioCues = userDefaultsService.bool(forKey: Constants.useAudioCues)
+        userDefaultsService.set(!useAudioCues, forKey: Constants.useAudioCues)
     }
     
 }

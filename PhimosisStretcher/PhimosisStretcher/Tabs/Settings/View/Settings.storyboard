@@ -196,7 +196,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZRM-8A-Z9a">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRM-8A-Z9a">
                                                     <rect key="frame" x="349" y="6.5" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
@@ -265,11 +265,11 @@
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="TX9-tv-s3L"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="audioCueSwitch" destination="ZRM-8A-Z9a" id="7Nm-In-RMn"/>
                         <outlet property="prepareLengthTextBox" destination="ILk-w4-9RA" id="naf-3H-LTf"/>
                         <outlet property="repLengthTextBox" destination="Li9-UQ-RsM" id="eUE-ir-SI2"/>
                         <outlet property="repsPerWorkoutTextBox" destination="mPj-Bs-y5n" id="ODB-de-ymZ"/>
                         <outlet property="restLengthTextBox" destination="aDw-3w-EvL" id="Ohz-hs-vmI"/>
-                        <outlet property="soundCueSwitch" destination="ZRM-8A-Z9a" id="7Nm-In-RMn"/>
                         <outlet property="targetWorkoutsPerDayTextBox" destination="o0e-li-0MB" id="XKm-Ce-405"/>
                         <outlet property="vibrateCueSwitch" destination="JWH-wz-4sY" id="4Pn-AJ-dAz"/>
                         <outlet property="visualCueSwitch" destination="Y5m-Dc-iVy" id="jaC-6Q-c9s"/>

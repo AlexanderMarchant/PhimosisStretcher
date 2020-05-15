@@ -12,17 +12,23 @@ import Foundation
 class MockSettingsPresenterView: MockObjectProtocol, SettingsPresenterView {
     
     var didGetWorkoutSettingsCallCount = 0
+    var didGetCueSettingsCallCount = 0
     var savedChangesCallCount = 0
     var errorOccurredCallCount = 0
     
     func resetCallCounts() {
         self.didGetWorkoutSettingsCallCount = 0
+        self.didGetCueSettingsCallCount = 0
         self.savedChangesCallCount = 0
         self.errorOccurredCallCount = 0
     }
     
     func didGetWorkoutSettings(_ targetWorkoutsPerDay: String, _ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String) {
         didGetWorkoutSettingsCallCount += 1
+    }
+    
+    func didGetCueSettings(_ useVibrateCues: Bool, _ useVisualCues: Bool, _ useAudioCues: Bool) {
+        didGetCueSettingsCallCount += 1
     }
     
     func savedChanges() {

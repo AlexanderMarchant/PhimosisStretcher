@@ -95,7 +95,7 @@
                         <outlet property="pauseWorkoutButton" destination="Ckr-ZF-K7O" id="nwX-gR-2fg"/>
                         <outlet property="repsLeftLabel" destination="JCx-d4-JRM" id="qtB-8B-dEX"/>
                         <outlet property="resumeWorkoutButton" destination="1Sp-On-iYC" id="BET-NW-CbG"/>
-                        <outlet property="timerLabel" destination="Dvj-ow-5Gh" id="mtW-ba-f0b"/>
+                        <outlet property="timerLabel" destination="Dvj-ow-5Gh" id="X4H-Da-BmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8T-PZ-9Xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

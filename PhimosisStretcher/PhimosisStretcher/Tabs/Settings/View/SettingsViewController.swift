@@ -22,7 +22,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
     
     @IBOutlet weak var vibrateCueSwitch: UISwitch!
     @IBOutlet weak var visualCueSwitch: UISwitch!
-    @IBOutlet weak var soundCueSwitch: UISwitch!
+    @IBOutlet weak var audioCueSwitch: UISwitch!
     
     var repsPerWorkoutTextBoxController: MDCTextInputControllerOutlined!
     var repLengthTextBoxController: MDCTextInputControllerOutlined!
@@ -37,6 +37,10 @@ class SettingsViewController: UITableViewController, Storyboarded {
         
         navigationItem.setLeftBarButton(nil, animated: false)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveChanges))
+        
+        vibrateCueSwitch.addTarget(self, action: #selector(vibrateCuesSwitchTouched), for: UIControl.Event.valueChanged)
+        visualCueSwitch.addTarget(self, action: #selector(visualCuesSwitchTouched), for: UIControl.Event.valueChanged)
+        audioCueSwitch.addTarget(self, action: #selector(audioCuesSwitchTouched), for: UIControl.Event.valueChanged)
         
         repsPerWorkoutTextBox.keyboardType = .numberPad
         repLengthTextBox.keyboardType = .numberPad
@@ -76,6 +80,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         settingsPresenter.getWorkoutSettings()
+        settingsPresenter.getCueSettings()
     }
     
     @objc func saveChanges()
@@ -87,6 +92,18 @@ class SettingsViewController: UITableViewController, Storyboarded {
             restLength: restLengthTextBox.text,
             prepareLength: prepareLengthTextBox.text
         )
+    }
+    
+    @objc func vibrateCuesSwitchTouched() {
+        settingsPresenter.updateVibrateCue()
+    }
+    
+    @objc func visualCuesSwitchTouched() {
+        settingsPresenter.updateVisualCue()
+    }
+    
+    @objc func audioCuesSwitchTouched() {
+        settingsPresenter.updateAudioCue()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -111,6 +128,12 @@ extension SettingsViewController: SettingsPresenterView {
         repLengthTextBox.text = repLength
         restLengthTextBox.text = restLength
         prepareLengthTextBox.text = prepareLength
+    }
+    
+    func didGetCueSettings(_ useVibrateCues: Bool, _ useVisualCues: Bool, _ useAudioCues: Bool) {
+        vibrateCueSwitch.isOn = useVibrateCues
+        visualCueSwitch.isOn = useVisualCues
+        audioCueSwitch.isOn = useAudioCues
     }
     
     func savedChanges() {

@@ -64,6 +64,31 @@ class SettingsViewControllerTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(1, mockSettingsPresenter.getWorkoutSettingsCallCount)
+        XCTAssertEqual(1, mockSettingsPresenter.getCueSettingsCallCount)
+    }
+    
+    func testVibrateCuesSwitchTouched() {
+        // Arrange/Act
+        settingsViewController.vibrateCuesSwitchTouched()
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenter.updateVibrateCueCallCount)
+    }
+    
+    func testVisualCueSwitchTouched() {
+        // Arrange/Act
+        settingsViewController.visualCuesSwitchTouched()
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenter.updateVisualCueCallCount)
+    }
+    
+    func testAudioCuesSwitchTouched() {
+        // Arrange/Act
+        settingsViewController.audioCuesSwitchTouched()
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenter.updateAudioCueCallCount)
     }
     
     func testSaveChanges() {
@@ -72,6 +97,28 @@ class SettingsViewControllerTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(1, mockSettingsPresenter.saveChangesCallCount)
+    }
+    
+    func testDidSelectRowAt_NotEmailIndexPath() {
+        // Arrange
+        let indexPath = IndexPath(row: 0, section: 1)
+        
+        // Act
+        settingsViewController.tableView(settingsViewController.tableView, didSelectRowAt: indexPath)
+        
+        // Assert
+        XCTAssertEqual(0, mockSettingsPresenter.sendEmailCallCount)
+    }
+    
+    func testDidSelectRowAt_EmailIndexPath() {
+        // Arrange
+        let indexPath = IndexPath(row: 0, section: 2)
+        
+        // Act
+        settingsViewController.tableView(settingsViewController.tableView, didSelectRowAt: indexPath)
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenter.sendEmailCallCount)
     }
     
     func testSettingsPresenterView_DidGetWorkoutSettings() {
@@ -90,6 +137,21 @@ class SettingsViewControllerTests: XCTestCase {
         XCTAssertEqual(REP_LENGTH, settingsViewController.repLengthTextBox.text)
         XCTAssertEqual(REST_LENGTH, settingsViewController.restLengthTextBox.text)
         XCTAssertEqual(PREPARE_LENGTH, settingsViewController.prepareLengthTextBox.text)
+    }
+    
+    func testSettingsPresenterView_DidGetCueSettings() {
+        // Arrange
+        let USE_VIBRATE_CUES = true
+        let USE_VISUAL_CUES = false
+        let USE_AUDIO_CUES = false
+        
+        // Act
+        settingsViewController.didGetCueSettings(USE_VIBRATE_CUES, USE_VISUAL_CUES, USE_AUDIO_CUES)
+        
+        // Assert
+        XCTAssertEqual(USE_VIBRATE_CUES, settingsViewController.vibrateCueSwitch.isOn)
+        XCTAssertEqual(USE_VISUAL_CUES, settingsViewController.visualCueSwitch.isOn)
+        XCTAssertEqual(USE_AUDIO_CUES, settingsViewController.audioCueSwitch.isOn)
     }
     
     func testSettingsPresenterView_SavedChanges() {

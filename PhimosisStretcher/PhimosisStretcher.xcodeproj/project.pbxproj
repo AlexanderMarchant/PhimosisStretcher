@@ -118,6 +118,8 @@
 		D47FA879246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA878246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift */; };
 		D47FA87B246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA87A246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift */; };
 		D47FA87D246E8A12006B3A69 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA87C246E8A12006B3A69 /* GlobalFunctions.swift */; };
+		D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C02E246F371D00D524DE /* WorkoutCueService.swift */; };
+		D4B5C031246F372900D524DE /* WorkoutCueServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5C030246F372900D524DE /* WorkoutCueServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +252,8 @@
 		D47FA878246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMenuViewControllerTests.swift; sourceTree = "<group>"; };
 		D47FA87A246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMenuPresenterTests.swift; sourceTree = "<group>"; };
 		D47FA87C246E8A12006B3A69 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		D4B5C02E246F371D00D524DE /* WorkoutCueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCueService.swift; sourceTree = "<group>"; };
+		D4B5C030246F372900D524DE /* WorkoutCueServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCueServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +380,7 @@
 		D4556619246AE55A00DC1FAE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4B5C02D246F370800D524DE /* WorkoutCueService */,
 				D4556711246BCA9600DC1FAE /* TimerService */,
 				D455661A246AE56A00DC1FAE /* AlertHandlerService */,
 				D455661B246AE57800DC1FAE /* UserDefaultsService */,
@@ -1213,6 +1218,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D4B5C02D246F370800D524DE /* WorkoutCueService */ = {
+			isa = PBXGroup;
+			children = (
+				D4B5C02E246F371D00D524DE /* WorkoutCueService.swift */,
+				D4B5C030246F372900D524DE /* WorkoutCueServiceProtocol.swift */,
+			);
+			path = WorkoutCueService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1405,10 +1419,12 @@
 				D45566D8246B19D300DC1FAE /* ErrorScreensCoordinator.swift in Sources */,
 				D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */,
 				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
+				D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */,
 				D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */,
 				D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */,
 				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
 				D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */,
+				D4B5C031246F372900D524DE /* WorkoutCueServiceProtocol.swift in Sources */,
 				D4556707246B22C200DC1FAE /* WorkoutMenuPresenter.swift in Sources */,
 				D4556686246B0C2000DC1FAE /* StretchInfoViewController.swift in Sources */,
 				D4556709246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift in Sources */,
