@@ -121,6 +121,54 @@ class SettingsViewControllerTests: XCTestCase {
         XCTAssertEqual(1, mockSettingsPresenter.sendEmailCallCount)
     }
     
+    func testCellForRowAt_KegelTrainerCell() {
+        // Arrange
+        let INDEX_PATH = Constants.kegelTrainerCellIndexPath
+        
+        // Act
+        let result = settingsViewController.tableView(settingsViewController.tableView, cellForRowAt: INDEX_PATH)
+        
+        // Assert
+        XCTAssertTrue(result is KegelTrainerCell)
+        
+        let kegelTrainerCell = result as! KegelTrainerCell
+        
+        XCTAssertEqual(5, kegelTrainerCell.kegelTrainerLogo.layer.cornerRadius)
+    }
+    
+    func testCellForRowAt_NormalCell() {
+        // Arrange
+        let INDEX_PATH = IndexPath(row: 0, section: 0)
+        
+        // Act
+        let result = settingsViewController.tableView(settingsViewController.tableView, cellForRowAt: INDEX_PATH)
+        
+        // Assert
+        XCTAssertFalse(result is KegelTrainerCell)
+    }
+    
+    func testHeightForRowAt_KegelTrainerCell() {
+        // Arrange
+        let INDEX_PATH = Constants.kegelTrainerCellIndexPath
+        
+        // Act
+        let result = settingsViewController.tableView(settingsViewController.tableView, heightForRowAt: INDEX_PATH)
+        
+        // Assert
+        XCTAssertEqual(140, result)
+    }
+    
+    func testHeightForRowAt_NormalCell() {
+        // Arrange
+        let INDEX_PATH = IndexPath(row: 0, section: 0)
+        
+        // Act
+        let result = settingsViewController.tableView(settingsViewController.tableView, heightForRowAt: INDEX_PATH)
+        
+        // Assert
+        XCTAssertNotEqual(140, result)
+    }
+    
     func testSettingsPresenterView_DidGetWorkoutSettings() {
         // Arrange
         let TARGET_WORKOUTS_PER_DAY = "3"
