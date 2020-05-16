@@ -99,6 +99,8 @@
 		D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556712246BCAA900DC1FAE /* TimerService.swift */; };
 		D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */; };
 		D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556716246BCC6E00DC1FAE /* MockTimerService.swift */; };
+		D46EB371246FFAD300AF0F5B /* KegelTrainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB36F246FFAD300AF0F5B /* KegelTrainerCell.swift */; };
+		D46EB372246FFAD300AF0F5B /* KegelTrainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46EB370246FFAD300AF0F5B /* KegelTrainerCell.xib */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -242,6 +244,8 @@
 		D4556712246BCAA900DC1FAE /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		D4556714246BCAB300DC1FAE /* TimerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceProtocol.swift; sourceTree = "<group>"; };
 		D4556716246BCC6E00DC1FAE /* MockTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerService.swift; sourceTree = "<group>"; };
+		D46EB36F246FFAD300AF0F5B /* KegelTrainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegelTrainerCell.swift; sourceTree = "<group>"; };
+		D46EB370246FFAD300AF0F5B /* KegelTrainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KegelTrainerCell.xib; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -379,7 +383,6 @@
 			children = (
 				D4556626246AE5ED00DC1FAE /* Stretches */,
 				D4556624246AE5DC00DC1FAE /* Workout */,
-				D45566F5246B1E0A00DC1FAE /* Reminders */,
 				D4556625246AE5E700DC1FAE /* Settings */,
 			);
 			path = Tabs;
@@ -679,6 +682,8 @@
 			children = (
 				D4556660246AEC6100DC1FAE /* SettingsViewController.swift */,
 				D455665E246AEC5500DC1FAE /* Settings.storyboard */,
+				D45566F5246B1E0A00DC1FAE /* Reminders */,
+				D46EB36B246FF97200AF0F5B /* Credits */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -808,6 +813,7 @@
 		D45566B1246B155900DC1FAE /* Custom Storyboard Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB36E246FFAB100AF0F5B /* TableCells */,
 				D47FA84A246D1AA1006B3A69 /* Labels */,
 				D45566B2246B156000DC1FAE /* Buttons */,
 			);
@@ -1151,6 +1157,30 @@
 			path = TimerService;
 			sourceTree = "<group>";
 		};
+		D46EB36B246FF97200AF0F5B /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB36C246FF97D00AF0F5B /* View */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		D46EB36C246FF97D00AF0F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D46EB36E246FFAB100AF0F5B /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB36F246FFAD300AF0F5B /* KegelTrainerCell.swift */,
+				D46EB370246FFAD300AF0F5B /* KegelTrainerCell.xib */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1368,6 +1398,7 @@
 				D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */,
 				D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
+				D46EB372246FFAD300AF0F5B /* KegelTrainerCell.xib in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
 				D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */,
 				D45566DF246B1A1E00DC1FAE /* EnableNotifications.storyboard in Resources */,
@@ -1489,6 +1520,7 @@
 				D47FA853246D9FA3006B3A69 /* WorkoutCompletePresenterProtocol.swift in Sources */,
 				D4556623246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift in Sources */,
 				D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */,
+				D46EB371246FFAD300AF0F5B /* KegelTrainerCell.swift in Sources */,
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
 				D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */,

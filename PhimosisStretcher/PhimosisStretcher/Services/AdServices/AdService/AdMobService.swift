@@ -102,7 +102,7 @@ extension AdMobService: GADBannerViewDelegate {
         
         UIView.animate(withDuration: 0.5) {
             bannerView.transform = CGAffineTransform.identity
-//            bannerView.centerInSuperview()
+//            bannerView.center()
             bannerView.superview?.setNeedsLayout()
         }
     }

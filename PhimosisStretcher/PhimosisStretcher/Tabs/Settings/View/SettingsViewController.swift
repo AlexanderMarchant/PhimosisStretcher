@@ -76,6 +76,8 @@ class SettingsViewController: UITableViewController, Storyboarded {
         targetWorkoutsPerDayTextBoxController = MDCTextInputControllerOutlined(textInput: targetWorkoutsPerDayTextBox)
         targetWorkoutsPerDayTextBoxController.activeColor = UIColor.appBlue
         targetWorkoutsPerDayTextBoxController.placeholderText = "Target Workouts Per Day"
+        
+        tableView.register(UINib.init(nibName: Constants.kegelTrainerCell, bundle: nil), forCellReuseIdentifier: Constants.kegelTrainerCell)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,16 +109,35 @@ class SettingsViewController: UITableViewController, Storyboarded {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let emailIndexPath = IndexPath(row: 0, section: 2)
         
         switch indexPath {
-        case emailIndexPath:
+        case Constants.emailCellIndexPath:
             settingsPresenter.sendEmail()
         default:
             break
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if(indexPath == Constants.kegelTrainerCellIndexPath) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kegelTrainerCell, for: indexPath) as! KegelTrainerCell
+            
+            cell.kegelTrainerLogo.layer.cornerRadius = 5
+            
+            return cell
+        } else {
+            return super.tableView(tableView, cellForRowAt: indexPath)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(indexPath == Constants.kegelTrainerCellIndexPath) {
+            return 140
+        } else {
+            return super.tableView(tableView, heightForRowAt: indexPath)
+        }
     }
 
 }

@@ -30,6 +30,12 @@ struct Constants {
     //  Dispatch Queue
     static let dispatchQueueLabel = "ResumeWorkout"
     
+    // Reusable Cells
+    static let emailCellIndexPath = IndexPath(row: 0, section: 2)
+    
+    static let kegelTrainerCell = "KegelTrainerCell"
+    static let kegelTrainerCellIndexPath = IndexPath(row: 0, section: 3)
+    
     // AdMob Test Ad Id's
     static let testBannerAdId = "ca-app-pub-3940256099942544/2934735716"
     static let testInterstitialAdId = "ca-app-pub-3940256099942544/4411468910"

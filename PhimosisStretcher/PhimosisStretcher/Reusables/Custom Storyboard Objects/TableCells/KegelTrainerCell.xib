@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KegelTrainerCell" rowHeight="148" id="KGk-i7-Jjw" customClass="KegelTrainerCell" customModule="PhimosisStretcher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KegelTrainerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bte-cG-gNm">
+                        <rect key="frame" x="16" y="16" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Ffg-gH-GXN"/>
+                            <constraint firstAttribute="width" constant="50" id="VDZ-iX-EJV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Kegel Trainer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="For-SU-svj">
+                        <rect key="frame" x="82" y="16" width="222" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="wzM-kY-tQQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kegel workouts made easy so you have better erections with more control, all for free!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cE-B8-Ila">
+                        <rect key="frame" x="16" y="74" width="288" height="58"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.48464255136986301" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Improve your control for free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-g2-GDp">
+                        <rect key="frame" x="82" y="49" width="222" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="For-SU-svj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Fee-E7-dk0"/>
+                    <constraint firstItem="9cE-B8-Ila" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JUm-8O-BzK"/>
+                    <constraint firstAttribute="trailing" secondItem="9cE-B8-Ila" secondAttribute="trailing" constant="16" id="K2k-SI-uM1"/>
+                    <constraint firstItem="Ivx-g2-GDp" firstAttribute="leading" secondItem="bte-cG-gNm" secondAttribute="trailing" constant="16" id="PBJ-ME-lqh"/>
+                    <constraint firstItem="bte-cG-gNm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PK0-sl-Ybt"/>
+                    <constraint firstItem="For-SU-svj" firstAttribute="leading" secondItem="bte-cG-gNm" secondAttribute="trailing" constant="16" id="Qrw-Yg-L7W"/>
+                    <constraint firstItem="bte-cG-gNm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="UL1-eP-02W"/>
+                    <constraint firstAttribute="trailing" secondItem="For-SU-svj" secondAttribute="trailing" constant="16" id="Vuh-Kz-73N"/>
+                    <constraint firstItem="9cE-B8-Ila" firstAttribute="top" secondItem="bte-cG-gNm" secondAttribute="bottom" constant="8" id="YaF-zU-KK2"/>
+                    <constraint firstItem="9cE-B8-Ila" firstAttribute="top" secondItem="Ivx-g2-GDp" secondAttribute="bottom" constant="8" id="gJH-Nt-dnl"/>
+                    <constraint firstItem="Ivx-g2-GDp" firstAttribute="top" secondItem="For-SU-svj" secondAttribute="bottom" constant="8" id="j1e-Gp-Bft"/>
+                    <constraint firstAttribute="trailing" secondItem="Ivx-g2-GDp" secondAttribute="trailing" constant="16" id="ksF-j6-RhY"/>
+                    <constraint firstAttribute="bottom" secondItem="9cE-B8-Ila" secondAttribute="bottom" constant="16" id="laa-yt-EvU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellSubTitle" destination="Ivx-g2-GDp" id="M8r-Lp-2Wk"/>
+                <outlet property="cellTitle" destination="For-SU-svj" id="Utn-qf-eXT"/>
+                <outlet property="kegelTrainerLogo" destination="bte-cG-gNm" id="2Ek-2Q-eF0"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="KegelTrainerLogo" width="100" height="100"/>
+    </resources>
+</document>
