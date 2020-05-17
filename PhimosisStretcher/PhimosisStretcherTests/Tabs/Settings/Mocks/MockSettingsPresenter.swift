@@ -18,6 +18,8 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     var updateVibrateCueCallCount = 0
     var updateVisualCueCallCount = 0
     var updateAudioCueCallCount = 0
+    var didSelectRemindersCallCount = 0
+    var getNotificationSettingsCallCount = 0
     
     func resetCallCounts() {
         self.getWorkoutSettingsCallCount = 0
@@ -27,6 +29,8 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
         self.updateVibrateCueCallCount = 0
         self.updateVisualCueCallCount = 0
         self.updateAudioCueCallCount = 0
+        self.didSelectRemindersCallCount = 0
+        self.getNotificationSettingsCallCount = 0
     }
     
     func getWorkoutSettings() {
@@ -55,5 +59,13 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     
     func updateAudioCue() {
         updateAudioCueCallCount += 1
+    }
+    
+    func didSelectReminders() {
+        didSelectRemindersCallCount += 1
+    }
+    
+    func getNotificationSettings() {
+        getNotificationSettingsCallCount += 1
     }
 }

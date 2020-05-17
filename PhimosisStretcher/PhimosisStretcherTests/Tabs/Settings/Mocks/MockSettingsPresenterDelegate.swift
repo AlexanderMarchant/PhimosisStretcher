@@ -12,12 +12,18 @@ import Foundation
 class MockSettingsPresenterDelegate: MockObjectProtocol, SettingsPresenterDelegate {
     
     var sendEmailCallCount = 0
+    var didSelectRemindersCallCount = 0
     
     func resetCallCounts() {
         self.sendEmailCallCount = 0
+        self.didSelectRemindersCallCount = 0
     }
     
     func sendEmail() {
         sendEmailCallCount += 1
+    }
+    
+    func didSelectReminders() {
+        didSelectRemindersCallCount += 1
     }
 }

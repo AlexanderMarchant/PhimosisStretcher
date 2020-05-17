@@ -339,5 +339,27 @@ class SettingsPresenterTests: XCTestCase {
         XCTAssertEqual(1, mockUserDefaultsService.getBoolValueCallCount)
         XCTAssertEqual(1, mockUserDefaultsService.setBoolValueCallCount)
     }
+    
+    func testDidSelectReminders_Disabled() {
+        // Arrange
+        settingsPresenter.notificationsAreEnabled = false
+        
+        // Act
+        settingsPresenter.didSelectReminders()
+        
+        // Assert
+        XCTAssertEqual(0, mockSettingsPresenterDelegate.didSelectRemindersCallCount)
+    }
+    
+    func testDidSelectReminders_Enabled() {
+        // Arrange
+        settingsPresenter.notificationsAreEnabled = true
+        
+        // Act
+        settingsPresenter.didSelectReminders()
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenterDelegate.didSelectRemindersCallCount)
+    }
 
 }

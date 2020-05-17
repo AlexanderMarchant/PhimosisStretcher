@@ -112,6 +112,16 @@
 		D46EB38824711C3400AF0F5B /* AddReminderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB38724711C3400AF0F5B /* AddReminderPresenter.swift */; };
 		D46EB38A24711C3D00AF0F5B /* AddReminderPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB38924711C3D00AF0F5B /* AddReminderPresenterProtocol.swift */; };
 		D46EB38E24711F8800AF0F5B /* Date-StripDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB38D24711F8800AF0F5B /* Date-StripDate.swift */; };
+		D46EB39424712C5200AF0F5B /* MockRemindersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB39324712C5200AF0F5B /* MockRemindersPresenter.swift */; };
+		D46EB39624712C5A00AF0F5B /* MockRemindersPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB39524712C5A00AF0F5B /* MockRemindersPresenterDelegate.swift */; };
+		D46EB39824712C6200AF0F5B /* MockRemindersPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB39724712C6200AF0F5B /* MockRemindersPresenterView.swift */; };
+		D46EB39A24712C6E00AF0F5B /* MockAddReminderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB39924712C6E00AF0F5B /* MockAddReminderPresenter.swift */; };
+		D46EB39C24712C7600AF0F5B /* MockAddReminderPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB39B24712C7600AF0F5B /* MockAddReminderPresenterDelegate.swift */; };
+		D46EB39E24712C7F00AF0F5B /* MockAddReminderPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB39D24712C7F00AF0F5B /* MockAddReminderPresenterView.swift */; };
+		D46EB3A024712E2B00AF0F5B /* RemindersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB39F24712E2B00AF0F5B /* RemindersPresenterTests.swift */; };
+		D46EB3A224712E9800AF0F5B /* AddReminderPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3A124712E9800AF0F5B /* AddReminderPresenterTests.swift */; };
+		D46EB3A424712EDA00AF0F5B /* RemindersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3A324712EDA00AF0F5B /* RemindersViewControllerTests.swift */; };
+		D46EB3A624712F5D00AF0F5B /* AddReminderViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3A524712F5D00AF0F5B /* AddReminderViewControllerTests.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -268,6 +278,16 @@
 		D46EB38724711C3400AF0F5B /* AddReminderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderPresenter.swift; sourceTree = "<group>"; };
 		D46EB38924711C3D00AF0F5B /* AddReminderPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderPresenterProtocol.swift; sourceTree = "<group>"; };
 		D46EB38D24711F8800AF0F5B /* Date-StripDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-StripDate.swift"; sourceTree = "<group>"; };
+		D46EB39324712C5200AF0F5B /* MockRemindersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemindersPresenter.swift; sourceTree = "<group>"; };
+		D46EB39524712C5A00AF0F5B /* MockRemindersPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemindersPresenterDelegate.swift; sourceTree = "<group>"; };
+		D46EB39724712C6200AF0F5B /* MockRemindersPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemindersPresenterView.swift; sourceTree = "<group>"; };
+		D46EB39924712C6E00AF0F5B /* MockAddReminderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddReminderPresenter.swift; sourceTree = "<group>"; };
+		D46EB39B24712C7600AF0F5B /* MockAddReminderPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddReminderPresenterDelegate.swift; sourceTree = "<group>"; };
+		D46EB39D24712C7F00AF0F5B /* MockAddReminderPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddReminderPresenterView.swift; sourceTree = "<group>"; };
+		D46EB39F24712E2B00AF0F5B /* RemindersPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersPresenterTests.swift; sourceTree = "<group>"; };
+		D46EB3A124712E9800AF0F5B /* AddReminderPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderPresenterTests.swift; sourceTree = "<group>"; };
+		D46EB3A324712EDA00AF0F5B /* RemindersViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewControllerTests.swift; sourceTree = "<group>"; };
+		D46EB3A524712F5D00AF0F5B /* AddReminderViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewControllerTests.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -511,7 +531,6 @@
 			children = (
 				D4556635246AE92A00DC1FAE /* Stretches */,
 				D4556636246AE92E00DC1FAE /* Workout */,
-				D45566F6246B1E1700DC1FAE /* Reminders */,
 				D4556637246AE93400DC1FAE /* Settings */,
 			);
 			path = Tabs;
@@ -642,6 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				D4556668246AEDD400DC1FAE /* SettingsViewControllerTests.swift */,
+				D45566F6246B1E1700DC1FAE /* Reminders */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1085,6 +1105,8 @@
 		D45566FA246B1E8A00DC1FAE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB3A324712EDA00AF0F5B /* RemindersViewControllerTests.swift */,
+				D46EB38F24712C2500AF0F5B /* AddReminder */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1092,6 +1114,7 @@
 		D45566FB246B1E8E00DC1FAE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB39F24712E2B00AF0F5B /* RemindersPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1106,6 +1129,9 @@
 		D45566FD246B1E9600DC1FAE /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB39324712C5200AF0F5B /* MockRemindersPresenter.swift */,
+				D46EB39524712C5A00AF0F5B /* MockRemindersPresenterDelegate.swift */,
+				D46EB39724712C6200AF0F5B /* MockRemindersPresenterView.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1243,6 +1269,42 @@
 				D46EB3832471178500AF0F5B /* Reminder.swift */,
 			);
 			path = Reminder;
+			sourceTree = "<group>";
+		};
+		D46EB38F24712C2500AF0F5B /* AddReminder */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB39224712C3500AF0F5B /* Mocks */,
+				D46EB39124712C3000AF0F5B /* Presenter */,
+				D46EB39024712C2B00AF0F5B /* View */,
+			);
+			path = AddReminder;
+			sourceTree = "<group>";
+		};
+		D46EB39024712C2B00AF0F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB3A524712F5D00AF0F5B /* AddReminderViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D46EB39124712C3000AF0F5B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB3A124712E9800AF0F5B /* AddReminderPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D46EB39224712C3500AF0F5B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB39924712C6E00AF0F5B /* MockAddReminderPresenter.swift */,
+				D46EB39B24712C7600AF0F5B /* MockAddReminderPresenterDelegate.swift */,
+				D46EB39D24712C7F00AF0F5B /* MockAddReminderPresenterView.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
@@ -1640,10 +1702,13 @@
 				D45566CC246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift in Sources */,
 				D45566A2246B116700DC1FAE /* StretchInfoPresenterTests.swift in Sources */,
 				D47FA85D246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift in Sources */,
+				D46EB39624712C5A00AF0F5B /* MockRemindersPresenterDelegate.swift in Sources */,
 				D455669E246B107E00DC1FAE /* StretchesViewControllerTests.swift in Sources */,
 				D4556698246B0F7400DC1FAE /* MockStretchesPresenterDelegate.swift in Sources */,
 				D47FA877246E8397006B3A69 /* MockWorkoutMenuPresenterDelegate.swift in Sources */,
+				D46EB39424712C5200AF0F5B /* MockRemindersPresenter.swift in Sources */,
 				D455664D246AEA5F00DC1FAE /* MockAlertHandlerService.swift in Sources */,
+				D46EB3A224712E9800AF0F5B /* AddReminderPresenterTests.swift in Sources */,
 				D47FA85F246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift in Sources */,
 				D455668E246B0EB900DC1FAE /* MockStretchInfoPresenter.swift in Sources */,
 				D455663F246AE96A00DC1FAE /* WorkoutPresenterTests.swift in Sources */,
@@ -1652,15 +1717,20 @@
 				D45566EB246B1C0700DC1FAE /* EnableNotificationsViewControllerTests.swift in Sources */,
 				D47FA873246E8382006B3A69 /* MockWorkoutMenuPresenter.swift in Sources */,
 				D47FA865246DA567006B3A69 /* MockWorkoutCompletePresenterDelegate.swift in Sources */,
+				D46EB3A624712F5D00AF0F5B /* AddReminderViewControllerTests.swift in Sources */,
 				D47FA875246E838C006B3A69 /* MockWorkoutMenuPresenterView.swift in Sources */,
 				D45566ED246B1C1400DC1FAE /* EnableNotificationsPresenterTests.swift in Sources */,
 				D45566EF246B1C2E00DC1FAE /* MockEnableNotificationsPresenter.swift in Sources */,
 				D4556641246AE97800DC1FAE /* WorkoutCoordinatorTests.swift in Sources */,
+				D46EB39824712C6200AF0F5B /* MockRemindersPresenterView.swift in Sources */,
 				D4B5C033246F381600D524DE /* MockWorkoutCueService.swift in Sources */,
 				D45566F1246B1C3600DC1FAE /* MockEnableNotificationsPresenterView.swift in Sources */,
 				D455666D246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift in Sources */,
+				D46EB39C24712C7600AF0F5B /* MockAddReminderPresenterDelegate.swift in Sources */,
 				D45566D3246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift in Sources */,
 				D45566CE246B17F000DC1FAE /* MockInformationScreenPresenterDelegate.swift in Sources */,
+				D46EB3A024712E2B00AF0F5B /* RemindersPresenterTests.swift in Sources */,
+				D46EB3A424712EDA00AF0F5B /* RemindersViewControllerTests.swift in Sources */,
 				D4556669246AEDD400DC1FAE /* SettingsViewControllerTests.swift in Sources */,
 				D455664F246AEA6900DC1FAE /* MockUserDefaultsService.swift in Sources */,
 				D455669C246B104700DC1FAE /* StretchesPresenterTests.swift in Sources */,
@@ -1674,8 +1744,10 @@
 				D4556649246AE9C600DC1FAE /* MockObjectProtocol.swift in Sources */,
 				D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */,
 				D45566A0246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift in Sources */,
+				D46EB39A24712C6E00AF0F5B /* MockAddReminderPresenter.swift in Sources */,
 				D45566CA246B17CA00DC1FAE /* InformationScreenPresenterTests.swift in Sources */,
 				D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */,
+				D46EB39E24712C7F00AF0F5B /* MockAddReminderPresenterView.swift in Sources */,
 				D47FA861246DA554006B3A69 /* MockWorkoutCompletePresenter.swift in Sources */,
 				D455666B246AEDDD00DC1FAE /* SettingsPresenterTests.swift in Sources */,
 			);

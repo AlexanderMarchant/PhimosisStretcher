@@ -65,6 +65,7 @@ class SettingsViewControllerTests: XCTestCase {
         // Assert
         XCTAssertEqual(1, mockSettingsPresenter.getWorkoutSettingsCallCount)
         XCTAssertEqual(1, mockSettingsPresenter.getCueSettingsCallCount)
+        XCTAssertEqual(1, mockSettingsPresenter.getNotificationSettingsCallCount)
     }
     
     func testVibrateCuesSwitchTouched() {
@@ -99,7 +100,7 @@ class SettingsViewControllerTests: XCTestCase {
         XCTAssertEqual(1, mockSettingsPresenter.saveChangesCallCount)
     }
     
-    func testDidSelectRowAt_NotEmailIndexPath() {
+    func testDidSelectRowAt_OtherIndexPath() {
         // Arrange
         let indexPath = IndexPath(row: 0, section: 1)
         
@@ -112,13 +113,24 @@ class SettingsViewControllerTests: XCTestCase {
     
     func testDidSelectRowAt_EmailIndexPath() {
         // Arrange
-        let indexPath = IndexPath(row: 0, section: 2)
+        let indexPath = Constants.emailCellIndexPath
         
         // Act
         settingsViewController.tableView(settingsViewController.tableView, didSelectRowAt: indexPath)
         
         // Assert
         XCTAssertEqual(1, mockSettingsPresenter.sendEmailCallCount)
+    }
+    
+    func testDidSelectRowAt_RemindersIndexPath() {
+        // Arrange
+        let indexPath = Constants.remindersCellIndexPath
+        
+        // Act
+        settingsViewController.tableView(settingsViewController.tableView, didSelectRowAt: indexPath)
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenter.didSelectRemindersCallCount)
     }
     
     func testCellForRowAt_KegelTrainerCell() {
