@@ -116,6 +116,8 @@ class SettingsViewController: UITableViewController, Storyboarded {
             settingsPresenter.didSelectReminders()
         case Constants.emailCellIndexPath:
             settingsPresenter.sendEmail()
+        case Constants.creditsIndexPath:
+            settingsPresenter.didSelectCredits()
         default:
             break
         }

@@ -19,6 +19,7 @@ protocol SettingsPresenterView {
 protocol SettingsPresenterDelegate {
     func sendEmail()
     func didSelectReminders()
+    func didSelectCredits()
 }
 
 class SettingsPresenter: SettingsPresenterProtocol {
@@ -106,6 +107,10 @@ class SettingsPresenter: SettingsPresenterProtocol {
         } else {
             ErrorScreensCoordinator.shared.showEnableNotifications()
         }
+    }
+    
+    func didSelectCredits() {
+        self.delegate.didSelectCredits()
     }
     
     func updateVibrateCue() {

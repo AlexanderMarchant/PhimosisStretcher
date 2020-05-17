@@ -38,6 +38,8 @@ struct Constants {
     static let kegelTrainerCell = "KegelTrainerCell"
     static let kegelTrainerCellIndexPath = IndexPath(row: 0, section: 4)
     
+    static let creditsIndexPath = IndexPath(row: 0, section: 5)
+    
     static let reminderCell = "Reminder"
     
     // AdMob Test Ad Id's

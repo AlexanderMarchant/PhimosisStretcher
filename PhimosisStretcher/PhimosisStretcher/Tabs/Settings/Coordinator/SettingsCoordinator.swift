@@ -74,6 +74,11 @@ class SettingsCoordinator: Coordinator {
         self.navigationController.present(vc, animated: true, completion: nil)
     }
     
+    func showCredits() {
+        let vc = CreditsViewController()
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension SettingsCoordinator: SettingsPresenterDelegate {
@@ -83,6 +88,10 @@ extension SettingsCoordinator: SettingsPresenterDelegate {
     
     func didSelectReminders() {
         showReminders()
+    }
+    
+    func didSelectCredits() {
+        showCredits()
     }
 }
 

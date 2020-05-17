@@ -122,6 +122,11 @@
 		D46EB3A224712E9800AF0F5B /* AddReminderPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3A124712E9800AF0F5B /* AddReminderPresenterTests.swift */; };
 		D46EB3A424712EDA00AF0F5B /* RemindersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3A324712EDA00AF0F5B /* RemindersViewControllerTests.swift */; };
 		D46EB3A624712F5D00AF0F5B /* AddReminderViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3A524712F5D00AF0F5B /* AddReminderViewControllerTests.swift */; };
+		D471B47424719FC300A5640F /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = D471B47324719FC300A5640F /* credits.html */; };
+		D471B47624719FE300A5640F /* theme.css in Resources */ = {isa = PBXBuildFile; fileRef = D471B47524719FE300A5640F /* theme.css */; };
+		D471B4792471A24100A5640F /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4782471A24100A5640F /* CreditsViewController.swift */; };
+		D471B47B2471A2AC00A5640F /* CreditsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B47A2471A2AC00A5640F /* CreditsTextView.swift */; };
+		D471B47D2471A30200A5640F /* String-Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B47C2471A30200A5640F /* String-Attributed.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -288,6 +293,11 @@
 		D46EB3A124712E9800AF0F5B /* AddReminderPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderPresenterTests.swift; sourceTree = "<group>"; };
 		D46EB3A324712EDA00AF0F5B /* RemindersViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewControllerTests.swift; sourceTree = "<group>"; };
 		D46EB3A524712F5D00AF0F5B /* AddReminderViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewControllerTests.swift; sourceTree = "<group>"; };
+		D471B47324719FC300A5640F /* credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = credits.html; sourceTree = "<group>"; };
+		D471B47524719FE300A5640F /* theme.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = theme.css; sourceTree = "<group>"; };
+		D471B4782471A24100A5640F /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		D471B47A2471A2AC00A5640F /* CreditsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsTextView.swift; sourceTree = "<group>"; };
+		D471B47C2471A30200A5640F /* String-Attributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Attributed.swift"; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -1223,6 +1233,9 @@
 		D46EB36C246FF97D00AF0F5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D471B47724719FED00A5640F /* Files */,
+				D471B4782471A24100A5640F /* CreditsViewController.swift */,
+				D471B47A2471A2AC00A5640F /* CreditsTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1305,6 +1318,15 @@
 				D46EB39D24712C7F00AF0F5B /* MockAddReminderPresenterView.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D471B47724719FED00A5640F /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D471B47324719FC300A5640F /* credits.html */,
+				D471B47524719FE300A5640F /* theme.css */,
+			);
+			path = Files;
 			sourceTree = "<group>";
 		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
@@ -1392,6 +1414,7 @@
 				D47FA867246DC36C006B3A69 /* UITextField-AddToolbar.swift */,
 				D47FA869246DC78E006B3A69 /* String-IsInt.swift */,
 				D46EB38D24711F8800AF0F5B /* Date-StripDate.swift */,
+				D471B47C2471A30200A5640F /* String-Attributed.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1521,6 +1544,7 @@
 			files = (
 				D4B5C03C246F3F7800D524DE /* Workout Complete.wav in Resources */,
 				D4556633246AE77900DC1FAE /* Workout.storyboard in Resources */,
+				D471B47624719FE300A5640F /* theme.css in Resources */,
 				D47FA857246D9FBB006B3A69 /* WorkoutComplete.storyboard in Resources */,
 				D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */,
 				D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */,
@@ -1536,6 +1560,7 @@
 				D455667E246B0BE400DC1FAE /* Stretches.storyboard in Resources */,
 				D4556688246B0C2900DC1FAE /* StretchInfo.storyboard in Resources */,
 				D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */,
+				D471B47424719FC300A5640F /* credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1639,7 +1664,9 @@
 				D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */,
 				D4B5C04B246F444400D524DE /* AdService.swift in Sources */,
 				D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */,
+				D471B47D2471A30200A5640F /* String-Attributed.swift in Sources */,
 				D4556618246AE48100DC1FAE /* Coordinator.swift in Sources */,
+				D471B4792471A24100A5640F /* CreditsViewController.swift in Sources */,
 				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
 				D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */,
 				D4B5C049246F444400D524DE /* AdServerNotifications.swift in Sources */,
@@ -1679,6 +1706,7 @@
 				D46EB38624711BFB00AF0F5B /* AddReminderViewController.swift in Sources */,
 				D46EB3762471144300AF0F5B /* RemindersCoordinator.swift in Sources */,
 				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,
+				D471B47B2471A2AC00A5640F /* CreditsTextView.swift in Sources */,
 				D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */,
 				D46EB37F2471153A00AF0F5B /* RemindersPresenter.swift in Sources */,
 				D455661F246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift in Sources */,
