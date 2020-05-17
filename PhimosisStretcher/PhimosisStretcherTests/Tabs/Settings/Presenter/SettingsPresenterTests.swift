@@ -361,5 +361,13 @@ class SettingsPresenterTests: XCTestCase {
         // Assert
         XCTAssertEqual(1, mockSettingsPresenterDelegate.didSelectRemindersCallCount)
     }
+    
+    func testDidSelectCredits() {
+        // Arrange/Act
+        settingsPresenter.didSelectCredits()
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenterDelegate.didSelectCreditsCallCount)
+    }
 
 }

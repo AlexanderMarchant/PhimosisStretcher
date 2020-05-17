@@ -29,5 +29,13 @@ class AddReminderPresenterTests: XCTestCase {
         mockAddReminderPresenterView = nil
         mockAddReminderPresenterDelegate = nil
     }
+    
+    func testAddReminder() {
+        // Arrange/Act
+        addReminderPresenter.addReminder(time: Date(), message: "", useSound: false)
+        
+        // Assert
+        XCTAssertEqual(1, mockAddReminderPresenterDelegate.didAddReminderCallCount)
+    }
 
 }

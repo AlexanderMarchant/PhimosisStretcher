@@ -133,6 +133,17 @@ class SettingsViewControllerTests: XCTestCase {
         XCTAssertEqual(1, mockSettingsPresenter.didSelectRemindersCallCount)
     }
     
+    func testDidSelectRowAt_CreditsIndexPath() {
+        // Arrange
+        let indexPath = Constants.creditsIndexPath
+        
+        // Act
+        settingsViewController.tableView(settingsViewController.tableView, didSelectRowAt: indexPath)
+        
+        // Assert
+        XCTAssertEqual(1, mockSettingsPresenter.didSelectCreditsCallCount)
+    }
+    
     func testCellForRowAt_KegelTrainerCell() {
         // Arrange
         let INDEX_PATH = Constants.kegelTrainerCellIndexPath
