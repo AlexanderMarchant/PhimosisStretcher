@@ -14,6 +14,7 @@ protocol SettingsPresenterProtocol {
     func saveChanges(targetWorkoutsPerDay: String?, repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?)
     func sendEmail()
     func didSelectReminders()
+    func getNotificationSettings()
     func updateVibrateCue()
     func updateVisualCue()
     func updateAudioCue()

@@ -27,6 +27,8 @@ class SettingsPresenter: SettingsPresenterProtocol {
     let view: SettingsPresenterView
     let delegate: SettingsPresenterDelegate
     
+    var notificationsAreEnabled: Bool = false
+    
     init(
         _ userDefaultsService: UserDefaultsServiceProtocol,
         with view: SettingsPresenterView,
@@ -99,7 +101,11 @@ class SettingsPresenter: SettingsPresenterProtocol {
     }
     
     func didSelectReminders() {
-        self.delegate.didSelectReminders()
+        if(notificationsAreEnabled) {
+            self.delegate.didSelectReminders()
+        } else {
+            ErrorScreensCoordinator.shared.showEnableNotifications()
+        }
     }
     
     func updateVibrateCue() {
@@ -115,6 +121,16 @@ class SettingsPresenter: SettingsPresenterProtocol {
     func updateAudioCue() {
         let useAudioCues = userDefaultsService.bool(forKey: Constants.useAudioCues)
         userDefaultsService.set(!useAudioCues, forKey: Constants.useAudioCues)
+    }
+    
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if(settings.authorizationStatus != .authorized) {
+                self.notificationsAreEnabled = false
+            } else {
+                self.notificationsAreEnabled = true
+            }
+        }
     }
     
 }

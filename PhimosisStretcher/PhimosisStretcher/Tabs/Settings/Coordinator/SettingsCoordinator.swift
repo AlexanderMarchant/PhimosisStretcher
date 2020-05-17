@@ -82,13 +82,7 @@ extension SettingsCoordinator: SettingsPresenterDelegate {
     }
     
     func didSelectReminders() {
-        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
-            if(settings.authorizationStatus != .authorized) {
-                ErrorScreensCoordinator.shared.showEnableNotifications()
-            } else {
-                self.showReminders()
-            }
-        }
+        showReminders()
     }
 }
 

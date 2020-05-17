@@ -83,13 +83,13 @@ extension RemindersViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegat
     
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         let str = "No Reminders Setup"
-        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body), NSAttributedString.Key.foregroundColor: UIColor.psLightGray]
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body), NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         return NSAttributedString(string: str, attributes: attrs)
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let str = "You have not setup any reminders yet."
-        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1), NSAttributedString.Key.foregroundColor: UIColor.psLightGray]
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1), NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         return NSAttributedString(string: str, attributes: attrs)
     }
     

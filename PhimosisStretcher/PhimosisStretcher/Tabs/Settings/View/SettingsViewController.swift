@@ -83,6 +83,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         settingsPresenter.getWorkoutSettings()
         settingsPresenter.getCueSettings()
+        settingsPresenter.getNotificationSettings()
     }
     
     @objc func saveChanges()
