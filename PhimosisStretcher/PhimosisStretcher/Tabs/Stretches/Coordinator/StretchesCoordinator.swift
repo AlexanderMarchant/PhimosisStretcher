@@ -28,7 +28,7 @@ class StretchesCoordinator: Coordinator {
         self.navigationController = UINavigationController()
         self.navigationController.isNavigationBarHidden = true
         
-        self.navigationController.tabBarItem = UITabBarItem(title: "Stretches", image: UIImage(named: "info-icon"), tag: 0)
+        self.navigationController.tabBarItem = UITabBarItem(title: "Stretches", image: UIImage(named: "stretches-icon"), tag: 0)
         
         self.alertHandlerService = alertHandlerService
         self.userDefaultsService = userDefaultsService
