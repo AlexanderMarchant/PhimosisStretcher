@@ -10,7 +10,6 @@ import UIKit
 import UserNotifications
 
 protocol RemindersCoordinatorDelegate {
-    func closeReminders()
 }
 
 class RemindersCoordinator: Coordinator {

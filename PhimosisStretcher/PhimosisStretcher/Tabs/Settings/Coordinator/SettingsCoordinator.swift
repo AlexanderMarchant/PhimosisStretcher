@@ -93,6 +93,4 @@ extension SettingsCoordinator: MFMailComposeViewControllerDelegate {
 }
 
 extension SettingsCoordinator: RemindersCoordinatorDelegate {
-    func closeReminders() {
-    }
 }
