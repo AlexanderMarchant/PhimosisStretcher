@@ -29,5 +29,49 @@ class RemindersPresenterTests: XCTestCase {
         mockRemindersPresenterView = nil
         mockRemindersPresenterDelegate = nil
     }
+    
+    func testAddReminder() {
+        // Arrange/Act
+        remindersPresenter.addReminder()
+        
+        // Assert
+        XCTAssertEqual(1, mockRemindersPresenterDelegate.didTapAddReminderCallCount)
+    }
+    
+    func testDeleteReminder_IndexOutOfRange() {
+        // Arrange
+        let INDEX = 4
+        
+        let REMINDERS = [
+            Reminder(identifier: "1", time: Date(), message: "", withSound: true, isAPendingNotification: true),
+            Reminder(identifier: "2", time: Date(), message: "", withSound: true, isAPendingNotification: true),
+            Reminder(identifier: "3", time: Date(), message: "", withSound: true, isAPendingNotification: true),
+        ]
+        
+        // Act
+        remindersPresenter.deleteReminder(reminders: REMINDERS, deleteAt: INDEX)
+        
+        // Assert
+        XCTAssertEqual(0, mockRemindersPresenterView.didGetRemindersCallCount)
+        XCTAssertEqual(1, mockRemindersPresenterView.errorOccurredCallCount)
+    }
+    
+    func testDeleteReminder_Success() {
+        // Arrange
+        let INDEX = 0
+        
+        let REMINDERS = [
+            Reminder(identifier: "fjdkasjfkdsajkfd", time: Date(), message: "", withSound: true, isAPendingNotification: true),
+            Reminder(identifier: "fjdkasjfkdsajkfd", time: Date(), message: "", withSound: true, isAPendingNotification: true),
+            Reminder(identifier: "fjdkasjfkdsajkfd", time: Date(), message: "", withSound: true, isAPendingNotification: true),
+        ]
+        
+        // Act
+        remindersPresenter.deleteReminder(reminders: REMINDERS, deleteAt: INDEX)
+        
+        // Assert
+        XCTAssertEqual(1, mockRemindersPresenterView.didGetRemindersCallCount)
+        XCTAssertEqual(0, mockRemindersPresenterView.errorOccurredCallCount)
+    }
 
 }

@@ -35,10 +35,6 @@ class RemindersViewController: UITableViewController, Storyboarded {
         remindersPresenter.getReminders()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.reminders.count
     }
