@@ -15,14 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-ja-OtZ" customClass="PTHubLightBackgroundSecondaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-ja-OtZ" customClass="PSSecondaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
                                 <rect key="frame" x="25" y="762" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="O0K-y5-PLI"/>
                                 </constraints>
                                 <state key="normal" title="Secondary Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-ey-93W" customClass="PTHubPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-ey-93W" customClass="PSPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
                                 <rect key="frame" x="25" y="687" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M1I-YD-qJn"/>

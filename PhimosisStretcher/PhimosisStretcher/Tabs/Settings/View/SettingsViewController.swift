@@ -111,6 +111,8 @@ class SettingsViewController: UITableViewController, Storyboarded {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath {
+        case Constants.remindersCellIndexPath:
+            settingsPresenter.didSelectReminders()
         case Constants.emailCellIndexPath:
             settingsPresenter.sendEmail()
         default:

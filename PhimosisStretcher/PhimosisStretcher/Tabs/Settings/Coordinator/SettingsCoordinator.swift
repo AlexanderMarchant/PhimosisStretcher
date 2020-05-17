@@ -53,6 +53,17 @@ class SettingsCoordinator: Coordinator {
         navigationController.pushViewController(settingsViewController, animated: true)
     }
     
+    func showReminders() {
+        let remindersCoordinator = RemindersCoordinator(
+            navigationController,
+            alertHandlerService,
+            delegate: self)
+        
+        self.addChildCoordinator(remindersCoordinator)
+        
+        remindersCoordinator.start()
+    }
+    
     func showEmail() {
         let vc = MFMailComposeViewController()
         
@@ -69,10 +80,25 @@ extension SettingsCoordinator: SettingsPresenterDelegate {
     func sendEmail() {
         showEmail()
     }
+    
+    func didSelectReminders() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if(settings.authorizationStatus != .authorized) {
+                ErrorScreensCoordinator.shared.showEnableNotifications()
+            } else {
+                self.showReminders()
+            }
+        }
+    }
 }
 
 extension SettingsCoordinator: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
+    }
+}
+
+extension SettingsCoordinator: RemindersCoordinatorDelegate {
+    func closeReminders() {
     }
 }

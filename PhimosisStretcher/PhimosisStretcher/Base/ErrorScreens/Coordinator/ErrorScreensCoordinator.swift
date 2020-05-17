@@ -28,17 +28,19 @@ class ErrorScreensCoordinator: Coordinator {
     }
     
     func showEnableNotifications() {
-        let viewController = EnableNotificationsViewController.instantiate(storyboard: "EnableNotifications")
-        
-        let enableNotificationsPresenter = EnableNotificationsPresenter(
-                with: viewController,
-                delegate: self)
+        DispatchQueue.main.sync {
+            let viewController = EnableNotificationsViewController.instantiate(storyboard: "EnableNotifications")
+            
+            let enableNotificationsPresenter = EnableNotificationsPresenter(
+                    with: viewController,
+                    delegate: self)
 
-        viewController.informationScreenPresenter = enableNotificationsPresenter
-        viewController.enableNotificationsPresenter = enableNotificationsPresenter
-        viewController.alertHandlerService = AlertHandlerService()
+            viewController.informationScreenPresenter = enableNotificationsPresenter
+            viewController.enableNotificationsPresenter = enableNotificationsPresenter
+            viewController.alertHandlerService = AlertHandlerService()
         
-        self.navigationController.pushViewController(viewController, animated: true)
+            self.navigationController.pushViewController(viewController, animated: true)
+        }
     }
     
 }

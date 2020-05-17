@@ -31,10 +31,14 @@ struct Constants {
     static let dispatchQueueLabel = "ResumeWorkout"
     
     // Reusable Cells
-    static let emailCellIndexPath = IndexPath(row: 0, section: 2)
+    static let remindersCellIndexPath = IndexPath(row: 0, section: 2)
+    
+    static let emailCellIndexPath = IndexPath(row: 0, section: 3)
     
     static let kegelTrainerCell = "KegelTrainerCell"
-    static let kegelTrainerCellIndexPath = IndexPath(row: 0, section: 3)
+    static let kegelTrainerCellIndexPath = IndexPath(row: 0, section: 4)
+    
+    static let reminderCell = "Reminder"
     
     // AdMob Test Ad Id's
     static let testBannerAdId = "ca-app-pub-3940256099942544/2934735716"

@@ -18,6 +18,7 @@ protocol SettingsPresenterView {
 
 protocol SettingsPresenterDelegate {
     func sendEmail()
+    func didSelectReminders()
 }
 
 class SettingsPresenter: SettingsPresenterProtocol {
@@ -95,6 +96,10 @@ class SettingsPresenter: SettingsPresenterProtocol {
         } else {
             self.view.errorOccurred(message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n Email: \n \(Constants.email)")
         }
+    }
+    
+    func didSelectReminders() {
+        self.delegate.didSelectReminders()
     }
     
     func updateVibrateCue() {

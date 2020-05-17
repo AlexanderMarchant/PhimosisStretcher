@@ -101,6 +101,17 @@
 		D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4556716246BCC6E00DC1FAE /* MockTimerService.swift */; };
 		D46EB371246FFAD300AF0F5B /* KegelTrainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB36F246FFAD300AF0F5B /* KegelTrainerCell.swift */; };
 		D46EB372246FFAD300AF0F5B /* KegelTrainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46EB370246FFAD300AF0F5B /* KegelTrainerCell.xib */; };
+		D46EB3742470504100AF0F5B /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3732470504100AF0F5B /* RemindersViewController.swift */; };
+		D46EB3762471144300AF0F5B /* RemindersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3752471144300AF0F5B /* RemindersCoordinator.swift */; };
+		D46EB37B2471151F00AF0F5B /* AddReminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46EB37A2471151F00AF0F5B /* AddReminder.storyboard */; };
+		D46EB37D2471152A00AF0F5B /* Reminders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46EB37C2471152A00AF0F5B /* Reminders.storyboard */; };
+		D46EB37F2471153A00AF0F5B /* RemindersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB37E2471153A00AF0F5B /* RemindersPresenter.swift */; };
+		D46EB3812471154400AF0F5B /* RemindersPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3802471154400AF0F5B /* RemindersPresenterProtocol.swift */; };
+		D46EB3842471178600AF0F5B /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3832471178500AF0F5B /* Reminder.swift */; };
+		D46EB38624711BFB00AF0F5B /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB38524711BFB00AF0F5B /* AddReminderViewController.swift */; };
+		D46EB38824711C3400AF0F5B /* AddReminderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB38724711C3400AF0F5B /* AddReminderPresenter.swift */; };
+		D46EB38A24711C3D00AF0F5B /* AddReminderPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB38924711C3D00AF0F5B /* AddReminderPresenterProtocol.swift */; };
+		D46EB38E24711F8800AF0F5B /* Date-StripDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB38D24711F8800AF0F5B /* Date-StripDate.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -246,6 +257,17 @@
 		D4556716246BCC6E00DC1FAE /* MockTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerService.swift; sourceTree = "<group>"; };
 		D46EB36F246FFAD300AF0F5B /* KegelTrainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegelTrainerCell.swift; sourceTree = "<group>"; };
 		D46EB370246FFAD300AF0F5B /* KegelTrainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KegelTrainerCell.xib; sourceTree = "<group>"; };
+		D46EB3732470504100AF0F5B /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		D46EB3752471144300AF0F5B /* RemindersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCoordinator.swift; sourceTree = "<group>"; };
+		D46EB37A2471151F00AF0F5B /* AddReminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddReminder.storyboard; sourceTree = "<group>"; };
+		D46EB37C2471152A00AF0F5B /* Reminders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminders.storyboard; sourceTree = "<group>"; };
+		D46EB37E2471153A00AF0F5B /* RemindersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersPresenter.swift; sourceTree = "<group>"; };
+		D46EB3802471154400AF0F5B /* RemindersPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersPresenterProtocol.swift; sourceTree = "<group>"; };
+		D46EB3832471178500AF0F5B /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		D46EB38524711BFB00AF0F5B /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
+		D46EB38724711C3400AF0F5B /* AddReminderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderPresenter.swift; sourceTree = "<group>"; };
+		D46EB38924711C3D00AF0F5B /* AddReminderPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderPresenterProtocol.swift; sourceTree = "<group>"; };
+		D46EB38D24711F8800AF0F5B /* Date-StripDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-StripDate.swift"; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -1014,6 +1036,7 @@
 		D45566F5246B1E0A00DC1FAE /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB3822471177C00AF0F5B /* Reminder */,
 				D45566F9246B1E8500DC1FAE /* Coordinator */,
 				D45566F8246B1E8100DC1FAE /* Presenter */,
 				D45566F7246B1E7900DC1FAE /* View */,
@@ -1035,6 +1058,9 @@
 		D45566F7246B1E7900DC1FAE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB3732470504100AF0F5B /* RemindersViewController.swift */,
+				D46EB37C2471152A00AF0F5B /* Reminders.storyboard */,
+				D46EB3772471150900AF0F5B /* AddReminder */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1042,6 +1068,8 @@
 		D45566F8246B1E8100DC1FAE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB37E2471153A00AF0F5B /* RemindersPresenter.swift */,
+				D46EB3802471154400AF0F5B /* RemindersPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1049,6 +1077,7 @@
 		D45566F9246B1E8500DC1FAE /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB3752471144300AF0F5B /* RemindersCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1181,6 +1210,41 @@
 			path = TableCells;
 			sourceTree = "<group>";
 		};
+		D46EB3772471150900AF0F5B /* AddReminder */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB3782471150E00AF0F5B /* Presenter */,
+				D46EB3792471151200AF0F5B /* View */,
+			);
+			path = AddReminder;
+			sourceTree = "<group>";
+		};
+		D46EB3782471150E00AF0F5B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB38724711C3400AF0F5B /* AddReminderPresenter.swift */,
+				D46EB38924711C3D00AF0F5B /* AddReminderPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D46EB3792471151200AF0F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB38524711BFB00AF0F5B /* AddReminderViewController.swift */,
+				D46EB37A2471151F00AF0F5B /* AddReminder.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D46EB3822471177C00AF0F5B /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB3832471178500AF0F5B /* Reminder.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1265,6 +1329,7 @@
 			children = (
 				D47FA867246DC36C006B3A69 /* UITextField-AddToolbar.swift */,
 				D47FA869246DC78E006B3A69 /* String-IsInt.swift */,
+				D46EB38D24711F8800AF0F5B /* Date-StripDate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1397,6 +1462,7 @@
 				D47FA857246D9FBB006B3A69 /* WorkoutComplete.storyboard in Resources */,
 				D455670B246B24E000DC1FAE /* WorkoutMenu.storyboard in Resources */,
 				D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */,
+				D46EB37D2471152A00AF0F5B /* Reminders.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
 				D46EB372246FFAD300AF0F5B /* KegelTrainerCell.xib in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
@@ -1404,6 +1470,7 @@
 				D45566DF246B1A1E00DC1FAE /* EnableNotifications.storyboard in Resources */,
 				D4B5C03D246F3F7800D524DE /* Rest.wav in Resources */,
 				D4B5C03E246F3F7800D524DE /* Begin.wav in Resources */,
+				D46EB37B2471151F00AF0F5B /* AddReminder.storyboard in Resources */,
 				D455667E246B0BE400DC1FAE /* Stretches.storyboard in Resources */,
 				D4556688246B0C2900DC1FAE /* StretchInfo.storyboard in Resources */,
 				D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */,
@@ -1494,6 +1561,7 @@
 				D455662B246AE62C00DC1FAE /* WorkoutCoordinator.swift in Sources */,
 				D455667C246B0BD900DC1FAE /* StretchesViewController.swift in Sources */,
 				D4556631246AE66E00DC1FAE /* WorkoutViewController.swift in Sources */,
+				D46EB38A24711C3D00AF0F5B /* AddReminderPresenterProtocol.swift in Sources */,
 				D45566BE246B167800DC1FAE /* UIColor-AppColours.swift in Sources */,
 				D4556675246B0B4B00DC1FAE /* StretchesCoordinator.swift in Sources */,
 				D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */,
@@ -1503,6 +1571,7 @@
 				D45566E3246B1A9400DC1FAE /* EnableNotificationsPresenterProtocol.swift in Sources */,
 				D45566B6246B157D00DC1FAE /* PSSecondaryButton.swift in Sources */,
 				D45566D8246B19D300DC1FAE /* ErrorScreensCoordinator.swift in Sources */,
+				D46EB3842471178600AF0F5B /* Reminder.swift in Sources */,
 				D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */,
 				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
 				D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */,
@@ -1514,6 +1583,7 @@
 				D4B5C049246F444400D524DE /* AdServerNotifications.swift in Sources */,
 				D4B5C031246F372900D524DE /* WorkoutCueServiceProtocol.swift in Sources */,
 				D4556707246B22C200DC1FAE /* WorkoutMenuPresenter.swift in Sources */,
+				D46EB38824711C3400AF0F5B /* AddReminderPresenter.swift in Sources */,
 				D4556686246B0C2000DC1FAE /* StretchInfoViewController.swift in Sources */,
 				D4556709246B22D100DC1FAE /* WorkoutMenuPresenterProtocol.swift in Sources */,
 				D4556616246AE47900DC1FAE /* AppCoordinator.swift in Sources */,
@@ -1531,7 +1601,9 @@
 				D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */,
 				D45566C1246B173800DC1FAE /* FatalError.swift in Sources */,
 				D4556679246B0B8C00DC1FAE /* StretchesPresenterProtocol.swift in Sources */,
+				D46EB38E24711F8800AF0F5B /* Date-StripDate.swift in Sources */,
 				D4556677246B0B8100DC1FAE /* StretchesPresenter.swift in Sources */,
+				D46EB3742470504100AF0F5B /* RemindersViewController.swift in Sources */,
 				D45566A9246B148000DC1FAE /* InformationScreenViewController.swift in Sources */,
 				D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */,
 				D45566BB246B164400DC1FAE /* Fonts.swift in Sources */,
@@ -1539,10 +1611,14 @@
 				D4556667246AED1C00DC1FAE /* SettingsCoordinator.swift in Sources */,
 				D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */,
 				D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */,
+				D46EB3812471154400AF0F5B /* RemindersPresenterProtocol.swift in Sources */,
 				D4556684246B0C1100DC1FAE /* StretchInfoPresenterProtocol.swift in Sources */,
 				D4B5C04A246F444400D524DE /* AdServerService.swift in Sources */,
+				D46EB38624711BFB00AF0F5B /* AddReminderViewController.swift in Sources */,
+				D46EB3762471144300AF0F5B /* RemindersCoordinator.swift in Sources */,
 				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,
 				D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */,
+				D46EB37F2471153A00AF0F5B /* RemindersPresenter.swift in Sources */,
 				D455661F246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift in Sources */,
 				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
 				D4B5C04E246F444400D524DE /* AdServiceDelegate.swift in Sources */,

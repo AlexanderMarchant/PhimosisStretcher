@@ -1,6 +1,6 @@
 //
 //  AdServerService.swift
-//  Kegal Timer
+//  Phimosis Stretcher
 //
 //  Created by Alex Marchant on 04/01/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
