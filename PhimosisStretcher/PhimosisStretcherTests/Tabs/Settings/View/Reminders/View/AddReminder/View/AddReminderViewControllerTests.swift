@@ -31,5 +31,31 @@ class AddReminderViewControllerTests: XCTestCase {
         mockAddReminderPresenter = nil
         mockAlertHandlerService = nil
     }
+    
+    func testViewDidLoad() {
+        // Arrange/Act
+        addReminderViewController.viewDidLoad()
+        
+        // Assert
+        XCTAssertEqual("Add Reminder", addReminderViewController.title)
+        XCTAssertEqual(UIColor.appBlue, addReminderViewController.reminderMessageTextBoxController.activeColor)
+        XCTAssertEqual("Reminder Message", addReminderViewController.reminderMessageTextBoxController.placeholderText)
+    }
+    
+    func testAddReminder() {
+        // Arrange/Act
+        addReminderViewController.addReminder()
+        
+        // Assert
+        XCTAssertEqual(1, mockAddReminderPresenter.addReminderCallCount)
+    }
+    
+    func testAddReminderPresenterView_ErrorOccurred() {
+        // Arrange/Act
+        addReminderViewController.errorOccurred(message: "Error")
+        
+        // Assert
+        XCTAssertEqual(1, mockAlertHandlerService.showWarningAlertCallCount)
+    }
 
 }
