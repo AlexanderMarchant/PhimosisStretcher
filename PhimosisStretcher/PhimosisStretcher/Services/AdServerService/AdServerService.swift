@@ -10,30 +10,35 @@ import Foundation
 import UIKit
 import GoogleMobileAds
 
-class AdServerService {
+class AdServerService: AdServerServiceProtocol {
     
-    let areAdsDisabled: Bool!
+    var adsAreDisabled: Bool! = false
+    let userDefaultsService: UserDefaultsServiceProtocol
     let notificationCenter = NotificationCenter.default
     
     var adMobService: AdMobService!
     
-    init() {
-        self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
+    init(_ userDefaultsService: UserDefaultsServiceProtocol) {
+        self.userDefaultsService = userDefaultsService
         
-        if(!self.areAdsDisabled) {
+        self.adsAreDisabled = userDefaultsService.bool(forKey: Constants.adsDisabled)
+        
+        if(!self.adsAreDisabled) {
             self.adMobService = AdMobService(delegate: self)
         }
     }
     
     func reloadAds() {
-        if(!areAdsDisabled) {
+        if(!adsAreDisabled) {
             self.adMobService.loadAds()
         }
     }
     
-    func displayInterstitialAd(viewController: UIViewController) {
-        if(!areAdsDisabled) {
-            let adDisplayed = adMobService.displayGADInterstitial(viewController)
+    func getInterstitialAd() -> GADInterstitial? {
+        if(!adsAreDisabled) {
+            return adMobService.displayGADInterstitial()
+        } else {
+            return nil
         }
     }
     
@@ -41,7 +46,7 @@ class AdServerService {
         adId: String,
         viewController: UIViewController,
         bannerContainerView: UIView) -> GADBannerView? {
-        if(!areAdsDisabled) {
+        if(!adsAreDisabled) {
             return adMobService.setupAdBannerView(adId, viewController, bannerContainerView)
         }
         

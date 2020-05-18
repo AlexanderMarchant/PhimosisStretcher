@@ -9,7 +9,7 @@
 import UIKit
 import MaterialComponents.MaterialButtons
 
-class WorkoutViewController: UIViewController, Storyboarded {
+class WorkoutViewController: AdvertScreenViewController, Storyboarded {
     
     var workoutPresenter: WorkoutPresenterProtocol!
     var alertHandlerService: AlertHandlerServiceProtocol!
@@ -45,6 +45,8 @@ class WorkoutViewController: UIViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+        
+        reloadAds()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

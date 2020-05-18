@@ -7,29 +7,36 @@
 //
 
 import Foundation
+import UIKit
 
-protocol WorkoutMenuPresenterView {
+protocol WorkoutMenuPresenterView: AdvertScreenPresenterView {
     func didGetWorkoutInformation(_ numberOfWorkoutsToday: Int, _ targetWorkoutsPerDay: Int, _ workoutTime: String)
 }
 
-protocol WorkoutMenuPresenterDelegate {
+protocol WorkoutMenuPresenterDelegate: AdvertScreenPresenterDelegate {
     func didStartWorkout()
 }
 
-class WorkoutMenuPresenter: WorkoutMenuPresenterProtocol {
+class WorkoutMenuPresenter: AdvertScreenPresenter, WorkoutMenuPresenterProtocol {
     
     let userDefaultsService: UserDefaultsServiceProtocol
-    let view: WorkoutMenuPresenterView
-    let delegate: WorkoutMenuPresenterDelegate
+    let workoutMenuView: WorkoutMenuPresenterView
+    let workoutMenuDelegate: WorkoutMenuPresenterDelegate
     
     init(
+        _ adServerService: AdServerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         with view: WorkoutMenuPresenterView,
         delegate: WorkoutMenuPresenterDelegate) {
         
         self.userDefaultsService = userDefaultsService
-        self.view = view
-        self.delegate = delegate
+        self.workoutMenuView = view
+        self.workoutMenuDelegate = delegate
+        
+        super.init(
+            adServerService,
+            with: view,
+            delegate: delegate)
     }
     
     func getWorkoutInformation() {
@@ -38,11 +45,15 @@ class WorkoutMenuPresenter: WorkoutMenuPresenterProtocol {
         let workoutsToday = userDefaultsService.integer(forKey: Constants.workoutsToday)
         let workoutTime = userDefaultsService.string(forKey: Constants.totalWorkoutTime) ?? "Not Set"
         
-        self.view.didGetWorkoutInformation(workoutsToday, targetWorkoutsPerDay, workoutTime)
+        self.workoutMenuView.didGetWorkoutInformation(workoutsToday, targetWorkoutsPerDay, workoutTime)
     }
     
     func startWorkout() {
-        self.delegate.didStartWorkout()
+        self.workoutMenuDelegate.didStartWorkout()
+    }
+    
+    func displayInterstitialAd(viewController: UIViewController) {
+        super.getInterstitialAd(viewController: viewController)
     }
     
 }

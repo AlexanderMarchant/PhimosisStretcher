@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class WorkoutCompleteViewController: InformationScreenViewController {
     
@@ -14,6 +15,8 @@ class WorkoutCompleteViewController: InformationScreenViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        workoutCompletePresenter.displayInterstitialAd(viewController: self)
         
         self.screenImage.image = UIImage(named: "workout-complete")!
         self.screenTitle.text = "Workout Complete!"
@@ -25,6 +28,7 @@ class WorkoutCompleteViewController: InformationScreenViewController {
         self.secondaryButton.isEnabled = false
         
         workoutCompletePresenter.updateWorkoutsToday()
+        displayInterstitialAd()
     }
     
     override func primaryButtonTapped() {
@@ -38,5 +42,4 @@ class WorkoutCompleteViewController: InformationScreenViewController {
 }
 
 extension WorkoutCompleteViewController: WorkoutCompletePresenterView {
-    
 }

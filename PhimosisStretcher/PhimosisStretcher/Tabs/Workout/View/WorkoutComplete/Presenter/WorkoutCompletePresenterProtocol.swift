@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol WorkoutCompletePresenterProtocol: InformationScreenPresenterProtocol {
     func updateWorkoutsToday()
+    func displayInterstitialAd(viewController: UIViewController)
 }

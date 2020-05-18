@@ -18,10 +18,13 @@ class ErrorScreensCoordinator: Coordinator {
     
     static let shared = ErrorScreensCoordinator()
     
+    var adServerService: AdServerServiceProtocol!
     var delegate: ErrorScreensCoordinatorDelegate?
     var navigationController: UINavigationController!
     
-    override init() { }
+    override init() {
+        self.adServerService = AdServerService(UserDefaultsService())
+    }
     
     override func start() {
         // Don't do anything
@@ -31,6 +34,7 @@ class ErrorScreensCoordinator: Coordinator {
         let viewController = EnableNotificationsViewController.instantiate(storyboard: "EnableNotifications")
         
         let enableNotificationsPresenter = EnableNotificationsPresenter(
+                adServerService,
                 with: viewController,
                 delegate: self)
 

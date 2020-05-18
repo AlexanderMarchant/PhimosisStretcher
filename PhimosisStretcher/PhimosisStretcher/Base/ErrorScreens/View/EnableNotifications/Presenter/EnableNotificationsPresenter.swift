@@ -21,11 +21,15 @@ class EnableNotificationsPresenter: InformationScreenPresenter, EnableNotificati
     let enableNotificationsPresenterView: EnableNotificationsPresenterView
     let enableNotificationsPresenterDelegate: EnableNotificationsPresenterDelegate
     
-    init(with view: EnableNotificationsPresenterView, delegate: EnableNotificationsPresenterDelegate) {
+    init(
+        _ adServerService: AdServerServiceProtocol,
+        with view: EnableNotificationsPresenterView,
+        delegate: EnableNotificationsPresenterDelegate) {
+        
         self.enableNotificationsPresenterView = view
         self.enableNotificationsPresenterDelegate = delegate
         
-        super.init(with: view, delegate: delegate)
+        super.init(adServerService, with: view, delegate: delegate)
     }
     
     func didTapEnableNotifications() {

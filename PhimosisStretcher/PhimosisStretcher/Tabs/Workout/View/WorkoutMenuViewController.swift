@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WorkoutMenuViewController: UIViewController, Storyboarded {
+class WorkoutMenuViewController: AdvertScreenViewController, Storyboarded {
     
     var workoutMenuPresenter: WorkoutMenuPresenterProtocol!
     var alertHandlerService: AlertHandlerServiceProtocol!

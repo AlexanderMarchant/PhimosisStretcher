@@ -16,12 +16,14 @@ class SettingsCoordinator: Coordinator {
     
     let navigationController: UINavigationController
     
+    let adServerService: AdServerServiceProtocol
     let alertHandlerService: AlertHandlerServiceProtocol
     let userDefaultsService: UserDefaultsServiceProtocol
     
     let delegate: SettingsCoordinatorDelegate
     
     init(
+        _ adServerService: AdServerServiceProtocol,
         _ alertHandlerService: AlertHandlerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         delegate: SettingsCoordinatorDelegate) {
@@ -30,6 +32,7 @@ class SettingsCoordinator: Coordinator {
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings-icon"), tag: 0)
         
+        self.adServerService = adServerService
         self.alertHandlerService = alertHandlerService
         self.userDefaultsService = userDefaultsService
         self.delegate = delegate

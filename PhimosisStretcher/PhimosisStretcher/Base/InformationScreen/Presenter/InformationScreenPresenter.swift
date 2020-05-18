@@ -8,26 +8,31 @@
 
 import Foundation
 
-protocol InformationScreenPresenterView {
+protocol InformationScreenPresenterView: AdvertScreenPresenterView {
     func errorOccurred(message: String)
 }
 
-protocol InformationScreenPresenterDelegate {
+protocol InformationScreenPresenterDelegate: AdvertScreenPresenterDelegate {
     func didTapClose()
 }
 
-class InformationScreenPresenter: InformationScreenPresenterProtocol {
+class InformationScreenPresenter: AdvertScreenPresenter, InformationScreenPresenterProtocol {
     
-    let view: InformationScreenPresenterView
-    let delegate: InformationScreenPresenterDelegate
+    let informationScreenView: InformationScreenPresenterView
+    let informationScreenDelegate: InformationScreenPresenterDelegate
     
-    init(with view: InformationScreenPresenterView, delegate: InformationScreenPresenterDelegate) {
-        self.view = view
-        self.delegate = delegate
+    init(
+        _ adServerService: AdServerServiceProtocol,
+        with view: InformationScreenPresenterView,
+        delegate: InformationScreenPresenterDelegate) {
+        self.informationScreenView = view
+        self.informationScreenDelegate = delegate
+        
+        super.init(adServerService, with: view, delegate: delegate)
     }
     
     func didTapClose() {
-        self.delegate.didTapClose()
+        self.informationScreenDelegate.didTapClose()
     }
     
 }

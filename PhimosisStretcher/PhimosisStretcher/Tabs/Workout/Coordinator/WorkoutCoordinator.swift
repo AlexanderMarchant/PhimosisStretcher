@@ -15,6 +15,7 @@ class WorkoutCoordinator: Coordinator {
     
     let navigationController: UINavigationController
     
+    let adServerService: AdServerServiceProtocol
     let alertHandlerService: AlertHandlerServiceProtocol
     let userDefaultsService: UserDefaultsServiceProtocol
     let workoutCueService: WorkoutCueServiceProtocol
@@ -22,6 +23,7 @@ class WorkoutCoordinator: Coordinator {
     let delegate: WorkoutCoordinatorDelegate
     
     init(
+        _ adServerService: AdServerServiceProtocol,
         _ alertHandlerService: AlertHandlerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         _ workoutCueService: WorkoutCueServiceProtocol,
@@ -32,6 +34,7 @@ class WorkoutCoordinator: Coordinator {
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Workout", image: UIImage(named: "workout-icon"), tag: 0)
         
+        self.adServerService = adServerService
         self.alertHandlerService = alertHandlerService
         self.userDefaultsService = userDefaultsService
         self.workoutCueService = workoutCueService
@@ -46,26 +49,30 @@ class WorkoutCoordinator: Coordinator {
         let workoutMenuViewController = WorkoutMenuViewController.instantiate(storyboard: "WorkoutMenu")
         
         let workoutMenuPresenter = WorkoutMenuPresenter(
+            adServerService,
             userDefaultsService,
             with: workoutMenuViewController,
             delegate: self)
         
+        workoutMenuViewController.advertScreenPresenter = workoutMenuPresenter
         workoutMenuViewController.workoutMenuPresenter = workoutMenuPresenter
         workoutMenuViewController.alertHandlerService = self.alertHandlerService
         
-        navigationController.pushViewController(workoutMenuViewController, animated: true)
+        navigationController.addChild(workoutMenuViewController)
     }
     
     func showWorkout() {
         let workoutViewController = WorkoutViewController.instantiate(storyboard: "Workout")
         
         let workoutPresenter = WorkoutPresenter(
+            adServerService,
             userDefaultsService,
             workoutCueService,
             TimerService(),
             with: workoutViewController,
             delegate: self)
         
+        workoutViewController.advertScreenPresenter = workoutPresenter
         workoutViewController.workoutPresenter = workoutPresenter
         workoutViewController.alertHandlerService = self.alertHandlerService
         
@@ -76,10 +83,12 @@ class WorkoutCoordinator: Coordinator {
         let workoutCompleteViewController = WorkoutCompleteViewController.instantiate(storyboard: "WorkoutComplete")
         
         let workoutCompletePresenter = WorkoutCompletePresenter(
+            adServerService,
             userDefaultsService,
             with: workoutCompleteViewController,
             delegate: self)
         
+        workoutCompleteViewController.advertScreenPresenter = workoutCompletePresenter
         workoutCompleteViewController.informationScreenPresenter = workoutCompletePresenter
         workoutCompleteViewController.workoutCompletePresenter = workoutCompletePresenter
         workoutCompleteViewController.alertHandlerService = alertHandlerService

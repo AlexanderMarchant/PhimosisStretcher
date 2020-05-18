@@ -9,7 +9,7 @@
 import UIKit
 import MaterialComponents.MaterialButtons
 
-class InformationScreenViewController: UIViewController, Storyboarded {
+class InformationScreenViewController: AdvertScreenViewController, Storyboarded {
     
     var informationScreenPresenter: InformationScreenPresenterProtocol!
     var alertHandlerService: AlertHandlerServiceProtocol!

@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol WorkoutMenuPresenterProtocol {
     func getWorkoutInformation()
     func startWorkout()
+    func displayInterstitialAd(viewController: UIViewController)
 }

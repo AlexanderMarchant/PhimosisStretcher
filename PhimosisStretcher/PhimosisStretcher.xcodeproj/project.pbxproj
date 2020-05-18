@@ -127,6 +127,10 @@
 		D471B4792471A24100A5640F /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4782471A24100A5640F /* CreditsViewController.swift */; };
 		D471B47B2471A2AC00A5640F /* CreditsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B47A2471A2AC00A5640F /* CreditsTextView.swift */; };
 		D471B47D2471A30200A5640F /* String-Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B47C2471A30200A5640F /* String-Attributed.swift */; };
+		D471B4832471BEE100A5640F /* AdServerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4822471BEE100A5640F /* AdServerServiceProtocol.swift */; };
+		D471B4882471C4F600A5640F /* AdvertScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4872471C4F600A5640F /* AdvertScreenPresenter.swift */; };
+		D471B48A2471C50700A5640F /* AdvertScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4892471C50700A5640F /* AdvertScreenPresenterProtocol.swift */; };
+		D471B48E2471C53400A5640F /* AdvertScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B48D2471C53400A5640F /* AdvertScreenViewController.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -298,6 +302,10 @@
 		D471B4782471A24100A5640F /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		D471B47A2471A2AC00A5640F /* CreditsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsTextView.swift; sourceTree = "<group>"; };
 		D471B47C2471A30200A5640F /* String-Attributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Attributed.swift"; sourceTree = "<group>"; };
+		D471B4822471BEE100A5640F /* AdServerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServerServiceProtocol.swift; sourceTree = "<group>"; };
+		D471B4872471C4F600A5640F /* AdvertScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertScreenPresenter.swift; sourceTree = "<group>"; };
+		D471B4892471C50700A5640F /* AdvertScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertScreenPresenterProtocol.swift; sourceTree = "<group>"; };
+		D471B48D2471C53400A5640F /* AdvertScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertScreenViewController.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -423,6 +431,7 @@
 		D4556610246AE44900DC1FAE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D471B4842471C4BC00A5640F /* AdvertScreen */,
 				D45566D4246B19AD00DC1FAE /* ErrorScreens */,
 				D45566A5246B145800DC1FAE /* InformationScreen */,
 				D4556612246AE45B00DC1FAE /* Coordinator */,
@@ -453,7 +462,7 @@
 		D4556619246AE55A00DC1FAE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D4B5C03F246F441000D524DE /* AdServices */,
+				D4B5C03F246F441000D524DE /* AdServerService */,
 				D4B5C02D246F370800D524DE /* WorkoutCueService */,
 				D4556711246BCA9600DC1FAE /* TimerService */,
 				D455661A246AE56A00DC1FAE /* AlertHandlerService */,
@@ -1329,6 +1338,32 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
+		D471B4842471C4BC00A5640F /* AdvertScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4862471C4E200A5640F /* Presenter */,
+				D471B4852471C4D700A5640F /* View */,
+			);
+			path = AdvertScreen;
+			sourceTree = "<group>";
+		};
+		D471B4852471C4D700A5640F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D471B48D2471C53400A5640F /* AdvertScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D471B4862471C4E200A5640F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4872471C4F600A5640F /* AdvertScreenPresenter.swift */,
+				D471B4892471C50700A5640F /* AdvertScreenPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1438,14 +1473,15 @@
 			path = "Sound Bites";
 			sourceTree = "<group>";
 		};
-		D4B5C03F246F441000D524DE /* AdServices */ = {
+		D4B5C03F246F441000D524DE /* AdServerService */ = {
 			isa = PBXGroup;
 			children = (
 				D4B5C041246F444300D524DE /* AdServerService.swift */,
+				D471B4822471BEE100A5640F /* AdServerServiceProtocol.swift */,
 				D4B5C040246F444300D524DE /* AdServerNotifications.swift */,
 				D4B5C042246F444400D524DE /* AdService */,
 			);
-			path = AdServices;
+			path = AdServerService;
 			sourceTree = "<group>";
 		};
 		D4B5C042246F444400D524DE /* AdService */ = {
@@ -1662,6 +1698,7 @@
 				D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */,
 				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
 				D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */,
+				D471B4882471C4F600A5640F /* AdvertScreenPresenter.swift in Sources */,
 				D4B5C04B246F444400D524DE /* AdService.swift in Sources */,
 				D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */,
 				D471B47D2471A30200A5640F /* String-Attributed.swift in Sources */,
@@ -1683,12 +1720,14 @@
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
 				D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */,
+				D471B48E2471C53400A5640F /* AdvertScreenViewController.swift in Sources */,
 				D47FA86A246DC78E006B3A69 /* String-IsInt.swift in Sources */,
 				D45566DD246B1A0F00DC1FAE /* EnableNotificationsViewController.swift in Sources */,
 				D47FA87D246E8A12006B3A69 /* GlobalFunctions.swift in Sources */,
 				D45566E1246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift in Sources */,
 				D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */,
 				D45566C1246B173800DC1FAE /* FatalError.swift in Sources */,
+				D471B4832471BEE100A5640F /* AdServerServiceProtocol.swift in Sources */,
 				D4556679246B0B8C00DC1FAE /* StretchesPresenterProtocol.swift in Sources */,
 				D46EB38E24711F8800AF0F5B /* Date-StripDate.swift in Sources */,
 				D4556677246B0B8100DC1FAE /* StretchesPresenter.swift in Sources */,
@@ -1703,6 +1742,7 @@
 				D46EB3812471154400AF0F5B /* RemindersPresenterProtocol.swift in Sources */,
 				D4556684246B0C1100DC1FAE /* StretchInfoPresenterProtocol.swift in Sources */,
 				D4B5C04A246F444400D524DE /* AdServerService.swift in Sources */,
+				D471B48A2471C50700A5640F /* AdvertScreenPresenterProtocol.swift in Sources */,
 				D46EB38624711BFB00AF0F5B /* AddReminderViewController.swift in Sources */,
 				D46EB3762471144300AF0F5B /* RemindersCoordinator.swift in Sources */,
 				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,

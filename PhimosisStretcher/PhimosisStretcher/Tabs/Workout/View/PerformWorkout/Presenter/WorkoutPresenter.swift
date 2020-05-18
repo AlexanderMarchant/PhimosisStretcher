@@ -15,7 +15,7 @@ enum WorkoutInstruction: String {
     case rest = "Rest"
 }
 
-protocol WorkoutPresenterView {
+protocol WorkoutPresenterView: AdvertScreenPresenterView {
     func workoutDidResume()
     func workoutDidPause()
     func workoutDidComplete()
@@ -24,18 +24,18 @@ protocol WorkoutPresenterView {
     func didCompleteRep(repsLeft: Int)
 }
 
-protocol WorkoutPresenterDelegate {
+protocol WorkoutPresenterDelegate: AdvertScreenPresenterDelegate {
     func didCompleteWorkout()
     func didCancelWorkout()
 }
 
-class WorkoutPresenter: WorkoutPresenterProtocol {
+class WorkoutPresenter: AdvertScreenPresenter, WorkoutPresenterProtocol {
     
     let userDefaultsService: UserDefaultsServiceProtocol
     let workoutCueService: WorkoutCueServiceProtocol
     var timerService: TimerServiceProtocol
-    let view: WorkoutPresenterView
-    let delegate: WorkoutPresenterDelegate
+    let workoutView: WorkoutPresenterView
+    let workoutDelegate: WorkoutPresenterDelegate
     
     let repsPerSet: Int
     let repLength: Int
@@ -54,6 +54,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
     var isPrepareState = false
     
     init(
+        _ adServerService: AdServerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         _ workoutCueService: WorkoutCueServiceProtocol,
         _ timerService: TimerServiceProtocol,
@@ -63,8 +64,8 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.userDefaultsService = userDefaultsService
         self.workoutCueService = workoutCueService
         self.timerService = timerService
-        self.view = view
-        self.delegate = delegate
+        self.workoutView = view
+        self.workoutDelegate = delegate
         
         self.repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerWorkout)
         self.repLength = userDefaultsService.integer(forKey: Constants.repLength)
@@ -74,6 +75,11 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         self.useVibrateCues = userDefaultsService.bool(forKey: Constants.useVibrateCues)
         self.useVisualCues = userDefaultsService.bool(forKey: Constants.useVisualCues)
         self.useAudioCues = userDefaultsService.bool(forKey: Constants.useAudioCues)
+        
+        super.init(
+            adServerService,
+            with: view,
+            delegate: delegate)
         
         self.timerService.delegate = self
         
@@ -90,8 +96,8 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         
         updateViewInstruction(.prepare, backgroundColor: UIColor.prepareBackgroundColour)
         
-        self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
-        self.view.workoutDidResume()
+        self.workoutView.didCompleteRep(repsLeft: repsPerSet - currentRep)
+        self.workoutView.workoutDidResume()
     }
     
     func resumeWorkout() {
@@ -113,18 +119,18 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
 
         timerService.resume()
         updateViewInstruction(instruction, backgroundColor: backgroundColor)
-        self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
-        self.view.workoutDidResume()
+        self.workoutView.didCompleteRep(repsLeft: repsPerSet - currentRep)
+        self.workoutView.workoutDidResume()
     }
     
     func pauseWorkout() {
         timerService.pause()
-        self.view.workoutDidPause()
+        self.workoutView.workoutDidPause()
     }
     
     func closeWorkout() {
         timerService.pause()
-        self.delegate.didCancelWorkout()
+        self.workoutDelegate.didCancelWorkout()
     }
     
     @objc func timerDidChange() {
@@ -159,7 +165,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
                     isPrepareState = false
                     
                     self.currentRep += 1
-                    self.view.didCompleteRep(repsLeft: repsPerSet - currentRep)
+                    self.workoutView.didCompleteRep(repsLeft: repsPerSet - currentRep)
                     
                     queueRep()
                 }
@@ -170,7 +176,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
                     workoutCueService.playWorkoutCompleteAudioCue()
                 }
                 
-                self.delegate.didCompleteWorkout()
+                self.workoutDelegate.didCompleteWorkout()
             }
         } else {
             updateTimeString(time: TimeInterval(secondsRemaining), milliseconds: milliseconds)
@@ -184,7 +190,7 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         
         let timerString = String(format:"%02i:%02i:%02i", minutes, seconds, milliseconds)
         
-        self.view.timeStringDidUpdate(timerString)
+        self.workoutView.timeStringDidUpdate(timerString)
     }
     
     internal func queueRep() {
@@ -232,9 +238,9 @@ class WorkoutPresenter: WorkoutPresenterProtocol {
         }
         
         if(useVisualCues) {
-            self.view.instructionDidUpdate(instruction: instruction.rawValue, backgroundColor: backgroundColor)
+            self.workoutView.instructionDidUpdate(instruction: instruction.rawValue, backgroundColor: backgroundColor)
         } else {
-            self.view.instructionDidUpdate(instruction: instruction.rawValue, backgroundColor: UIColor.workoutBackgroundColour)
+            self.workoutView.instructionDidUpdate(instruction: instruction.rawValue, backgroundColor: UIColor.workoutBackgroundColour)
         }
     }
     

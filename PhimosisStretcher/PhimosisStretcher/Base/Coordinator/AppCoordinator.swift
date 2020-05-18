@@ -13,6 +13,7 @@ class AppCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     
+    let adServerService: AdServerServiceProtocol
     let alertHandlerService: AlertHandlerServiceProtocol
     let userDefaultsService: UserDefaultsServiceProtocol
     let workoutCueService: WorkoutCueServiceProtocol
@@ -30,6 +31,7 @@ class AppCoordinator: Coordinator {
         self.alertHandlerService = AlertHandlerService()
         self.userDefaultsService = UserDefaultsService()
         self.workoutCueService = WorkoutCueService()
+        self.adServerService = AdServerService(userDefaultsService)
         
         super.init()
         
@@ -39,12 +41,14 @@ class AppCoordinator: Coordinator {
             delegate: self)
         
         self.workoutCoordinator = WorkoutCoordinator(
+            adServerService,
             alertHandlerService,
             userDefaultsService,
             workoutCueService,
             delegate: self)
         
         self.settingsCoordinator = SettingsCoordinator(
+            adServerService,
             alertHandlerService,
             userDefaultsService,
             delegate: self)

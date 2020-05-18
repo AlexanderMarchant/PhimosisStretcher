@@ -41,13 +41,12 @@ class AdMobService: NSObject {
         self.interstitial.load(self.interstitialAdRequest)
     }
     
-    func displayGADInterstitial(_ viewController: UIViewController) -> Bool {
+    func displayGADInterstitial() -> GADInterstitial? {
         if self.interstitial.isReady {
-            self.interstitial.present(fromRootViewController: viewController)
-            return true
+            return self.interstitial
         } else {
             print("AdMob interstitial Ad wasn't ready")
-            return false
+            return nil
         }
     }
     
