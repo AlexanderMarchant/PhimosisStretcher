@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol WorkoutMenuPresenterProtocol {
+protocol WorkoutMenuPresenterProtocol: AdvertScreenPresenterProtocol {
     func getWorkoutInformation()
     func startWorkout()
     func displayInterstitialAd(viewController: UIViewController)

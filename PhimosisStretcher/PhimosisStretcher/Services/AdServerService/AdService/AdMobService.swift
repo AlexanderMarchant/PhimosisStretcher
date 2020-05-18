@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMobileAds
 
-class AdMobService: NSObject {
+class AdMobService: NSObject, AdMobServiceProtocol {
     
     let delegate: AdServiceDelegate
     
@@ -19,7 +19,7 @@ class AdMobService: NSObject {
     
     var bannerContainerView: UIView!
     
-    init(delegate: AdServiceDelegate) {
+    required init(delegate: AdServiceDelegate) {
         
         self.delegate = delegate
         
@@ -37,7 +37,7 @@ class AdMobService: NSObject {
     
     func loadAds() {
         self.interstitialAdRequest = GADRequest()
-        self.interstitial = GADInterstitial(adUnitID: Constants.testInterstitialAdId)
+        self.interstitial = GADInterstitial(adUnitID: Constants.workoutCompleteInterstitialAdId)
         self.interstitial.load(self.interstitialAdRequest)
     }
     
@@ -57,7 +57,7 @@ class AdMobService: NSObject {
         
         let bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         
-        bannerView.adUnitID = Constants.testBannerAdId
+        bannerView.adUnitID = Constants.generalBannerAdId
         bannerView.rootViewController = viewController
         bannerView.delegate = self
         

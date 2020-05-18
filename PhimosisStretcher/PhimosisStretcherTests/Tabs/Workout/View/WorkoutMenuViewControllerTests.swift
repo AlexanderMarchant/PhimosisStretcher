@@ -20,6 +20,7 @@ class WorkoutMenuViewControllerTests: XCTestCase {
         mockAlertHandlerService = MockAlertHandlerService()
         
         workoutMenuViewController = WorkoutMenuViewController.instantiate(storyboard: "WorkoutMenu")
+        workoutMenuViewController.advertScreenPresenter = mockWorkoutMenuPresenter
         workoutMenuViewController.workoutMenuPresenter = mockWorkoutMenuPresenter
         workoutMenuViewController.alertHandlerService = mockAlertHandlerService
         

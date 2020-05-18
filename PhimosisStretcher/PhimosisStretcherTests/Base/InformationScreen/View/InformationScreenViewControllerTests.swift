@@ -21,6 +21,7 @@ class InformationScreenViewControllerTests: XCTestCase {
         
         informationScreenViewController = InformationScreenViewController.instantiate(storyboard: "InformationScreen")
         
+        informationScreenViewController.advertScreenPresenter = mockInformationScreenPresenter
         informationScreenViewController.informationScreenPresenter = mockInformationScreenPresenter
         
         XCTAssertNotNil(informationScreenViewController.view)

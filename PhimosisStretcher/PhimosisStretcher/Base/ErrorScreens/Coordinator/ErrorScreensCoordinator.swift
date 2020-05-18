@@ -37,7 +37,8 @@ class ErrorScreensCoordinator: Coordinator {
                 adServerService,
                 with: viewController,
                 delegate: self)
-
+        
+        viewController.advertScreenPresenter = enableNotificationsPresenter
         viewController.informationScreenPresenter = enableNotificationsPresenter
         viewController.enableNotificationsPresenter = enableNotificationsPresenter
         viewController.alertHandlerService = AlertHandlerService()

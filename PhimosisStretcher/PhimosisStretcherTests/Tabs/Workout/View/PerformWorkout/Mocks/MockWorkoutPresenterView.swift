@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 @testable import PhimosisStretcher
 
 class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
@@ -22,6 +23,9 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     var backgroundColor: UIColor!
     var didCompleteRepCallCount = 0
     
+    var didGetBannerAdCallCount = 0
+    var didGetInterstitialAdCallCount = 0
+    
     func resetCallCounts() {
         self.workoutDidResumeCallCount = 0
         self.workoutDidPauseCallCount = 0
@@ -29,6 +33,8 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
         self.timeStringDidUpdateCallCount = 0
         self.instructionDidUpdateCallCount = 0
         self.didCompleteRepCallCount = 0
+        self.didGetBannerAdCallCount = 0
+        self.didGetInterstitialAdCallCount = 0
     }
     
     
@@ -58,6 +64,14 @@ class MockWorkoutPresenterView: MockObjectProtocol, WorkoutPresenterView {
     
     func didCompleteRep(repsLeft: Int) {
         didCompleteRepCallCount += 1
+    }
+    
+    func didGetBannerAd(ad: GADBannerView?) {
+        didGetBannerAdCallCount += 1
+    }
+    
+    func didGetInterstitialAd(ad: GADInterstitial?) {
+        didGetInterstitialAdCallCount += 1
     }
 }
 

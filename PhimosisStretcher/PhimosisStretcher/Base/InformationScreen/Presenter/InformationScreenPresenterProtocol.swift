@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol InformationScreenPresenterProtocol {
+protocol InformationScreenPresenterProtocol: AdvertScreenPresenterProtocol {
     func didTapClose()
 }

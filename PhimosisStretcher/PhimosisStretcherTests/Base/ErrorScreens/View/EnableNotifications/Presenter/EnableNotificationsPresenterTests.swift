@@ -12,20 +12,24 @@ import XCTest
 class EnableNotificationsPresenterTests: XCTestCase {
 
     var enableNotificationsPresenter: EnableNotificationsPresenter!
+    var mockAdServerService: MockAdServerService!
     var mockEnableNotificationsPresenterView: MockEnableNotificationsPresenterView!
     var mockEnableNotificationsPresenterDelegate: MockEnableNotificationsPresenterDelegate!
 
     override func setUp() {
+        mockAdServerService = MockAdServerService()
         mockEnableNotificationsPresenterView = MockEnableNotificationsPresenterView()
         mockEnableNotificationsPresenterDelegate = MockEnableNotificationsPresenterDelegate()
         
         enableNotificationsPresenter = EnableNotificationsPresenter(
+            mockAdServerService,
             with: mockEnableNotificationsPresenterView,
             delegate: mockEnableNotificationsPresenterDelegate)
     }
 
     override func tearDown() {
         enableNotificationsPresenter = nil
+        mockAdServerService = nil
         mockEnableNotificationsPresenterView = nil
         mockEnableNotificationsPresenterDelegate = nil
     }

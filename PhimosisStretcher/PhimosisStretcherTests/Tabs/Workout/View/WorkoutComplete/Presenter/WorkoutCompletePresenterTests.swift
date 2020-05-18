@@ -12,16 +12,19 @@ import XCTest
 class WorkoutCompletePresenterTests: XCTestCase {
 
     var workoutCompletePresenter: WorkoutCompletePresenter!
+    var mockAdServerService: MockAdServerService!
     var mockUserDefaultsService: MockUserDefaultsService!
     var mockWorkoutCompletePresenterView: MockWorkoutCompletePresenterView!
     var mockWorkoutCompletePresenterDelegate: MockWorkoutCompletePresenterDelegate!
 
     override func setUp() {
+        mockAdServerService = MockAdServerService()
         mockUserDefaultsService = MockUserDefaultsService()
         mockWorkoutCompletePresenterView = MockWorkoutCompletePresenterView()
         mockWorkoutCompletePresenterDelegate = MockWorkoutCompletePresenterDelegate()
         
         workoutCompletePresenter = WorkoutCompletePresenter(
+            mockAdServerService,
             mockUserDefaultsService,
             with: mockWorkoutCompletePresenterView,
             delegate: mockWorkoutCompletePresenterDelegate)
@@ -29,6 +32,7 @@ class WorkoutCompletePresenterTests: XCTestCase {
 
     override func tearDown() {
         workoutCompletePresenter = nil
+        mockAdServerService = nil
         mockUserDefaultsService = nil
         mockWorkoutCompletePresenterView = nil
         mockWorkoutCompletePresenterDelegate = nil

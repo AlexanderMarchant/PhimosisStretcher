@@ -1,8 +1,8 @@
 //
-//  MockInformationScreenPresenterView.swift
+//  MockAdvertScreenPresenterView.swift
 //  PhimosisStretcherTests
 //
-//  Created by Alex Marchant on 12/05/2020.
+//  Created by Alex Marchant on 18/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
 //
 
@@ -10,21 +10,14 @@ import Foundation
 import GoogleMobileAds
 @testable import PhimosisStretcher
 
-class MockInformationScreenPresenterView: InformationScreenPresenterView, MockObjectProtocol {
-    
-    var errorOccurredCallCount = 0
+class MockAdvertScreenPresenterView: AdvertScreenPresenterView, MockObjectProtocol {
     
     var didGetBannerAdCallCount = 0
     var didGetInterstitialAdCallCount = 0
     
     func resetCallCounts() {
-        self.errorOccurredCallCount = 0
         self.didGetBannerAdCallCount = 0
         self.didGetInterstitialAdCallCount = 0
-    }
-    
-    func errorOccurred(message: String) {
-        errorOccurredCallCount += 1
     }
     
     func didGetBannerAd(ad: GADBannerView?) {
@@ -34,4 +27,5 @@ class MockInformationScreenPresenterView: InformationScreenPresenterView, MockOb
     func didGetInterstitialAd(ad: GADInterstitial?) {
         didGetInterstitialAdCallCount += 1
     }
+    
 }

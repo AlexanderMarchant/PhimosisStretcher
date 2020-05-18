@@ -24,6 +24,7 @@ class WorkoutViewControllerTests: XCTestCase {
         navController.addChild(tabBarController)
         
         workoutViewController = WorkoutViewController.instantiate(storyboard: "Workout")
+        workoutViewController.advertScreenPresenter = mockWorkoutPresenter
         workoutViewController.workoutPresenter = mockWorkoutPresenter
         workoutViewController.alertHandlerService = mockAlertHandlerService
         

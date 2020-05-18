@@ -21,6 +21,7 @@ class EnableNotificationsViewControllerTests: XCTestCase {
         
         enableNotificationsViewController = EnableNotificationsViewController.instantiate(storyboard: "EnableNotifications")
         
+        enableNotificationsViewController.advertScreenPresenter = mockEnableNotificationsPresenter
         enableNotificationsViewController.informationScreenPresenter = mockEnableNotificationsPresenter
         enableNotificationsViewController.enableNotificationsPresenter = mockEnableNotificationsPresenter
         enableNotificationsViewController.alertHandlerService = mockAlertHandlerService

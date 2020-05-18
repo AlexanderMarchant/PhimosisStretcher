@@ -12,18 +12,24 @@ import XCTest
 class InformationScreenPresenterTests: XCTestCase {
     
     var informationScreenPresenter: InformationScreenPresenter!
+    var mockAdServerService: MockAdServerService!
     var mockInformationScreenPresenterView: MockInformationScreenPresenterView!
     var mockInformationScreenPresenterDelegate: MockInformationScreenPresenterDelegate!
 
     override func setUp() {
+        mockAdServerService = MockAdServerService()
         mockInformationScreenPresenterView = MockInformationScreenPresenterView()
         mockInformationScreenPresenterDelegate = MockInformationScreenPresenterDelegate()
         
-        informationScreenPresenter = InformationScreenPresenter(with: mockInformationScreenPresenterView, delegate: mockInformationScreenPresenterDelegate)
+        informationScreenPresenter = InformationScreenPresenter(
+            mockAdServerService,
+            with: mockInformationScreenPresenterView,
+            delegate: mockInformationScreenPresenterDelegate)
     }
 
     override func tearDown() {
         informationScreenPresenter = nil
+        mockAdServerService = nil
         mockInformationScreenPresenterView = nil
         mockInformationScreenPresenterDelegate = nil
     }

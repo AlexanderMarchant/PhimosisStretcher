@@ -21,6 +21,7 @@ class WorkoutCompleteViewControllerTests: XCTestCase {
         
         workoutCompleteViewController = WorkoutCompleteViewController.instantiate(storyboard: "WorkoutComplete")
         
+        workoutCompleteViewController.advertScreenPresenter = mockWorkoutCompletePresenter
         workoutCompleteViewController.informationScreenPresenter = mockWorkoutCompletePresenter
         workoutCompleteViewController.workoutCompletePresenter = mockWorkoutCompletePresenter
         workoutCompleteViewController.alertHandlerService = mockAlertHandlerService

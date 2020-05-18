@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol WorkoutPresenterProtocol {
+protocol WorkoutPresenterProtocol: AdvertScreenPresenterProtocol {
     func beginWorkout()
     func resumeWorkout()
     func pauseWorkout()

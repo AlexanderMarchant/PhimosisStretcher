@@ -12,11 +12,13 @@ import XCTest
 class WorkoutMenuPresenterTests: XCTestCase {
     
     var workoutMenuPresenter: WorkoutMenuPresenter!
+    var mockAdServerService: MockAdServerService!
     var mockUserDefaultsService: MockUserDefaultsService!
     var mockWorkoutMenuPresenterView: MockWorkoutMenuPresenterView!
     var mockWorkoutMenuPresenterDelegate: MockWorkoutMenuPresenterDelegate!
 
     override func setUpWithError() throws {
+        mockAdServerService = MockAdServerService()
         mockUserDefaultsService = MockUserDefaultsService()
         mockWorkoutMenuPresenterView = MockWorkoutMenuPresenterView()
         mockWorkoutMenuPresenterDelegate = MockWorkoutMenuPresenterDelegate()
@@ -24,6 +26,7 @@ class WorkoutMenuPresenterTests: XCTestCase {
         mockUserDefaultsService.getIntValueReturnValue = 5
         
         workoutMenuPresenter = WorkoutMenuPresenter(
+            mockAdServerService,
             mockUserDefaultsService,
             with: mockWorkoutMenuPresenterView,
             delegate: mockWorkoutMenuPresenterDelegate)
@@ -31,6 +34,7 @@ class WorkoutMenuPresenterTests: XCTestCase {
 
     override func tearDownWithError() throws {
         workoutMenuPresenter = nil
+        mockAdServerService = nil
         mockUserDefaultsService = nil
         mockWorkoutMenuPresenterView = nil
         mockWorkoutMenuPresenterDelegate = nil

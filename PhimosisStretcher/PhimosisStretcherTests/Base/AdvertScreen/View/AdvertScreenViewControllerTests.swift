@@ -1,0 +1,62 @@
+//
+//  AdvertScreenViewControllerTests.swift
+//  PhimosisStretcherTests
+//
+//  Created by Alex Marchant on 18/05/2020.
+//  Copyright © 2020 Alex Marchant. All rights reserved.
+//
+
+import XCTest
+import GoogleMobileAds
+@testable import PhimosisStretcher
+
+class AdvertScreenViewControllerTests: XCTestCase {
+
+    var advertScreenViewController: AdvertScreenViewController!
+    var mockAdvertScreenPresenter: MockAdvertScreenPresenter!
+
+    override func setUp(){
+        mockAdvertScreenPresenter = MockAdvertScreenPresenter()
+        
+        advertScreenViewController = AdvertScreenViewController()
+        
+        advertScreenViewController.advertScreenPresenter = mockAdvertScreenPresenter
+    }
+
+    override func tearDown() {
+        advertScreenViewController = nil
+        mockAdvertScreenPresenter = nil
+    }
+    
+    func testViewDidLoad() {
+        
+    }
+    
+    func testDisplayInterstitialAd() {
+        // Arrange/Act
+        advertScreenViewController.displayInterstitialAd()
+        
+        // Assert
+        XCTAssertEqual(1, mockAdvertScreenPresenter.getInterstitialAdCallCount)
+    }
+    
+    func testReloadAds() {
+        // Arrange/Act
+        advertScreenViewController.reloadAds()
+        
+        // Assert
+        XCTAssertEqual(1, mockAdvertScreenPresenter.reloadAdsCallCount)
+    }
+    
+    func testAdvertScreenPresenterView_DidGetBannerAd() {
+        // Arrange
+        let BANNER = GADBannerView()
+        
+        // Act
+        advertScreenViewController.didGetBannerAd(ad: BANNER)
+        
+        // Assert
+        XCTAssertEqual(BANNER, advertScreenViewController.adBannerView)
+    }
+
+}
