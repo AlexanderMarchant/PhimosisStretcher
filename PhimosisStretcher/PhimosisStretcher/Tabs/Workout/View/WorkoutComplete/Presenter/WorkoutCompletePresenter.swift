@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol WorkoutCompletePresenterView: InformationScreenPresenterView {
     
@@ -33,10 +32,6 @@ class WorkoutCompletePresenter: InformationScreenPresenter, WorkoutCompletePrese
         self.workoutCompletePresenterDelegate = delegate
         
         super.init(adServerService, with: view, delegate: delegate)
-    }
-    
-    func displayInterstitialAd(viewController: UIViewController) {
-        super.getInterstitialAd(viewController: viewController)
     }
     
     func updateWorkoutsToday() {
