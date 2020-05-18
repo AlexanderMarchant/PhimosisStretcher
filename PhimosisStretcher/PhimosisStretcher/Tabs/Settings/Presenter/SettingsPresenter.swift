@@ -9,35 +9,41 @@
 import Foundation
 import MessageUI
 
-protocol SettingsPresenterView {
+protocol SettingsPresenterView: AdvertScreenPresenterView {
     func didGetWorkoutSettings(_ targetWorkoutsPerDay: String, _ repsPerWorkout: String, _ repLength: String, _ restLength: String, _ prepareLength: String)
     func didGetCueSettings(_ useVibrateCues: Bool, _ useVisualCues: Bool, _ useAudioCues: Bool)
     func savedChanges()
     func errorOccurred(message: String)
 }
 
-protocol SettingsPresenterDelegate {
+protocol SettingsPresenterDelegate: AdvertScreenPresenterDelegate {
     func sendEmail()
     func didSelectReminders()
     func didSelectCredits()
 }
 
-class SettingsPresenter: SettingsPresenterProtocol {
+class SettingsPresenter: AdvertScreenPresenter, SettingsPresenterProtocol {
     
     let userDefaultsService: UserDefaultsServiceProtocol
-    let view: SettingsPresenterView
-    let delegate: SettingsPresenterDelegate
+    let settingsView: SettingsPresenterView
+    let settingsDelegate: SettingsPresenterDelegate
     
     var notificationsAreEnabled: Bool = false
     
     init(
+        _ adServerService: AdServerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         with view: SettingsPresenterView,
         delegate: SettingsPresenterDelegate) {
         
         self.userDefaultsService = userDefaultsService
-        self.view = view
-        self.delegate = delegate
+        self.settingsView = view
+        self.settingsDelegate = delegate
+        
+        super.init(
+            adServerService,
+            with: view,
+            delegate: delegate)
     }
     
     func getWorkoutSettings() {
@@ -47,7 +53,7 @@ class SettingsPresenter: SettingsPresenterProtocol {
         let restLength = String(userDefaultsService.integer(forKey: Constants.restLength))
         let prepareLength = String(userDefaultsService.integer(forKey: Constants.prepareLength))
         
-        self.view.didGetWorkoutSettings(targetWorkoutsPerDay, repsPerWorkout, repLength, restLength, prepareLength)
+        self.settingsView.didGetWorkoutSettings(targetWorkoutsPerDay, repsPerWorkout, repLength, restLength, prepareLength)
     }
     
     func getCueSettings() {
@@ -55,22 +61,22 @@ class SettingsPresenter: SettingsPresenterProtocol {
         let useVisualCues = userDefaultsService.bool(forKey: Constants.useVisualCues)
         let useAudioCues = userDefaultsService.bool(forKey: Constants.useAudioCues)
         
-        self.view.didGetCueSettings(useVibrateCues, useVisualCues, useAudioCues)
+        self.settingsView.didGetCueSettings(useVibrateCues, useVisualCues, useAudioCues)
     }
     
     func saveChanges(targetWorkoutsPerDay: String?, repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?) {
         guard let targetWorkoutsPerDay = targetWorkoutsPerDay, let repsPerWorkout = repsPerWorkout, let repLength = repLength, let restLength = restLength, let prepareLength = prepareLength else {
-            self.view.errorOccurred(message: "Please enter a value for all workout settings")
+            self.settingsView.errorOccurred(message: "Please enter a value for all workout settings")
             return
         }
         
         if(repsPerWorkout.isEmpty || repLength.isEmpty || restLength.isEmpty || prepareLength.isEmpty) {
-            self.view.errorOccurred(message: "Please enter a value for all workout settings")
+            self.settingsView.errorOccurred(message: "Please enter a value for all workout settings")
             return
         }
         
         if(!repsPerWorkout.isInt || !repLength.isInt || !restLength.isInt || !prepareLength.isInt) {
-            self.view.errorOccurred(message: "Please enter a numeric value for all workout settings")
+            self.settingsView.errorOccurred(message: "Please enter a numeric value for all workout settings")
             return
         }
         
@@ -89,28 +95,28 @@ class SettingsPresenter: SettingsPresenterProtocol {
         userDefaultsService.set(prepareLengthInt, forKey: Constants.prepareLength)
         userDefaultsService.set(totalWorkoutTime, forKey: Constants.totalWorkoutTime)
         
-        self.view.savedChanges()
+        self.settingsView.savedChanges()
         
     }
     
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
-            self.delegate.sendEmail()
+            self.settingsDelegate.sendEmail()
         } else {
-            self.view.errorOccurred(message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n Email: \n \(Constants.email)")
+            self.settingsView.errorOccurred(message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n Email: \n \(Constants.email)")
         }
     }
     
     func didSelectReminders() {
         if(notificationsAreEnabled) {
-            self.delegate.didSelectReminders()
+            self.settingsDelegate.didSelectReminders()
         } else {
             ErrorScreensCoordinator.shared.showEnableNotifications()
         }
     }
     
     func didSelectCredits() {
-        self.delegate.didSelectCredits()
+        self.settingsDelegate.didSelectCredits()
     }
     
     func updateVibrateCue() {

@@ -46,10 +46,12 @@ class SettingsCoordinator: Coordinator {
         let settingsViewController = SettingsViewController.instantiate(storyboard: "Settings")
         
         let settingsPresenter = SettingsPresenter(
+            adServerService,
             userDefaultsService,
             with: settingsViewController,
             delegate: self)
         
+        settingsViewController.advertScreenPresenter = settingsPresenter
         settingsViewController.settingsPresenter = settingsPresenter
         settingsViewController.alertHandlerService = self.alertHandlerService
         

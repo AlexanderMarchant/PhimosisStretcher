@@ -9,7 +9,7 @@
 import UIKit
 import MaterialComponents.MaterialTextFields
 
-class SettingsViewController: UITableViewController, Storyboarded {
+class SettingsViewController: AdvertScreenTableViewController, Storyboarded {
     
     var settingsPresenter: SettingsPresenterProtocol!
     var alertHandlerService: AlertHandlerServiceProtocol!
