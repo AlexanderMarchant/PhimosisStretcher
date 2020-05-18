@@ -27,6 +27,8 @@ class WorkoutCompleteViewControllerTests: XCTestCase {
         workoutCompleteViewController.alertHandlerService = mockAlertHandlerService
         
         XCTAssertNotNil(workoutCompleteViewController.view)
+        
+        mockWorkoutCompletePresenter.resetCallCounts()
     }
 
     override func tearDown() {
@@ -52,6 +54,8 @@ class WorkoutCompleteViewControllerTests: XCTestCase {
         XCTAssertEqual("High Five", workoutCompleteViewController.secondaryButton.currentTitle!)
         XCTAssertTrue(workoutCompleteViewController.secondaryButton.isHidden)
         XCTAssertFalse(workoutCompleteViewController.secondaryButton.isEnabled)
+        
+        XCTAssertEqual(1, mockWorkoutCompletePresenter.getInterstitialAdCallCount)
     }
     
     func testPrimaryButtonTapped() {

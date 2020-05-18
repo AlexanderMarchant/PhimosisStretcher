@@ -91,6 +91,8 @@ class WorkoutViewControllerTests: XCTestCase {
         
         // Assert
         XCTAssertTrue((workoutViewController.tabBarController?.tabBar.isHidden)!)
+        
+        XCTAssertEqual(1, mockWorkoutPresenter.reloadAdsCallCount)
     }
     
     func testViewWillDisappear() {

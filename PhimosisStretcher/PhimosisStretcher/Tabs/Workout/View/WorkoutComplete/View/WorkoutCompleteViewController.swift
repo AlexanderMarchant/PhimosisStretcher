@@ -16,7 +16,7 @@ class WorkoutCompleteViewController: InformationScreenViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        workoutCompletePresenter.displayInterstitialAd(viewController: self)
+        displayInterstitialAd()
         
         self.screenImage.image = UIImage(named: "workout-complete")!
         self.screenTitle.text = "Workout Complete!"
@@ -28,7 +28,6 @@ class WorkoutCompleteViewController: InformationScreenViewController {
         self.secondaryButton.isEnabled = false
         
         workoutCompletePresenter.updateWorkoutsToday()
-        displayInterstitialAd()
     }
     
     override func primaryButtonTapped() {
