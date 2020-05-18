@@ -13,16 +13,19 @@ import MessageUI
 class SettingsPresenterTests: XCTestCase {
     
     var settingsPresenter: SettingsPresenter!
+    var mockAdServerService: MockAdServerService!
     var mockUserDefaultsService: MockUserDefaultsService!
     var mockSettingsPresenterView: MockSettingsPresenterView!
     var mockSettingsPresenterDelegate: MockSettingsPresenterDelegate!
 
     override func setUpWithError() throws {
+        mockAdServerService = MockAdServerService()
         mockUserDefaultsService = MockUserDefaultsService()
         mockSettingsPresenterView = MockSettingsPresenterView()
         mockSettingsPresenterDelegate = MockSettingsPresenterDelegate()
         
         settingsPresenter = SettingsPresenter(
+            mockAdServerService,
             mockUserDefaultsService,
             with: mockSettingsPresenterView,
             delegate: mockSettingsPresenterDelegate)
@@ -30,6 +33,7 @@ class SettingsPresenterTests: XCTestCase {
 
     override func tearDownWithError() throws {
         settingsPresenter = nil
+        mockAdServerService = nil
         mockUserDefaultsService = nil
         mockSettingsPresenterView = nil
         mockSettingsPresenterDelegate = nil

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SettingsPresenterProtocol {
+protocol SettingsPresenterProtocol: AdvertScreenPresenterProtocol {
     func getWorkoutSettings()
     func getCueSettings()
     func saveChanges(targetWorkoutsPerDay: String?, repsPerWorkout: String?, repLength: String?, restLength: String?, prepareLength: String?)

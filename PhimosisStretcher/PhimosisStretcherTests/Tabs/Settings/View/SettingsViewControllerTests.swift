@@ -20,6 +20,7 @@ class SettingsViewControllerTests: XCTestCase {
         mockAlertHandlerService = MockAlertHandlerService()
         
         settingsViewController = SettingsViewController.instantiate(storyboard: "Settings")
+        settingsViewController.advertScreenPresenter = mockSettingsPresenter
         settingsViewController.settingsPresenter = mockSettingsPresenter
         settingsViewController.alertHandlerService = mockAlertHandlerService
         

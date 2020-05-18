@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 @testable import PhimosisStretcher
 
 class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
@@ -22,6 +23,10 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     var getNotificationSettingsCallCount = 0
     var didSelectCreditsCallCount = 0
     
+    var reloadAdsCallCount = 0
+    var getInterstitialAdCallCount = 0
+    var getBannerAdCallCount = 0
+    
     func resetCallCounts() {
         self.getWorkoutSettingsCallCount = 0
         self.saveChangesCallCount = 0
@@ -33,6 +38,10 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
         self.didSelectRemindersCallCount = 0
         self.getNotificationSettingsCallCount = 0
         self.didSelectCreditsCallCount = 0
+        
+        self.reloadAdsCallCount = 0
+        self.getInterstitialAdCallCount = 0
+        self.getBannerAdCallCount = 0
     }
     
     func getWorkoutSettings() {
@@ -73,5 +82,17 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     
     func didSelectCredits() {
         didSelectCreditsCallCount += 1
+    }
+    
+    func reloadAds() {
+        reloadAdsCallCount += 1
+    }
+    
+    func getInterstitialAd(viewController: UIViewController) {
+        getInterstitialAdCallCount += 1
+    }
+    
+    func getBannerAd(viewController: UIViewController, bannerContainerView: UIView) {
+        getBannerAdCallCount += 1
     }
 }

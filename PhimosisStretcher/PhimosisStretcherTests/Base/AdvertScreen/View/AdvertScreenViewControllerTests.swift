@@ -21,6 +21,10 @@ class AdvertScreenViewControllerTests: XCTestCase {
         advertScreenViewController = AdvertScreenViewController()
         
         advertScreenViewController.advertScreenPresenter = mockAdvertScreenPresenter
+        
+        advertScreenViewController.viewDidLoad()
+        
+        mockAdvertScreenPresenter.resetCallCounts()
     }
 
     override func tearDown() {
@@ -29,7 +33,14 @@ class AdvertScreenViewControllerTests: XCTestCase {
     }
     
     func testViewDidLoad() {
+        // Arrange/Act
+        advertScreenViewController.viewDidLoad()
         
+        // Assert
+        XCTAssertNotNil(advertScreenViewController.bannerAdContainerView)
+        XCTAssertFalse(advertScreenViewController.bannerAdContainerView.translatesAutoresizingMaskIntoConstraints)
+        
+        XCTAssertEqual(1, mockAdvertScreenPresenter.getBannerAdCallCount)
     }
     
     func testDisplayInterstitialAd() {
