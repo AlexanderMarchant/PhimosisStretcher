@@ -34,8 +34,14 @@ class StretchesViewController: AdvertScreenTableViewController, Storyboarded {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.stretchCell, for: indexPath) as! StretchCell
         
-        cell.stretchTitle.text = items[indexPath.row].title
-        cell.previewText.text = items[indexPath.row].stretchInfo
+        let stretch = items[indexPath.row]
+        
+        if let image = UIImage(named: stretch.image) {
+            cell.stretchImage.image = image
+        }
+        
+        cell.stretchTitle.text = stretch.title
+        cell.previewText.text = stretch.stretchInfo
         
         return cell
     }

@@ -15,4 +15,5 @@ struct StretchInfo: Decodable {
     var image: String
     var steps: String
     var closingText: String
+    var references: [String]
 }

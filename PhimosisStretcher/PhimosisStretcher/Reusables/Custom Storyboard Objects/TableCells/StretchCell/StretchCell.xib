@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tw9-mf-a20">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tw9-mf-a20">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="dgj-0l-lbA"/>
