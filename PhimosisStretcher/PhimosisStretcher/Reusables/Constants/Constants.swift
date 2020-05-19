@@ -42,6 +42,8 @@ struct Constants {
     
     static let reminderCell = "Reminder"
     
+    static let stretchCell = "StretchCell"
+    
     // AdMob Test Ad Id's
     static let testBannerAdId = "ca-app-pub-3940256099942544/2934735716"
     static let testInterstitialAdId = "ca-app-pub-3940256099942544/4411468910"

@@ -9,6 +9,7 @@
 import Foundation
 
 protocol StretchInfoPresenterView {
+    func didGetStretchInfo(_ stretchInfo: StretchInfo)
 }
 
 protocol StretchInfoPresenterDelegate {
@@ -20,14 +21,22 @@ class StretchInfoPresenter: StretchInfoPresenterProtocol {
     let view: StretchInfoPresenterView
     let delegate: StretchInfoPresenterDelegate
     
+    let stretchInfo: StretchInfo
+    
     init(
+        _ stretchInfo: StretchInfo,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         with view: StretchInfoPresenterView,
         delegate: StretchInfoPresenterDelegate) {
         
+        self.stretchInfo = stretchInfo
         self.userDefaultsService = userDefaultsService
         self.view = view
         self.delegate = delegate
+    }
+    
+    func getStretchInfo() {
+        self.view.didGetStretchInfo(stretchInfo)
     }
     
 }

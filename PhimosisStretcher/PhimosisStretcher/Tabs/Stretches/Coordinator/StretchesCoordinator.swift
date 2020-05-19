@@ -15,21 +15,24 @@ class StretchesCoordinator: Coordinator {
     
     let navigationController: UINavigationController
     
+    let adServerService: AdServerServiceProtocol
     let alertHandlerService: AlertHandlerServiceProtocol
     let userDefaultsService: UserDefaultsServiceProtocol
     
     let delegate: StretchesCoordinatorDelegate
     
     init(
+    _ adServerService: AdServerServiceProtocol,
         _ alertHandlerService: AlertHandlerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         delegate: StretchesCoordinatorDelegate) {
         
         self.navigationController = UINavigationController()
-        self.navigationController.isNavigationBarHidden = true
+        self.navigationController.isNavigationBarHidden = false
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Stretches", image: UIImage(named: "stretches-icon"), tag: 0)
         
+        self.adServerService = adServerService
         self.alertHandlerService = alertHandlerService
         self.userDefaultsService = userDefaultsService
         self.delegate = delegate
@@ -43,20 +46,23 @@ class StretchesCoordinator: Coordinator {
         let stretchesViewController = StretchesViewController.instantiate(storyboard: "Stretches")
         
         let stretchesPresenter = StretchesPresenter(
+            adServerService,
             userDefaultsService,
             with: stretchesViewController,
             delegate: self)
         
+        stretchesViewController.advertScreenPresenter = stretchesPresenter
         stretchesViewController.stretchesPresenter = stretchesPresenter
         stretchesViewController.alertHandlerService = self.alertHandlerService
         
         navigationController.pushViewController(stretchesViewController, animated: true)
     }
     
-    func showStretchInfo() {
+    func showStretchInfo(_ selectedStretch: StretchInfo) {
         let stretchInfoViewController = StretchInfoViewController.instantiate(storyboard: "StretchInfo")
         
         let stretchInfoPresenter = StretchInfoPresenter(
+            selectedStretch,
             userDefaultsService,
             with: stretchInfoViewController,
             delegate: self)
@@ -70,8 +76,8 @@ class StretchesCoordinator: Coordinator {
 }
 
 extension StretchesCoordinator: StretchesPresenterDelegate {
-    func didSelectStretch() {
-        self.showStretchInfo()
+    func didSelectStretch(_ selectedStretch: StretchInfo) {
+        self.showStretchInfo(selectedStretch)
     }
 }
 

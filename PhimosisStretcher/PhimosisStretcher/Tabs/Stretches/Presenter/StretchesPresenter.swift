@@ -8,31 +8,37 @@
 
 import Foundation
 
-protocol StretchesPresenterView {
+protocol StretchesPresenterView: AdvertScreenPresenterView {
 }
 
-protocol StretchesPresenterDelegate {
-    func didSelectStretch()
+protocol StretchesPresenterDelegate: AdvertScreenPresenterDelegate {
+    func didSelectStretch(_ selectedStretch: StretchInfo)
 }
 
-class StretchesPresenter: StretchesPresenterProtocol {
+class StretchesPresenter: AdvertScreenPresenter, StretchesPresenterProtocol {
     
     let userDefaultsService: UserDefaultsServiceProtocol
-    let view: StretchesPresenterView
-    let delegate: StretchesPresenterDelegate
+    let stretchesView: StretchesPresenterView
+    let stretchesDelegate: StretchesPresenterDelegate
     
     init(
+        _ adServiceService: AdServerServiceProtocol,
         _ userDefaultsService: UserDefaultsServiceProtocol,
         with view: StretchesPresenterView,
         delegate: StretchesPresenterDelegate) {
         
         self.userDefaultsService = userDefaultsService
-        self.view = view
-        self.delegate = delegate
+        self.stretchesView = view
+        self.stretchesDelegate = delegate
+        
+        super.init(
+            adServiceService,
+            with: view,
+            delegate: delegate)
     }
     
-    func didSelectStretch() {
-        self.delegate.didSelectStretch()
+    func didSelectStretch(_ selectedStretch: StretchInfo) {
+        self.stretchesDelegate.didSelectStretch(selectedStretch)
     }
     
 }

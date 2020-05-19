@@ -3,50 +3,36 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Stretches View Controller-->
-        <scene sceneID="Oq2-CI-44u">
+        <scene sceneID="7vg-Bw-CF8">
             <objects>
-                <viewController storyboardIdentifier="StretchesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="23h-Lf-RaV" customClass="StretchesViewController" customModule="PhimosisStretcher" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nT1-in-cn8">
+                <tableViewController storyboardIdentifier="StretchesViewController" id="eOD-7K-Ije" customClass="StretchesViewController" customModule="PhimosisStretcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FPX-Iu-lfw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stretches View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-4L-x9h">
-                                <rect key="frame" x="109.5" y="438" width="195" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFv-86-E62">
-                                <rect key="frame" x="25" y="762" width="364" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ckC-cU-F0n"/>
-                                </constraints>
-                                <state key="normal" title="Stretch Info"/>
-                                <connections>
-                                    <action selector="stretchInfoButtonTapped:" destination="23h-Lf-RaV" eventType="touchUpInside" id="dLz-aU-N0w"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="aFv-86-E62" firstAttribute="leading" secondItem="Fzv-mP-bhi" secondAttribute="leading" constant="25" id="22G-FL-MKP"/>
-                            <constraint firstItem="bLn-4L-x9h" firstAttribute="centerY" secondItem="nT1-in-cn8" secondAttribute="centerY" id="CCB-rp-0nP"/>
-                            <constraint firstItem="aFv-86-E62" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bLn-4L-x9h" secondAttribute="bottom" constant="150" id="Cbf-Eg-Hx2"/>
-                            <constraint firstItem="Fzv-mP-bhi" firstAttribute="trailing" secondItem="aFv-86-E62" secondAttribute="trailing" constant="25" id="c2B-Q7-nFu"/>
-                            <constraint firstItem="bLn-4L-x9h" firstAttribute="centerX" secondItem="nT1-in-cn8" secondAttribute="centerX" id="lQK-aJ-tzf"/>
-                            <constraint firstItem="Fzv-mP-bhi" firstAttribute="bottom" secondItem="aFv-86-E62" secondAttribute="bottom" constant="50" id="yXe-ve-JBk"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Fzv-mP-bhi"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iwd-fo-1DQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StretchCell" id="ezV-qL-O0N" customClass="StretchCell" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ezV-qL-O0N" id="fRh-Wt-Ucm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eOD-7K-Ije" id="Img-Lm-KWn"/>
+                            <outlet property="delegate" destination="eOD-7K-Ije" id="1C6-VB-Mrb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5aW-8T-KLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-274"/>
+            <point key="canvasLocation" x="1012" y="-275"/>
         </scene>
     </scenes>
 </document>

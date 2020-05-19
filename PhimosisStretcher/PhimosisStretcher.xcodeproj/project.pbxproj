@@ -141,6 +141,11 @@
 		D471B4A32472B61D00A5640F /* AdvertScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4A22472B61D00A5640F /* AdvertScreenViewControllerTests.swift */; };
 		D471B4A52472BBDB00A5640F /* AdvertScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4A42472BBDB00A5640F /* AdvertScreenTableViewController.swift */; };
 		D471B4A92472EC8100A5640F /* AdvertScreenTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4A82472EC8100A5640F /* AdvertScreenTableViewControllerTests.swift */; };
+		D471B4AC24743FFA00A5640F /* StretchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4AB24743FFA00A5640F /* StretchInfo.swift */; };
+		D471B4AE247440B400A5640F /* stretches.json in Resources */ = {isa = PBXBuildFile; fileRef = D471B4AD247440B400A5640F /* stretches.json */; };
+		D471B4B2247443D900A5640F /* Bundle-Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4B1247443D900A5640F /* Bundle-Decode.swift */; };
+		D471B4B7247444A500A5640F /* StretchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4B5247444A500A5640F /* StretchCell.swift */; };
+		D471B4B8247444A500A5640F /* StretchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471B4B6247444A500A5640F /* StretchCell.xib */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -326,6 +331,11 @@
 		D471B4A22472B61D00A5640F /* AdvertScreenViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertScreenViewControllerTests.swift; sourceTree = "<group>"; };
 		D471B4A42472BBDB00A5640F /* AdvertScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertScreenTableViewController.swift; sourceTree = "<group>"; };
 		D471B4A82472EC8100A5640F /* AdvertScreenTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertScreenTableViewControllerTests.swift; sourceTree = "<group>"; };
+		D471B4AB24743FFA00A5640F /* StretchInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchInfo.swift; sourceTree = "<group>"; };
+		D471B4AD247440B400A5640F /* stretches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stretches.json; sourceTree = "<group>"; };
+		D471B4B1247443D900A5640F /* Bundle-Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decode.swift"; sourceTree = "<group>"; };
+		D471B4B5247444A500A5640F /* StretchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchCell.swift; sourceTree = "<group>"; };
+		D471B4B6247444A500A5640F /* StretchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StretchCell.xib; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -881,6 +891,8 @@
 		D45566B0246B154700DC1FAE /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				D471B4BA2474484A00A5640F /* PhimosisInfo */,
+				D471B4AA24743FE400A5640F /* StretchInfo */,
 				D4B5C038246F3F7800D524DE /* Sound Bites */,
 				D47FA866246DC35C006B3A69 /* Extensions */,
 				D47FA847246BD070006B3A69 /* Constants */,
@@ -1275,8 +1287,8 @@
 		D46EB36E246FFAB100AF0F5B /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
-				D46EB36F246FFAD300AF0F5B /* KegelTrainerCell.swift */,
-				D46EB370246FFAD300AF0F5B /* KegelTrainerCell.xib */,
+				D471B4B42474448D00A5640F /* StretchCell */,
+				D471B4B32474448200A5640F /* KegelTrainerCell */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -1425,6 +1437,40 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D471B4AA24743FE400A5640F /* StretchInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4AB24743FFA00A5640F /* StretchInfo.swift */,
+				D471B4AD247440B400A5640F /* stretches.json */,
+			);
+			path = StretchInfo;
+			sourceTree = "<group>";
+		};
+		D471B4B32474448200A5640F /* KegelTrainerCell */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB36F246FFAD300AF0F5B /* KegelTrainerCell.swift */,
+				D46EB370246FFAD300AF0F5B /* KegelTrainerCell.xib */,
+			);
+			path = KegelTrainerCell;
+			sourceTree = "<group>";
+		};
+		D471B4B42474448D00A5640F /* StretchCell */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4B5247444A500A5640F /* StretchCell.swift */,
+				D471B4B6247444A500A5640F /* StretchCell.xib */,
+			);
+			path = StretchCell;
+			sourceTree = "<group>";
+		};
+		D471B4BA2474484A00A5640F /* PhimosisInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhimosisInfo;
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1511,6 +1557,7 @@
 				D47FA869246DC78E006B3A69 /* String-IsInt.swift */,
 				D46EB38D24711F8800AF0F5B /* Date-StripDate.swift */,
 				D471B47C2471A30200A5640F /* String-Attributed.swift */,
+				D471B4B1247443D900A5640F /* Bundle-Decode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1655,6 +1702,8 @@
 				D4B5C03D246F3F7800D524DE /* Rest.wav in Resources */,
 				D4B5C03E246F3F7800D524DE /* Begin.wav in Resources */,
 				D46EB37B2471151F00AF0F5B /* AddReminder.storyboard in Resources */,
+				D471B4B8247444A500A5640F /* StretchCell.xib in Resources */,
+				D471B4AE247440B400A5640F /* stretches.json in Resources */,
 				D455667E246B0BE400DC1FAE /* Stretches.storyboard in Resources */,
 				D4556688246B0C2900DC1FAE /* StretchInfo.storyboard in Resources */,
 				D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */,
@@ -1741,6 +1790,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4556682246B0C0800DC1FAE /* StretchInfoPresenter.swift in Sources */,
+				D471B4B2247443D900A5640F /* Bundle-Decode.swift in Sources */,
 				D4B5C04C246F444400D524DE /* AdMobService.swift in Sources */,
 				D45566B8246B15CD00DC1FAE /* PSDestructiveButton.swift in Sources */,
 				D455662B246AE62C00DC1FAE /* WorkoutCoordinator.swift in Sources */,
@@ -1780,6 +1830,7 @@
 				D47FA853246D9FA3006B3A69 /* WorkoutCompletePresenterProtocol.swift in Sources */,
 				D4556623246AE5C400DC1FAE /* UserDefaultsServiceProtocol.swift in Sources */,
 				D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */,
+				D471B4B7247444A500A5640F /* StretchCell.swift in Sources */,
 				D46EB371246FFAD300AF0F5B /* KegelTrainerCell.swift in Sources */,
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
@@ -1796,6 +1847,7 @@
 				D46EB38E24711F8800AF0F5B /* Date-StripDate.swift in Sources */,
 				D4556677246B0B8100DC1FAE /* StretchesPresenter.swift in Sources */,
 				D46EB3742470504100AF0F5B /* RemindersViewController.swift in Sources */,
+				D471B4AC24743FFA00A5640F /* StretchInfo.swift in Sources */,
 				D45566A9246B148000DC1FAE /* InformationScreenViewController.swift in Sources */,
 				D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */,
 				D45566BB246B164400DC1FAE /* Fonts.swift in Sources */,
@@ -2050,6 +2102,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.PhimosisStretcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -2070,6 +2123,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.PhimosisStretcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

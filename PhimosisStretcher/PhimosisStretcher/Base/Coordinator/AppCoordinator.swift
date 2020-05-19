@@ -36,6 +36,7 @@ class AppCoordinator: Coordinator {
         super.init()
         
         self.stretchesCoordinator = StretchesCoordinator(
+            adServerService,
             alertHandlerService,
             userDefaultsService,
             delegate: self)

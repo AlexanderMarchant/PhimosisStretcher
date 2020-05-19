@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol StretchesPresenterProtocol {
-    func didSelectStretch()
+protocol StretchesPresenterProtocol: AdvertScreenPresenterProtocol {
+    func didSelectStretch(_ selectedStretch: StretchInfo)
 }
