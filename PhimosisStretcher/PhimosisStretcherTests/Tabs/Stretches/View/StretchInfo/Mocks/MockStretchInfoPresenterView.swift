@@ -11,7 +11,13 @@ import Foundation
 
 class MockStretchInfoPresenterView: MockObjectProtocol, StretchInfoPresenterView {
     
+    var didGetStretchInfoCallCount = 0
+    
     func resetCallCounts() {
-        
+        self.didGetStretchInfoCallCount = 0
+    }
+    
+    func didGetStretchInfo(_ stretchInfo: StretchInfo) {
+        didGetStretchInfoCallCount += 1
     }
 }

@@ -17,7 +17,6 @@ protocol StretchInfoPresenterDelegate {
 
 class StretchInfoPresenter: StretchInfoPresenterProtocol {
     
-    let userDefaultsService: UserDefaultsServiceProtocol
     let view: StretchInfoPresenterView
     let delegate: StretchInfoPresenterDelegate
     
@@ -25,12 +24,10 @@ class StretchInfoPresenter: StretchInfoPresenterProtocol {
     
     init(
         _ stretchInfo: StretchInfo,
-        _ userDefaultsService: UserDefaultsServiceProtocol,
         with view: StretchInfoPresenterView,
         delegate: StretchInfoPresenterDelegate) {
         
         self.stretchInfo = stretchInfo
-        self.userDefaultsService = userDefaultsService
         self.view = view
         self.delegate = delegate
     }

@@ -12,24 +12,32 @@ import XCTest
 class StretchInfoPresenterTests: XCTestCase {
     
     var stretchInfoPresenter: StretchInfoPresenter!
-    var mockUserDefaultsService: MockUserDefaultsService!
+    var stretchInfo: StretchInfo!
     var mockStretchInfoPresenterView: MockStretchInfoPresenterView!
     var mockStretchInfoPresenterDelegate: MockStretchInfoPresenterDelegate!
 
     override func setUpWithError() throws {
-        mockUserDefaultsService = MockUserDefaultsService()
+        stretchInfo = StretchInfo(
+            title: "Test",
+            stretchInfo: "Test",
+            warning: "Test",
+            image: "Test",
+            steps: "Test",
+            closingText: "Test",
+            references: ["Test", "Test"])
+        
         mockStretchInfoPresenterView = MockStretchInfoPresenterView()
         mockStretchInfoPresenterDelegate = MockStretchInfoPresenterDelegate()
         
         stretchInfoPresenter = StretchInfoPresenter(
-            mockUserDefaultsService,
+            stretchInfo,
             with: mockStretchInfoPresenterView,
             delegate: mockStretchInfoPresenterDelegate)
     }
 
     override func tearDownWithError() throws {
         stretchInfoPresenter = nil
-        mockUserDefaultsService = nil
+        stretchInfo = nil
         mockStretchInfoPresenterView = nil
         mockStretchInfoPresenterDelegate = nil
     }

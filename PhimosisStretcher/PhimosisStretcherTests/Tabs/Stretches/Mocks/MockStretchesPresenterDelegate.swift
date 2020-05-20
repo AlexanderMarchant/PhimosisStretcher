@@ -12,12 +12,24 @@ import Foundation
 class MockStretchesPresenterDelegate: MockObjectProtocol, StretchesPresenterDelegate {
     
     var didSelectStretchCallCount = 0
+    var didSelectUnderstandingPhimosisCallCount = 0
+    var didSelectSafetyMeasuresCallCount = 0
     
     func resetCallCounts() {
         self.didSelectStretchCallCount = 0
+        self.didSelectUnderstandingPhimosisCallCount = 0
+        self.didSelectSafetyMeasuresCallCount = 0
     }
     
-    func didSelectStretch() {
+    func didSelectStretch(_ selectedStretch: StretchInfo) {
         didSelectStretchCallCount += 1
+    }
+    
+    func didSelectUnderstandingPhimosis(_ understandingPhimosis: UnderstandingPhimosis) {
+        didSelectUnderstandingPhimosisCallCount += 1
+    }
+    
+    func didSelectSafetyMeasures(_ safetyMeasures: SafetyMeasures) {
+        didSelectSafetyMeasuresCallCount += 1
     }
 }

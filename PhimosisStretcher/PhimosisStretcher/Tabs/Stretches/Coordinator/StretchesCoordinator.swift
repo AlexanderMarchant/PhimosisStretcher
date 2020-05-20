@@ -91,7 +91,6 @@ class StretchesCoordinator: Coordinator {
         
         let stretchInfoPresenter = StretchInfoPresenter(
             selectedStretch,
-            userDefaultsService,
             with: stretchInfoViewController,
             delegate: self)
         
