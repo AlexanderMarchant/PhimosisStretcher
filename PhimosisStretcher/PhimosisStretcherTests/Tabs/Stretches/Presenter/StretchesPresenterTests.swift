@@ -37,5 +37,57 @@ class StretchesPresenterTests: XCTestCase {
         mockStretchesPresenterView = nil
         mockStretchesPresenterDelegate = nil
     }
+    
+    func testDidSelectUnderstandingPhimosis() {
+        // Arrange
+        let understandingPhimosis = UnderstandingPhimosis(
+            title: "Test",
+            introduction: "Test",
+            casuses: "Test",
+            image: "Test",
+            solutions: "Test",
+            goodNews: "Test",
+            references: ["Test"])
+        
+        // Act
+        stretchesPresenter.didSelectUnderstandingPhimosis(understandingPhimosis)
+        
+        // Assert
+        XCTAssertEqual(1, mockStretchesPresenterDelegate.didSelectUnderstandingPhimosisCallCount)
+    }
+    
+    func testDidSelectSafetyMeasures() {
+        // Arrange
+        let safetyMeasures = SafetyMeasures(
+            title: "Test",
+            introduction: "Test",
+            safetyTips: [SafetyTip(title: "Test", explanation: "Test")],
+            image: "Test",
+            references: ["Test"])
+            
+        // Act
+        stretchesPresenter.didSelectSafetyMeasures(safetyMeasures)
+        
+        // Assert
+        XCTAssertEqual(1, mockStretchesPresenterDelegate.didSelectSafetyMeasuresCallCount)
+    }
+    
+    func testDidSelectStretch() {
+        // Arrange
+        let stretch = StretchInfo(
+            title: "Test",
+            stretchInfo: "Test",
+            warning: "Test",
+            image: "Test",
+            steps: "Test",
+            closingText: "Test",
+            references: ["Test"])
+            
+        // Act
+        stretchesPresenter.didSelectStretch(stretch)
+        
+        // Assert
+        XCTAssertEqual(1, mockStretchesPresenterDelegate.didSelectStretchCallCount)
+    }
 
 }

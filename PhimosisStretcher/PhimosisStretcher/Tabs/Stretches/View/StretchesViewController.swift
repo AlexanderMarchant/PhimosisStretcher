@@ -13,9 +13,9 @@ class StretchesViewController: AdvertScreenTableViewController, Storyboarded {
     var stretchesPresenter: StretchesPresenterProtocol!
     var alertHandlerService: AlertHandlerServiceProtocol!
     
-    let understandingPhimosis = Bundle.main.decode(UnderstandingPhimosis.self, from: "understandingPhimosis.json")
-    let safetyMeasures = Bundle.main.decode(SafetyMeasures.self, from: "safetyMeasures.json")
-    let stretches = Bundle.main.decode([StretchInfo].self, from: "stretches.json")
+    var understandingPhimosis = Bundle.main.decode(UnderstandingPhimosis.self, from: "understandingPhimosis.json")
+    var safetyMeasures = Bundle.main.decode(SafetyMeasures.self, from: "safetyMeasures.json")
+    var stretches = Bundle.main.decode([StretchInfo].self, from: "stretches.json")
     
     override func viewDidLoad() {
         super.viewDidLoad()
