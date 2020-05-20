@@ -13,6 +13,8 @@ protocol StretchesPresenterView: AdvertScreenPresenterView {
 
 protocol StretchesPresenterDelegate: AdvertScreenPresenterDelegate {
     func didSelectStretch(_ selectedStretch: StretchInfo)
+    func didSelectUnderstandingPhimosis(_ understandingPhimosis: UnderstandingPhimosis)
+    func didSelectSafetyMeasures(_ safetyMeasures: SafetyMeasures)
 }
 
 class StretchesPresenter: AdvertScreenPresenter, StretchesPresenterProtocol {
@@ -35,6 +37,14 @@ class StretchesPresenter: AdvertScreenPresenter, StretchesPresenterProtocol {
             adServiceService,
             with: view,
             delegate: delegate)
+    }
+    
+    func didSelectUnderstandingPhimosis(_ understandingPhimosis: UnderstandingPhimosis) {
+        self.stretchesDelegate.didSelectUnderstandingPhimosis(understandingPhimosis)
+    }
+    
+    func didSelectSafetyMeasures(_ safetyMeasures: SafetyMeasures) {
+        self.stretchesDelegate.didSelectSafetyMeasures(safetyMeasures)
     }
     
     func didSelectStretch(_ selectedStretch: StretchInfo) {

@@ -151,6 +151,10 @@
 		D471B4CE2475129B00A5640F /* UnderstandingPhimosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4CD2475129B00A5640F /* UnderstandingPhimosis.swift */; };
 		D471B4D0247512A400A5640F /* SafetyMeasures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4CF247512A400A5640F /* SafetyMeasures.swift */; };
 		D471B4D2247513E100A5640F /* SafetyTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4D1247513E100A5640F /* SafetyTip.swift */; };
+		D471B4DA2475166400A5640F /* UnderstandingPhimosis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471B4D92475166400A5640F /* UnderstandingPhimosis.storyboard */; };
+		D471B4DC2475167500A5640F /* UnderstandingPhimosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4DB2475167500A5640F /* UnderstandingPhimosisViewController.swift */; };
+		D471B4DE2475168100A5640F /* UnderstandingPhimosisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4DD2475168100A5640F /* UnderstandingPhimosisPresenter.swift */; };
+		D471B4E02475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4DF2475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -346,6 +350,10 @@
 		D471B4CD2475129B00A5640F /* UnderstandingPhimosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosis.swift; sourceTree = "<group>"; };
 		D471B4CF247512A400A5640F /* SafetyMeasures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasures.swift; sourceTree = "<group>"; };
 		D471B4D1247513E100A5640F /* SafetyTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTip.swift; sourceTree = "<group>"; };
+		D471B4D92475166400A5640F /* UnderstandingPhimosis.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UnderstandingPhimosis.storyboard; sourceTree = "<group>"; };
+		D471B4DB2475167500A5640F /* UnderstandingPhimosisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisViewController.swift; sourceTree = "<group>"; };
+		D471B4DD2475168100A5640F /* UnderstandingPhimosisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisPresenter.swift; sourceTree = "<group>"; };
+		D471B4DF2475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisPresenterProtocol.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -758,6 +766,8 @@
 			children = (
 				D455667B246B0BD900DC1FAE /* StretchesViewController.swift */,
 				D455667D246B0BE400DC1FAE /* Stretches.storyboard */,
+				D471B4D62475164400A5640F /* UnderstandingPhimosis */,
+				D471B4D32475162F00A5640F /* SafetyMeasures */,
 				D455667A246B0B8F00DC1FAE /* StretchInfo */,
 			);
 			path = View;
@@ -1502,6 +1512,56 @@
 			path = SafetyMeasures;
 			sourceTree = "<group>";
 		};
+		D471B4D32475162F00A5640F /* SafetyMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4D42475163A00A5640F /* Presenter */,
+				D471B4D52475163F00A5640F /* View */,
+			);
+			path = SafetyMeasures;
+			sourceTree = "<group>";
+		};
+		D471B4D42475163A00A5640F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D471B4D52475163F00A5640F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D471B4D62475164400A5640F /* UnderstandingPhimosis */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4D82475165200A5640F /* Presenter */,
+				D471B4D72475164E00A5640F /* View */,
+			);
+			path = UnderstandingPhimosis;
+			sourceTree = "<group>";
+		};
+		D471B4D72475164E00A5640F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4DB2475167500A5640F /* UnderstandingPhimosisViewController.swift */,
+				D471B4D92475166400A5640F /* UnderstandingPhimosis.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D471B4D82475165200A5640F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4DD2475168100A5640F /* UnderstandingPhimosisPresenter.swift */,
+				D471B4DF2475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1736,6 +1796,7 @@
 				D471B4B8247444A500A5640F /* StretchCell.xib in Resources */,
 				D471B4C82475122E00A5640F /* understandingPhimosis.json in Resources */,
 				D471B4AE247440B400A5640F /* stretches.json in Resources */,
+				D471B4DA2475166400A5640F /* UnderstandingPhimosis.storyboard in Resources */,
 				D471B4CA2475126D00A5640F /* safetyMeasures.json in Resources */,
 				D455667E246B0BE400DC1FAE /* Stretches.storyboard in Resources */,
 				D4556688246B0C2900DC1FAE /* StretchInfo.storyboard in Resources */,
@@ -1867,6 +1928,7 @@
 				D46EB371246FFAD300AF0F5B /* KegelTrainerCell.swift in Sources */,
 				D471B4D0247512A400A5640F /* SafetyMeasures.swift in Sources */,
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
+				D471B4DE2475168100A5640F /* UnderstandingPhimosisPresenter.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
 				D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */,
 				D471B48E2471C53400A5640F /* AdvertScreenViewController.swift in Sources */,
@@ -1897,6 +1959,7 @@
 				D46EB3762471144300AF0F5B /* RemindersCoordinator.swift in Sources */,
 				D471B4CE2475129B00A5640F /* UnderstandingPhimosis.swift in Sources */,
 				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,
+				D471B4E02475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift in Sources */,
 				D471B47B2471A2AC00A5640F /* CreditsTextView.swift in Sources */,
 				D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */,
 				D46EB37F2471153A00AF0F5B /* RemindersPresenter.swift in Sources */,
@@ -1904,6 +1967,7 @@
 				D471B4D2247513E100A5640F /* SafetyTip.swift in Sources */,
 				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
 				D4B5C04E246F444400D524DE /* AdServiceDelegate.swift in Sources */,
+				D471B4DC2475167500A5640F /* UnderstandingPhimosisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

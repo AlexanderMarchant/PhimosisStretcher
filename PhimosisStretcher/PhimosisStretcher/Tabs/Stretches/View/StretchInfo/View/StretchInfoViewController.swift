@@ -21,7 +21,6 @@ class StretchInfoViewController: UIViewController, Storyboarded {
     @IBOutlet weak var closingText: UILabel!
     @IBOutlet weak var references: UILabel!
     @IBOutlet internal var contentView: UIView!
-    @IBOutlet internal var contentViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet internal var scrollView: UIScrollView!
     
     override func viewDidLoad() {

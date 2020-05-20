@@ -58,6 +58,20 @@ class StretchesCoordinator: Coordinator {
         navigationController.pushViewController(stretchesViewController, animated: true)
     }
     
+    func showUnderstandingPhimosis(_ understandingPhimosis: UnderstandingPhimosis) {
+        let understandingPhimosisViewController = UnderstandingPhimosisViewController.instantiate(storyboard: "UnderstandingPhimosis")
+        
+        let understandingPhimosisPresenter = UnderstandingPhimosisPresenter(
+            understandingPhimosis,
+            with: understandingPhimosisViewController,
+            delegate: self)
+        
+        understandingPhimosisViewController.understandingPhimosisPresenter = understandingPhimosisPresenter
+        understandingPhimosisViewController.alertHandlerService = self.alertHandlerService
+        
+        navigationController.pushViewController(understandingPhimosisViewController, animated: true)
+    }
+    
     func showStretchInfo(_ selectedStretch: StretchInfo) {
         let stretchInfoViewController = StretchInfoViewController.instantiate(storyboard: "StretchInfo")
         
@@ -79,7 +93,18 @@ extension StretchesCoordinator: StretchesPresenterDelegate {
     func didSelectStretch(_ selectedStretch: StretchInfo) {
         self.showStretchInfo(selectedStretch)
     }
+    
+    func didSelectUnderstandingPhimosis(_ understandingPhimosis: UnderstandingPhimosis) {
+        self.showUnderstandingPhimosis(understandingPhimosis)
+    }
+    
+    func didSelectSafetyMeasures(_ safetyMeasures: SafetyMeasures) {
+        // Shwo safety measures VC
+    }
 }
 
 extension StretchesCoordinator: StretchInfoPresenterDelegate {
+}
+
+extension StretchesCoordinator: UnderstandingPhimosisPresenterDelegate {
 }

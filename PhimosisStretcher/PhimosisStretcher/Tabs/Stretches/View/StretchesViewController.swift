@@ -103,9 +103,24 @@ class StretchesViewController: AdvertScreenTableViewController, Storyboarded {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedStretch = stretches[indexPath.row]
         
-        stretchesPresenter.didSelectStretch(selectedStretch)
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                stretchesPresenter.didSelectUnderstandingPhimosis(understandingPhimosis)
+            case 1:
+                stretchesPresenter.didSelectSafetyMeasures(safetyMeasures)
+            default:
+                return
+            }
+        case 1:
+            let selectedStretch = stretches[indexPath.row]
+            
+            stretchesPresenter.didSelectStretch(selectedStretch)
+        default:
+            return
+        }
     }
 
 }
