@@ -146,6 +146,11 @@
 		D471B4B2247443D900A5640F /* Bundle-Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4B1247443D900A5640F /* Bundle-Decode.swift */; };
 		D471B4B7247444A500A5640F /* StretchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4B5247444A500A5640F /* StretchCell.swift */; };
 		D471B4B8247444A500A5640F /* StretchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471B4B6247444A500A5640F /* StretchCell.xib */; };
+		D471B4C82475122E00A5640F /* understandingPhimosis.json in Resources */ = {isa = PBXBuildFile; fileRef = D471B4C72475122E00A5640F /* understandingPhimosis.json */; };
+		D471B4CA2475126D00A5640F /* safetyMeasures.json in Resources */ = {isa = PBXBuildFile; fileRef = D471B4C92475126D00A5640F /* safetyMeasures.json */; };
+		D471B4CE2475129B00A5640F /* UnderstandingPhimosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4CD2475129B00A5640F /* UnderstandingPhimosis.swift */; };
+		D471B4D0247512A400A5640F /* SafetyMeasures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4CF247512A400A5640F /* SafetyMeasures.swift */; };
+		D471B4D2247513E100A5640F /* SafetyTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4D1247513E100A5640F /* SafetyTip.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -336,6 +341,11 @@
 		D471B4B1247443D900A5640F /* Bundle-Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decode.swift"; sourceTree = "<group>"; };
 		D471B4B5247444A500A5640F /* StretchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchCell.swift; sourceTree = "<group>"; };
 		D471B4B6247444A500A5640F /* StretchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StretchCell.xib; sourceTree = "<group>"; };
+		D471B4C72475122E00A5640F /* understandingPhimosis.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = understandingPhimosis.json; sourceTree = "<group>"; };
+		D471B4C92475126D00A5640F /* safetyMeasures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = safetyMeasures.json; sourceTree = "<group>"; };
+		D471B4CD2475129B00A5640F /* UnderstandingPhimosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosis.swift; sourceTree = "<group>"; };
+		D471B4CF247512A400A5640F /* SafetyMeasures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasures.swift; sourceTree = "<group>"; };
+		D471B4D1247513E100A5640F /* SafetyTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTip.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -1467,8 +1477,29 @@
 		D471B4BA2474484A00A5640F /* PhimosisInfo */ = {
 			isa = PBXGroup;
 			children = (
+				D471B4CB2475127F00A5640F /* UnderstandingPhimosis */,
+				D471B4CC2475128900A5640F /* SafetyMeasures */,
 			);
 			path = PhimosisInfo;
+			sourceTree = "<group>";
+		};
+		D471B4CB2475127F00A5640F /* UnderstandingPhimosis */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4C72475122E00A5640F /* understandingPhimosis.json */,
+				D471B4CD2475129B00A5640F /* UnderstandingPhimosis.swift */,
+			);
+			path = UnderstandingPhimosis;
+			sourceTree = "<group>";
+		};
+		D471B4CC2475128900A5640F /* SafetyMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4C92475126D00A5640F /* safetyMeasures.json */,
+				D471B4CF247512A400A5640F /* SafetyMeasures.swift */,
+				D471B4D1247513E100A5640F /* SafetyTip.swift */,
+			);
+			path = SafetyMeasures;
 			sourceTree = "<group>";
 		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
@@ -1703,7 +1734,9 @@
 				D4B5C03E246F3F7800D524DE /* Begin.wav in Resources */,
 				D46EB37B2471151F00AF0F5B /* AddReminder.storyboard in Resources */,
 				D471B4B8247444A500A5640F /* StretchCell.xib in Resources */,
+				D471B4C82475122E00A5640F /* understandingPhimosis.json in Resources */,
 				D471B4AE247440B400A5640F /* stretches.json in Resources */,
+				D471B4CA2475126D00A5640F /* safetyMeasures.json in Resources */,
 				D455667E246B0BE400DC1FAE /* Stretches.storyboard in Resources */,
 				D4556688246B0C2900DC1FAE /* StretchInfo.storyboard in Resources */,
 				D455665F246AEC5500DC1FAE /* Settings.storyboard in Resources */,
@@ -1832,6 +1865,7 @@
 				D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */,
 				D471B4B7247444A500A5640F /* StretchCell.swift in Sources */,
 				D46EB371246FFAD300AF0F5B /* KegelTrainerCell.swift in Sources */,
+				D471B4D0247512A400A5640F /* SafetyMeasures.swift in Sources */,
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
 				D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */,
@@ -1861,11 +1895,13 @@
 				D471B48A2471C50700A5640F /* AdvertScreenPresenterProtocol.swift in Sources */,
 				D46EB38624711BFB00AF0F5B /* AddReminderViewController.swift in Sources */,
 				D46EB3762471144300AF0F5B /* RemindersCoordinator.swift in Sources */,
+				D471B4CE2475129B00A5640F /* UnderstandingPhimosis.swift in Sources */,
 				D4556614246AE47000DC1FAE /* Storyboarded.swift in Sources */,
 				D471B47B2471A2AC00A5640F /* CreditsTextView.swift in Sources */,
 				D4556715246BCAB300DC1FAE /* TimerServiceProtocol.swift in Sources */,
 				D46EB37F2471153A00AF0F5B /* RemindersPresenter.swift in Sources */,
 				D455661F246AE5A100DC1FAE /* AlertHandlerServiceProtocol.swift in Sources */,
+				D471B4D2247513E100A5640F /* SafetyTip.swift in Sources */,
 				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
 				D4B5C04E246F444400D524DE /* AdServiceDelegate.swift in Sources */,
 			);
