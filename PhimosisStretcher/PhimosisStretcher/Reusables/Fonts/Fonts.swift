@@ -28,7 +28,7 @@ struct Fonts {
     }
     
     static var semiBoldTextFont: UIFont {
-        let textFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        let textFont = UIFont.systemFont(ofSize: 18, weight: .semibold)
         let metrics = UIFontMetrics(forTextStyle: .body)
         return metrics.scaledFont(for: textFont)
     }

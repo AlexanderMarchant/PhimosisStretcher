@@ -155,6 +155,10 @@
 		D471B4DC2475167500A5640F /* UnderstandingPhimosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4DB2475167500A5640F /* UnderstandingPhimosisViewController.swift */; };
 		D471B4DE2475168100A5640F /* UnderstandingPhimosisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4DD2475168100A5640F /* UnderstandingPhimosisPresenter.swift */; };
 		D471B4E02475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4DF2475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift */; };
+		D471B4E22475656800A5640F /* SafetyMeasuresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4E12475656800A5640F /* SafetyMeasuresPresenter.swift */; };
+		D471B4E42475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4E32475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift */; };
+		D471B4E8247566AA00A5640F /* SafetyMeasuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4E7247566AA00A5640F /* SafetyMeasuresViewController.swift */; };
+		D471B4EA2475686900A5640F /* SafetyMeasures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471B4E92475686900A5640F /* SafetyMeasures.storyboard */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -354,6 +358,10 @@
 		D471B4DB2475167500A5640F /* UnderstandingPhimosisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisViewController.swift; sourceTree = "<group>"; };
 		D471B4DD2475168100A5640F /* UnderstandingPhimosisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisPresenter.swift; sourceTree = "<group>"; };
 		D471B4DF2475168900A5640F /* UnderstandingPhimosisPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisPresenterProtocol.swift; sourceTree = "<group>"; };
+		D471B4E12475656800A5640F /* SafetyMeasuresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresPresenter.swift; sourceTree = "<group>"; };
+		D471B4E32475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresPresenterProtocol.swift; sourceTree = "<group>"; };
+		D471B4E7247566AA00A5640F /* SafetyMeasuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresViewController.swift; sourceTree = "<group>"; };
+		D471B4E92475686900A5640F /* SafetyMeasures.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafetyMeasures.storyboard; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -1524,6 +1532,8 @@
 		D471B4D42475163A00A5640F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D471B4E12475656800A5640F /* SafetyMeasuresPresenter.swift */,
+				D471B4E32475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1531,6 +1541,8 @@
 		D471B4D52475163F00A5640F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D471B4E7247566AA00A5640F /* SafetyMeasuresViewController.swift */,
+				D471B4E92475686900A5640F /* SafetyMeasures.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1786,6 +1798,7 @@
 				D45566AF246B14C800DC1FAE /* InformationScreen.storyboard in Resources */,
 				D46EB37D2471152A00AF0F5B /* Reminders.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
+				D471B4EA2475686900A5640F /* SafetyMeasures.storyboard in Resources */,
 				D46EB372246FFAD300AF0F5B /* KegelTrainerCell.xib in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
 				D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */,
@@ -1934,11 +1947,13 @@
 				D471B48E2471C53400A5640F /* AdvertScreenViewController.swift in Sources */,
 				D47FA86A246DC78E006B3A69 /* String-IsInt.swift in Sources */,
 				D45566DD246B1A0F00DC1FAE /* EnableNotificationsViewController.swift in Sources */,
+				D471B4E22475656800A5640F /* SafetyMeasuresPresenter.swift in Sources */,
 				D47FA87D246E8A12006B3A69 /* GlobalFunctions.swift in Sources */,
 				D45566E1246B1A8C00DC1FAE /* EnableNotificationsPresenter.swift in Sources */,
 				D45566AD246B149C00DC1FAE /* InformationScreenPresenterProtocol.swift in Sources */,
 				D45566C1246B173800DC1FAE /* FatalError.swift in Sources */,
 				D471B4832471BEE100A5640F /* AdServerServiceProtocol.swift in Sources */,
+				D471B4E8247566AA00A5640F /* SafetyMeasuresViewController.swift in Sources */,
 				D4556679246B0B8C00DC1FAE /* StretchesPresenterProtocol.swift in Sources */,
 				D46EB38E24711F8800AF0F5B /* Date-StripDate.swift in Sources */,
 				D4556677246B0B8100DC1FAE /* StretchesPresenter.swift in Sources */,
@@ -1953,6 +1968,7 @@
 				D4556621246AE5B900DC1FAE /* UserDefaultsService.swift in Sources */,
 				D46EB3812471154400AF0F5B /* RemindersPresenterProtocol.swift in Sources */,
 				D4556684246B0C1100DC1FAE /* StretchInfoPresenterProtocol.swift in Sources */,
+				D471B4E42475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift in Sources */,
 				D4B5C04A246F444400D524DE /* AdServerService.swift in Sources */,
 				D471B48A2471C50700A5640F /* AdvertScreenPresenterProtocol.swift in Sources */,
 				D46EB38624711BFB00AF0F5B /* AddReminderViewController.swift in Sources */,
