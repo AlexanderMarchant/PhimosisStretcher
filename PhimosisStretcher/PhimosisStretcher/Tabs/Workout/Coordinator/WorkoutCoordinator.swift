@@ -61,6 +61,22 @@ class WorkoutCoordinator: Coordinator {
         navigationController.addChild(workoutMenuViewController)
     }
     
+    func showWashYourHands() {
+        let washYourHandsViewController = WashYourHandsViewController.instantiate(storyboard: "WashYourHands")
+        
+        let washYourHandsPresenter = WashYourHandsPresenter(
+            adServerService,
+            with: washYourHandsViewController,
+            delegate: self)
+        
+        washYourHandsViewController.advertScreenPresenter = washYourHandsPresenter
+        washYourHandsViewController.informationScreenPresenter = washYourHandsPresenter
+        washYourHandsViewController.washYourHandsPresenter = washYourHandsPresenter
+        washYourHandsViewController.alertHandlerService = alertHandlerService
+        
+        navigationController.pushViewController(washYourHandsViewController, animated: true)
+    }
+    
     func showWorkout() {
         let workoutViewController = WorkoutViewController.instantiate(storyboard: "Workout")
         
@@ -100,6 +116,12 @@ class WorkoutCoordinator: Coordinator {
 
 extension WorkoutCoordinator: WorkoutMenuPresenterDelegate {
     func didStartWorkout() {
+        showWashYourHands()
+    }
+}
+
+extension WorkoutCoordinator: WashYourHandsPresenterDelegate {
+    func didTapContinue() {
         showWorkout()
     }
 }

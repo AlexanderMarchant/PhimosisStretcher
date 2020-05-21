@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wash Your Hands View Controller-->
+        <scene sceneID="cLX-II-goZ">
+            <objects>
+                <viewController storyboardIdentifier="WashYourHandsViewController" id="1lV-Lp-eOz" customClass="WashYourHandsViewController" customModule="PhimosisStretcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pp7-sC-Ang">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-wm-3nd" customClass="PSSecondaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="762" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UcT-5f-mar"/>
+                                </constraints>
+                                <state key="normal" title="Secondary Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMV-Oy-mKE" customClass="PSPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
+                                <rect key="frame" x="25" y="687" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vhY-em-OmZ"/>
+                                </constraints>
+                                <state key="normal" title="Primary Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handwashing" translatesAutoresizingMaskIntoConstraints="NO" id="H8D-It-42o">
+                                <rect key="frame" x="50" y="119" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H8D-It-42o" secondAttribute="height" multiplier="1:1" id="JjE-eY-Mmf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbH-dK-DJW">
+                                <rect key="frame" x="25" y="458" width="364" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceS-Uo-rDo">
+                                <rect key="frame" x="25" y="505.5" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4r-nh-p0p" customClass="MDCFloatingButton">
+                                <rect key="frame" x="339" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="SGo-cO-TzP"/>
+                                    <constraint firstAttribute="height" constant="50" id="WZK-gP-tEO"/>
+                                </constraints>
+                                <state key="normal" image="close-icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ceS-Uo-rDo" firstAttribute="leading" secondItem="tCM-Ht-QW6" secondAttribute="leading" constant="25" id="6Lp-97-QXN"/>
+                            <constraint firstItem="mbH-dK-DJW" firstAttribute="centerX" secondItem="pp7-sC-Ang" secondAttribute="centerX" id="85g-RM-MQc"/>
+                            <constraint firstItem="mbH-dK-DJW" firstAttribute="top" secondItem="H8D-It-42o" secondAttribute="bottom" constant="25" id="Do6-xJ-YPy"/>
+                            <constraint firstItem="ceS-Uo-rDo" firstAttribute="top" secondItem="mbH-dK-DJW" secondAttribute="bottom" constant="16" id="GRY-Gm-Fpx"/>
+                            <constraint firstItem="tCM-Ht-QW6" firstAttribute="trailing" secondItem="G4r-nh-p0p" secondAttribute="trailing" constant="25" id="HJb-HT-gIc"/>
+                            <constraint firstItem="tCM-Ht-QW6" firstAttribute="trailing" secondItem="ceS-Uo-rDo" secondAttribute="trailing" constant="25" id="INb-fL-yXu"/>
+                            <constraint firstItem="OtQ-wm-3nd" firstAttribute="top" secondItem="xMV-Oy-mKE" secondAttribute="bottom" constant="25" id="OmL-9E-8AS"/>
+                            <constraint firstItem="H8D-It-42o" firstAttribute="leading" secondItem="tCM-Ht-QW6" secondAttribute="leading" constant="50" id="Qal-8w-yxX"/>
+                            <constraint firstItem="tCM-Ht-QW6" firstAttribute="trailing" secondItem="mbH-dK-DJW" secondAttribute="trailing" constant="25" id="T91-6x-DUN"/>
+                            <constraint firstItem="OtQ-wm-3nd" firstAttribute="leading" secondItem="tCM-Ht-QW6" secondAttribute="leading" constant="25" id="VHL-pi-eK5"/>
+                            <constraint firstItem="G4r-nh-p0p" firstAttribute="top" secondItem="tCM-Ht-QW6" secondAttribute="top" constant="25" id="YfS-wH-rXS"/>
+                            <constraint firstItem="tCM-Ht-QW6" firstAttribute="bottom" secondItem="OtQ-wm-3nd" secondAttribute="bottom" constant="50" id="cyT-gy-nHr"/>
+                            <constraint firstItem="mbH-dK-DJW" firstAttribute="leading" secondItem="tCM-Ht-QW6" secondAttribute="leading" constant="25" id="eNq-45-BcO"/>
+                            <constraint firstItem="H8D-It-42o" firstAttribute="top" secondItem="tCM-Ht-QW6" secondAttribute="top" constant="75" id="rS7-Sf-U5A"/>
+                            <constraint firstItem="tCM-Ht-QW6" firstAttribute="trailing" secondItem="H8D-It-42o" secondAttribute="trailing" constant="50" id="sO2-3K-tSl"/>
+                            <constraint firstItem="tCM-Ht-QW6" firstAttribute="trailing" secondItem="OtQ-wm-3nd" secondAttribute="trailing" constant="25" id="tQR-s6-rkw"/>
+                            <constraint firstItem="xMV-Oy-mKE" firstAttribute="leading" secondItem="tCM-Ht-QW6" secondAttribute="leading" constant="25" id="u9I-Iq-Z4b"/>
+                            <constraint firstItem="xMV-Oy-mKE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ceS-Uo-rDo" secondAttribute="bottom" constant="25" id="xbA-Hh-Axe"/>
+                            <constraint firstItem="tCM-Ht-QW6" firstAttribute="trailing" secondItem="xMV-Oy-mKE" secondAttribute="trailing" constant="25" id="yEs-bi-LU7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tCM-Ht-QW6"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="G4r-nh-p0p" id="6wP-oX-AN5"/>
+                        <outlet property="primaryButton" destination="xMV-Oy-mKE" id="4di-na-GkO"/>
+                        <outlet property="screenDescription" destination="ceS-Uo-rDo" id="5Pg-ZY-laE"/>
+                        <outlet property="screenImage" destination="H8D-It-42o" id="575-yy-wXl"/>
+                        <outlet property="screenTitle" destination="mbH-dK-DJW" id="Z83-S7-L8b"/>
+                        <outlet property="secondaryButton" destination="OtQ-wm-3nd" id="d3O-IA-nTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCo-EG-OUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-icon" width="16" height="16"/>
+        <image name="handwashing" width="2000" height="2000"/>
+    </resources>
+</document>

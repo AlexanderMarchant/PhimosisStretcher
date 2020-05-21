@@ -169,6 +169,15 @@
 		D471B502247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B501247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift */; };
 		D471B50424765A1900A5640F /* SafetyMeasuresPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B50324765A1900A5640F /* SafetyMeasuresPresenterTests.swift */; };
 		D471B50624765AA900A5640F /* SafetyMeasuresViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B50524765AA900A5640F /* SafetyMeasuresViewControllerTests.swift */; };
+		D471B50C2476650F00A5640F /* WashYourHandsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B50B2476650F00A5640F /* WashYourHandsPresenter.swift */; };
+		D471B50E2476651800A5640F /* WashYourHandsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B50D2476651800A5640F /* WashYourHandsPresenterProtocol.swift */; };
+		D471B5102476652400A5640F /* WashYourHandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B50F2476652400A5640F /* WashYourHandsViewController.swift */; };
+		D471B5122476652D00A5640F /* WashYourHands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471B5112476652D00A5640F /* WashYourHands.storyboard */; };
+		D471B518247669DD00A5640F /* MockWashYourHandsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B517247669DD00A5640F /* MockWashYourHandsPresenter.swift */; };
+		D471B51A247669E500A5640F /* MockWashYourHandsPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B519247669E500A5640F /* MockWashYourHandsPresenterDelegate.swift */; };
+		D471B51C247669EC00A5640F /* MockWashYourHandsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B51B247669EC00A5640F /* MockWashYourHandsPresenterView.swift */; };
+		D471B51E24766AE500A5640F /* WashYourHandsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B51D24766AE500A5640F /* WashYourHandsPresenterTests.swift */; };
+		D471B52024766B7D00A5640F /* WashYourHandsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B51F24766B7D00A5640F /* WashYourHandsViewControllerTests.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -382,6 +391,15 @@
 		D471B501247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisViewControllerTests.swift; sourceTree = "<group>"; };
 		D471B50324765A1900A5640F /* SafetyMeasuresPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresPresenterTests.swift; sourceTree = "<group>"; };
 		D471B50524765AA900A5640F /* SafetyMeasuresViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresViewControllerTests.swift; sourceTree = "<group>"; };
+		D471B50B2476650F00A5640F /* WashYourHandsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashYourHandsPresenter.swift; sourceTree = "<group>"; };
+		D471B50D2476651800A5640F /* WashYourHandsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashYourHandsPresenterProtocol.swift; sourceTree = "<group>"; };
+		D471B50F2476652400A5640F /* WashYourHandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashYourHandsViewController.swift; sourceTree = "<group>"; };
+		D471B5112476652D00A5640F /* WashYourHands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WashYourHands.storyboard; sourceTree = "<group>"; };
+		D471B517247669DD00A5640F /* MockWashYourHandsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWashYourHandsPresenter.swift; sourceTree = "<group>"; };
+		D471B519247669E500A5640F /* MockWashYourHandsPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWashYourHandsPresenterDelegate.swift; sourceTree = "<group>"; };
+		D471B51B247669EC00A5640F /* MockWashYourHandsPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWashYourHandsPresenterView.swift; sourceTree = "<group>"; };
+		D471B51D24766AE500A5640F /* WashYourHandsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashYourHandsPresenterTests.swift; sourceTree = "<group>"; };
+		D471B51F24766B7D00A5640F /* WashYourHandsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashYourHandsViewControllerTests.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -1245,6 +1263,7 @@
 			children = (
 				D4556704246B22A900DC1FAE /* WorkoutMenuViewController.swift */,
 				D455670A246B24E000DC1FAE /* WorkoutMenu.storyboard */,
+				D471B508247664EA00A5640F /* WashYourHands */,
 				D455670E246B27E100DC1FAE /* PerformWorkout */,
 				D47FA84D246D9F5C006B3A69 /* WorkoutComplete */,
 			);
@@ -1264,6 +1283,7 @@
 			isa = PBXGroup;
 			children = (
 				D47FA878246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift */,
+				D471B513247669B500A5640F /* WashYourHands */,
 				D455670D246B27C400DC1FAE /* PerformWorkout */,
 				D47FA858246DA482006B3A69 /* WorkoutComplete */,
 			);
@@ -1668,6 +1688,69 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D471B508247664EA00A5640F /* WashYourHands */ = {
+			isa = PBXGroup;
+			children = (
+				D471B50A247664FD00A5640F /* Presenter */,
+				D471B509247664F700A5640F /* View */,
+			);
+			path = WashYourHands;
+			sourceTree = "<group>";
+		};
+		D471B509247664F700A5640F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D471B50F2476652400A5640F /* WashYourHandsViewController.swift */,
+				D471B5112476652D00A5640F /* WashYourHands.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D471B50A247664FD00A5640F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D471B50B2476650F00A5640F /* WashYourHandsPresenter.swift */,
+				D471B50D2476651800A5640F /* WashYourHandsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D471B513247669B500A5640F /* WashYourHands */ = {
+			isa = PBXGroup;
+			children = (
+				D471B516247669CB00A5640F /* Mocks */,
+				D471B515247669C600A5640F /* Presenter */,
+				D471B514247669C200A5640F /* View */,
+			);
+			path = WashYourHands;
+			sourceTree = "<group>";
+		};
+		D471B514247669C200A5640F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D471B51F24766B7D00A5640F /* WashYourHandsViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D471B515247669C600A5640F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D471B51D24766AE500A5640F /* WashYourHandsPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D471B516247669CB00A5640F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D471B517247669DD00A5640F /* MockWashYourHandsPresenter.swift */,
+				D471B519247669E500A5640F /* MockWashYourHandsPresenterDelegate.swift */,
+				D471B51B247669EC00A5640F /* MockWashYourHandsPresenterView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1893,6 +1976,7 @@
 				D46EB37D2471152A00AF0F5B /* Reminders.storyboard in Resources */,
 				D45565FB246AAD8200DC1FAE /* LaunchScreen.storyboard in Resources */,
 				D471B4EA2475686900A5640F /* SafetyMeasures.storyboard in Resources */,
+				D471B5122476652D00A5640F /* WashYourHands.storyboard in Resources */,
 				D46EB372246FFAD300AF0F5B /* KegelTrainerCell.xib in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
 				D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */,
@@ -1995,6 +2079,7 @@
 				D4B5C04C246F444400D524DE /* AdMobService.swift in Sources */,
 				D45566B8246B15CD00DC1FAE /* PSDestructiveButton.swift in Sources */,
 				D455662B246AE62C00DC1FAE /* WorkoutCoordinator.swift in Sources */,
+				D471B5102476652400A5640F /* WashYourHandsViewController.swift in Sources */,
 				D455667C246B0BD900DC1FAE /* StretchesViewController.swift in Sources */,
 				D4556631246AE66E00DC1FAE /* WorkoutViewController.swift in Sources */,
 				D46EB38A24711C3D00AF0F5B /* AddReminderPresenterProtocol.swift in Sources */,
@@ -2077,6 +2162,8 @@
 				D471B4D2247513E100A5640F /* SafetyTip.swift in Sources */,
 				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
 				D4B5C04E246F444400D524DE /* AdServiceDelegate.swift in Sources */,
+				D471B50E2476651800A5640F /* WashYourHandsPresenterProtocol.swift in Sources */,
+				D471B50C2476650F00A5640F /* WashYourHandsPresenter.swift in Sources */,
 				D471B4DC2475167500A5640F /* UnderstandingPhimosisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2113,6 +2200,7 @@
 				D471B4FA247656C700A5640F /* MockSafetyMeasuresPresenter.swift in Sources */,
 				D455664D246AEA5F00DC1FAE /* MockAlertHandlerService.swift in Sources */,
 				D46EB3A224712E9800AF0F5B /* AddReminderPresenterTests.swift in Sources */,
+				D471B51C247669EC00A5640F /* MockWashYourHandsPresenterView.swift in Sources */,
 				D47FA85F246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift in Sources */,
 				D455668E246B0EB900DC1FAE /* MockStretchInfoPresenter.swift in Sources */,
 				D455663F246AE96A00DC1FAE /* WorkoutPresenterTests.swift in Sources */,
@@ -2135,6 +2223,7 @@
 				D471B49F2472B47400A5640F /* MockAdvertScreenPresenterDelegate.swift in Sources */,
 				D455666D246AEDEB00DC1FAE /* SettingsCoordinatorTests.swift in Sources */,
 				D471B4A12472B4EE00A5640F /* AdvertScreenPresenterTests.swift in Sources */,
+				D471B52024766B7D00A5640F /* WashYourHandsViewControllerTests.swift in Sources */,
 				D46EB39C24712C7600AF0F5B /* MockAddReminderPresenterDelegate.swift in Sources */,
 				D45566D3246B184000DC1FAE /* XCTestCase-ExpectFatalError.swift in Sources */,
 				D45566CE246B17F000DC1FAE /* MockInformationScreenPresenterDelegate.swift in Sources */,
@@ -2146,11 +2235,13 @@
 				D4556645246AE99500DC1FAE /* MockWorkoutPresenterDelegate.swift in Sources */,
 				D4556694246B0F6200DC1FAE /* MockStretchesPresenter.swift in Sources */,
 				D47FA879246E83B7006B3A69 /* WorkoutMenuViewControllerTests.swift in Sources */,
+				D471B51E24766AE500A5640F /* WashYourHandsPresenterTests.swift in Sources */,
 				D455669A246B0FF100DC1FAE /* StretchesCoordinatorTests.swift in Sources */,
 				D4556692246B0ECA00DC1FAE /* MockStretchInfoPresenterDelegate.swift in Sources */,
 				D4556643246AE98A00DC1FAE /* MockWorkoutPresenter.swift in Sources */,
 				D47FA863246DA55D006B3A69 /* MockWorkoutCompletePresenterView.swift in Sources */,
 				D4556649246AE9C600DC1FAE /* MockObjectProtocol.swift in Sources */,
+				D471B51A247669E500A5640F /* MockWashYourHandsPresenterDelegate.swift in Sources */,
 				D4556717246BCC6E00DC1FAE /* MockTimerService.swift in Sources */,
 				D45566A0246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift in Sources */,
 				D46EB39A24712C6E00AF0F5B /* MockAddReminderPresenter.swift in Sources */,
@@ -2159,6 +2250,7 @@
 				D45566CA246B17CA00DC1FAE /* InformationScreenPresenterTests.swift in Sources */,
 				D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */,
 				D46EB39E24712C7F00AF0F5B /* MockAddReminderPresenterView.swift in Sources */,
+				D471B518247669DD00A5640F /* MockWashYourHandsPresenter.swift in Sources */,
 				D47FA861246DA554006B3A69 /* MockWorkoutCompletePresenter.swift in Sources */,
 				D455666B246AEDDD00DC1FAE /* SettingsPresenterTests.swift in Sources */,
 				D471B502247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift in Sources */,
