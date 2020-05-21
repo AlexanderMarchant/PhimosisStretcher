@@ -24,11 +24,10 @@ struct Constants {
     static let adsDisabled = "AdsDisabled"
     
     //  User Default Keys
-    static let appLaunchCount = "AppLaunchCount"
-    static let launchedBefore = "LaunchedBefore"
+    static let appLaunchCount = "appLaunchCount"
     
     //  Dispatch Queue
-    static let dispatchQueueLabel = "ResumeWorkout"
+    static let dispatchQueueLabel = "resumeWorkout"
     
     // Reusable Cells
     static let remindersCellIndexPath = IndexPath(row: 0, section: 2)

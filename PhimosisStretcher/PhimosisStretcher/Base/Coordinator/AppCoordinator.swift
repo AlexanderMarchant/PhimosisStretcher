@@ -74,6 +74,8 @@ class AppCoordinator: Coordinator {
             settingsCoordinator.navigationController
         ]
         
+        tabBarController.selectedIndex = 1
+        
         let targetWorkoutsPerDay = userDefaultsService.integer(forKey: Constants.targetWorkoutsPerDay)
         let repsPerSet = userDefaultsService.integer(forKey: Constants.repsPerWorkout)
         let repLength = userDefaultsService.integer(forKey: Constants.repLength)

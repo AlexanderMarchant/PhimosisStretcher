@@ -178,6 +178,7 @@
 		D471B51C247669EC00A5640F /* MockWashYourHandsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B51B247669EC00A5640F /* MockWashYourHandsPresenterView.swift */; };
 		D471B51E24766AE500A5640F /* WashYourHandsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B51D24766AE500A5640F /* WashYourHandsPresenterTests.swift */; };
 		D471B52024766B7D00A5640F /* WashYourHandsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B51F24766B7D00A5640F /* WashYourHandsViewControllerTests.swift */; };
+		D471B5232476711C00A5640F /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B5222476711C00A5640F /* RequestReview.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -400,6 +401,7 @@
 		D471B51B247669EC00A5640F /* MockWashYourHandsPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWashYourHandsPresenterView.swift; sourceTree = "<group>"; };
 		D471B51D24766AE500A5640F /* WashYourHandsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashYourHandsPresenterTests.swift; sourceTree = "<group>"; };
 		D471B51F24766B7D00A5640F /* WashYourHandsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashYourHandsViewControllerTests.swift; sourceTree = "<group>"; };
+		D471B5222476711C00A5640F /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -959,6 +961,7 @@
 		D45566B0246B154700DC1FAE /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				D471B5212476710E00A5640F /* Request Review */,
 				D471B4BA2474484A00A5640F /* PhimosisInfo */,
 				D471B4AA24743FE400A5640F /* StretchInfo */,
 				D4B5C038246F3F7800D524DE /* Sound Bites */,
@@ -1751,6 +1754,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D471B5212476710E00A5640F /* Request Review */ = {
+			isa = PBXGroup;
+			children = (
+				D471B5222476711C00A5640F /* RequestReview.swift */,
+			);
+			path = "Request Review";
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -2163,6 +2174,7 @@
 				D4556663246AECA800DC1FAE /* SettingsPresenter.swift in Sources */,
 				D4B5C04E246F444400D524DE /* AdServiceDelegate.swift in Sources */,
 				D471B50E2476651800A5640F /* WashYourHandsPresenterProtocol.swift in Sources */,
+				D471B5232476711C00A5640F /* RequestReview.swift in Sources */,
 				D471B50C2476650F00A5640F /* WashYourHandsPresenter.swift in Sources */,
 				D471B4DC2475167500A5640F /* UnderstandingPhimosisViewController.swift in Sources */,
 			);
