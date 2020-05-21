@@ -45,6 +45,7 @@ class WorkoutViewController: AdvertScreenViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+        UIApplication.shared.isIdleTimerDisabled = true
         
         reloadAds()
     }
