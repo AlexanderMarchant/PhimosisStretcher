@@ -99,6 +99,7 @@ class SettingsViewControllerTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(1, mockSettingsPresenter.saveChangesCallCount)
+        XCTAssertEqual(1, mockSettingsPresenter.getInterstitialAdCallCount)
     }
     
     func testDidSelectRowAt_OtherIndexPath() {
