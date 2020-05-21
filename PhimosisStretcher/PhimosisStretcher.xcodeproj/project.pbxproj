@@ -159,6 +159,16 @@
 		D471B4E42475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4E32475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift */; };
 		D471B4E8247566AA00A5640F /* SafetyMeasuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4E7247566AA00A5640F /* SafetyMeasuresViewController.swift */; };
 		D471B4EA2475686900A5640F /* SafetyMeasures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471B4E92475686900A5640F /* SafetyMeasures.storyboard */; };
+		D471B4F42476564C00A5640F /* MockUnderstandingPhimosisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4F32476564C00A5640F /* MockUnderstandingPhimosisPresenter.swift */; };
+		D471B4F62476565600A5640F /* MockUnderstandingPhimosisPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4F52476565600A5640F /* MockUnderstandingPhimosisPresenterView.swift */; };
+		D471B4F82476565E00A5640F /* MockUnderstandingPhimosisPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4F72476565E00A5640F /* MockUnderstandingPhimosisPresenterDelegate.swift */; };
+		D471B4FA247656C700A5640F /* MockSafetyMeasuresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4F9247656C700A5640F /* MockSafetyMeasuresPresenter.swift */; };
+		D471B4FC247656CF00A5640F /* MockSafetyMeasuresPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4FB247656CF00A5640F /* MockSafetyMeasuresPresenterDelegate.swift */; };
+		D471B4FE247656D500A5640F /* MockSafetyMeasuresPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4FD247656D500A5640F /* MockSafetyMeasuresPresenterView.swift */; };
+		D471B5002476572700A5640F /* UnderstandingPhimosisPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B4FF2476572700A5640F /* UnderstandingPhimosisPresenterTests.swift */; };
+		D471B502247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B501247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift */; };
+		D471B50424765A1900A5640F /* SafetyMeasuresPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B50324765A1900A5640F /* SafetyMeasuresPresenterTests.swift */; };
+		D471B50624765AA900A5640F /* SafetyMeasuresViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471B50524765AA900A5640F /* SafetyMeasuresViewControllerTests.swift */; };
 		D47FA849246BD07D006B3A69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA848246BD07D006B3A69 /* Constants.swift */; };
 		D47FA84C246D1AB2006B3A69 /* RepsLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */; };
 		D47FA851246D9F84006B3A69 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */; };
@@ -362,6 +372,16 @@
 		D471B4E32475657F00A5640F /* SafetyMeasuresPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresPresenterProtocol.swift; sourceTree = "<group>"; };
 		D471B4E7247566AA00A5640F /* SafetyMeasuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresViewController.swift; sourceTree = "<group>"; };
 		D471B4E92475686900A5640F /* SafetyMeasures.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafetyMeasures.storyboard; sourceTree = "<group>"; };
+		D471B4F32476564C00A5640F /* MockUnderstandingPhimosisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUnderstandingPhimosisPresenter.swift; sourceTree = "<group>"; };
+		D471B4F52476565600A5640F /* MockUnderstandingPhimosisPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUnderstandingPhimosisPresenterView.swift; sourceTree = "<group>"; };
+		D471B4F72476565E00A5640F /* MockUnderstandingPhimosisPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUnderstandingPhimosisPresenterDelegate.swift; sourceTree = "<group>"; };
+		D471B4F9247656C700A5640F /* MockSafetyMeasuresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSafetyMeasuresPresenter.swift; sourceTree = "<group>"; };
+		D471B4FB247656CF00A5640F /* MockSafetyMeasuresPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSafetyMeasuresPresenterDelegate.swift; sourceTree = "<group>"; };
+		D471B4FD247656D500A5640F /* MockSafetyMeasuresPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSafetyMeasuresPresenterView.swift; sourceTree = "<group>"; };
+		D471B4FF2476572700A5640F /* UnderstandingPhimosisPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisPresenterTests.swift; sourceTree = "<group>"; };
+		D471B501247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingPhimosisViewControllerTests.swift; sourceTree = "<group>"; };
+		D471B50324765A1900A5640F /* SafetyMeasuresPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresPresenterTests.swift; sourceTree = "<group>"; };
+		D471B50524765AA900A5640F /* SafetyMeasuresViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyMeasuresViewControllerTests.swift; sourceTree = "<group>"; };
 		D47FA848246BD07D006B3A69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47FA84B246D1AB2006B3A69 /* RepsLeftLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsLeftLabel.swift; sourceTree = "<group>"; };
 		D47FA850246D9F84006B3A69 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
@@ -703,6 +723,8 @@
 			isa = PBXGroup;
 			children = (
 				D455669D246B107E00DC1FAE /* StretchesViewControllerTests.swift */,
+				D471B4EC2476561200A5640F /* UnderstandingPhimosis */,
+				D471B4EB2476560900A5640F /* SafetyMeasures */,
 				D4556689246B0E8E00DC1FAE /* StretchInfo */,
 			);
 			path = View;
@@ -1574,6 +1596,78 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		D471B4EB2476560900A5640F /* SafetyMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4F22476563200A5640F /* Mocks */,
+				D471B4F12476562F00A5640F /* Presenter */,
+				D471B4F02476562B00A5640F /* View */,
+			);
+			path = SafetyMeasures;
+			sourceTree = "<group>";
+		};
+		D471B4EC2476561200A5640F /* UnderstandingPhimosis */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4EF2476562600A5640F /* Mocks */,
+				D471B4EE2476562300A5640F /* Presenter */,
+				D471B4ED2476561D00A5640F /* View */,
+			);
+			path = UnderstandingPhimosis;
+			sourceTree = "<group>";
+		};
+		D471B4ED2476561D00A5640F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D471B501247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D471B4EE2476562300A5640F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4FF2476572700A5640F /* UnderstandingPhimosisPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D471B4EF2476562600A5640F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4F32476564C00A5640F /* MockUnderstandingPhimosisPresenter.swift */,
+				D471B4F52476565600A5640F /* MockUnderstandingPhimosisPresenterView.swift */,
+				D471B4F72476565E00A5640F /* MockUnderstandingPhimosisPresenterDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D471B4F02476562B00A5640F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D471B50524765AA900A5640F /* SafetyMeasuresViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D471B4F12476562F00A5640F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D471B50324765A1900A5640F /* SafetyMeasuresPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D471B4F22476563200A5640F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D471B4F9247656C700A5640F /* MockSafetyMeasuresPresenter.swift */,
+				D471B4FB247656CF00A5640F /* MockSafetyMeasuresPresenterDelegate.swift */,
+				D471B4FD247656D500A5640F /* MockSafetyMeasuresPresenterView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D47FA847246BD070006B3A69 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1992,23 +2086,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				D455666F246AEDF700DC1FAE /* MockSettingsPresenter.swift in Sources */,
+				D471B50424765A1900A5640F /* SafetyMeasuresPresenterTests.swift in Sources */,
 				D4556647246AE99D00DC1FAE /* MockWorkoutPresenterView.swift in Sources */,
 				D4556696246B0F6C00DC1FAE /* MockStretchesPresenterView.swift in Sources */,
+				D471B4F42476564C00A5640F /* MockUnderstandingPhimosisPresenter.swift in Sources */,
 				D4556671246AEDFE00DC1FAE /* MockSettingsPresenterView.swift in Sources */,
 				D45566F3246B1C3F00DC1FAE /* MockEnableNotificationsPresenterDelegate.swift in Sources */,
 				D47FA87B246E83C9006B3A69 /* WorkoutMenuPresenterTests.swift in Sources */,
 				D45566C8246B17A800DC1FAE /* InformationScreenViewControllerTests.swift in Sources */,
+				D471B4F82476565E00A5640F /* MockUnderstandingPhimosisPresenterDelegate.swift in Sources */,
 				D45566D0246B180C00DC1FAE /* MockInformationScreenPresenter.swift in Sources */,
 				D45566CC246B17DF00DC1FAE /* MockInformationScreenPresenterView.swift in Sources */,
 				D45566A2246B116700DC1FAE /* StretchInfoPresenterTests.swift in Sources */,
 				D47FA85D246DA4B0006B3A69 /* WorkoutCompleteViewControllerTests.swift in Sources */,
+				D471B4F62476565600A5640F /* MockUnderstandingPhimosisPresenterView.swift in Sources */,
 				D46EB39624712C5A00AF0F5B /* MockRemindersPresenterDelegate.swift in Sources */,
 				D471B49D2472B46C00A5640F /* MockAdvertScreenPresenterView.swift in Sources */,
 				D471B4932472A42400A5640F /* MockAdMobService.swift in Sources */,
+				D471B50624765AA900A5640F /* SafetyMeasuresViewControllerTests.swift in Sources */,
+				D471B5002476572700A5640F /* UnderstandingPhimosisPresenterTests.swift in Sources */,
+				D471B4FE247656D500A5640F /* MockSafetyMeasuresPresenterView.swift in Sources */,
 				D455669E246B107E00DC1FAE /* StretchesViewControllerTests.swift in Sources */,
 				D4556698246B0F7400DC1FAE /* MockStretchesPresenterDelegate.swift in Sources */,
 				D47FA877246E8397006B3A69 /* MockWorkoutMenuPresenterDelegate.swift in Sources */,
 				D46EB39424712C5200AF0F5B /* MockRemindersPresenter.swift in Sources */,
+				D471B4FA247656C700A5640F /* MockSafetyMeasuresPresenter.swift in Sources */,
 				D455664D246AEA5F00DC1FAE /* MockAlertHandlerService.swift in Sources */,
 				D46EB3A224712E9800AF0F5B /* AddReminderPresenterTests.swift in Sources */,
 				D47FA85F246DA4C3006B3A69 /* WorkoutCompletePresenterTests.swift in Sources */,
@@ -2053,11 +2155,13 @@
 				D45566A0246B10E200DC1FAE /* StretchesInfoViewControllerTests.swift in Sources */,
 				D46EB39A24712C6E00AF0F5B /* MockAddReminderPresenter.swift in Sources */,
 				D471B49B2472B46300A5640F /* MockAdvertScreenPresenter.swift in Sources */,
+				D471B4FC247656CF00A5640F /* MockSafetyMeasuresPresenterDelegate.swift in Sources */,
 				D45566CA246B17CA00DC1FAE /* InformationScreenPresenterTests.swift in Sources */,
 				D4556673246AEE0700DC1FAE /* MockSettingsPresenterDelegate.swift in Sources */,
 				D46EB39E24712C7F00AF0F5B /* MockAddReminderPresenterView.swift in Sources */,
 				D47FA861246DA554006B3A69 /* MockWorkoutCompletePresenter.swift in Sources */,
 				D455666B246AEDDD00DC1FAE /* SettingsPresenterTests.swift in Sources */,
+				D471B502247657C400A5640F /* UnderstandingPhimosisViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

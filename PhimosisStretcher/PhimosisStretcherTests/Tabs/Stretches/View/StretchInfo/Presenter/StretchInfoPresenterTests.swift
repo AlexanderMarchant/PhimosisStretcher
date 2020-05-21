@@ -41,5 +41,13 @@ class StretchInfoPresenterTests: XCTestCase {
         mockStretchInfoPresenterView = nil
         mockStretchInfoPresenterDelegate = nil
     }
+    
+    func testGetStretchInfo() {
+        // Arrange/Act
+        stretchInfoPresenter.getStretchInfo()
+        
+        // Assert
+        XCTAssertEqual(1, mockStretchInfoPresenterView.didGetStretchInfoCallCount)
+    }
 
 }

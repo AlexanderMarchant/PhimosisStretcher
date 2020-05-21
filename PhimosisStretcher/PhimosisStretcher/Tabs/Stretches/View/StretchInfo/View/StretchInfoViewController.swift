@@ -25,10 +25,6 @@ class StretchInfoViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         stretchInfoPresenter.getStretchInfo()
     }
