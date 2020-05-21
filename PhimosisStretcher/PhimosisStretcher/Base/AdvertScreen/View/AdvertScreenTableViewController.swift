@@ -48,5 +48,6 @@ extension AdvertScreenTableViewController: AdvertScreenPresenterView {
         if let ad = ad {
             ad.present(fromRootViewController: self.navigationController!)
         }
+        self.reloadAds()
     }
 }

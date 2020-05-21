@@ -95,6 +95,8 @@ class SettingsViewController: AdvertScreenTableViewController, Storyboarded {
             restLength: restLengthTextBox.text,
             prepareLength: prepareLengthTextBox.text
         )
+        
+        displayInterstitialAd()
     }
     
     @objc func vibrateCuesSwitchTouched() {
