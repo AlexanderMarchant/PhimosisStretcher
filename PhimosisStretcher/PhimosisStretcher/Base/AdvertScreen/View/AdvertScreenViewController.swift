@@ -19,7 +19,7 @@ class AdvertScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerAdContainerView = UIView()
+        bannerAdContainerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 50))
         bannerAdContainerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bannerAdContainerView)
         
@@ -27,7 +27,7 @@ class AdvertScreenViewController: UIViewController {
             NSLayoutConstraint(item: bannerAdContainerView!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 50),
             NSLayoutConstraint(item: bannerAdContainerView!, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: bannerAdContainerView!, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1.0, constant: 25),
-            NSLayoutConstraint(item: bannerAdContainerView!, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1.0, constant: 25),
+            NSLayoutConstraint(item: bannerAdContainerView!, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1.0, constant: 25)
         ])
         
         advertScreenPresenter.getBannerAd(viewController: self, bannerContainerView: bannerAdContainerView)

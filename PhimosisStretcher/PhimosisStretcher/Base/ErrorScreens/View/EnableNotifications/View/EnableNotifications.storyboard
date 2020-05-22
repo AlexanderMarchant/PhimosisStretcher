@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,33 +16,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-ja-OtZ" customClass="PSSecondaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
-                                <rect key="frame" x="25" y="762" width="364" height="50"/>
+                                <rect key="frame" x="25" y="787" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="O0K-y5-PLI"/>
                                 </constraints>
                                 <state key="normal" title="Secondary Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-ey-93W" customClass="PSPrimaryButton" customModule="PhimosisStretcher" customModuleProvider="target">
-                                <rect key="frame" x="25" y="687" width="364" height="50"/>
+                                <rect key="frame" x="25" y="787" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M1I-YD-qJn"/>
                                 </constraints>
                                 <state key="normal" title="Primary Button"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enable-notifications" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-eI-JeR">
-                                <rect key="frame" x="50" y="119" width="314" height="314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="245" verticalHuggingPriority="251" image="enable-notifications" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-eI-JeR">
+                                <rect key="frame" x="50" y="69" width="314" height="314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ulx-eI-JeR" secondAttribute="height" multiplier="1:1" id="QUG-5S-cXq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R44-nW-k4H">
-                                <rect key="frame" x="25" y="458" width="364" height="31.5"/>
+                                <rect key="frame" x="25" y="408" width="364" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-ss-bed">
-                                <rect key="frame" x="25" y="505.5" width="364" height="20.5"/>
+                                <rect key="frame" x="25" y="455.5" width="364" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                         <constraints>
                             <constraint firstItem="R44-nW-k4H" firstAttribute="leading" secondItem="Ldv-jZ-k2J" secondAttribute="leading" constant="25" id="2Nn-0L-dcG"/>
                             <constraint firstItem="Tca-ss-bed" firstAttribute="top" secondItem="R44-nW-k4H" secondAttribute="bottom" constant="16" id="30S-sT-1Pd"/>
-                            <constraint firstItem="Ldv-jZ-k2J" firstAttribute="bottom" secondItem="PIN-ja-OtZ" secondAttribute="bottom" constant="50" id="6Iy-Xe-Y70"/>
+                            <constraint firstItem="Ldv-jZ-k2J" firstAttribute="bottom" secondItem="PIN-ja-OtZ" secondAttribute="bottom" constant="25" id="6Iy-Xe-Y70"/>
                             <constraint firstItem="Ldv-jZ-k2J" firstAttribute="trailing" secondItem="Tca-ss-bed" secondAttribute="trailing" constant="25" id="7RD-ID-r9Q"/>
                             <constraint firstItem="R44-nW-k4H" firstAttribute="top" secondItem="ulx-eI-JeR" secondAttribute="bottom" constant="25" id="FAN-27-cHi"/>
                             <constraint firstItem="hcb-ey-93W" firstAttribute="leading" secondItem="Ldv-jZ-k2J" secondAttribute="leading" constant="25" id="I3Y-Ct-gem"/>
@@ -71,9 +71,9 @@
                             <constraint firstItem="Ldv-jZ-k2J" firstAttribute="trailing" secondItem="hcb-ey-93W" secondAttribute="trailing" constant="25" id="SDu-aQ-j6U"/>
                             <constraint firstItem="ulx-eI-JeR" firstAttribute="leading" secondItem="Ldv-jZ-k2J" secondAttribute="leading" constant="50" id="TVZ-9j-sdY"/>
                             <constraint firstItem="Ldv-jZ-k2J" firstAttribute="trailing" secondItem="R44-nW-k4H" secondAttribute="trailing" constant="25" id="WBf-Yf-3Uc"/>
-                            <constraint firstItem="Ilb-h6-SY4" firstAttribute="top" secondItem="Ldv-jZ-k2J" secondAttribute="top" constant="25" id="WHg-8r-EQM"/>
-                            <constraint firstItem="ulx-eI-JeR" firstAttribute="top" secondItem="Ldv-jZ-k2J" secondAttribute="top" constant="75" id="b9c-UR-d5g"/>
-                            <constraint firstItem="PIN-ja-OtZ" firstAttribute="top" secondItem="hcb-ey-93W" secondAttribute="bottom" constant="25" id="nIo-1A-cVO"/>
+                            <constraint firstItem="Ilb-h6-SY4" firstAttribute="top" secondItem="Ldv-jZ-k2J" secondAttribute="top" priority="250" constant="25" id="WHg-8r-EQM"/>
+                            <constraint firstItem="ulx-eI-JeR" firstAttribute="top" secondItem="Ldv-jZ-k2J" secondAttribute="top" priority="250" constant="25" id="b9c-UR-d5g"/>
+                            <constraint firstItem="Ldv-jZ-k2J" firstAttribute="bottom" secondItem="hcb-ey-93W" secondAttribute="bottom" constant="25" id="nIo-1A-cVO"/>
                             <constraint firstItem="Ldv-jZ-k2J" firstAttribute="trailing" secondItem="PIN-ja-OtZ" secondAttribute="trailing" constant="25" id="riu-Vy-IkV"/>
                             <constraint firstItem="Ldv-jZ-k2J" firstAttribute="trailing" secondItem="ulx-eI-JeR" secondAttribute="trailing" constant="50" id="ukJ-M2-LUb"/>
                             <constraint firstItem="R44-nW-k4H" firstAttribute="centerX" secondItem="osy-DN-Auf" secondAttribute="centerX" id="wfU-JZ-xQS"/>

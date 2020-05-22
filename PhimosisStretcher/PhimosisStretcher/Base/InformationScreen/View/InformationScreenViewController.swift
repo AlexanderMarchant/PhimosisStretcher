@@ -24,6 +24,11 @@ class InformationScreenViewController: AdvertScreenViewController, Storyboarded 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.addConstraints([
+            NSLayoutConstraint(item: screenImage!, attribute: .top, relatedBy: .equal, toItem: bannerAdContainerView, attribute: .bottom, multiplier: 1.0, constant: 0),
+            NSLayoutConstraint(item: closeButton!, attribute: .top, relatedBy: .equal, toItem: bannerAdContainerView, attribute: .bottom, multiplier: 1.0, constant: 0),
+        ])
+        
         screenImage.image = UIImage(named: "lost")!
         
         screenTitle.font = Fonts.headerFont
