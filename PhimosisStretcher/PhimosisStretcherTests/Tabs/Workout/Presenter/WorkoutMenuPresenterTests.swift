@@ -1,6 +1,6 @@
 //
 //  WorkoutMenuPresenterTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 15/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.

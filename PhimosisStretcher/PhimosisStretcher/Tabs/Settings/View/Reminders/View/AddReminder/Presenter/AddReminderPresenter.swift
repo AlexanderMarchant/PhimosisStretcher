@@ -1,6 +1,6 @@
 //
 //  AddReminderPresenter.swift
-//  PhimosisStretcher
+//  PhimosisStretches
 //
 //  Created by Alex Marchant on 17/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -43,7 +43,7 @@ class AddReminderPresenter: AddReminderPresenterProtocol {
         let triggerTime = Calendar.current.dateComponents([.hour, .minute], from: time)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerTime, repeats: true)
         
-        let request = UNNotificationRequest(identifier: "PhimosisStretcher\(triggerTime)", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "PhimosisStretches\(triggerTime)", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         

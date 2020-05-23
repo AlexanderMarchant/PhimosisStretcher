@@ -1,6 +1,6 @@
 //
 //  WorkoutViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 12/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -44,7 +44,7 @@ class WorkoutViewControllerTests: XCTestCase {
     
     func testViewDidLoad() {
         // Arrange
-        let BACK_BUTTON_IMAGE = UIImage(named: "close-icon", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        let BACK_BUTTON_IMAGE = UIImage(named: "close-icon", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         
         // Act
         workoutViewController.viewDidLoad()

@@ -1,6 +1,6 @@
 //
 //  WorkoutCompleteViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 14/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -39,7 +39,7 @@ class WorkoutCompleteViewControllerTests: XCTestCase {
     
     func testViewDidLoad() {
         // Arrange
-        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "workout-complete", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "workout-complete", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         // Act
         workoutCompleteViewController.viewDidLoad()

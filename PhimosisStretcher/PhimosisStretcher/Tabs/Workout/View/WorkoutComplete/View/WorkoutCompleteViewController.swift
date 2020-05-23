@@ -1,6 +1,6 @@
 //
 //  WorkoutCompleteViewController.swift
-//  PhimosisStretcher
+//  PhimosisStretches
 //
 //  Created by Alex Marchant on 14/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.

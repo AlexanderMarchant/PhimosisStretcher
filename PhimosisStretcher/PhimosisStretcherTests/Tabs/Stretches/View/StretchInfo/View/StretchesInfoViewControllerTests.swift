@@ -1,6 +1,6 @@
 //
 //  StretchesInfoViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 12/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -81,7 +81,7 @@ class StretchesInfoViewControllerTests: XCTestCase {
             closingText: "Test",
             references: [])
         
-        let EXPECTED_IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "No references"
         
         // Act
@@ -109,7 +109,7 @@ class StretchesInfoViewControllerTests: XCTestCase {
             closingText: "Test",
             references: ["Test"])
         
-        let EXPECTED_IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "Test"
         
         // Act
@@ -137,7 +137,7 @@ class StretchesInfoViewControllerTests: XCTestCase {
             closingText: "Test",
             references: ["Test", "Test", "Test"])
         
-        let EXPECTED_IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "Test\n \nTest\n \nTest"
         
         // Act

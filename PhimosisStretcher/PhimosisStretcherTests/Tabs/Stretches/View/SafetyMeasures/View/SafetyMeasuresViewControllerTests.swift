@@ -1,6 +1,6 @@
 //
 //  SafetyMeasuresViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 21/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -78,7 +78,7 @@ class SafetyMeasuresViewControllerTests: XCTestCase {
             image: "safety",
             references: [])
         
-        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "No references"
         
         let attrs = [NSAttributedString.Key.font : Fonts.semiBoldTextFont]
@@ -105,7 +105,7 @@ class SafetyMeasuresViewControllerTests: XCTestCase {
             image: "safety",
             references: [])
         
-        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "No references"
         
         let attrs = [NSAttributedString.Key.font : Fonts.semiBoldTextFont]
@@ -138,7 +138,7 @@ class SafetyMeasuresViewControllerTests: XCTestCase {
             image: "safety",
             references: [])
         
-        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "No references"
         
         let attrs = [NSAttributedString.Key.font : Fonts.semiBoldTextFont]
@@ -176,7 +176,7 @@ class SafetyMeasuresViewControllerTests: XCTestCase {
             image: "safety",
             references: ["Test"])
         
-        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "Test"
         
         let attrs = [NSAttributedString.Key.font : Fonts.semiBoldTextFont]
@@ -214,7 +214,7 @@ class SafetyMeasuresViewControllerTests: XCTestCase {
             image: "safety",
             references: ["Test", "Test", "Test"])
         
-        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         let EXPECTED_REFERENCE_TEXT = "Test\n \nTest\n \nTest"
         
         let attrs = [NSAttributedString.Key.font : Fonts.semiBoldTextFont]

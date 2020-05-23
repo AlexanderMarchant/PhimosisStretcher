@@ -1,6 +1,6 @@
 //
 //  EnableNotificationsViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 12/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -37,7 +37,7 @@ class EnableNotificationsViewControllerTests: XCTestCase {
     
     func testViewDidLoad() {
         // Arrange
-        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "enable-notifications", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "enable-notifications", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         // Act
         enableNotificationsViewController.viewDidLoad()

@@ -1,6 +1,6 @@
 //
 //  UnderstandingPhimosisViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 21/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -82,7 +82,7 @@ class UnderstandingPhimosisViewControllerTests: XCTestCase {
             references: [])
         
         let EXPECTED_REFERENCE_TEXT = "No references"
-        let EXPECTED_IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         // Act
         understandingPhimosisViewController.didGetInfo(UNDERSTANDING_PHIMOSIS)
@@ -110,7 +110,7 @@ class UnderstandingPhimosisViewControllerTests: XCTestCase {
             references: ["Test"])
         
         let EXPECTED_REFERENCE_TEXT = "Test"
-        let EXPECTED_IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         // Act
         understandingPhimosisViewController.didGetInfo(UNDERSTANDING_PHIMOSIS)
@@ -138,7 +138,7 @@ class UnderstandingPhimosisViewControllerTests: XCTestCase {
             references: ["Test", "Test", "Test"])
         
         let EXPECTED_REFERENCE_TEXT = "Test\n \nTest\n \nTest"
-        let EXPECTED_IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let EXPECTED_IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         // Act
         understandingPhimosisViewController.didGetInfo(UNDERSTANDING_PHIMOSIS)

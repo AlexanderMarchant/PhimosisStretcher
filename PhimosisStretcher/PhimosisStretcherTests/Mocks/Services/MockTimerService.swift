@@ -1,6 +1,6 @@
 //
 //  MockTimerService.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 13/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.

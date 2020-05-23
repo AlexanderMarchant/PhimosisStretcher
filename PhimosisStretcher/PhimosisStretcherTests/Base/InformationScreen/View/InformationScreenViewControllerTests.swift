@@ -1,6 +1,6 @@
 //
 //  InformationScreenViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 12/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -35,8 +35,8 @@ class InformationScreenViewControllerTests: XCTestCase {
     
     func testViewDidLoad() {
         // Arrange
-        let LOST_IMAGE = UIImage(named: "lost", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
-        let CLOSE_IMAGE = UIImage(named: "close-icon", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
+        let LOST_IMAGE = UIImage(named: "lost", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
+        let CLOSE_IMAGE = UIImage(named: "close-icon", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
         
         // Act
         informationScreenViewController.viewDidLoad()

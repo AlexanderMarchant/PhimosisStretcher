@@ -1,6 +1,6 @@
 //
 //  StretchesViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 12/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -136,7 +136,7 @@ class StretchesViewControllerTests: XCTestCase {
             goodNews: "Test",
             references: ["Test"])
         
-        let IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let IMAGE = UIImage(named: "understanding-phimosis", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         stretchesViewController.understandingPhimosis = UNDERSTANDING_PHIMOSIS
         
@@ -164,7 +164,7 @@ class StretchesViewControllerTests: XCTestCase {
             image: "safety",
             references: ["Test"])
         
-        let IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let IMAGE = UIImage(named: "safety", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         stretchesViewController.safetyMeasures = SAFETY_MEASURES
         
@@ -193,7 +193,7 @@ class StretchesViewControllerTests: XCTestCase {
             closingText: "Test",
             references: ["Test"])
         
-        let IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let IMAGE = UIImage(named: "two-finger-inside-stretching", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         stretchesViewController.stretches = [STRETCH]
         

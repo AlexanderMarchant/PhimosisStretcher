@@ -1,6 +1,6 @@
 //
 //  WashYourHandsViewControllerTests.swift
-//  PhimosisStretcherTests
+//  PhimosisStretchesTests
 //
 //  Created by Alex Marchant on 21/05/2020.
 //  Copyright © 2020 Alex Marchant. All rights reserved.
@@ -39,7 +39,7 @@ class WashYourHandsViewControllerTests: XCTestCase {
     
     func testViewDidLoad() {
         // Arrange
-        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "handwashing", in: Bundle(identifier: "PhimosisStretcher"), compatibleWith: nil)!
+        let ENABLE_NOTIFICATIONS_IMAGE = UIImage(named: "handwashing", in: Bundle(identifier: "PhimosisStretches"), compatibleWith: nil)!
         
         // Act
         washYourHandsViewController.viewDidLoad()
