@@ -3,12 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PrivacyPolicyComponent } from './privacy/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PrivacyPolicyComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
