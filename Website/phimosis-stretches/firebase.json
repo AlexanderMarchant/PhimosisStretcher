@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "src",
+    "public": "dist/phimosis-stretches",
     "ignore": [
       "firebase.json",
       "**/.*",

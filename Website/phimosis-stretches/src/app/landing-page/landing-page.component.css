@@ -1,0 +1,13 @@
+html,
+body {
+  padding: 25px;
+  height: 100%;
+  background: rgb(52,84,209);
+  background: linear-gradient(45deg, rgba(52,84,209,1) 22%, rgba(66,175,208,1) 100%);
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff !important;
+}
