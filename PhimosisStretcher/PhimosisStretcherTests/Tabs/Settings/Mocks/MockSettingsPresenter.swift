@@ -22,6 +22,7 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     var didSelectRemindersCallCount = 0
     var getNotificationSettingsCallCount = 0
     var didSelectCreditsCallCount = 0
+    var showWalkthroughCallCount = 0
     
     var reloadAdsCallCount = 0
     var getInterstitialAdCallCount = 0
@@ -38,6 +39,7 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
         self.didSelectRemindersCallCount = 0
         self.getNotificationSettingsCallCount = 0
         self.didSelectCreditsCallCount = 0
+        self.showWalkthroughCallCount = 0
         
         self.reloadAdsCallCount = 0
         self.getInterstitialAdCallCount = 0
@@ -94,5 +96,9 @@ class MockSettingsPresenter: MockObjectProtocol, SettingsPresenterProtocol {
     
     func getBannerAd(viewController: UIViewController, bannerContainerView: UIView) {
         getBannerAdCallCount += 1
+    }
+    
+    func showWalkthrough() {
+        showWalkthroughCallCount += 1
     }
 }

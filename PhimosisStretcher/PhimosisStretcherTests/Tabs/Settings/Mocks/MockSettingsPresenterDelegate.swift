@@ -14,11 +14,13 @@ class MockSettingsPresenterDelegate: MockObjectProtocol, SettingsPresenterDelega
     var sendEmailCallCount = 0
     var didSelectRemindersCallCount = 0
     var didSelectCreditsCallCount = 0
+    var didSelectShowWalkthroughCallCount = 0
     
     func resetCallCounts() {
         self.sendEmailCallCount = 0
         self.didSelectRemindersCallCount = 0
         self.didSelectCreditsCallCount = 0
+        self.didSelectShowWalkthroughCallCount = 0
     }
     
     func sendEmail() {
@@ -31,5 +33,9 @@ class MockSettingsPresenterDelegate: MockObjectProtocol, SettingsPresenterDelega
     
     func didSelectCredits() {
         didSelectCreditsCallCount += 1
+    }
+    
+    func didSelectShowWalkthrough() {
+        didSelectShowWalkthroughCallCount += 1
     }
 }

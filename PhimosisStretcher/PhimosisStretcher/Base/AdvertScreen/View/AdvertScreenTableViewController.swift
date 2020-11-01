@@ -36,12 +36,13 @@ class AdvertScreenTableViewController: UITableViewController {
 
 extension AdvertScreenTableViewController: AdvertScreenPresenterView {
     func didGetBannerAd(ad: GADBannerView?) {
-        self.adBannerView = ad
-        
-        adBannerView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addConstraints([
-            adBannerView.centerXAnchor.constraint(equalTo: self.tableView!.tableHeaderView!.centerXAnchor),
-        ])
+        if let adBannerView = ad {
+            self.adBannerView = ad
+            adBannerView.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addConstraints([
+                adBannerView.centerXAnchor.constraint(equalTo: self.tableView!.tableHeaderView!.centerXAnchor),
+            ])
+        }
     }
     
     func didGetInterstitialAd(ad: GADInterstitial?) {
