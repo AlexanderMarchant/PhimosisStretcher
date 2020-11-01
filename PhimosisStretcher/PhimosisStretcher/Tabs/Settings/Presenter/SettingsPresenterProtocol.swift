@@ -19,4 +19,5 @@ protocol SettingsPresenterProtocol: AdvertScreenPresenterProtocol {
     func updateVibrateCue()
     func updateVisualCue()
     func updateAudioCue()
+    func showWalkthrough()
 }

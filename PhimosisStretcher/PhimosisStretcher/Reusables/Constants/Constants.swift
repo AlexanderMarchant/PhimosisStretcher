@@ -22,6 +22,7 @@ struct Constants {
     static let useVisualCues = "UseVisualCues"
     static let useAudioCues = "UseSoundCues"
     static let adsDisabled = "AdsDisabled"
+    static let launchedBefore = "LaunchedBefore"
     
     //  User Default Keys
     static let appLaunchCount = "appLaunchCount"
@@ -33,6 +34,7 @@ struct Constants {
     static let remindersCellIndexPath = IndexPath(row: 0, section: 2)
     
     static let emailCellIndexPath = IndexPath(row: 0, section: 3)
+    static let appWalkthroughIndexPath = IndexPath(row: 1, section: 3)
     
     static let kegelTrainerCell = "KegelTrainerCell"
     static let kegelTrainerCellIndexPath = IndexPath(row: 0, section: 4)

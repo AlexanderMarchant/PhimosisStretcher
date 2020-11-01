@@ -118,6 +118,25 @@ class AppCoordinator: Coordinator {
         self.navigationController.navigationBar.isHidden = true
         self.navigationController.pushViewController(tabBarController, animated: true)
     }
+    
+    func showWalkthroughOnStartup() {
+        self.showWalkthrough()
+    }
+    
+    private func showWalkthrough() {
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
+        
+        let walkthroughCoordinator = WalkthroughCoordinator(
+            self.navigationController,
+            launchedBefore)
+        
+        walkthroughCoordinator.delegate = self
+            
+        self.addChildCoordinator(walkthroughCoordinator)
+        
+        walkthroughCoordinator.start()
+    }
 }
 
 extension AppCoordinator: StretchesCoordinatorDelegate {
@@ -129,8 +148,18 @@ extension AppCoordinator: WorkoutCoordinatorDelegate {
 }
 
 extension AppCoordinator: SettingsCoordinatorDelegate {
+    func showAppWalkthrough() {
+        self.showWalkthrough()
+    }
     
 }
 
 extension AppCoordinator: ErrorScreensCoordinatorDelegate {
+}
+
+extension AppCoordinator: WalkthroughCoordinatorDelegate {
+    func didFinishWalkthrough(_ walkthroughCoordinator: WalkthroughCoordinator) {
+        walkthroughCoordinator.navigationController.dismiss(animated: true)
+        self.removeChildCoordinator(walkthroughCoordinator)
+    }
 }

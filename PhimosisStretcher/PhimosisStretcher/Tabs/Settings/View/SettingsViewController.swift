@@ -120,6 +120,8 @@ class SettingsViewController: AdvertScreenTableViewController, Storyboarded {
             settingsPresenter.sendEmail()
         case Constants.creditsIndexPath:
             settingsPresenter.didSelectCredits()
+        case Constants.appWalkthroughIndexPath:
+            settingsPresenter.showWalkthrough()
         default:
             break
         }

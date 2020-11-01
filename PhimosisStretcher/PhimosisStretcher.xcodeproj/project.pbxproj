@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		98B0DBCD1CF433C0B5FDD3E3 /* Pods_PhimosisStretcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2925F936BD65733D2208AAEB /* Pods_PhimosisStretcher.framework */; };
 		BEB2987912609F78F3A90C04 /* Pods_PhimosisStretcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132129F5388B8A5322411F12 /* Pods_PhimosisStretcherTests.framework */; };
+		D4182EF8254EECDA006857FC /* WalkthroughCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EE6254EECDA006857FC /* WalkthroughCoordinator.swift */; };
+		D4182EF9254EECDA006857FC /* WalkthroughPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EEA254EECDA006857FC /* WalkthroughPresenter.swift */; };
+		D4182EFA254EECDA006857FC /* WalkthroughPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EEB254EECDA006857FC /* WalkthroughPresenterProtocol.swift */; };
+		D4182EFB254EECDA006857FC /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EED254EECDA006857FC /* WalkthroughViewController.swift */; };
+		D4182EFC254EECDA006857FC /* WalkthroughViewController-SetupWalkthroughViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EEF254EECDA006857FC /* WalkthroughViewController-SetupWalkthroughViewControllers.swift */; };
+		D4182EFD254EECDA006857FC /* WalkthroughViewController-WelcomeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EF0254EECDA006857FC /* WalkthroughViewController-WelcomeStep.swift */; };
+		D4182EFE254EECDA006857FC /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4182EF1254EECDA006857FC /* Walkthrough.storyboard */; };
+		D4182EFF254EECDA006857FC /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EF4254EECDA006857FC /* WalkthroughPageViewController.swift */; };
+		D4182F00254EECDA006857FC /* WalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4182EF5254EECDA006857FC /* WalkthroughPage.storyboard */; };
+		D4182F01254EECDA006857FC /* WalkthroughPageViewController-Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4182EF7254EECDA006857FC /* WalkthroughPageViewController-Animations.swift */; };
+		D4182F05254EED67006857FC /* WalkthroughImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4182F04254EED67006857FC /* WalkthroughImages.xcassets */; };
 		D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45565EE246AAD8000DC1FAE /* AppDelegate.swift */; };
 		D45565F1246AAD8000DC1FAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45565F0246AAD8000DC1FAE /* SceneDelegate.swift */; };
 		D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45565F4246AAD8000DC1FAE /* Main.storyboard */; };
@@ -228,6 +239,17 @@
 		5A09C2C3852184078B31E374 /* Pods-PhimosisStretcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhimosisStretcher.release.xcconfig"; path = "Target Support Files/Pods-PhimosisStretcher/Pods-PhimosisStretcher.release.xcconfig"; sourceTree = "<group>"; };
 		728A4F0CC0EB1217D6A589E2 /* Pods-PhimosisStretcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhimosisStretcher.debug.xcconfig"; path = "Target Support Files/Pods-PhimosisStretcher/Pods-PhimosisStretcher.debug.xcconfig"; sourceTree = "<group>"; };
 		AFC196A122C8FFA64689ACE1 /* Pods-PhimosisStretcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhimosisStretcherTests.debug.xcconfig"; path = "Target Support Files/Pods-PhimosisStretcherTests/Pods-PhimosisStretcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4182EE6254EECDA006857FC /* WalkthroughCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughCoordinator.swift; sourceTree = "<group>"; };
+		D4182EEA254EECDA006857FC /* WalkthroughPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPresenter.swift; sourceTree = "<group>"; };
+		D4182EEB254EECDA006857FC /* WalkthroughPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPresenterProtocol.swift; sourceTree = "<group>"; };
+		D4182EED254EECDA006857FC /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		D4182EEF254EECDA006857FC /* WalkthroughViewController-SetupWalkthroughViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WalkthroughViewController-SetupWalkthroughViewControllers.swift"; sourceTree = "<group>"; };
+		D4182EF0254EECDA006857FC /* WalkthroughViewController-WelcomeStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WalkthroughViewController-WelcomeStep.swift"; sourceTree = "<group>"; };
+		D4182EF1254EECDA006857FC /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		D4182EF4254EECDA006857FC /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		D4182EF5254EECDA006857FC /* WalkthroughPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WalkthroughPage.storyboard; sourceTree = "<group>"; };
+		D4182EF7254EECDA006857FC /* WalkthroughPageViewController-Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WalkthroughPageViewController-Animations.swift"; sourceTree = "<group>"; };
+		D4182F04254EED67006857FC /* WalkthroughImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WalkthroughImages.xcassets; sourceTree = "<group>"; };
 		D45565EB246AAD8000DC1FAE /* PhimosisStretcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhimosisStretcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45565EE246AAD8000DC1FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45565F0246AAD8000DC1FAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -474,6 +496,95 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D4182EE4254EECDA006857FC /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EE5254EECDA006857FC /* Coordinator */,
+				D4182EE7254EECDA006857FC /* View */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		D4182EE5254EECDA006857FC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EE6254EECDA006857FC /* WalkthroughCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4182EE7254EECDA006857FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EE8254EECDA006857FC /* Walkthrough */,
+				D4182EF2254EECDA006857FC /* WalkthroughPage */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4182EE8254EECDA006857FC /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EE9254EECDA006857FC /* Presenter */,
+				D4182EEC254EECDA006857FC /* View */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		D4182EE9254EECDA006857FC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EEA254EECDA006857FC /* WalkthroughPresenter.swift */,
+				D4182EEB254EECDA006857FC /* WalkthroughPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D4182EEC254EECDA006857FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EED254EECDA006857FC /* WalkthroughViewController.swift */,
+				D4182EF1254EECDA006857FC /* Walkthrough.storyboard */,
+				D4182EEE254EECDA006857FC /* Extensions */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4182EEE254EECDA006857FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EEF254EECDA006857FC /* WalkthroughViewController-SetupWalkthroughViewControllers.swift */,
+				D4182EF0254EECDA006857FC /* WalkthroughViewController-WelcomeStep.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4182EF2254EECDA006857FC /* WalkthroughPage */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EF3254EECDA006857FC /* View */,
+			);
+			path = WalkthroughPage;
+			sourceTree = "<group>";
+		};
+		D4182EF3254EECDA006857FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EF4254EECDA006857FC /* WalkthroughPageViewController.swift */,
+				D4182EF5254EECDA006857FC /* WalkthroughPage.storyboard */,
+				D4182EF6254EECDA006857FC /* Extensions */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4182EF6254EECDA006857FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4182EF7254EECDA006857FC /* WalkthroughPageViewController-Animations.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D45565E2246AAD8000DC1FAE = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +616,7 @@
 				D45565F0246AAD8000DC1FAE /* SceneDelegate.swift */,
 				D45565F4246AAD8000DC1FAE /* Main.storyboard */,
 				D45565F7246AAD8200DC1FAE /* Assets.xcassets */,
+				D4182F04254EED67006857FC /* WalkthroughImages.xcassets */,
 				D45565F9246AAD8200DC1FAE /* LaunchScreen.storyboard */,
 				D45565FC246AAD8200DC1FAE /* Info.plist */,
 			);
@@ -538,6 +650,7 @@
 		D4556611246AE45400DC1FAE /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				D4182EE4254EECDA006857FC /* Walkthrough */,
 				D4556626246AE5ED00DC1FAE /* Stretches */,
 				D4556624246AE5DC00DC1FAE /* Workout */,
 				D4556625246AE5E700DC1FAE /* Settings */,
@@ -1990,7 +2103,10 @@
 				D471B5122476652D00A5640F /* WashYourHands.storyboard in Resources */,
 				D46EB372246FFAD300AF0F5B /* KegelTrainerCell.xib in Resources */,
 				D45565F8246AAD8200DC1FAE /* Assets.xcassets in Resources */,
+				D4182EFE254EECDA006857FC /* Walkthrough.storyboard in Resources */,
+				D4182F05254EED67006857FC /* WalkthroughImages.xcassets in Resources */,
 				D45565F6246AAD8000DC1FAE /* Main.storyboard in Resources */,
+				D4182F00254EECDA006857FC /* WalkthroughPage.storyboard in Resources */,
 				D45566DF246B1A1E00DC1FAE /* EnableNotifications.storyboard in Resources */,
 				D4B5C03D246F3F7800D524DE /* Rest.wav in Resources */,
 				D4B5C03E246F3F7800D524DE /* Begin.wav in Resources */,
@@ -2094,6 +2210,7 @@
 				D455667C246B0BD900DC1FAE /* StretchesViewController.swift in Sources */,
 				D4556631246AE66E00DC1FAE /* WorkoutViewController.swift in Sources */,
 				D46EB38A24711C3D00AF0F5B /* AddReminderPresenterProtocol.swift in Sources */,
+				D4182EFB254EECDA006857FC /* WalkthroughViewController.swift in Sources */,
 				D45566BE246B167800DC1FAE /* UIColor-AppColours.swift in Sources */,
 				D4556675246B0B4B00DC1FAE /* StretchesCoordinator.swift in Sources */,
 				D45565EF246AAD8000DC1FAE /* AppDelegate.swift in Sources */,
@@ -2108,6 +2225,8 @@
 				D45566AB246B149300DC1FAE /* InformationScreenPresenter.swift in Sources */,
 				D455662F246AE64600DC1FAE /* WorkoutPresenterProtocol.swift in Sources */,
 				D4B5C02F246F371D00D524DE /* WorkoutCueService.swift in Sources */,
+				D4182EFA254EECDA006857FC /* WalkthroughPresenterProtocol.swift in Sources */,
+				D4182F01254EECDA006857FC /* WalkthroughPageViewController-Animations.swift in Sources */,
 				D471B4A52472BBDB00A5640F /* AdvertScreenTableViewController.swift in Sources */,
 				D471B4882471C4F600A5640F /* AdvertScreenPresenter.swift in Sources */,
 				D4B5C04B246F444400D524DE /* AdService.swift in Sources */,
@@ -2118,6 +2237,7 @@
 				D4556665246AECB300DC1FAE /* SettingsPresenterProtocol.swift in Sources */,
 				D455662D246AE63D00DC1FAE /* WorkoutPresenter.swift in Sources */,
 				D4B5C049246F444400D524DE /* AdServerNotifications.swift in Sources */,
+				D4182EF9254EECDA006857FC /* WalkthroughPresenter.swift in Sources */,
 				D4B5C031246F372900D524DE /* WorkoutCueServiceProtocol.swift in Sources */,
 				D4556707246B22C200DC1FAE /* WorkoutMenuPresenter.swift in Sources */,
 				D46EB38824711C3400AF0F5B /* AddReminderPresenter.swift in Sources */,
@@ -2130,6 +2250,7 @@
 				D471B4B7247444A500A5640F /* StretchCell.swift in Sources */,
 				D46EB371246FFAD300AF0F5B /* KegelTrainerCell.swift in Sources */,
 				D471B4D0247512A400A5640F /* SafetyMeasures.swift in Sources */,
+				D4182EFF254EECDA006857FC /* WalkthroughPageViewController.swift in Sources */,
 				D45566B4246B157400DC1FAE /* PSPrimaryButton.swift in Sources */,
 				D471B4DE2475168100A5640F /* UnderstandingPhimosisPresenter.swift in Sources */,
 				D4556661246AEC6100DC1FAE /* SettingsViewController.swift in Sources */,
@@ -2151,7 +2272,10 @@
 				D471B4AC24743FFA00A5640F /* StretchInfo.swift in Sources */,
 				D45566A9246B148000DC1FAE /* InformationScreenViewController.swift in Sources */,
 				D455661D246AE59000DC1FAE /* AlertHandlerService.swift in Sources */,
+				D4182EF8254EECDA006857FC /* WalkthroughCoordinator.swift in Sources */,
+				D4182EFC254EECDA006857FC /* WalkthroughViewController-SetupWalkthroughViewControllers.swift in Sources */,
 				D45566BB246B164400DC1FAE /* Fonts.swift in Sources */,
+				D4182EFD254EECDA006857FC /* WalkthroughViewController-WelcomeStep.swift in Sources */,
 				D47FA868246DC36C006B3A69 /* UITextField-AddToolbar.swift in Sources */,
 				D4556667246AED1C00DC1FAE /* SettingsCoordinator.swift in Sources */,
 				D4556713246BCAA900DC1FAE /* TimerService.swift in Sources */,
@@ -2419,7 +2543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.6;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = PhimosisStretcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -2427,7 +2551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.PhimosisStretcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -2441,7 +2565,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.6;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = PhimosisStretcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -2449,7 +2573,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.PhimosisStretcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

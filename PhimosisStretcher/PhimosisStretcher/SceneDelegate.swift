@@ -28,6 +28,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
         
         RequestReview.requestReview()
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
+        
+        if (launchedBefore == false) {
+            self.appCoordinator.showWalkthroughOnStartup()
+            UserDefaults.standard.set(true, forKey: Constants.launchedBefore)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

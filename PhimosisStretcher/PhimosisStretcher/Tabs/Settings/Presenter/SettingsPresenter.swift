@@ -20,6 +20,7 @@ protocol SettingsPresenterDelegate: AdvertScreenPresenterDelegate {
     func sendEmail()
     func didSelectReminders()
     func didSelectCredits()
+    func didSelectShowWalkthrough()
 }
 
 class SettingsPresenter: AdvertScreenPresenter, SettingsPresenterProtocol {
@@ -142,6 +143,10 @@ class SettingsPresenter: AdvertScreenPresenter, SettingsPresenterProtocol {
                 self.notificationsAreEnabled = true
             }
         }
+    }
+    
+    func showWalkthrough() {
+        self.settingsDelegate.didSelectShowWalkthrough()
     }
     
 }

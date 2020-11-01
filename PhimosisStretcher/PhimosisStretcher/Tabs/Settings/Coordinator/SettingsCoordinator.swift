@@ -10,6 +10,7 @@ import UIKit
 import MessageUI
 
 protocol SettingsCoordinatorDelegate {
+    func showAppWalkthrough()
 }
 
 class SettingsCoordinator: Coordinator {
@@ -97,6 +98,10 @@ extension SettingsCoordinator: SettingsPresenterDelegate {
     
     func didSelectCredits() {
         showCredits()
+    }
+    
+    func didSelectShowWalkthrough() {
+        self.delegate.showAppWalkthrough()
     }
 }
 
