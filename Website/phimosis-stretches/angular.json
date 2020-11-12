@@ -21,6 +21,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/app-ads",
+              "src/app-ads.txt",
               "src/assets"
             ],
             "styles": [
